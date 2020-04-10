@@ -1,0 +1,94 @@
+
+Timing Report
+
+//  Project = ktest1
+//  Family  = lc4k
+//  Device  = LC4064ZE
+//  Speed   = -5.8
+//  Voltage = 1.8
+//  Operating Condition = IND
+//  Data sheet version  = 0.9
+
+//  Pass Bidirection = OFF
+//  Pass S/R = OFF
+//  Pass Latch = OFF
+//  Pass Clock = OFF
+//  Maximum Paths = 20
+//  T_SU Endpoints D/T inputs = ON
+//  T_SU Endpoints CE inputs = OFF
+//  T_SU Endpoints S/R inputs = OFF
+//  T_SU Endpoints RAM gated = ON
+//  Fmax of CE = ON
+//  Fmax of RAM = ON
+
+//  Location(From => To)
+//    Pin number: numeric number preceded by "p", BGA number as is
+//    Macrocell number: Segment#,GLB#,Macrocell#
+//                      Segment#: starts from 0 (if applicable)
+//                      GLB#: starts from A..Z, AA..ZZ
+//                      Macrocell#: starts from 0 to 31
+
+
+Section fMAX
+
+  Maximum Operating Frequency: 190.48 MHz
+  Clock Source From:           pps
+  Logic Levels:                1
+  Path Delay:                  5.25 ns
+  Path Expansion                                Source                        Destination
+  ==============                                ======                        ===========
+   0.45  tCOi                                   pcnt_0_.C                     pcnt_0_.Q
+   3.70  tFBK+tROUTE+tBLA+tMCELL                pcnt_0_.Q                     pcnt_5_.T
+   1.10  tST                                    pcnt_5_.T                     pcnt_5_.C
+ 
+  Clock Source From: pps
+  Delay         Level   Location(From => To)    Source                        Destination                   Destination_Clock
+  =====         =====   ====================    ======                        ===========                   =================
+   5.25           1      A12      =>  A9        pcnt_0_.C                     pcnt_5_.T                     pps
+   5.25           1      A12      =>  A7        pcnt_0_.C                     pcnt_6_.T                     pps
+   5.25           1      A12      =>  A5        pcnt_0_.C                     pcnt_7_.T                     pps
+   5.25           1      B9       =>  A9        pcnt_1_.C                     pcnt_5_.T                     pps
+   5.25           1      B9       =>  A7        pcnt_1_.C                     pcnt_6_.T                     pps
+   5.25           1      B9       =>  A5        pcnt_1_.C                     pcnt_7_.T                     pps
+   5.25           1      B3       =>  A9        pcnt_2_.C                     pcnt_5_.T                     pps
+   5.25           1      B3       =>  A7        pcnt_2_.C                     pcnt_6_.T                     pps
+   5.25           1      B3       =>  A5        pcnt_2_.C                     pcnt_7_.T                     pps
+   5.20           1      A1       =>  A9        pcnt_3_.C                     pcnt_5_.T                     pps
+   5.20           1      A1       =>  A7        pcnt_3_.C                     pcnt_6_.T                     pps
+   5.20           1      A1       =>  A5        pcnt_3_.C                     pcnt_7_.T                     pps
+   5.20           1      A3       =>  A9        pcnt_4_.C                     pcnt_5_.T                     pps
+   5.20           1      A3       =>  A7        pcnt_4_.C                     pcnt_6_.T                     pps
+   5.20           1      A3       =>  A5        pcnt_4_.C                     pcnt_7_.T                     pps
+   5.20           1      A9       =>  A7        pcnt_5_.C                     pcnt_6_.T                     pps
+   5.20           1      A9       =>  A5        pcnt_5_.C                     pcnt_7_.T                     pps
+   5.20           1      A7       =>  A5        pcnt_6_.C                     pcnt_7_.T                     pps
+   5.05           1      A12      =>  A12       pcnt_0_.C                     pcnt_0_.D                     pps
+   5.05           1      A12      =>  B9        pcnt_0_.C                     pcnt_1_.D                     pps
+
+
+Section tRCV
+
+   Delay         Level   Location(From => To)    Source                        Destination
+  =====         =====   ====================    ======                        ===========
+   5.05           1     p18       =>  A12       nclr                          pcnt_0_.AR
+   5.05           1     p18       =>  B9        nclr                          pcnt_1_.AR
+   5.05           1     p18       =>  B3        nclr                          pcnt_2_.AR
+   5.05           1     p18       =>  A1        nclr                          pcnt_3_.AR
+   5.05           1     p18       =>  A3        nclr                          pcnt_4_.AR
+   5.05           1     p18       =>  A9        nclr                          pcnt_5_.AR
+   5.05           1     p18       =>  A7        nclr                          pcnt_6_.AR
+   5.05           1     p18       =>  A5        nclr                          pcnt_7_.AR
+
+
+Section tCO
+
+     tCO         Level   Location(From => To)    Source                        Destination                   Register_Clock
+    ===         =====   ====================    ======                        ===========                   ==============
+   3.80           1     p43       => p2         pps                           pcnt[0]                       pcnt_0_.C
+   3.80           1     p43       => p16        pps                           pcnt[1]                       pcnt_1_.C
+   3.80           1     p43       => p17        pps                           pcnt[2]                       pcnt_2_.C
+   3.80           1     p43       => p44        pps                           pcnt[3]                       pcnt_3_.C
+   3.80           1     p43       => p45        pps                           pcnt[4]                       pcnt_4_.C
+   3.80           1     p43       => p48        pps                           pcnt[5]                       pcnt_5_.C
+   3.80           1     p43       => p47        pps                           pcnt[6]                       pcnt_6_.C
+   3.80           1     p43       => p46        pps                           pcnt[7]                       pcnt_7_.C

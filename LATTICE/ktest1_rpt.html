@@ -1,0 +1,580 @@
+<HTML>
+<HEAD><TITLE>HTML_REPORT_FILE</TITLE>
+<STYLE TYPE="text/css">
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 10pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 10pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+</HEAD>
+<PRE>
+<A name="Top"></A><H2 align=center> ispLEVER Classic 2.0.00.17.20.15 Fitter Report File </H2>
+<H2 align=center>Copyright(C), 1992-2012, Lattice Semiconductor Corporation</H2>
+<H2 align=center>All Rights Reserved</H2>
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+<A name="Project_Summary"></A><FONT COLOR=maroon><U><B><big>Project_Summary</big></B></U></FONT>
+<BR>
+Project Name         :  ktest1
+Project Path         :  C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE
+Project Fitted on    :  Fri Apr 10 15:54:49 2020
+
+Device               :  M4064_32
+Package              :  48
+GLB Input Mux Size   :  12
+Available Blocks     :  4
+Speed                :  -5.8
+Part Number          :  LC4064ZE-5TN48I
+Source Format        :  Pure_VHDL
+
+
+<font color=green size=4><span class=blink><strong><B>Project 'ktest1' Fit Successfully!</B></strong></span></font>
+
+
+<A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
+<BR>
+Prefit Time                     0 secs
+Load Design Time                0.06 secs
+Partition Time                  0.03 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+<A name="Design_Summary"></A><FONT COLOR=maroon><U><B><big>Design_Summary</big></B></U></FONT>
+<BR>
+Total Input Pins                2
+Total Logic Functions           27
+  Total Output Pins             24
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            3
+Total Flip-Flops                24
+  Total D Flip-Flops            13
+  Total T Flip-Flops            11
+  Total Latches                 0
+Total Product Terms             96
+
+Total Reserved Pins             0
+Total Locked Pins               1
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             1
+Total Unique Clock Enables      0
+Total Unique Resets             1
+Total Unique Presets            0
+
+Fmax Logic Levels               2
+
+
+<A name="Device_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>Device_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+</B>Dedicated Pins
+  Clock/Input Pins                  4        2      2    -->    50
+  I/O / Enable Pins                 2        2      0    -->   100
+I/O Pins                           30       22      8    -->    73
+Logic Functions                    64       27     37    -->    42
+  Input Registers                  32        0     32    -->     0
+
+GLB Inputs                        144       59     85    -->    40
+Logical Product Terms             320       48    272    -->    15
+Occupied GLBs                       4        4      0    -->   100
+Macrocells                         64       27     37    -->    42
+
+Control Product Terms:
+  GLB Clock/Clock Enables           4        0      4    -->     0
+  GLB Reset/Presets                 4        0      4    -->     0
+  Macrocell Clocks                 64        0     64    -->     0
+  Macrocell Clock Enables          64        0     64    -->     0
+  Macrocell Enables                64        0     64    -->     0
+  Macrocell Resets                 64        0     64    -->     0
+  Macrocell Presets                64        0     64    -->     0
+
+Global Routing Pool               100       27     73    -->    27
+  GRP from IFB                     ..        1     ..    -->    ..
+    (from input signals)           ..        1     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..       26     ..    -->    ..
+----------------------------------------------------------------------
+
+&lt;Note&gt; 1 : The available PT is the product term that has not been used.
+&lt;Note&gt; 2 : IFB is I/O feedback.
+&lt;Note&gt; 3 : MFB is macrocell feedback.
+
+
+<A name="GLB_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+</B>-------------------------------------------------------------------------------------------
+  GLB    A      2    23    25      6/8      0   10      0              6       15       10
+  GLB    B      3     3     6      3/8      0    3      0             13        7        3
+  GLB    C      3    13    16      7/8      0    7      0              9       13        7
+  GLB    D      6     6    12      6/8      0    7      0              9       13        7
+-------------------------------------------------------------------------------------------
+TOTALS:        14    45    59     22/32     0   27      0             37       48       27
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+&lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+<A name="GLB_Control_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Control_Summary</big></B></U></FONT>
+<BR>
+<B>           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+</B>  GLB    A   0      0         0      0      0      0      0
+  GLB    B   0      0         0      0      0      0      0
+  GLB    C   0      0         0      0      0      0      0
+  GLB    D   0      0         0      0      0      0      0
+------------------------------------------------------------------------------
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+<A name="Optimizer_and_Fitter_Options"></A><FONT COLOR=maroon><U><B><big>Optimizer_and_Fitter_Options</big></B></U></FONT>
+<BR>
+Pin Assignment :                       No
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              Yes
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_DOWN (2)
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+&lt;Note&gt; 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+&lt;Note&gt; 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+<A name="Pinout_Listing"></A><FONT COLOR=maroon><U><B><big>Pinout_Listing</big></B></U></FONT>
+<BR>
+<B>      | Pin   | Bank |GLB |Assigned|                 | Signal|            | PG
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enable
+</B>----------------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |            |
+2     |  I_O  |   0  | A8 |        |LVCMOS18         | Output|<A href=#18>pcnt_13_</A>|
+3     |  I_O  |   0  | A10|        |LVCMOS18         | Output|<A href=#20>pcnt_11_</A>|
+4     |  I_O  |   0  | A11|        |                 |       |            |
+5     |GNDIO0 |   -  |    |        |                 |       |            |
+6     |VCCIO0 |   -  |    |        |                 |       |            |
+7     |  I_O  |   0  | B15|        |                 |       |            |
+8     |  I_O  |   0  | B12|        |                 |       |            |
+9     |  I_O  |   0  | B10|        |                 |       |            |
+10    |  I_O  |   0  | B8 |        |                 |       |            |
+11    | TCK   |   -  |    |        |                 |       |            |
+12    | VCC   |   -  |    |        |                 |       |            |
+13    | GND   |   -  |    |        |                 |       |            |
+14    |  I_O  |   0  | B6 |        |                 |       |            |
+15    |  I_O  |   0  | B4 |        |LVCMOS18         | Output|<A href=#19>pcnt_12_</A>|
+16    |  I_O  |   0  | B2 |        |LVCMOS18         | Output|<A href=#12>pcnt_19_</A>|
+17    |  I_O  |   0  | B0 |        |LVCMOS18         | Output|<A href=#11>pcnt_20_</A>|
+18    |INCLK1 |   0  |    |    *   |LVCMOS18         | Input |<A href=#7>nclr</A>|
+19    |INCLK2 |   1  |    |        |                 |       |            |
+20    |  I_O  |   1  | C0 |        |LVCMOS18         | Output|<A href=#14>pcnt_17_</A>|
+21    |  I_O  |   1  | C1 |        |LVCMOS18         | Output|<A href=#15>pcnt_16_</A>|
+22    |  I_O  |   1  | C2 |        |LVCMOS18         | Output|<A href=#13>pcnt_18_</A>|
+23    |  I_O  |   1  | C4 |        |LVCMOS18         | Output|<A href=#21>pcnt_10_</A>|
+24    |  I_O  |   1  | C6 |        |LVCMOS18         | Output|<A href=#23>pcnt_8_</A>|
+25    | TMS   |   -  |    |        |                 |       |            |
+26    |  I_O  |   1  | C8 |        |LVCMOS18         | Output|<A href=#24>pcnt_7_</A>|
+27    |  I_O  |   1  | C10|        |LVCMOS18         | Output|<A href=#25>pcnt_6_</A>|
+28    |  I_O  |   1  | C11|        |                 |       |            |
+29    |GNDIO1 |   -  |    |        |                 |       |            |
+30    |VCCIO1 |   -  |    |        |                 |       |            |
+31    |  I_O  |   1  | D15|        |                 |       |            |
+32    |  I_O  |   1  | D12|        |LVCMOS18         | Output|<A href=#31>pcnt_0_</A>|
+33    |  I_O  |   1  | D10|        |LVCMOS18         | Output|<A href=#27>pcnt_4_</A>|
+34    |  I_O  |   1  | D8 |        |LVCMOS18         | Output|<A href=#26>pcnt_5_</A>|
+35    | TDO   |   -  |    |        |                 |       |            |
+36    | VCC   |   -  |    |        |                 |       |            |
+37    | GND   |   -  |    |        |                 |       |            |
+38    |  I_O  |   1  | D6 |        |LVCMOS18         | Output|<A href=#22>pcnt_9_</A>|
+39    |  I_O  |   1  | D4 |        |LVCMOS18         | Output|<A href=#30>pcnt_1_</A>|
+40    |  I_O  |   1  | D2 |        |LVCMOS18         | Output|<A href=#16>pcnt_15_</A>|
+41    | I_O/OE|   1  | D0 |        |LVCMOS18         | Output|<A href=#28>pcnt_3_</A>|
+42    |INCLK3 |   1  |    |        |                 |       |            |
+43    |INCLK0 |   0  |    |        |LVCMOS18         | Input |<A href=#6>pps</A>|
+44    | I_O/OE|   0  | A0 |        |LVCMOS18         | Output|<A href=#10>pcnt_21_</A>|
+45    |  I_O  |   0  | A1 |        |LVCMOS18         | Output|<A href=#29>pcnt_2_</A>|
+46    |  I_O  |   0  | A2 |        |LVCMOS18         | Output|<A href=#8>pcnt_23_</A>|
+47    |  I_O  |   0  | A4 |        |LVCMOS18         | Output|<A href=#9>pcnt_22_</A>|
+48    |  I_O  |   0  | A6 |        |LVCMOS18         | Output|<A href=#17>pcnt_14_</A>|
+----------------------------------------------------------------------------------
+
+&lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
+&lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+&lt;Note&gt; Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+<A name="Input_Signal_List"></A><FONT COLOR=maroon><U><B><big>Input_Signal_List</big></B></U></FONT>
+<BR>
+<B>                Input
+         Pin    Fanout
+ Pin GLB Type           Pullup Signal
+</B>-------------------------------------
+  18  -- INCLK  4 ABCD    Down <A name=7>nclr</A>
+  43  -- INCLK    ----    Down <A name=6>pps</A>
+-------------------------------------
+
+
+<A name="Output_Signal_List"></A><FONT COLOR=maroon><U><B><big>Output_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+</B>---------------------------------------------------------------------
+  32   D  2  1   1  1 DFF    * R         3 A-CD  Fast   Down <A href=#31>pcnt_0_</A>
+  23   C 11  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#21>pcnt_10_</A>
+   3   A 12  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#20>pcnt_11_</A>
+  15   B  3  2   2  1 DFF    * R         2 AB--  Fast   Down <A href=#19>pcnt_12_</A>
+   2   A 14  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#18>pcnt_13_</A>
+  48   A 15  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#17>pcnt_14_</A>
+  40   D  3  2   2  1 DFF    * R         3 A-CD  Fast   Down <A href=#16>pcnt_15_</A>
+  21   C  4  2   3  1 DFF    * R         2 A-C-  Fast   Down <A href=#15>pcnt_16_</A>
+  20   C  5  2   4  1 DFF    * R         2 A-C-  Fast   Down <A href=#14>pcnt_17_</A>
+  22   C  6  2   2  1 DFF    * R         2 A-C-  Fast   Down <A href=#13>pcnt_18_</A>
+  16   B  3  2   2  1 DFF    * R         2 AB--  Fast   Down <A href=#12>pcnt_19_</A>
+  39   D  3  1   2  1 DFF    * R         3 A-CD  Fast   Down <A href=#30>pcnt_1_</A>
+  17   B  4  2   3  1 DFF    * R         2 AB--  Fast   Down <A href=#11>pcnt_20_</A>
+  44   A  5  2   4  1 DFF    * R         1 A---  Fast   Down <A href=#10>pcnt_21_</A>
+  47   A 23  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#9>pcnt_22_</A>
+  46   A 24  1   1  1 TFF    * R           ----  Fast   Down <A href=#8>pcnt_23_</A>
+  45   A  4  1   3  1 DFF    * R         3 A-CD  Fast   Down <A href=#29>pcnt_2_</A>
+  41   D  5  1   4  1 DFF    * R         3 A-CD  Fast   Down <A href=#28>pcnt_3_</A>
+  33   D  6  1   2  1 DFF    * R         3 A-CD  Fast   Down <A href=#27>pcnt_4_</A>
+  34   D  6  1   1  1 TFF    * R         3 A-CD  Fast   Down <A href=#26>pcnt_5_</A>
+  27   C  7  1   1  1 TFF    * R         3 A-CD  Fast   Down <A href=#25>pcnt_6_</A>
+  26   C  8  1   1  1 TFF    * R         3 A-CD  Fast   Down <A href=#24>pcnt_7_</A>
+  24   C  9  1   1  1 TFF    * R         3 A-CD  Fast   Down <A href=#23>pcnt_8_</A>
+  38   D 10  1   1  1 TFF    * R         2 A-C-  Fast   Down <A href=#22>pcnt_9_</A>
+---------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Bidir_Signal_List"></A><FONT COLOR=maroon><U><B><big>Bidir_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+</B>-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Buried_Signal_List"></A><FONT COLOR=maroon><U><B><big>Buried_Signal_List</big></B></U></FONT>
+<BR>
+<B>        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P         Signal
+</B>---------------------------------------------------
+ 3   A 12  -   1  1 COM              1 -B--  <A href=#32>n166</A>
+ 5   A 15  -   1  1 COM              2 --CD  <A href=#33>n187</A>
+ 7   A 19  -   1  1 COM              2 AB--  <A href=#34>n215</A>
+---------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
+<BR>
+<A name=32>n166</A> = <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A>
+       & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 12 signals)
+
+<A name=33>n187</A> = <A href=#17>pcnt_14_.Q</A> & <A href=#18>pcnt_13_.Q</A> & <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A>
+       & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A>
+       & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 15 signals)
+
+<A name=34>n215</A> = <A href=#13>pcnt_18_.Q</A> & <A href=#14>pcnt_17_.Q</A> & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#17>pcnt_14_.Q</A>
+       & <A href=#18>pcnt_13_.Q</A> & <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A>
+       & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A>
+       & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 19 signals)
+
+<A name=31>pcnt_0_.D</A> = !<A href=#31>pcnt_0_.Q</A> ; (1 pterm, 1 signal)
+pcnt_0_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_0_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=21>pcnt_10_.T</A> = <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A>
+       & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 10 signals)
+pcnt_10_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_10_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=20>pcnt_11_.T</A> = <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A>
+       & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 11 signals)
+pcnt_11_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_11_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=19>pcnt_12_.D</A> = <A href=#19>pcnt_12_.Q</A> & !<A href=#32>n166</A>
+    # !pcnt_12_.Q & n166 ; (2 pterms, 2 signals)
+pcnt_12_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_12_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=18>pcnt_13_.T</A> = <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A>
+       & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A>
+       & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 13 signals)
+pcnt_13_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_13_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=17>pcnt_14_.T</A> = <A href=#18>pcnt_13_.Q</A> & <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A>
+       & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A>
+       & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 14 signals)
+pcnt_14_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_14_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=16>pcnt_15_.D</A> = <A href=#16>pcnt_15_.Q</A> & !<A href=#33>n187</A>
+    # !pcnt_15_.Q & n187 ; (2 pterms, 2 signals)
+pcnt_15_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_15_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=15>pcnt_16_.D</A> = !<A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#33>n187</A>
+    # pcnt_16_.Q & !pcnt_15_.Q
+    # pcnt_16_.Q & !n187 ; (3 pterms, 3 signals)
+pcnt_16_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_16_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=14>pcnt_17_.D</A> = !<A href=#14>pcnt_17_.Q</A> & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#33>n187</A>
+    # pcnt_17_.Q & !pcnt_15_.Q
+    # pcnt_17_.Q & !pcnt_16_.Q
+    # pcnt_17_.Q & !n187 ; (4 pterms, 4 signals)
+pcnt_17_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_17_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=13>pcnt_18_.D.X1</A> = <A href=#13>pcnt_18_.Q</A> ; (1 pterm, 1 signal)
+pcnt_18_.D.X2 = <A href=#14>pcnt_17_.Q</A> & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#33>n187</A> ; (1 pterm, 4 signals)
+pcnt_18_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_18_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=12>pcnt_19_.D</A> = <A href=#12>pcnt_19_.Q</A> & !<A href=#34>n215</A>
+    # !pcnt_19_.Q & n215 ; (2 pterms, 2 signals)
+pcnt_19_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_19_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=30>pcnt_1_.D</A> = <A href=#30>pcnt_1_.Q</A> & !<A href=#31>pcnt_0_.Q</A>
+    # !pcnt_1_.Q & pcnt_0_.Q ; (2 pterms, 2 signals)
+pcnt_1_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_1_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=11>pcnt_20_.D</A> = !<A href=#11>pcnt_20_.Q</A> & <A href=#12>pcnt_19_.Q</A> & <A href=#34>n215</A>
+    # pcnt_20_.Q & !pcnt_19_.Q
+    # pcnt_20_.Q & !n215 ; (3 pterms, 3 signals)
+pcnt_20_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_20_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=10>pcnt_21_.D</A> = !<A href=#10>pcnt_21_.Q</A> & <A href=#11>pcnt_20_.Q</A> & <A href=#12>pcnt_19_.Q</A> & <A href=#34>n215</A>
+    # pcnt_21_.Q & !pcnt_19_.Q
+    # pcnt_21_.Q & !pcnt_20_.Q
+    # pcnt_21_.Q & !n215 ; (4 pterms, 4 signals)
+pcnt_21_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_21_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=9>pcnt_22_.T</A> = <A href=#10>pcnt_21_.Q</A> & <A href=#11>pcnt_20_.Q</A> & <A href=#12>pcnt_19_.Q</A> & <A href=#13>pcnt_18_.Q</A> & <A href=#14>pcnt_17_.Q</A>
+       & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#17>pcnt_14_.Q</A> & <A href=#18>pcnt_13_.Q</A> & <A href=#19>pcnt_12_.Q</A>
+       & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A>
+       & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A>
+       & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 22 signals)
+pcnt_22_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_22_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=8>pcnt_23_.T</A> = <A href=#9>pcnt_22_.Q</A> & <A href=#10>pcnt_21_.Q</A> & <A href=#11>pcnt_20_.Q</A> & <A href=#12>pcnt_19_.Q</A> & <A href=#13>pcnt_18_.Q</A>
+       & <A href=#14>pcnt_17_.Q</A> & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#17>pcnt_14_.Q</A> & <A href=#18>pcnt_13_.Q</A>
+       & <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A>
+       & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A>
+       & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 23 signals)
+pcnt_23_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_23_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=29>pcnt_2_.D</A> = !<A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A>
+    # pcnt_2_.Q & !pcnt_1_.Q
+    # pcnt_2_.Q & !pcnt_0_.Q ; (3 pterms, 3 signals)
+pcnt_2_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_2_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=28>pcnt_3_.D</A> = !<A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A>
+    # pcnt_3_.Q & !pcnt_1_.Q
+    # pcnt_3_.Q & !pcnt_2_.Q
+    # pcnt_3_.Q & !pcnt_0_.Q ; (4 pterms, 4 signals)
+pcnt_3_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_3_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=27>pcnt_4_.D.X1</A> = <A href=#27>pcnt_4_.Q</A> ; (1 pterm, 1 signal)
+pcnt_4_.D.X2 = <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 4 signals)
+pcnt_4_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_4_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=26>pcnt_5_.T</A> = <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 5 signals)
+pcnt_5_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_5_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=25>pcnt_6_.T</A> = <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A>
+       & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 6 signals)
+pcnt_6_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_6_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=24>pcnt_7_.T</A> = <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A>
+       & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 7 signals)
+pcnt_7_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_7_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=23>pcnt_8_.T</A> = <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A>
+       & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 8 signals)
+pcnt_8_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_8_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<A name=22>pcnt_9_.T</A> = <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A>
+       & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 9 signals)
+pcnt_9_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
+pcnt_9_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+

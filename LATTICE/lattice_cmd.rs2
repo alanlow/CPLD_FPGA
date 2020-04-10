@@ -1,0 +1,1 @@
+-src ktest1.tt4 -type PLA -devfile "C:/ispLEVER_Classic2_0/ispcpld/dat/lc4k/m4e_64_32.dev" -postfit -lci ktest1.lco

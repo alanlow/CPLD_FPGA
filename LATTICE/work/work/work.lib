@@ -1,0 +1,37 @@
+timestamp=1586506971179
+
+[~A]
+ModifyID=10
+Version=73
+
+[pps_count]
+A/up_count=A/UP_COUNT 21|./../../pps_count.vhd|14|1*0
+BinI32/up_count=3*0
+I=0*559
+I/up_count=I/UP_COUNT 0*1217
+M=11|0|vc1|1586506970773|./../../pps_count.vhd|0*181*0x09815a0d04dc5c07605d57766f8fa02569a4f150|0*477*0x5eebbfaf24833dd780412b1f91e05209
+M/up_count=M/UP_COUNT 21|0|vc1|1586506970775|./../../pps_count.vhd|0*796*0x8d7dbc1f3356193a25e74b17fa56a821ef53aad7|0*1123*0x342d199c7b40d21b0ecf2867dd8bfa66
+R=./../../pps_count.vhd|6
+Version=10.1.3088.5434  (Windows)|00000003789cd3f5370600015b00b0|681a3854ccdf14dea1ff58fda891873750c4b6dd3333f88a08b01e61079c21fa92731742a59248f1639d389383e4fa74
+Version/up_count=10.1.3088.5434  (Windows)|00000003789cd3f5370600015b00b0|17cd312f22ab2740bbc1650c3ecda553000e4db928b10529e69c61707b108d4e04619b551122b57a9af631d06a3c01a1
+
+[testbench]
+A/behavior=21|./../../pps_counter_tb.vhd|25|1*1462
+BinI32/behavior=3*397
+I=0*1858
+I/behavior=0*2782
+M=11|0|vc1|1586506971085|./../../pps_counter_tb.vhd|0*1536*0x60b39730ac49a2b83510569ace244188fc801624|0*1771*0x5eebbfaf24833dd780412b1f91e05209
+M/behavior=21|0|vc1|1586506971101|./../../pps_counter_tb.vhd|0*2087*0x648cb34e65d2f7448d04daca82a2f7838f94f043|0*2683*0x342d199c7b40d21b0ecf2867dd8bfa66
+R=./../../pps_counter_tb.vhd|22
+Version=10.1.3088.5434  (Windows)|00000003789cd3f5370600015b00b0|9c08cd30fe0f9550ac0d051aa32c9ba5030c5f4de3ffa3c97f58c5528f1d7913e53c211433524ca0a3827b2d3a82a712
+Version/behavior=10.1.3088.5434  (Windows)|00000003789cd3f5370600015b00b0|f9bccf16e2dce5a640f0ad5e8eaa0283e08d679eaf1bc9de9439630905b37e5fb2f05ec8ce157aa30da0ba81744cccf3
+
+[~MFT]
+0=13|0work.mgf|2782|0
+1=1|1work.mgf|1462|0
+3=1|3work.mgf|397|0
+
+[~U]
+pps_count=PPS_COUNT 11|0*0|
+testbench=11|0*1463|
+

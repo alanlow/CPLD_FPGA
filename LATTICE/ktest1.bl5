@@ -1,0 +1,197 @@
+#$ TOOL  ispLEVER Classic 2.0.00.17.20.15
+#$ DATE  Fri Apr 10 15:54:46 2020
+#$ MODULE  PPS_COUNT
+#$ PINS 26 pps nclr pcnt_23_ pcnt_22_ pcnt_21_ pcnt_20_ pcnt_19_ pcnt_18_
+ pcnt_17_ pcnt_16_ pcnt_15_ pcnt_14_ pcnt_13_ pcnt_12_ pcnt_11_ pcnt_10_ pcnt_9_
+ pcnt_8_ pcnt_7_ pcnt_6_ pcnt_5_ pcnt_4_ pcnt_3_ pcnt_2_ pcnt_1_ pcnt_0_
+#$ NODES 3 n166 n187 n215
+.model pps_count 
+.inputs pps.BLIF nclr.BLIF pcnt_22_.Q pcnt_21_.Q pcnt_20_.Q pcnt_19_.Q \
+ pcnt_18_.Q pcnt_17_.Q pcnt_16_.Q pcnt_15_.Q pcnt_14_.Q pcnt_13_.Q pcnt_12_.Q \
+ pcnt_11_.Q pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q \
+ pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q n166.BLIF n187.BLIF n215.BLIF
+.outputs pcnt_23_.T pcnt_23_.C pcnt_23_.AR pcnt_22_.T pcnt_22_.C pcnt_22_.AR \
+ pcnt_21_.D pcnt_21_.C pcnt_21_.AR pcnt_20_.D pcnt_20_.C pcnt_20_.AR pcnt_19_.D \
+ pcnt_19_.C pcnt_19_.AR pcnt_18_.D.X1 pcnt_18_.D.X2 pcnt_18_.C pcnt_18_.AR \
+ pcnt_17_.D pcnt_17_.C pcnt_17_.AR pcnt_16_.D pcnt_16_.C pcnt_16_.AR pcnt_15_.D \
+ pcnt_15_.C pcnt_15_.AR pcnt_14_.T pcnt_14_.C pcnt_14_.AR pcnt_13_.T pcnt_13_.C \
+ pcnt_13_.AR pcnt_12_.D pcnt_12_.C pcnt_12_.AR pcnt_11_.T pcnt_11_.C pcnt_11_.AR \
+ pcnt_10_.T pcnt_10_.C pcnt_10_.AR pcnt_9_.T pcnt_9_.C pcnt_9_.AR pcnt_8_.T \
+ pcnt_8_.C pcnt_8_.AR pcnt_7_.T pcnt_7_.C pcnt_7_.AR pcnt_6_.T pcnt_6_.C \
+ pcnt_6_.AR pcnt_5_.T pcnt_5_.C pcnt_5_.AR pcnt_4_.D.X1 pcnt_4_.D.X2 pcnt_4_.C \
+ pcnt_4_.AR pcnt_3_.D pcnt_3_.C pcnt_3_.AR pcnt_2_.D pcnt_2_.C pcnt_2_.AR \
+ pcnt_1_.D pcnt_1_.C pcnt_1_.AR pcnt_0_.D pcnt_0_.C pcnt_0_.AR n166 n187 n215
+.names pcnt_22_.Q pcnt_21_.Q pcnt_20_.Q pcnt_19_.Q pcnt_18_.Q pcnt_17_.Q pcnt_16_.Q pcnt_15_.Q pcnt_14_.Q pcnt_13_.Q pcnt_12_.Q pcnt_11_.Q pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_23_.T
+11111111111111111111111 1
+.names pps.BLIF pcnt_23_.C
+1 1
+.names nclr.BLIF pcnt_23_.AR
+0 1
+.names pcnt_21_.Q pcnt_20_.Q pcnt_19_.Q pcnt_18_.Q pcnt_17_.Q pcnt_16_.Q pcnt_15_.Q pcnt_14_.Q pcnt_13_.Q pcnt_12_.Q pcnt_11_.Q pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_22_.T
+1111111111111111111111 1
+.names pps.BLIF pcnt_22_.C
+1 1
+.names nclr.BLIF pcnt_22_.AR
+0 1
+.names pcnt_21_.Q pcnt_20_.Q pcnt_19_.Q n215.BLIF pcnt_21_.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+.names pps.BLIF pcnt_21_.C
+1 1
+.names nclr.BLIF pcnt_21_.AR
+0 1
+.names pcnt_20_.Q pcnt_19_.Q n215.BLIF pcnt_20_.D
+011 1
+10- 1
+1-0 1
+.names pps.BLIF pcnt_20_.C
+1 1
+.names nclr.BLIF pcnt_20_.AR
+0 1
+.names pcnt_19_.Q n215.BLIF pcnt_19_.D
+10 1
+01 1
+.names pps.BLIF pcnt_19_.C
+1 1
+.names nclr.BLIF pcnt_19_.AR
+0 1
+.names pcnt_18_.Q pcnt_17_.Q pcnt_16_.Q pcnt_15_.Q n187.BLIF pcnt_18_.D.X1
+1---- 1
+.names pcnt_18_.Q pcnt_17_.Q pcnt_16_.Q pcnt_15_.Q n187.BLIF pcnt_18_.D.X2
+-1111 1
+.names pps.BLIF pcnt_18_.C
+1 1
+.names nclr.BLIF pcnt_18_.AR
+0 1
+.names pcnt_17_.Q pcnt_16_.Q pcnt_15_.Q n187.BLIF pcnt_17_.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+.names pps.BLIF pcnt_17_.C
+1 1
+.names nclr.BLIF pcnt_17_.AR
+0 1
+.names pcnt_16_.Q pcnt_15_.Q n187.BLIF pcnt_16_.D
+011 1
+10- 1
+1-0 1
+.names pps.BLIF pcnt_16_.C
+1 1
+.names nclr.BLIF pcnt_16_.AR
+0 1
+.names pcnt_15_.Q n187.BLIF pcnt_15_.D
+10 1
+01 1
+.names pps.BLIF pcnt_15_.C
+1 1
+.names nclr.BLIF pcnt_15_.AR
+0 1
+.names pcnt_13_.Q pcnt_12_.Q pcnt_11_.Q pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_14_.T
+11111111111111 1
+.names pps.BLIF pcnt_14_.C
+1 1
+.names nclr.BLIF pcnt_14_.AR
+0 1
+.names pcnt_12_.Q pcnt_11_.Q pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_13_.T
+1111111111111 1
+.names pps.BLIF pcnt_13_.C
+1 1
+.names nclr.BLIF pcnt_13_.AR
+0 1
+.names pcnt_12_.Q n166.BLIF pcnt_12_.D
+10 1
+01 1
+.names pps.BLIF pcnt_12_.C
+1 1
+.names nclr.BLIF pcnt_12_.AR
+0 1
+.names pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_11_.T
+11111111111 1
+.names pps.BLIF pcnt_11_.C
+1 1
+.names nclr.BLIF pcnt_11_.AR
+0 1
+.names pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_10_.T
+1111111111 1
+.names pps.BLIF pcnt_10_.C
+1 1
+.names nclr.BLIF pcnt_10_.AR
+0 1
+.names pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_9_.T
+111111111 1
+.names pps.BLIF pcnt_9_.C
+1 1
+.names nclr.BLIF pcnt_9_.AR
+0 1
+.names pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_8_.T
+11111111 1
+.names pps.BLIF pcnt_8_.C
+1 1
+.names nclr.BLIF pcnt_8_.AR
+0 1
+.names pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_7_.T
+1111111 1
+.names pps.BLIF pcnt_7_.C
+1 1
+.names nclr.BLIF pcnt_7_.AR
+0 1
+.names pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_6_.T
+111111 1
+.names pps.BLIF pcnt_6_.C
+1 1
+.names nclr.BLIF pcnt_6_.AR
+0 1
+.names pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_5_.T
+11111 1
+.names pps.BLIF pcnt_5_.C
+1 1
+.names nclr.BLIF pcnt_5_.AR
+0 1
+.names pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_4_.D.X1
+1---- 1
+.names pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_4_.D.X2
+-1111 1
+.names pps.BLIF pcnt_4_.C
+1 1
+.names nclr.BLIF pcnt_4_.AR
+0 1
+.names pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_3_.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+.names pps.BLIF pcnt_3_.C
+1 1
+.names nclr.BLIF pcnt_3_.AR
+0 1
+.names pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q pcnt_2_.D
+011 1
+10- 1
+1-0 1
+.names pps.BLIF pcnt_2_.C
+1 1
+.names nclr.BLIF pcnt_2_.AR
+0 1
+.names pcnt_1_.Q pcnt_0_.Q pcnt_1_.D
+10 1
+01 1
+.names pps.BLIF pcnt_1_.C
+1 1
+.names nclr.BLIF pcnt_1_.AR
+0 1
+.names pcnt_0_.Q pcnt_0_.D
+0 1
+.names pps.BLIF pcnt_0_.C
+1 1
+.names nclr.BLIF pcnt_0_.AR
+0 1
+.names pcnt_11_.Q pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q n166
+111111111111 1
+.names pcnt_14_.Q pcnt_13_.Q pcnt_12_.Q pcnt_11_.Q pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q n187
+111111111111111 1
+.names pcnt_18_.Q pcnt_17_.Q pcnt_16_.Q pcnt_15_.Q pcnt_14_.Q pcnt_13_.Q pcnt_12_.Q pcnt_11_.Q pcnt_10_.Q pcnt_9_.Q pcnt_8_.Q pcnt_7_.Q pcnt_6_.Q pcnt_5_.Q pcnt_4_.Q pcnt_3_.Q pcnt_2_.Q pcnt_1_.Q pcnt_0_.Q n215
+1111111111111111111 1
+.end

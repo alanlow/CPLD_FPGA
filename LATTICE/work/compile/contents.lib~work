@@ -1,0 +1,5 @@
+10
+~E 1 "./../../pps_count.vhd" 6 PPS_COUNT
+~A 1 "./../../pps_count.vhd" 14 UP_COUNT
+~E 1 "./../../pps_counter_tb.vhd" 22 testbench
+~A 1 "./../../pps_counter_tb.vhd" 25 behavior

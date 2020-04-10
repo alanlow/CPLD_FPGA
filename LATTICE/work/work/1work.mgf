@@ -1,0 +1,81 @@
+V 000049 55 1413          1586506970776 UP_COUNT
+(_unit VHDL (pps_count 0 6(up_count 0 14))
+	(_version vc1)
+	(_time 1586506970777 2020.04.10 16:22:50)
+	(_source (\./../../pps_count.vhd\))
+	(_code 83808a8c80d5d496d4d690d984848685d684878483)
+	(_entity
+		(_time 1586506970774)
+	)
+	(_object
+		(_port (_int pps ~extieee.std_logic_1164.STD_LOGIC 0 8(_entity(_in)(_event))))
+		(_port (_int nclr ~extieee.std_logic_1164.STD_LOGIC 0 8(_entity(_in))))
+		(_type (_int ~STD_LOGIC_VECTOR{23~downto~0}~12 0 9(_array ~extieee.std_logic_1164.STD_LOGIC ((_dto i 23 i 0)))))
+		(_port (_int pcnt ~STD_LOGIC_VECTOR{23~downto~0}~12 0 9(_entity(_out))))
+		(_type (_int ~STD_LOGIC_VECTOR{23~downto~0}~13 0 16(_array ~extieee.std_logic_1164.STD_LOGIC ((_dto i 23 i 0)))))
+		(_signal (_int temp_pcnt ~STD_LOGIC_VECTOR{23~downto~0}~13 0 16(_architecture(_uni))))
+		(_process
+			(line__20(_architecture 0 0 20(_process (_simple)(_target(3))(_sensitivity(0)(1))(_read(3)))))
+			(line__28(_architecture 1 0 28(_assignment (_alias((pcnt)(temp_pcnt)))(_target(2))(_sensitivity(3)))))
+		)
+		(_subprogram
+			(_ext resolved (0 15))
+		)
+		(_type (_ext ~extieee.std_logic_1164.STD_LOGIC (0 STD_LOGIC)))
+		(_type (_ext ~extieee.std_logic_1164.STD_ULOGIC (0 STD_ULOGIC)))
+	)
+	(_use (ieee(std_logic_1164))(std(standard))(ieee(std_logic_arith))(ieee(STD_LOGIC_UNSIGNED)))
+	(_static
+		(33686018 33686018 33686018 33686018 33686018 33686018)
+	)
+	(_model . UP_COUNT 2 -1)
+)
+V 000049 55 1904          1586506971102 behavior
+(_unit VHDL (testbench 0 22(behavior 0 25))
+	(_version vc1)
+	(_time 1586506971103 2020.04.10 16:22:51)
+	(_source (\./../../pps_counter_tb.vhd\))
+	(_code cbc89e9e9c9d9cdcccc8d9919fcd9ecdc8cdc3cccf)
+	(_entity
+		(_time 1586506971086)
+	)
+	(_component
+		(PPS_COUNT
+			(_object
+				(_port (_int pps ~extieee.std_logic_1164.STD_LOGIC 0 29(_entity (_in))))
+				(_port (_int nclr ~extieee.std_logic_1164.STD_LOGIC 0 30(_entity (_in))))
+				(_port (_int pcnt ~STD_LOGIC_VECTOR{23~downto~0}~13 0 31(_entity (_out))))
+			)
+		)
+	)
+	(_instantiation uut 0 42(_component PPS_COUNT)
+		(_port
+			((pps)(pps))
+			((nclr)(nclr))
+			((pcnt)(pcnt))
+		)
+		(_use (_entity . PPS_COUNT)
+		)
+	)
+	(_object
+		(_type (_int ~STD_LOGIC_VECTOR{23~downto~0}~13 0 31(_array ~extieee.std_logic_1164.STD_LOGIC ((_dto i 23 i 0)))))
+		(_signal (_int pps ~extieee.std_logic_1164.STD_LOGIC 0 35(_architecture(_uni((i 2))))))
+		(_signal (_int nclr ~extieee.std_logic_1164.STD_LOGIC 0 36(_architecture(_uni((i 2))))))
+		(_type (_int ~STD_LOGIC_VECTOR{23~downto~0}~132 0 37(_array ~extieee.std_logic_1164.STD_LOGIC ((_dto i 23 i 0)))))
+		(_signal (_int pcnt ~STD_LOGIC_VECTOR{23~downto~0}~132 0 37(_architecture(_uni))))
+		(_constant (_int clock_period ~extstd.standard.TIME 0 38(_architecture((ns 4630826316843712512)))))
+		(_process
+			(clock_process(_architecture 0 0 49(_process (_wait_for)(_target(0)))))
+			(tb(_architecture 1 0 59(_process (_wait_for)(_target(1)))))
+		)
+		(_subprogram
+			(_ext resolved (0 15))
+		)
+		(_type (_ext ~extieee.std_logic_1164.STD_LOGIC (0 STD_LOGIC)))
+		(_type (_ext ~extieee.std_logic_1164.STD_ULOGIC (0 STD_ULOGIC)))
+		(_type (_ext ~extstd.standard.TIME (1 TIME)))
+		(_type (_ext ~extieee.std_logic_1164.STD_LOGIC_VECTOR (0 STD_LOGIC_VECTOR)))
+	)
+	(_use (ieee(std_logic_1164))(std(standard))(ieee(NUMERIC_STD))(generics(COMPONENTS)))
+	(_model . behavior 2 -1)
+)

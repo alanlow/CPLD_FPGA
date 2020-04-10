@@ -1,0 +1,1 @@
+-w -s "C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\library.cfg"  -j "C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\projlib.cfg"  -d "C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\compile"   -work work  -O3 -e 100 "pps_counter_tb.vhd"

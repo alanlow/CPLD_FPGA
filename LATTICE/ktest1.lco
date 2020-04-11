@@ -14,8 +14,8 @@ Voltage = 1.8;
 RCS = "$Header $";
 Parent = lc4k64e.lci;
 Design = ;
-DATE = 2002;
-TIME = 0:00:00;
+DATE = 04/11/2020;
+TIME = 15:48:49;
 Source_Format = Pure_VHDL;
 Type = ;
 Pre_Fit_Time = ;
@@ -96,39 +96,53 @@ Adjust_input_assignments = Off;
 
 [LOCATION ASSIGNMENTS]
 // Block A
-pcnt_23_=pin,46,-,A,2;
-pcnt_22_=pin,47,-,A,4;
-pcnt_21_=pin,44,-,A,0;
-pcnt_14_=pin,48,-,A,6;
-pcnt_13_=pin,2,-,A,9;
-pcnt_11_=pin,3,-,A,12;
-pcnt_2_=pin,45,-,A,1;
-n166=node,-,-,A,3;
-n187=node,-,-,A,5;
-n215=node,-,-,A,7;
+rxd_1v8=pin,48,-,A,6;
+adc_sel0=pin,44,-,A,1;
+adc_clk0=pin,45,-,A,3;
+pps_counter__temp_pcnt_5__i10=node,-,-,A,6;
+pps_counter__temp_pcnt_5__i12=node,-,-,A,10;
 // Block B
-pcnt_20_=pin,17,-,B,2;
-pcnt_19_=pin,16,-,B,5;
-pcnt_12_=pin,15,-,B,10;
+cpld_seln=pin,14,-,B,6;
+pps_rstn=pin,9,-,B,10;
+cpld_sdi=pin,15,-,B,4;
+cpld_sdo=pin,17,-,B,1;
+adc_clk1=pin,10,-,B,10;
+adc_sel1=pin,7,-,B,3;
+spi_module__spi_cntr_vPcnt_i0=node,-,-,B,6;
 // Block C
-pcnt_18_=pin,22,-,C,3;
-pcnt_17_=pin,20,-,C,0;
-pcnt_16_=pin,21,-,C,1;
-pcnt_10_=pin,23,-,C,5;
-pcnt_8_=pin,24,-,C,7;
-pcnt_7_=pin,26,-,C,9;
-pcnt_6_=pin,27,-,C,12;
+spi_miso=pin,23,-,C,4;
+cpld_clk=pin,24,-,C,6;
+spi_clk=pin,21,-,C,1;
+spi_mosi=pin,22,-,C,2;
+pps_counter__temp_pcnt_5__i0=node,-,-,C,5;
+pps_counter__temp_pcnt_5__i1=node,-,-,C,4;
+pps_counter__temp_pcnt_5__i2=node,-,-,C,0;
+pps_counter__temp_pcnt_5__i4=node,-,-,C,3;
+pps_counter__temp_pcnt_5__i5=node,-,-,C,6;
+pps_counter__temp_pcnt_5__i6=node,-,-,C,7;
+pps_counter__temp_pcnt_5__i7=node,-,-,C,8;
+pps_counter__temp_pcnt_5__i8=node,-,-,C,9;
+pps_counter__temp_pcnt_5__i9=node,-,-,C,10;
+n151=node,-,-,C,12;
 // Block D
-pcnt_15_=pin,40,-,D,3;
-pcnt_9_=pin,38,-,D,7;
-pcnt_5_=pin,34,-,D,9;
-pcnt_4_=pin,33,-,D,1;
-pcnt_3_=pin,41,-,D,0;
-pcnt_1_=pin,39,-,D,5;
-pcnt_0_=pin,32,-,D,12;
+freq_clka=pin,39,-,D,4;
+pps_counter__temp_pcnt_5__i23=node,-,-,D,2;
+pps_counter__temp_pcnt_5__i3=node,-,-,D,0;
+pps_counter__temp_pcnt_5__i11=node,-,-,D,1;
+pps_counter__temp_pcnt_5__i13=node,-,-,D,3;
+pps_counter__temp_pcnt_5__i14=node,-,-,D,5;
+pps_counter__temp_pcnt_5__i15=node,-,-,D,6;
+pps_counter__temp_pcnt_5__i16=node,-,-,D,7;
+pps_counter__temp_pcnt_5__i17=node,-,-,D,8;
+pps_counter__temp_pcnt_5__i18=node,-,-,D,9;
+pps_counter__temp_pcnt_5__i19=node,-,-,D,10;
+pps_counter__temp_pcnt_5__i20=node,-,-,D,11;
+pps_counter__temp_pcnt_5__i21=node,-,-,D,12;
+pps_counter__temp_pcnt_5__i22=node,-,-,D,13;
 // Input/Clock Pins
-pps=pin,43,-,-,-;
-nclr=pin,18,-,-,-;
+mcu_clko=pin,43,-,-,-;
+adc_dclk=pin,18,-,-,-;
+adc_drdyn=pin,19,-,-,-;
 
 [PTOE ASSIGNMENTS]
 
@@ -137,32 +151,23 @@ Default=NONE;
 ;
 
 [IO TYPES]
-pps=LVCMOS18,pin,-,-;
-nclr=LVCMOS18,pin,-,-;
-pcnt_23_=LVCMOS18,pin,0,-;
-pcnt_22_=LVCMOS18,pin,0,-;
-pcnt_21_=LVCMOS18,pin,0,-;
-pcnt_20_=LVCMOS18,pin,0,-;
-pcnt_19_=LVCMOS18,pin,0,-;
-pcnt_18_=LVCMOS18,pin,1,-;
-pcnt_17_=LVCMOS18,pin,1,-;
-pcnt_16_=LVCMOS18,pin,1,-;
-pcnt_15_=LVCMOS18,pin,1,-;
-pcnt_14_=LVCMOS18,pin,0,-;
-pcnt_13_=LVCMOS18,pin,0,-;
-pcnt_12_=LVCMOS18,pin,0,-;
-pcnt_11_=LVCMOS18,pin,0,-;
-pcnt_10_=LVCMOS18,pin,1,-;
-pcnt_9_=LVCMOS18,pin,1,-;
-pcnt_8_=LVCMOS18,pin,1,-;
-pcnt_7_=LVCMOS18,pin,1,-;
-pcnt_6_=LVCMOS18,pin,1,-;
-pcnt_5_=LVCMOS18,pin,1,-;
-pcnt_4_=LVCMOS18,pin,1,-;
-pcnt_3_=LVCMOS18,pin,1,-;
-pcnt_2_=LVCMOS18,pin,0,-;
-pcnt_1_=LVCMOS18,pin,1,-;
-pcnt_0_=LVCMOS18,pin,1,-;
+mcu_clko=LVCMOS18,pin,-,-;
+rxd_1v8=LVCMOS18,pin,-,-;
+adc_dclk=LVCMOS18,pin,-,-;
+cpld_seln=LVCMOS18,pin,-,-;
+pps_rstn=LVCMOS18,pin,-,-;
+adc_drdyn=LVCMOS18,pin,-,-;
+spi_miso=LVCMOS18,pin,-,-;
+cpld_clk=LVCMOS18,pin,-,-;
+cpld_sdi=LVCMOS18,pin,-,-;
+cpld_sdo=LVCMOS18,pin,0,-;
+adc_clk1=LVCMOS18,pin,0,-;
+adc_sel1=LVCMOS18,pin,0,-;
+adc_sel0=LVCMOS18,pin,0,-;
+adc_clk0=LVCMOS18,pin,0,-;
+spi_clk=LVCMOS18,pin,1,-;
+spi_mosi=LVCMOS18,pin,1,-;
+freq_clka=LVCMOS18,pin,1,-;
 
 [PLL ASSIGNMENTS]
 
@@ -173,21 +178,23 @@ layer=OFF;
 Default=FAST;
 
 [PULLUP]
+UP=mcu_clko,adc_sel0,adc_clk0,rxd_1v8,adc_dclk,cpld_sdo,cpld_sdi,cpld_seln,adc_clk1,pps_rstn,cpld_rstn,adc_sel1,adc_drdyn,spi_clk,spi_mosi,spi_miso,cpld_clk,freq_clka;
 Default=DOWN;
 
 [FITTER RESULTS]
-I/O_pin_util = 68;
-I/O_pin = 22;
+I/O_pin_util = 40;
+I/O_pin = 13;
 Logic_PT_util = 15;
 Logic_PT = 48;
-Occupied_MC_util = 42;
-Occupied_MC = 27;
+Occupied_MC_util = 53;
+Occupied_MC = 34;
 Occupied_PT_util = 23;
-Occupied_PT = 79;
-GLB_input_util = 40;
-GLB_input = 59;
+Occupied_PT = 77;
+GLB_input_util = 38;
+GLB_input = 55;
 
 [TIMING CONSTRAINTS]
+layer=OFF;
 
 [FITTER REPORT FORMAT]
 Fitter_Options = Yes;

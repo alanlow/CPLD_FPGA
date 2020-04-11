@@ -1,4 +1,4 @@
-#$ DATE Fri Apr 10 15:54:46 2020
+#$ DATE Sat Apr 11 15:13:58 2020
 #$ TOOL EDIF2BLIF version IspLever 1.0 
 #$ MODULE pps_count
 #$ PINS 26 pps nclr pcnt_23_ pcnt_22_ pcnt_21_ pcnt_20_ pcnt_19_ pcnt_18_ pcnt_17_ pcnt_16_ pcnt_15_ pcnt_14_ pcnt_13_ pcnt_12_ pcnt_11_ pcnt_10_ pcnt_9_ pcnt_8_ pcnt_7_ pcnt_6_ pcnt_5_ pcnt_4_ pcnt_3_ pcnt_2_ pcnt_1_ pcnt_0_

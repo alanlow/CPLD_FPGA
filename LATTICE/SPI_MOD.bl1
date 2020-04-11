@@ -1,0 +1,601 @@
+#$ TOOL ispLEVER Classic 2.0.00.17.20.15
+#$ DATE Sat Apr 11 13:53:47 2020
+#$ MODULE spi_mod
+#$ PINS 32 pcnt_23_ nclr sdi dclk nsel miso sdo sclk mosi pcnt_22_ pcnt_21_ pcnt_20_ \
+#  pcnt_19_ pcnt_18_ pcnt_17_ pcnt_16_ pcnt_15_ pcnt_14_ pcnt_13_ pcnt_12_ pcnt_11_ \
+#  pcnt_10_ pcnt_9_ pcnt_8_ pcnt_7_ pcnt_6_ pcnt_5_ pcnt_4_ pcnt_3_ pcnt_2_ pcnt_1_ pcnt_0_
+#$ NODES 104 pcnt_c_23 pcnt_c_22 pcnt_c_21 pcnt_c_20 pcnt_c_19 pcnt_c_18 pcnt_c_17 \
+#  pcnt_c_16 pcnt_c_15 pcnt_c_14 pcnt_c_13 pcnt_c_12 pcnt_c_11 pcnt_c_10 pcnt_c_9 \
+#  pcnt_c_8 pcnt_c_7 pcnt_c_6 pcnt_c_5 pcnt_c_4 pcnt_c_3 pcnt_c_2 pcnt_c_1 nclr_c mosi_c_c \
+#  sclk_c_c nsel_c miso_c sdo_c spi_cntr_vPcnt_23__61 spi_cntr_vPcnt_22__65 \
+#  spi_cntr_vPcnt_21__69 spi_cntr_vPcnt_20__73 spi_cntr_vPcnt_19__77 \
+#  spi_cntr_vPcnt_18__81 spi_cntr_vPcnt_17__85 spi_cntr_vPcnt_16__89 \
+#  spi_cntr_vPcnt_15__93 spi_cntr_vPcnt_14__97 spi_cntr_vPcnt_13__101 \
+#  spi_cntr_vPcnt_12__105 spi_cntr_vPcnt_11__109 spi_cntr_vPcnt_10__113 \
+#  spi_cntr_vPcnt_9__117 spi_cntr_vPcnt_8__121 spi_cntr_vPcnt_7__125 \
+#  spi_cntr_vPcnt_6__129 spi_cntr_vPcnt_5__133 spi_cntr_vPcnt_4__137 \
+#  spi_cntr_vPcnt_3__141 spi_cntr_vPcnt_2__145 spi_cntr_vPcnt_1__149 i195 n295 n292 \
+#  n289 n286 nclr_N_8 dclk_N_5 nsel_N_3 n283 n330 n327 n324 n321 n318 n315 n280 n312 n309 n306 \
+#  n303 n300 n297 n277 n294 n291 n288 n285 n282 n279 n274 n276 n273 n270 n267 n271 n268 n265 n264 \
+#  n298 n301 n304 n307 n310 n313 n316 n319 n322 n325 n328 n334 n331 n333
+.model spi_mod
+.inputs pcnt_23_.BLIF nclr.BLIF sdi.BLIF dclk.BLIF nsel.BLIF miso.BLIF \
+pcnt_22_.BLIF pcnt_21_.BLIF pcnt_20_.BLIF pcnt_19_.BLIF pcnt_18_.BLIF \
+pcnt_17_.BLIF pcnt_16_.BLIF pcnt_15_.BLIF pcnt_14_.BLIF pcnt_13_.BLIF \
+pcnt_12_.BLIF pcnt_11_.BLIF pcnt_10_.BLIF pcnt_9_.BLIF pcnt_8_.BLIF \
+pcnt_7_.BLIF pcnt_6_.BLIF pcnt_5_.BLIF pcnt_4_.BLIF pcnt_3_.BLIF pcnt_2_.BLIF \
+pcnt_1_.BLIF pcnt_0_.BLIF pcnt_c_23.BLIF pcnt_c_22.BLIF pcnt_c_21.BLIF \
+pcnt_c_20.BLIF pcnt_c_19.BLIF pcnt_c_18.BLIF pcnt_c_17.BLIF pcnt_c_16.BLIF \
+pcnt_c_15.BLIF pcnt_c_14.BLIF pcnt_c_13.BLIF pcnt_c_12.BLIF pcnt_c_11.BLIF \
+pcnt_c_10.BLIF pcnt_c_9.BLIF pcnt_c_8.BLIF pcnt_c_7.BLIF pcnt_c_6.BLIF \
+pcnt_c_5.BLIF pcnt_c_4.BLIF pcnt_c_3.BLIF pcnt_c_2.BLIF pcnt_c_1.BLIF \
+nclr_c.BLIF mosi_c_c.BLIF sclk_c_c.BLIF nsel_c.BLIF miso_c.BLIF sdo_c.BLIF \
+spi_cntr_vPcnt_23__61.BLIF spi_cntr_vPcnt_22__65.BLIF \
+spi_cntr_vPcnt_21__69.BLIF spi_cntr_vPcnt_20__73.BLIF \
+spi_cntr_vPcnt_19__77.BLIF spi_cntr_vPcnt_18__81.BLIF \
+spi_cntr_vPcnt_17__85.BLIF spi_cntr_vPcnt_16__89.BLIF \
+spi_cntr_vPcnt_15__93.BLIF spi_cntr_vPcnt_14__97.BLIF \
+spi_cntr_vPcnt_13__101.BLIF spi_cntr_vPcnt_12__105.BLIF \
+spi_cntr_vPcnt_11__109.BLIF spi_cntr_vPcnt_10__113.BLIF \
+spi_cntr_vPcnt_9__117.BLIF spi_cntr_vPcnt_8__121.BLIF \
+spi_cntr_vPcnt_7__125.BLIF spi_cntr_vPcnt_6__129.BLIF \
+spi_cntr_vPcnt_5__133.BLIF spi_cntr_vPcnt_4__137.BLIF \
+spi_cntr_vPcnt_3__141.BLIF spi_cntr_vPcnt_2__145.BLIF \
+spi_cntr_vPcnt_1__149.BLIF i195.BLIF n295.BLIF n292.BLIF n289.BLIF n286.BLIF \
+nclr_N_8.BLIF dclk_N_5.BLIF nsel_N_3.BLIF n283.BLIF n330.BLIF n327.BLIF \
+n324.BLIF n321.BLIF n318.BLIF n315.BLIF n280.BLIF n312.BLIF n309.BLIF \
+n306.BLIF n303.BLIF n300.BLIF n297.BLIF n277.BLIF n294.BLIF n291.BLIF \
+n288.BLIF n285.BLIF n282.BLIF n279.BLIF n274.BLIF n276.BLIF n273.BLIF \
+n270.BLIF n267.BLIF n271.BLIF n268.BLIF n265.BLIF n264.BLIF n298.BLIF \
+n301.BLIF n304.BLIF n307.BLIF n310.BLIF n313.BLIF n316.BLIF n319.BLIF \
+n322.BLIF n325.BLIF n328.BLIF n334.BLIF n331.BLIF n333.BLIF
+.outputs sdo sclk mosi spi_cntr_vPcnt_3__141.D spi_cntr_vPcnt_3__141.C \
+spi_cntr_vPcnt_3__141.CE spi_cntr_vPcnt_3__141.AR spi_cntr_vPcnt_3__141.AP \
+spi_cntr_vPcnt_4__137.D spi_cntr_vPcnt_4__137.C spi_cntr_vPcnt_4__137.CE \
+spi_cntr_vPcnt_4__137.AR spi_cntr_vPcnt_4__137.AP spi_cntr_vPcnt_5__133.D \
+spi_cntr_vPcnt_5__133.C spi_cntr_vPcnt_5__133.CE spi_cntr_vPcnt_5__133.AR \
+spi_cntr_vPcnt_5__133.AP spi_cntr_vPcnt_6__129.D spi_cntr_vPcnt_6__129.C \
+spi_cntr_vPcnt_6__129.CE spi_cntr_vPcnt_6__129.AR spi_cntr_vPcnt_6__129.AP \
+spi_cntr_vPcnt_7__125.D spi_cntr_vPcnt_7__125.C spi_cntr_vPcnt_7__125.CE \
+spi_cntr_vPcnt_7__125.AR spi_cntr_vPcnt_7__125.AP spi_cntr_vPcnt_8__121.D \
+spi_cntr_vPcnt_8__121.C spi_cntr_vPcnt_8__121.CE spi_cntr_vPcnt_8__121.AR \
+spi_cntr_vPcnt_8__121.AP spi_cntr_vPcnt_9__117.D spi_cntr_vPcnt_9__117.C \
+spi_cntr_vPcnt_9__117.CE spi_cntr_vPcnt_9__117.AR spi_cntr_vPcnt_9__117.AP \
+spi_cntr_vPcnt_10__113.D spi_cntr_vPcnt_10__113.C spi_cntr_vPcnt_10__113.CE \
+spi_cntr_vPcnt_10__113.AR spi_cntr_vPcnt_10__113.AP spi_cntr_vPcnt_11__109.D \
+spi_cntr_vPcnt_11__109.C spi_cntr_vPcnt_11__109.CE spi_cntr_vPcnt_11__109.AR \
+spi_cntr_vPcnt_11__109.AP spi_cntr_vPcnt_12__105.D spi_cntr_vPcnt_12__105.C \
+spi_cntr_vPcnt_12__105.CE spi_cntr_vPcnt_12__105.AR spi_cntr_vPcnt_12__105.AP \
+spi_cntr_vPcnt_13__101.D spi_cntr_vPcnt_13__101.C spi_cntr_vPcnt_13__101.CE \
+spi_cntr_vPcnt_13__101.AR spi_cntr_vPcnt_13__101.AP spi_cntr_vPcnt_14__97.D \
+spi_cntr_vPcnt_14__97.C spi_cntr_vPcnt_14__97.CE spi_cntr_vPcnt_14__97.AR \
+spi_cntr_vPcnt_14__97.AP spi_cntr_vPcnt_15__93.D spi_cntr_vPcnt_15__93.C \
+spi_cntr_vPcnt_15__93.CE spi_cntr_vPcnt_15__93.AR spi_cntr_vPcnt_15__93.AP \
+spi_cntr_vPcnt_16__89.D spi_cntr_vPcnt_16__89.C spi_cntr_vPcnt_16__89.CE \
+spi_cntr_vPcnt_16__89.AR spi_cntr_vPcnt_16__89.AP spi_cntr_vPcnt_17__85.D \
+spi_cntr_vPcnt_17__85.C spi_cntr_vPcnt_17__85.CE spi_cntr_vPcnt_17__85.AR \
+spi_cntr_vPcnt_17__85.AP spi_cntr_vPcnt_18__81.D spi_cntr_vPcnt_18__81.C \
+spi_cntr_vPcnt_18__81.CE spi_cntr_vPcnt_18__81.AR spi_cntr_vPcnt_18__81.AP \
+spi_cntr_vPcnt_19__77.D spi_cntr_vPcnt_19__77.C spi_cntr_vPcnt_19__77.CE \
+spi_cntr_vPcnt_19__77.AR spi_cntr_vPcnt_19__77.AP spi_cntr_vPcnt_20__73.D \
+spi_cntr_vPcnt_20__73.C spi_cntr_vPcnt_20__73.CE spi_cntr_vPcnt_20__73.AR \
+spi_cntr_vPcnt_20__73.AP spi_cntr_vPcnt_21__69.D spi_cntr_vPcnt_21__69.C \
+spi_cntr_vPcnt_21__69.CE spi_cntr_vPcnt_21__69.AR spi_cntr_vPcnt_21__69.AP \
+spi_cntr_vPcnt_22__65.D spi_cntr_vPcnt_22__65.C spi_cntr_vPcnt_22__65.CE \
+spi_cntr_vPcnt_22__65.AR spi_cntr_vPcnt_22__65.AP spi_cntr_vPcnt_23__61.D \
+spi_cntr_vPcnt_23__61.C spi_cntr_vPcnt_23__61.CE spi_cntr_vPcnt_23__61.AR \
+spi_cntr_vPcnt_23__61.AP spi_cntr_vPcnt_1__149.D spi_cntr_vPcnt_1__149.C \
+spi_cntr_vPcnt_1__149.CE spi_cntr_vPcnt_1__149.AR spi_cntr_vPcnt_1__149.AP \
+i195.D i195.LH spi_cntr_vPcnt_2__145.D spi_cntr_vPcnt_2__145.C \
+spi_cntr_vPcnt_2__145.CE spi_cntr_vPcnt_2__145.AR spi_cntr_vPcnt_2__145.AP \
+pcnt_c_23 pcnt_c_22 pcnt_c_21 pcnt_c_20 pcnt_c_19 pcnt_c_18 pcnt_c_17 \
+pcnt_c_16 pcnt_c_15 pcnt_c_14 pcnt_c_13 pcnt_c_12 pcnt_c_11 pcnt_c_10 pcnt_c_9 \
+pcnt_c_8 pcnt_c_7 pcnt_c_6 pcnt_c_5 pcnt_c_4 pcnt_c_3 pcnt_c_2 pcnt_c_1 nclr_c \
+mosi_c_c sclk_c_c nsel_c miso_c sdo_c n295 n292 n289 n286 nclr_N_8 dclk_N_5 \
+nsel_N_3 n283 n330 n327 n324 n321 n318 n315 n280 n312 n309 n306 n303 n300 n297 \
+n277 n294 n291 n288 n285 n282 n279 n274 n276 n273 n270 n267 n271 n268 n265 \
+n264 n298 n301 n304 n307 n310 n313 n316 n319 n322 n325 n328 n334 n331 n333
+.names n325.BLIF n324.BLIF spi_cntr_vPcnt_3__141.AR
+11 1
+.names pcnt_c_3.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_3__141.AP
+11 1
+.names n322.BLIF n321.BLIF spi_cntr_vPcnt_4__137.AR
+11 1
+.names pcnt_c_4.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_4__137.AP
+11 1
+.names n319.BLIF n318.BLIF spi_cntr_vPcnt_5__133.AR
+11 1
+.names pcnt_c_5.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_5__133.AP
+11 1
+.names n316.BLIF n315.BLIF spi_cntr_vPcnt_6__129.AR
+11 1
+.names pcnt_c_6.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_6__129.AP
+11 1
+.names n313.BLIF n312.BLIF spi_cntr_vPcnt_7__125.AR
+11 1
+.names pcnt_c_7.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_7__125.AP
+11 1
+.names n310.BLIF n309.BLIF spi_cntr_vPcnt_8__121.AR
+11 1
+.names pcnt_c_8.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_8__121.AP
+11 1
+.names n307.BLIF n306.BLIF spi_cntr_vPcnt_9__117.AR
+11 1
+.names pcnt_c_9.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_9__117.AP
+11 1
+.names n304.BLIF n303.BLIF spi_cntr_vPcnt_10__113.AR
+11 1
+.names pcnt_c_10.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_10__113.AP
+11 1
+.names n301.BLIF n300.BLIF spi_cntr_vPcnt_11__109.AR
+11 1
+.names pcnt_c_11.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_11__109.AP
+11 1
+.names n298.BLIF n297.BLIF spi_cntr_vPcnt_12__105.AR
+11 1
+.names pcnt_c_12.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_12__105.AP
+11 1
+.names n295.BLIF n294.BLIF spi_cntr_vPcnt_13__101.AR
+11 1
+.names pcnt_c_13.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_13__101.AP
+11 1
+.names n292.BLIF n291.BLIF spi_cntr_vPcnt_14__97.AR
+11 1
+.names pcnt_c_14.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_14__97.AP
+11 1
+.names n289.BLIF n288.BLIF spi_cntr_vPcnt_15__93.AR
+11 1
+.names pcnt_c_15.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_15__93.AP
+11 1
+.names n286.BLIF n285.BLIF spi_cntr_vPcnt_16__89.AR
+11 1
+.names pcnt_c_16.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_16__89.AP
+11 1
+.names n283.BLIF n282.BLIF spi_cntr_vPcnt_17__85.AR
+11 1
+.names pcnt_c_17.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_17__85.AP
+11 1
+.names n280.BLIF n279.BLIF spi_cntr_vPcnt_18__81.AR
+11 1
+.names pcnt_c_18.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_18__81.AP
+11 1
+.names n277.BLIF n276.BLIF spi_cntr_vPcnt_19__77.AR
+11 1
+.names pcnt_c_19.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_19__77.AP
+11 1
+.names n274.BLIF n273.BLIF spi_cntr_vPcnt_20__73.AR
+11 1
+.names pcnt_c_20.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_20__73.AP
+11 1
+.names n271.BLIF n270.BLIF spi_cntr_vPcnt_21__69.AR
+11 1
+.names pcnt_c_21.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_21__69.AP
+11 1
+.names n268.BLIF n267.BLIF spi_cntr_vPcnt_22__65.AR
+11 1
+.names pcnt_c_22.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_22__65.AP
+11 1
+.names n265.BLIF n264.BLIF spi_cntr_vPcnt_23__61.AR
+11 1
+.names pcnt_c_23.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_23__61.AP
+11 1
+.names n331.BLIF n330.BLIF spi_cntr_vPcnt_1__149.AR
+11 1
+.names pcnt_c_1.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_1__149.AP
+11 1
+.names n328.BLIF n327.BLIF spi_cntr_vPcnt_2__145.AR
+11 1
+.names pcnt_c_2.BLIF nclr_N_8.BLIF spi_cntr_vPcnt_2__145.AP
+11 1
+.names n334.BLIF n333.BLIF sdo_c
+1- 1
+-1 1
+.names pcnt_c_13.BLIF n295
+0 1
+.names pcnt_c_14.BLIF n292
+0 1
+.names pcnt_c_15.BLIF n289
+0 1
+.names pcnt_c_16.BLIF n286
+0 1
+.names nclr_c.BLIF nclr_N_8
+0 1
+.names sclk_c_c.BLIF dclk_N_5
+0 1
+.names nsel_c.BLIF nsel_N_3
+0 1
+.names pcnt_c_17.BLIF n283
+0 1
+.names nclr_c.BLIF n330
+0 1
+.names nclr_c.BLIF n327
+0 1
+.names nclr_c.BLIF n324
+0 1
+.names nclr_c.BLIF n321
+0 1
+.names nclr_c.BLIF n318
+0 1
+.names nclr_c.BLIF n315
+0 1
+.names pcnt_c_18.BLIF n280
+0 1
+.names nclr_c.BLIF n312
+0 1
+.names nclr_c.BLIF n309
+0 1
+.names nclr_c.BLIF n306
+0 1
+.names nclr_c.BLIF n303
+0 1
+.names nclr_c.BLIF n300
+0 1
+.names nclr_c.BLIF n297
+0 1
+.names pcnt_c_19.BLIF n277
+0 1
+.names nclr_c.BLIF n294
+0 1
+.names nclr_c.BLIF n291
+0 1
+.names nclr_c.BLIF n288
+0 1
+.names nclr_c.BLIF n285
+0 1
+.names nclr_c.BLIF n282
+0 1
+.names nclr_c.BLIF n279
+0 1
+.names pcnt_c_20.BLIF n274
+0 1
+.names nclr_c.BLIF n276
+0 1
+.names nclr_c.BLIF n273
+0 1
+.names nclr_c.BLIF n270
+0 1
+.names nclr_c.BLIF n267
+0 1
+.names pcnt_c_21.BLIF n271
+0 1
+.names pcnt_c_22.BLIF n268
+0 1
+.names pcnt_c_23.BLIF n265
+0 1
+.names nclr_c.BLIF n264
+0 1
+.names pcnt_c_12.BLIF n298
+0 1
+.names pcnt_c_11.BLIF n301
+0 1
+.names pcnt_c_10.BLIF n304
+0 1
+.names pcnt_c_9.BLIF n307
+0 1
+.names pcnt_c_8.BLIF n310
+0 1
+.names pcnt_c_7.BLIF n313
+0 1
+.names pcnt_c_6.BLIF n316
+0 1
+.names pcnt_c_5.BLIF n319
+0 1
+.names pcnt_c_4.BLIF n322
+0 1
+.names pcnt_c_3.BLIF n325
+0 1
+.names pcnt_c_2.BLIF n328
+0 1
+.names nsel_c.BLIF miso_c.BLIF n334
+11 1
+.names pcnt_c_1.BLIF n331
+0 1
+.names nsel_N_3.BLIF spi_cntr_vPcnt_23__61.BLIF n333
+11 1
+.names sdo_c.BLIF sdo
+1 1
+0 0
+.names sclk_c_c.BLIF sclk
+1 1
+0 0
+.names mosi_c_c.BLIF mosi
+1 1
+0 0
+.names spi_cntr_vPcnt_2__145.BLIF spi_cntr_vPcnt_3__141.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_3__141.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_3__141.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_3__141.BLIF spi_cntr_vPcnt_4__137.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_4__137.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_4__137.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_4__137.BLIF spi_cntr_vPcnt_5__133.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_5__133.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_5__133.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_5__133.BLIF spi_cntr_vPcnt_6__129.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_6__129.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_6__129.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_6__129.BLIF spi_cntr_vPcnt_7__125.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_7__125.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_7__125.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_7__125.BLIF spi_cntr_vPcnt_8__121.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_8__121.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_8__121.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_8__121.BLIF spi_cntr_vPcnt_9__117.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_9__117.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_9__117.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_9__117.BLIF spi_cntr_vPcnt_10__113.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_10__113.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_10__113.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_10__113.BLIF spi_cntr_vPcnt_11__109.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_11__109.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_11__109.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_11__109.BLIF spi_cntr_vPcnt_12__105.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_12__105.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_12__105.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_12__105.BLIF spi_cntr_vPcnt_13__101.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_13__101.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_13__101.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_13__101.BLIF spi_cntr_vPcnt_14__97.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_14__97.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_14__97.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_14__97.BLIF spi_cntr_vPcnt_15__93.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_15__93.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_15__93.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_15__93.BLIF spi_cntr_vPcnt_16__89.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_16__89.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_16__89.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_16__89.BLIF spi_cntr_vPcnt_17__85.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_17__85.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_17__85.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_17__85.BLIF spi_cntr_vPcnt_18__81.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_18__81.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_18__81.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_18__81.BLIF spi_cntr_vPcnt_19__77.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_19__77.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_19__77.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_19__77.BLIF spi_cntr_vPcnt_20__73.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_20__73.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_20__73.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_20__73.BLIF spi_cntr_vPcnt_21__69.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_21__69.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_21__69.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_21__69.BLIF spi_cntr_vPcnt_22__65.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_22__65.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_22__65.CE
+1 1
+0 0
+.names spi_cntr_vPcnt_22__65.BLIF spi_cntr_vPcnt_23__61.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_23__61.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_23__61.CE
+1 1
+0 0
+.names i195.BLIF spi_cntr_vPcnt_1__149.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_1__149.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_1__149.CE
+1 1
+0 0
+.names pcnt_0_.BLIF i195.D
+1 1
+0 0
+.names nclr_N_8.BLIF i195.LH
+1 1
+0 0
+.names spi_cntr_vPcnt_1__149.BLIF spi_cntr_vPcnt_2__145.D
+1 1
+0 0
+.names dclk_N_5.BLIF spi_cntr_vPcnt_2__145.C
+1 1
+0 0
+.names nsel_N_3.BLIF spi_cntr_vPcnt_2__145.CE
+1 1
+0 0
+.names pcnt_23_.BLIF pcnt_c_23
+1 1
+0 0
+.names pcnt_22_.BLIF pcnt_c_22
+1 1
+0 0
+.names pcnt_21_.BLIF pcnt_c_21
+1 1
+0 0
+.names pcnt_20_.BLIF pcnt_c_20
+1 1
+0 0
+.names pcnt_19_.BLIF pcnt_c_19
+1 1
+0 0
+.names pcnt_18_.BLIF pcnt_c_18
+1 1
+0 0
+.names pcnt_17_.BLIF pcnt_c_17
+1 1
+0 0
+.names pcnt_16_.BLIF pcnt_c_16
+1 1
+0 0
+.names pcnt_15_.BLIF pcnt_c_15
+1 1
+0 0
+.names pcnt_14_.BLIF pcnt_c_14
+1 1
+0 0
+.names pcnt_13_.BLIF pcnt_c_13
+1 1
+0 0
+.names pcnt_12_.BLIF pcnt_c_12
+1 1
+0 0
+.names pcnt_11_.BLIF pcnt_c_11
+1 1
+0 0
+.names pcnt_10_.BLIF pcnt_c_10
+1 1
+0 0
+.names pcnt_9_.BLIF pcnt_c_9
+1 1
+0 0
+.names pcnt_8_.BLIF pcnt_c_8
+1 1
+0 0
+.names pcnt_7_.BLIF pcnt_c_7
+1 1
+0 0
+.names pcnt_6_.BLIF pcnt_c_6
+1 1
+0 0
+.names pcnt_5_.BLIF pcnt_c_5
+1 1
+0 0
+.names pcnt_4_.BLIF pcnt_c_4
+1 1
+0 0
+.names pcnt_3_.BLIF pcnt_c_3
+1 1
+0 0
+.names pcnt_2_.BLIF pcnt_c_2
+1 1
+0 0
+.names pcnt_1_.BLIF pcnt_c_1
+1 1
+0 0
+.names nclr.BLIF nclr_c
+1 1
+0 0
+.names sdi.BLIF mosi_c_c
+1 1
+0 0
+.names dclk.BLIF sclk_c_c
+1 1
+0 0
+.names nsel.BLIF nsel_c
+1 1
+0 0
+.names miso.BLIF miso_c
+1 1
+0 0
+.end

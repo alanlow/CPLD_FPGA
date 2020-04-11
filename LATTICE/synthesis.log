@@ -3,10 +3,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Apr 10 15:54:45 2020
+Sat Apr 11 22:00:48 2020
 
 
-Command Line:  C:\ispLEVER_Classic2_0\lse/bin/nt/synthesis -f PPS_COUNT.synproj 
+Command Line:  C:\ispLEVER_Classic2_0\lse/bin/nt/synthesis -f KEPLER_TL.synproj 
 
 Synthesis options:
 The -a option is ispMACH400ZE.
@@ -28,7 +28,7 @@ Using default performance grade 6.
                                                           
 
 Optimization goal = Area
-Top-level module name = PPS_COUNT.
+Top-level module name = KEPLER_TL.
 WARNING - synthesis: Ignoring Frequency option in Area Mode. Setting to default frequency of 1.0 MHz.
 WARNING - synthesis: Ignoring SDC constraints in Area Mode!
 Target frequency = 1.000000 MHz.
@@ -39,12 +39,15 @@ Use IO Insertion = TRUE
 Resource Sharing = TRUE
 Propagate Constants = TRUE
 Remove Duplicate Registers = TRUE
-Output EDIF file name = PPS_COUNT.edi.
+Output EDIF file name = KEPLER_TL.edi.
 WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
 The -comp option is FALSE.
 The -syn option is FALSE.
 VHDL library = work
+VHDL design file = spi_mod.vhd
 VHDL design file = pps_count.vhd
+VHDL design file = adc_buf.vhd
+VHDL design file = kepler_tl.vhd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is not used.
 Hardtimer checking is enabled (default). The -dt option is not used.
@@ -55,58 +58,94 @@ Analyzing Verilog file C:/ispLEVER_Classic2_0/lse/userware/NT/SYNTHESIS_HEADERS/
 Compile design.
 Compile Design Begin
 INFO - synthesis: The default VHDL library search path is now "C:/Users/alanlow/Documents/GitHub/CPLD_FPGA/LATTICE". VHDL-1504
+Analyzing VHDL file spi_mod.vhd. VHDL-1481
+INFO - synthesis: spi_mod.vhd(7): analyzing entity spi_mod. VHDL-1012
+INFO - synthesis: spi_mod.vhd(15): analyzing architecture spi_cpld. VHDL-1010
 Analyzing VHDL file pps_count.vhd. VHDL-1481
 INFO - synthesis: pps_count.vhd(6): analyzing entity pps_count. VHDL-1012
 INFO - synthesis: pps_count.vhd(14): analyzing architecture up_count. VHDL-1010
-unit PPS_COUNT is not yet analyzed. VHDL-1485
-pps_count.vhd(6): executing PPS_COUNT(UP_COUNT)
+Analyzing VHDL file adc_buf.vhd. VHDL-1481
+INFO - synthesis: adc_buf.vhd(6): analyzing entity adc_buf. VHDL-1012
+INFO - synthesis: adc_buf.vhd(16): analyzing architecture buff. VHDL-1010
+Analyzing VHDL file kepler_tl.vhd. VHDL-1481
+INFO - synthesis: kepler_tl.vhd(6): analyzing entity kepler_tl. VHDL-1012
+INFO - synthesis: kepler_tl.vhd(30): analyzing architecture top_level. VHDL-1010
+unit KEPLER_TL is not yet analyzed. VHDL-1485
+kepler_tl.vhd(6): executing KEPLER_TL(TOP_LEVEL)
 
-WARNING - synthesis: pps_count.vhd(11): replacing existing netlist PPS_COUNT(UP_COUNT). VHDL-1205
-Top module name (VHDL): PPS_COUNT
+WARNING - synthesis: kepler_tl.vhd(28): replacing existing netlist KEPLER_TL(TOP_LEVEL). VHDL-1205
+Top module name (VHDL): KEPLER_TL
 Loading NGL library 'C:/ispLEVER_Classic2_0/lse/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/ispLEVER_Classic2_0/lse/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c640.nph' in environment: C:/ispLEVER_Classic2_0/lse.
 Package Status:                     Final          Version 1.36.
-Top-level module name = PPS_COUNT.
+Top-level module name = KEPLER_TL.
+WARNING - synthesis: Initial value found on net pps_reg[23] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[22] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[21] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[20] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[19] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[18] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[17] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[16] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[15] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[14] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[13] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[12] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[11] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[10] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[9] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[8] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[7] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[6] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[5] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[4] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[3] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[2] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net pps_reg[0] will be ignored due to unrecognized driver type
 
 
 
 Applying 1.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
-Results of NGD DRC are available in PPS_COUNT_drc.log.
+Results of NGD DRC are available in KEPLER_TL_drc.log.
 
-################### Begin Area Report (PPS_COUNT)######################
-Number of register bits => 24 of 880 (2 % )
-AND2 => 22
+################### Begin Area Report (KEPLER_TL)######################
+Number of register bits => 25 of 880 (2 % )
+AND2 => 24
+DFF => 1
 DFFR => 24
 GND => 1
-IBUF => 2
-INV => 1
-OBUF => 24
+IBUF => 10
+INV => 2
+OBUF => 8
+OR2 => 1
 VCC => 1
 XOR2 => 23
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 1
-  Net : pps_c, loads : 24
+Number of Clocks: 2
+  Net : rxd_1v8_c, loads : 24
+  Net : nsel_N_28, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : nclr_c, loads : 24
-  Net : pcnt_c_0, loads : 4
-  Net : pcnt_c_22, loads : 3
-  Net : pcnt_c_21, loads : 3
-  Net : pcnt_c_20, loads : 3
-  Net : pcnt_c_19, loads : 3
-  Net : pcnt_c_18, loads : 3
-  Net : pcnt_c_17, loads : 3
-  Net : pcnt_c_16, loads : 3
-  Net : pcnt_c_15, loads : 3
+  Net : pps_rstn_c, loads : 24
+  Net : adc_clk0_c_c, loads : 2
+  Net : cpld_seln_c, loads : 2
+  Net : adc_sel0_c_c, loads : 2
+  Net : n165, loads : 2
+  Net : n172, loads : 2
+  Net : pps_counter/n24, loads : 2
+  Net : n151, loads : 2
+  Net : n109, loads : 2
+  Net : n158, loads : 2
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -116,7 +155,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 1000.000000 -name  |             |             |
-clk0 [get_nets pps_c]                   |            -|            -|     0  
+clk1 [get_nets nsel_N_28]               |            -|            -|     0  
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk0 [get_nets rxd_1v8_c]               |            -|            -|     0  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -124,8 +166,8 @@ clk0 [get_nets pps_c]                   |            -|            -|     0
 All constraints were met.
 
 
-Peak Memory Usage: 39.461  MB
+Peak Memory Usage: 39.699  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.469  secs
+Elapsed CPU time for LSE flow : 0.578  secs
 --------------------------------------------------------------

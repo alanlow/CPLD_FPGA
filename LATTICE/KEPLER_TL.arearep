@@ -1,0 +1,28 @@
+----------------------------------------------------------------------
+Report for cell KEPLER_TL.TECH
+Register bits:  25 of 880 (2.841%)
+I/O cells:      18
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                DFF         1          100.0
+                               DFFR        24          100.0
+                               IBUF        10          100.0
+                               OBUF         8          100.0
+SUB MODULES
+                          PPS_COUNT         1
+                            SPI_MOD         1
+                              TOTAL        45
+----------------------------------------------------------------------
+Report for cell SPI_MOD.v1
+Instance Path : spi_module
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                DFF         1          100.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell PPS_COUNT.v1
+Instance Path : pps_counter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               DFFR        24          100.0
+                              TOTAL        24

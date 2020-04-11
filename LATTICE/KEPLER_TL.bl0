@@ -1,0 +1,368 @@
+#$ DATE Sat Apr 11 22:00:50 2020
+#$ TOOL EDIF2BLIF version IspLever 1.0 
+#$ MODULE kepler_tl
+#$ PINS 18 mcu_clko rxd_1v8 adc_dclk cpld_seln pps_rstn cpld_rstn adc_drdyn spi_miso cpld_clk cpld_sdi cpld_sdo adc_clk1 adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi freq_clka
+#$ NODES 83 freq_clka_c_c rxd_1v8_c adc_clk0_c_c cpld_seln_c pps_rstn_c adc_sel0_c_c spi_miso_c spi_clk_c_c spi_mosi_c_c cpld_sdo_c \
+#  n165 n172 spi_module__spi_cntr_vPcnt_i0 n259 pps_counter__temp_pcnt_5__i23 pps_counter__temp_pcnt_5__i0 pps_counter__temp_pcnt_5__i1 pps_counter__temp_pcnt_5__i2 pps_counter__temp_pcnt_5__i3 pps_counter__temp_pcnt_5__i4 \
+#  pps_counter__temp_pcnt_5__i5 pps_counter__temp_pcnt_5__i6 pps_counter__temp_pcnt_5__i7 pps_counter__temp_pcnt_5__i8 pps_counter__temp_pcnt_5__i9 pps_counter__temp_pcnt_5__i10 pps_counter__temp_pcnt_5__i11 pps_counter__temp_pcnt_5__i12 pps_counter__temp_pcnt_5__i13 pps_counter__temp_pcnt_5__i14 \
+#  pps_counter__temp_pcnt_5__i15 pps_counter__temp_pcnt_5__i16 pps_counter__temp_pcnt_5__i17 pps_counter__temp_pcnt_5__i18 pps_counter__temp_pcnt_5__i19 pps_counter__temp_pcnt_5__i20 pps_counter__temp_pcnt_5__i21 pps_counter__temp_pcnt_5__i22 n151 n109 \
+#  nsel_N_28 n158 n179 n186 n193 n200 n207 n214 n221 n228 \
+#  n235 n242 n249 n116 n123 n260 n130 n102 n137 n144 \
+#  i188 i181 i174 i167 i160 i153 i146 i139 i132 i125 \
+#  i118 i111 i104 i97 i90 i83 i76 i69 i62 i55 \
+#  i48 i41 i34 
+.model kepler_tl
+.inputs mcu_clko.BLIF rxd_1v8.BLIF adc_dclk.BLIF cpld_seln.BLIF pps_rstn.BLIF adc_drdyn.BLIF spi_miso.BLIF cpld_clk.BLIF cpld_sdi.BLIF \
+  freq_clka_c_c.BLIF rxd_1v8_c.BLIF adc_clk0_c_c.BLIF cpld_seln_c.BLIF pps_rstn_c.BLIF adc_sel0_c_c.BLIF spi_miso_c.BLIF spi_clk_c_c.BLIF spi_mosi_c_c.BLIF \
+  cpld_sdo_c.BLIF n165.BLIF n172.BLIF spi_module__spi_cntr_vPcnt_i0.BLIF n259.BLIF pps_counter__temp_pcnt_5__i23.BLIF pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF pps_counter__temp_pcnt_5__i2.BLIF \
+  pps_counter__temp_pcnt_5__i3.BLIF pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+  pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i17.BLIF pps_counter__temp_pcnt_5__i18.BLIF pps_counter__temp_pcnt_5__i19.BLIF pps_counter__temp_pcnt_5__i20.BLIF \
+  pps_counter__temp_pcnt_5__i21.BLIF pps_counter__temp_pcnt_5__i22.BLIF n151.BLIF n109.BLIF nsel_N_28.BLIF n158.BLIF n179.BLIF n186.BLIF n193.BLIF \
+  n200.BLIF n207.BLIF n214.BLIF n221.BLIF n228.BLIF n235.BLIF n242.BLIF n249.BLIF n116.BLIF \
+  n123.BLIF n260.BLIF n130.BLIF n102.BLIF n137.BLIF n144.BLIF i188.BLIF i181.BLIF i174.BLIF \
+  i167.BLIF i160.BLIF i153.BLIF i146.BLIF i139.BLIF i132.BLIF i125.BLIF i118.BLIF i111.BLIF \
+  i104.BLIF i97.BLIF i90.BLIF i83.BLIF i76.BLIF i69.BLIF i62.BLIF i55.BLIF i48.BLIF \
+  i41.BLIF i34.BLIF  
+.outputs cpld_sdo adc_clk1 adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi freq_clka spi_module__spi_cntr_vPcnt_i0.D spi_module__spi_cntr_vPcnt_i0.C pps_counter__temp_pcnt_5__i23.D \
+  pps_counter__temp_pcnt_5__i23.C pps_counter__temp_pcnt_5__i23.AR pps_counter__temp_pcnt_5__i0.D pps_counter__temp_pcnt_5__i0.C pps_counter__temp_pcnt_5__i0.AR pps_counter__temp_pcnt_5__i22.D pps_counter__temp_pcnt_5__i22.C pps_counter__temp_pcnt_5__i22.AR pps_counter__temp_pcnt_5__i21.D pps_counter__temp_pcnt_5__i21.C pps_counter__temp_pcnt_5__i21.AR \
+  pps_counter__temp_pcnt_5__i20.D pps_counter__temp_pcnt_5__i20.C pps_counter__temp_pcnt_5__i20.AR pps_counter__temp_pcnt_5__i19.D pps_counter__temp_pcnt_5__i19.C pps_counter__temp_pcnt_5__i19.AR pps_counter__temp_pcnt_5__i18.D pps_counter__temp_pcnt_5__i18.C pps_counter__temp_pcnt_5__i18.AR pps_counter__temp_pcnt_5__i17.D pps_counter__temp_pcnt_5__i17.C \
+  pps_counter__temp_pcnt_5__i17.AR pps_counter__temp_pcnt_5__i16.D pps_counter__temp_pcnt_5__i16.C pps_counter__temp_pcnt_5__i16.AR pps_counter__temp_pcnt_5__i15.D pps_counter__temp_pcnt_5__i15.C pps_counter__temp_pcnt_5__i15.AR pps_counter__temp_pcnt_5__i14.D pps_counter__temp_pcnt_5__i14.C pps_counter__temp_pcnt_5__i14.AR pps_counter__temp_pcnt_5__i13.D \
+  pps_counter__temp_pcnt_5__i13.C pps_counter__temp_pcnt_5__i13.AR pps_counter__temp_pcnt_5__i12.D pps_counter__temp_pcnt_5__i12.C pps_counter__temp_pcnt_5__i12.AR pps_counter__temp_pcnt_5__i11.D pps_counter__temp_pcnt_5__i11.C pps_counter__temp_pcnt_5__i11.AR pps_counter__temp_pcnt_5__i10.D pps_counter__temp_pcnt_5__i10.C pps_counter__temp_pcnt_5__i10.AR \
+  pps_counter__temp_pcnt_5__i9.D pps_counter__temp_pcnt_5__i9.C pps_counter__temp_pcnt_5__i9.AR pps_counter__temp_pcnt_5__i8.D pps_counter__temp_pcnt_5__i8.C pps_counter__temp_pcnt_5__i8.AR pps_counter__temp_pcnt_5__i7.D pps_counter__temp_pcnt_5__i7.C pps_counter__temp_pcnt_5__i7.AR pps_counter__temp_pcnt_5__i6.D pps_counter__temp_pcnt_5__i6.C \
+  pps_counter__temp_pcnt_5__i6.AR pps_counter__temp_pcnt_5__i5.D pps_counter__temp_pcnt_5__i5.C pps_counter__temp_pcnt_5__i5.AR pps_counter__temp_pcnt_5__i4.D pps_counter__temp_pcnt_5__i4.C pps_counter__temp_pcnt_5__i4.AR pps_counter__temp_pcnt_5__i3.D pps_counter__temp_pcnt_5__i3.C pps_counter__temp_pcnt_5__i3.AR pps_counter__temp_pcnt_5__i2.D \
+  pps_counter__temp_pcnt_5__i2.C pps_counter__temp_pcnt_5__i2.AR pps_counter__temp_pcnt_5__i1.D pps_counter__temp_pcnt_5__i1.C pps_counter__temp_pcnt_5__i1.AR i41.X1 i41.X2 i34.X1 i34.X2 i55.X1 i55.X2 \
+  i62.X1 i62.X2 i69.X1 i69.X2 i76.X1 i76.X2 i83.X1 i83.X2 i90.X1 i90.X2 i97.X1 \
+  i97.X2 i104.X1 i104.X2 i111.X1 i111.X2 i118.X1 i118.X2 i125.X1 i125.X2 i132.X1 i132.X2 \
+  i139.X1 i139.X2 i146.X1 i146.X2 i153.X1 i153.X2 i160.X1 i160.X2 i167.X1 i167.X2 i174.X1 \
+  i174.X2 i181.X1 i181.X2 i48.X1 i48.X2 i188.X1 i188.X2 freq_clka_c_c rxd_1v8_c adc_clk0_c_c cpld_seln_c \
+  pps_rstn_c adc_sel0_c_c spi_miso_c spi_clk_c_c spi_mosi_c_c cpld_sdo_c n165 n172 n259 n151 n109 \
+  nsel_N_28 n158 n179 n186 n193 n200 n207 n214 n221 n228 n235 \
+  n242 n249 n116 n123 n260 n130 n102 n137 n144
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i2.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i1.C
+1 1
+.names  n102.BLIF i41.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i2.BLIF i41.X2
+1 1
+.names  pps_counter__temp_pcnt_5__i0.BLIF i34.X1
+1 1
+.names  n221.BLIF pps_counter__temp_pcnt_5__i19.BLIF n228
+11 1
+.names  n228.BLIF pps_counter__temp_pcnt_5__i20.BLIF n235
+11 1
+.names  pps_counter__temp_pcnt_5__i1.BLIF i34.X2
+1 1
+.names  n235.BLIF pps_counter__temp_pcnt_5__i21.BLIF n242
+11 1
+.names  n207.BLIF pps_counter__temp_pcnt_5__i17.BLIF n214
+11 1
+.names  n242.BLIF pps_counter__temp_pcnt_5__i22.BLIF n249
+11 1
+.names  n116.BLIF i55.X1
+1 1
+.names  n214.BLIF pps_counter__temp_pcnt_5__i18.BLIF n221
+11 1
+.names  cpld_seln_c.BLIF spi_miso_c.BLIF n260
+11 1
+.names  pps_counter__temp_pcnt_5__i4.BLIF i55.X2
+1 1
+.names  nsel_N_28.BLIF spi_module__spi_cntr_vPcnt_i0.BLIF n259
+11 1
+.names  n109.BLIF pps_counter__temp_pcnt_5__i3.BLIF n116
+11 1
+.names  n123.BLIF i62.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF n102
+11 1
+.names  n102.BLIF pps_counter__temp_pcnt_5__i2.BLIF n109
+11 1
+.names  pps_counter__temp_pcnt_5__i5.BLIF i62.X2
+1 1
+.names  n130.BLIF i69.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i6.BLIF i69.X2
+1 1
+.names  n137.BLIF i76.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i7.BLIF i76.X2
+1 1
+.names  n144.BLIF i83.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i8.BLIF i83.X2
+1 1
+.names  n151.BLIF i90.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i9.BLIF i90.X2
+1 1
+.names  n116.BLIF pps_counter__temp_pcnt_5__i4.BLIF n123
+11 1
+.names  n158.BLIF i97.X1
+1 1
+.names  n260.BLIF n259.BLIF cpld_sdo_c
+1- 1
+-1 1
+.names  pps_counter__temp_pcnt_5__i10.BLIF i97.X2
+1 1
+.names  pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i0.D
+0 1
+.names  cpld_seln_c.BLIF nsel_N_28
+0 1
+.names  n165.BLIF i104.X1
+1 1
+.names  cpld_sdi.BLIF spi_mosi_c_c
+1 1
+.names  pps_counter__temp_pcnt_5__i11.BLIF i104.X2
+1 1
+.names  cpld_clk.BLIF spi_clk_c_c
+1 1
+.names  spi_miso.BLIF spi_miso_c
+1 1
+.names  adc_drdyn.BLIF adc_sel0_c_c
+1 1
+.names  n172.BLIF i111.X1
+1 1
+.names  pps_rstn.BLIF pps_rstn_c
+1 1
+.names  pps_counter__temp_pcnt_5__i12.BLIF i111.X2
+1 1
+.names  cpld_seln.BLIF cpld_seln_c
+1 1
+.names  adc_dclk.BLIF adc_clk0_c_c
+1 1
+.names  rxd_1v8.BLIF rxd_1v8_c
+1 1
+.names  n179.BLIF i118.X1
+1 1
+.names  mcu_clko.BLIF freq_clka_c_c
+1 1
+.names  freq_clka_c_c.BLIF freq_clka
+1 1
+.names  pps_counter__temp_pcnt_5__i13.BLIF i118.X2
+1 1
+.names  spi_mosi_c_c.BLIF spi_mosi
+1 1
+.names  spi_clk_c_c.BLIF spi_clk
+1 1
+.names  adc_clk0_c_c.BLIF adc_clk0
+1 1
+.names  n186.BLIF i125.X1
+1 1
+.names  adc_sel0_c_c.BLIF adc_sel0
+1 1
+.names  adc_sel0_c_c.BLIF adc_sel1
+1 1
+.names  pps_counter__temp_pcnt_5__i14.BLIF i125.X2
+1 1
+.names  adc_clk0_c_c.BLIF adc_clk1
+1 1
+.names  cpld_sdo_c.BLIF cpld_sdo
+1 1
+.names  n193.BLIF i132.X1
+1 1
+.names  n200.BLIF pps_counter__temp_pcnt_5__i16.BLIF n207
+11 1
+.names  n193.BLIF pps_counter__temp_pcnt_5__i15.BLIF n200
+11 1
+.names  pps_counter__temp_pcnt_5__i15.BLIF i132.X2
+1 1
+.names  n186.BLIF pps_counter__temp_pcnt_5__i14.BLIF n193
+11 1
+.names  n179.BLIF pps_counter__temp_pcnt_5__i13.BLIF n186
+11 1
+.names  n172.BLIF pps_counter__temp_pcnt_5__i12.BLIF n179
+11 1
+.names  n200.BLIF i139.X1
+1 1
+.names  n165.BLIF pps_counter__temp_pcnt_5__i11.BLIF n172
+11 1
+.names  n158.BLIF pps_counter__temp_pcnt_5__i10.BLIF n165
+11 1
+.names  pps_counter__temp_pcnt_5__i16.BLIF i139.X2
+1 1
+.names  n151.BLIF pps_counter__temp_pcnt_5__i9.BLIF n158
+11 1
+.names  n144.BLIF pps_counter__temp_pcnt_5__i8.BLIF n151
+11 1
+.names  n137.BLIF pps_counter__temp_pcnt_5__i7.BLIF n144
+11 1
+.names  n207.BLIF i146.X1
+1 1
+.names  n130.BLIF pps_counter__temp_pcnt_5__i6.BLIF n137
+11 1
+.names  n123.BLIF pps_counter__temp_pcnt_5__i5.BLIF n130
+11 1
+.names  pps_counter__temp_pcnt_5__i17.BLIF i146.X2
+1 1
+.names  n214.BLIF i153.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i18.BLIF i153.X2
+1 1
+.names  n221.BLIF i160.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i19.BLIF i160.X2
+1 1
+.names  n228.BLIF i167.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i20.BLIF i167.X2
+1 1
+.names  n235.BLIF i174.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i21.BLIF i174.X2
+1 1
+.names  n242.BLIF i181.X1
+1 1
+.names  pps_counter__temp_pcnt_5__i22.BLIF i181.X2
+1 1
+.names  n109.BLIF i48.X1
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i23.AR
+0 1
+.names  pps_counter__temp_pcnt_5__i3.BLIF i48.X2
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i0.AR
+0 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i22.AR
+0 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i21.AR
+0 1
+.names  n249.BLIF i188.X1
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i20.AR
+0 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i19.AR
+0 1
+.names  pps_counter__temp_pcnt_5__i23.BLIF i188.X2
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i18.AR
+0 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i17.AR
+0 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i16.AR
+0 1
+.names  i188.BLIF pps_counter__temp_pcnt_5__i23.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i15.AR
+0 1
+.names  i181.BLIF pps_counter__temp_pcnt_5__i22.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i14.AR
+0 1
+.names  i174.BLIF pps_counter__temp_pcnt_5__i21.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i13.AR
+0 1
+.names  i167.BLIF pps_counter__temp_pcnt_5__i20.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i12.AR
+0 1
+.names  i160.BLIF pps_counter__temp_pcnt_5__i19.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i11.AR
+0 1
+.names  i153.BLIF pps_counter__temp_pcnt_5__i18.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i10.AR
+0 1
+.names  i146.BLIF pps_counter__temp_pcnt_5__i17.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i9.AR
+0 1
+.names  i139.BLIF pps_counter__temp_pcnt_5__i16.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i8.AR
+0 1
+.names  i132.BLIF pps_counter__temp_pcnt_5__i15.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i7.AR
+0 1
+.names  i125.BLIF pps_counter__temp_pcnt_5__i14.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i6.AR
+0 1
+.names  i118.BLIF pps_counter__temp_pcnt_5__i13.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i5.AR
+0 1
+.names  i111.BLIF pps_counter__temp_pcnt_5__i12.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i4.AR
+0 1
+.names  i104.BLIF pps_counter__temp_pcnt_5__i11.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i3.AR
+0 1
+.names  i97.BLIF pps_counter__temp_pcnt_5__i10.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i2.AR
+0 1
+.names  i90.BLIF pps_counter__temp_pcnt_5__i9.D
+1 1
+.names  pps_rstn_c.BLIF pps_counter__temp_pcnt_5__i1.AR
+0 1
+.names  i83.BLIF pps_counter__temp_pcnt_5__i8.D
+1 1
+.names  pps_counter__temp_pcnt_5__i23.BLIF spi_module__spi_cntr_vPcnt_i0.D
+1 1
+.names  i76.BLIF pps_counter__temp_pcnt_5__i7.D
+1 1
+.names  i69.BLIF pps_counter__temp_pcnt_5__i6.D
+1 1
+.names  nsel_N_28.BLIF spi_module__spi_cntr_vPcnt_i0.C
+1 1
+.names  i62.BLIF pps_counter__temp_pcnt_5__i5.D
+1 1
+.names  i55.BLIF pps_counter__temp_pcnt_5__i4.D
+1 1
+.names  i48.BLIF pps_counter__temp_pcnt_5__i3.D
+1 1
+.names  i41.BLIF pps_counter__temp_pcnt_5__i2.D
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i23.C
+1 1
+.names  i34.BLIF pps_counter__temp_pcnt_5__i1.D
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i0.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i22.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i21.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i20.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i19.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i18.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i17.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i16.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i15.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i14.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i13.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i12.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i11.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i10.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i9.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i8.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i7.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i6.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i5.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i4.C
+1 1
+.names  rxd_1v8_c.BLIF pps_counter__temp_pcnt_5__i3.C
+1 1
+.end

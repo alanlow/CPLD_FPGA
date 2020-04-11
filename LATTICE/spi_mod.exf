@@ -1,0 +1,117 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// -------------------------------------------------------------------------------------------------
+      Port          1      pcnt[23:0]                     pcnt                 23         24            -1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      pcnt_23_                     pcnt[23]                       1            0            
+        Port      pcnt_22_                     pcnt[22]                       1            1            
+        Port      pcnt_21_                     pcnt[21]                       1            2            
+        Port      pcnt_20_                     pcnt[20]                       1            3            
+        Port      pcnt_19_                     pcnt[19]                       1            4            
+        Port      pcnt_18_                     pcnt[18]                       1            5            
+        Port      pcnt_17_                     pcnt[17]                       1            6            
+        Port      pcnt_16_                     pcnt[16]                       1            7            
+        Port      pcnt_15_                     pcnt[15]                       1            8            
+        Port      pcnt_14_                     pcnt[14]                       1            9            
+        Port      pcnt_13_                     pcnt[13]                       1            10            
+        Port      pcnt_12_                     pcnt[12]                       1            11            
+        Port      pcnt_11_                     pcnt[11]                       1            12            
+        Port      pcnt_10_                     pcnt[10]                       1            13            
+        Port      pcnt_9_                     pcnt[9]                       1            14            
+        Port      pcnt_8_                     pcnt[8]                       1            15            
+        Port      pcnt_7_                     pcnt[7]                       1            16            
+        Port      pcnt_6_                     pcnt[6]                       1            17            
+        Port      pcnt_5_                     pcnt[5]                       1            18            
+        Port      pcnt_4_                     pcnt[4]                       1            19            
+        Port      pcnt_3_                     pcnt[3]                       1            20            
+        Port      pcnt_2_                     pcnt[2]                       1            21            
+        Port      pcnt_1_                     pcnt[1]                       1            22            
+        Port      pcnt_0_                     pcnt[0]                       1            23            
+End
+Section Cross Reference File
+Design 'SPI_MOD' created Sat Apr 11 13:53:47 2020
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst   spi_cntr_vPcnt_3__141                     spi_cntr.vPcnt_3__141
+   Inst   spi_cntr_vPcnt_4__137                     spi_cntr.vPcnt_4__137
+   Inst   spi_cntr_vPcnt_5__133                     spi_cntr.vPcnt_5__133
+   Inst   spi_cntr_vPcnt_6__129                     spi_cntr.vPcnt_6__129
+   Inst   spi_cntr_vPcnt_7__125                     spi_cntr.vPcnt_7__125
+   Inst   spi_cntr_vPcnt_8__121                     spi_cntr.vPcnt_8__121
+   Inst   spi_cntr_vPcnt_9__117                     spi_cntr.vPcnt_9__117
+   Inst   spi_cntr_vPcnt_10__113                    spi_cntr.vPcnt_10__113
+   Inst   spi_cntr_vPcnt_11__109                    spi_cntr.vPcnt_11__109
+   Inst   spi_cntr_vPcnt_12__105                    spi_cntr.vPcnt_12__105
+   Inst   spi_cntr_vPcnt_13__101                    spi_cntr.vPcnt_13__101
+   Inst   spi_cntr_vPcnt_14__97                     spi_cntr.vPcnt_14__97
+   Inst   spi_cntr_vPcnt_15__93                     spi_cntr.vPcnt_15__93
+   Inst   spi_cntr_vPcnt_16__89                     spi_cntr.vPcnt_16__89
+   Inst   spi_cntr_vPcnt_17__85                     spi_cntr.vPcnt_17__85
+   Inst   spi_cntr_vPcnt_18__81                     spi_cntr.vPcnt_18__81
+   Inst   spi_cntr_vPcnt_19__77                     spi_cntr.vPcnt_19__77
+   Inst   spi_cntr_vPcnt_20__73                     spi_cntr.vPcnt_20__73
+   Inst   spi_cntr_vPcnt_21__69                     spi_cntr.vPcnt_21__69
+   Inst   spi_cntr_vPcnt_22__65                     spi_cntr.vPcnt_22__65
+   Inst   spi_cntr_vPcnt_23__61                     spi_cntr.vPcnt_23__61
+   Inst   spi_cntr_vPcnt_1__149                     spi_cntr.vPcnt_1__149
+   Inst   spi_cntr_vPcnt_2__145                     spi_cntr.vPcnt_2__145
+   Net              pcnt_22__n                                  pcnt[22]
+   Net              pcnt_21__n                                  pcnt[21]
+   Net              pcnt_20__n                                  pcnt[20]
+   Net              pcnt_19__n                                  pcnt[19]
+   Net              pcnt_18__n                                  pcnt[18]
+   Net              pcnt_17__n                                  pcnt[17]
+   Net              pcnt_16__n                                  pcnt[16]
+   Net              pcnt_15__n                                  pcnt[15]
+   Net              pcnt_14__n                                  pcnt[14]
+   Net              pcnt_13__n                                  pcnt[13]
+   Net              pcnt_12__n                                  pcnt[12]
+   Net              pcnt_11__n                                  pcnt[11]
+   Net              pcnt_10__n                                  pcnt[10]
+   Net               pcnt_9__n                                   pcnt[9]
+   Net               pcnt_8__n                                   pcnt[8]
+   Net               pcnt_7__n                                   pcnt[7]
+   Net               pcnt_6__n                                   pcnt[6]
+   Net               pcnt_5__n                                   pcnt[5]
+   Net               pcnt_4__n                                   pcnt[4]
+   Net               pcnt_3__n                                   pcnt[3]
+   Net               pcnt_2__n                                   pcnt[2]
+   Net               pcnt_1__n                                   pcnt[1]
+   Net               pcnt_0__n                                   pcnt[0]
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     pcnt_23_
+        Input     nclr
+        Input     sdi
+        Input     dclk
+        Input     nsel
+        Input     miso
+        Input     pcnt_22_
+        Input     pcnt_21_
+        Input     pcnt_20_
+        Input     pcnt_19_
+        Input     pcnt_18_
+        Input     pcnt_17_
+        Input     pcnt_16_
+        Input     pcnt_15_
+        Input     pcnt_14_
+        Input     pcnt_13_
+        Input     pcnt_12_
+        Input     pcnt_11_
+        Input     pcnt_10_
+        Input     pcnt_9_
+        Input     pcnt_8_
+        Input     pcnt_7_
+        Input     pcnt_6_
+        Input     pcnt_5_
+        Input     pcnt_4_
+        Input     pcnt_3_
+        Input     pcnt_2_
+        Input     pcnt_1_
+        Input     pcnt_0_
+        Output     sdo
+        Output     sclk
+        Output     mosi
+End

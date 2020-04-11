@@ -1,1 +1,4 @@
-. PPS_COUNT pps_count.vhd c:\users\alanlow\documents\github\cpld_fpga\lattice\pps_count.vhd
+. KEPLER_TL kepler_tl.vhd c:\users\alanlow\documents\github\cpld_fpga\lattice\kepler_tl.vhd
+adc_sig ADC_BUF adc_buf.vhd c:\users\alanlow\documents\github\cpld_fpga\lattice\adc_buf.vhd
+pps_counter PPS_COUNT pps_count.vhd c:\users\alanlow\documents\github\cpld_fpga\lattice\pps_count.vhd
+spi_module SPI_MOD spi_mod.vhd c:\users\alanlow\documents\github\cpld_fpga\lattice\spi_mod.vhd

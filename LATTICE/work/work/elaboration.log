@@ -1,4 +1,4 @@
-Active-HDL 10.1.3088.5434  2020-04-10 16:22:51
+Active-HDL 10.1.3088.5434  2020-04-11 22:10:26
 
 Elaboration top modules:
 Architecture                  behavior(testbench)
@@ -8,7 +8,10 @@ Architecture                  behavior(testbench)
 Entity    | Architecture | Library  | Info | Compiler Version          | Compilation Options
 ---------------------------------------------------------------------------------------------
 testbench | behavior     | work     |      | 10.1.3088.5434  (Windows) | -O3
+KEPLER_TL | top_level    | work     |      | 10.1.3088.5434  (Windows) | -O3
 PPS_COUNT | up_count     | work     |      | 10.1.3088.5434  (Windows) | -O3
+SPI_MOD   | spi_cpld     | work     |      | 10.1.3088.5434  (Windows) | -O3
+ADC_BUF   | buff         | work     |      | 10.1.3088.5434  (Windows) | -O3
 ---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------

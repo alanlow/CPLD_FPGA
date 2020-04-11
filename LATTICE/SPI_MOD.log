@@ -1,0 +1,16 @@
+Starting EDIF2BLIF....
+readEDIF ended normally.
+
+EDIF2BLIF: Warning: Remove floating instance: :
+	i378
+
+Inspect circuit SPI_MOD
+    Number of input ports   : 6
+    Number of output ports  : 3
+    Number of bidir ports   : 0
+    Number of instances     : 155
+    Number of nets          : 184
+
+No design errors found in circuit SPI_MOD
+
+WriteBLIF ended normally.

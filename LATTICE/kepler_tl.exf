@@ -1,0 +1,27 @@
+Section Cross Reference File
+Design 'KEPLER_TL' created Sat Apr 11 22:00:50 2020
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst   spi_module__spi_cntr_vPcnt_i0             spi_module__spi_cntr.vPcnt_i0
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     mcu_clko
+        Input     rxd_1v8
+        Input     adc_dclk
+        Input     cpld_seln
+        Input     pps_rstn
+        Input     cpld_rstn
+        Input     adc_drdyn
+        Input     spi_miso
+        Input     cpld_clk
+        Input     cpld_sdi
+        Output     cpld_sdo
+        Output     adc_clk1
+        Output     adc_sel1
+        Output     adc_sel0
+        Output     adc_clk0
+        Output     spi_clk
+        Output     spi_mosi
+        Output     freq_clka
+End

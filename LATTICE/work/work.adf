@@ -26,6 +26,12 @@ EnableDebug=0
 CompileWithDebug=0
 [$LibMap$]
 work=.
+[Files]
+/CPLD-TopLevel.asdb=-1
+/CPLD-TopLevel.awc=-1
+[Files.Data]
+.\src\CPLD-TopLevel.asdb=Accelerated Waveform File
+.\src\CPLD-TopLevel.awc=Accelerated Waveform Configuration
 [SpecTracer]
 WindowVisible=0
 [HierarchyViewer]

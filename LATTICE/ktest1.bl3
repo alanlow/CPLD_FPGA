@@ -1,282 +1,220 @@
 #$ TOOL ispLEVER Classic 2.0.00.17.20.15
-#$ DATE Fri Apr 10 15:54:46 2020
+#$ DATE Sat Apr 11 22:00:50 2020
 #$ MODULE ktest1
-#$ PINS 26 pps nclr pcnt_23_ pcnt_22_ pcnt_21_ pcnt_20_ pcnt_19_ pcnt_18_ pcnt_17_ \
-#  pcnt_16_ pcnt_15_ pcnt_14_ pcnt_13_ pcnt_12_ pcnt_11_ pcnt_10_ pcnt_9_ pcnt_8_ pcnt_7_ \
-#  pcnt_6_ pcnt_5_ pcnt_4_ pcnt_3_ pcnt_2_ pcnt_1_ pcnt_0_
-#$ NODES 27 temp_pcnt_12__i24reg temp_pcnt_12__i23reg temp_pcnt_12__i22reg \
-#  temp_pcnt_12__i21reg temp_pcnt_12__i20reg temp_pcnt_12__i19reg \
-#  temp_pcnt_12__i18reg temp_pcnt_12__i17reg temp_pcnt_12__i16reg \
-#  temp_pcnt_12__i15reg temp_pcnt_12__i14reg temp_pcnt_12__i13reg \
-#  temp_pcnt_12__i12reg temp_pcnt_12__i11reg temp_pcnt_12__i10reg \
-#  temp_pcnt_12__i9reg temp_pcnt_12__i8reg temp_pcnt_12__i7reg temp_pcnt_12__i6reg \
-#  temp_pcnt_12__i5reg temp_pcnt_12__i4reg temp_pcnt_12__i3reg temp_pcnt_12__i2reg \
-#  temp_pcnt_12__i1reg n166 n187 n215
-.model pps_count
-.inputs pps.BLIF nclr.BLIF temp_pcnt_12__i24reg.BLIF temp_pcnt_12__i23reg.BLIF \
-temp_pcnt_12__i22reg.BLIF temp_pcnt_12__i21reg.BLIF temp_pcnt_12__i20reg.BLIF \
-temp_pcnt_12__i19reg.BLIF temp_pcnt_12__i18reg.BLIF temp_pcnt_12__i17reg.BLIF \
-temp_pcnt_12__i16reg.BLIF temp_pcnt_12__i15reg.BLIF temp_pcnt_12__i14reg.BLIF \
-temp_pcnt_12__i13reg.BLIF temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i11reg.BLIF \
-temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF \
-temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF \
-temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF n166.BLIF n187.BLIF n215.BLIF
-.outputs pcnt_23_ pcnt_22_ pcnt_21_ pcnt_20_ pcnt_19_ pcnt_18_ pcnt_17_ \
-pcnt_16_ pcnt_15_ pcnt_14_ pcnt_13_ pcnt_12_ pcnt_11_ pcnt_10_ pcnt_9_ pcnt_8_ \
-pcnt_7_ pcnt_6_ pcnt_5_ pcnt_4_ pcnt_3_ pcnt_2_ pcnt_1_ pcnt_0_ \
-temp_pcnt_12__i24reg.D temp_pcnt_12__i24reg.C temp_pcnt_12__i24reg.AR \
-temp_pcnt_12__i23reg.C temp_pcnt_12__i23reg.AR temp_pcnt_12__i22reg.D \
-temp_pcnt_12__i22reg.C temp_pcnt_12__i22reg.AR temp_pcnt_12__i21reg.D \
-temp_pcnt_12__i21reg.C temp_pcnt_12__i21reg.AR temp_pcnt_12__i20reg.D \
-temp_pcnt_12__i20reg.C temp_pcnt_12__i20reg.AR temp_pcnt_12__i19reg.C \
-temp_pcnt_12__i19reg.AR temp_pcnt_12__i18reg.D temp_pcnt_12__i18reg.C \
-temp_pcnt_12__i18reg.AR temp_pcnt_12__i17reg.D temp_pcnt_12__i17reg.C \
-temp_pcnt_12__i17reg.AR temp_pcnt_12__i16reg.D temp_pcnt_12__i16reg.C \
-temp_pcnt_12__i16reg.AR temp_pcnt_12__i15reg.C temp_pcnt_12__i15reg.AR \
-temp_pcnt_12__i14reg.C temp_pcnt_12__i14reg.AR temp_pcnt_12__i13reg.D \
-temp_pcnt_12__i13reg.C temp_pcnt_12__i13reg.AR temp_pcnt_12__i12reg.C \
-temp_pcnt_12__i12reg.AR temp_pcnt_12__i11reg.C temp_pcnt_12__i11reg.AR \
-temp_pcnt_12__i10reg.C temp_pcnt_12__i10reg.AR temp_pcnt_12__i9reg.C \
-temp_pcnt_12__i9reg.AR temp_pcnt_12__i8reg.C temp_pcnt_12__i8reg.AR \
-temp_pcnt_12__i7reg.C temp_pcnt_12__i7reg.AR temp_pcnt_12__i6reg.C \
-temp_pcnt_12__i6reg.AR temp_pcnt_12__i5reg.C temp_pcnt_12__i5reg.AR \
-temp_pcnt_12__i4reg.D temp_pcnt_12__i4reg.C temp_pcnt_12__i4reg.AR \
-temp_pcnt_12__i3reg.D temp_pcnt_12__i3reg.C temp_pcnt_12__i3reg.AR \
-temp_pcnt_12__i2reg.D temp_pcnt_12__i2reg.C temp_pcnt_12__i2reg.AR \
-temp_pcnt_12__i1reg.D temp_pcnt_12__i1reg.C temp_pcnt_12__i1reg.AR n166 n187 \
-n215 temp_pcnt_12__i23reg.D.X1 temp_pcnt_12__i23reg.D.X2 \
-temp_pcnt_12__i19reg.D.X1 temp_pcnt_12__i19reg.D.X2 temp_pcnt_12__i15reg.D.X1 \
-temp_pcnt_12__i15reg.D.X2 temp_pcnt_12__i14reg.D.X1 temp_pcnt_12__i14reg.D.X2 \
-temp_pcnt_12__i12reg.D.X1 temp_pcnt_12__i12reg.D.X2 temp_pcnt_12__i11reg.D.X1 \
-temp_pcnt_12__i11reg.D.X2 temp_pcnt_12__i10reg.D.X1 temp_pcnt_12__i10reg.D.X2 \
-temp_pcnt_12__i9reg.D.X1 temp_pcnt_12__i9reg.D.X2 temp_pcnt_12__i8reg.D.X1 \
-temp_pcnt_12__i8reg.D.X2 temp_pcnt_12__i7reg.D.X1 temp_pcnt_12__i7reg.D.X2 \
-temp_pcnt_12__i6reg.D.X1 temp_pcnt_12__i6reg.D.X2 temp_pcnt_12__i5reg.D.X1 \
-temp_pcnt_12__i5reg.D.X2
-.names nclr.BLIF temp_pcnt_12__i24reg.AR
+#$ PINS 17 mcu_clko rxd_1v8 adc_dclk cpld_seln pps_rstn adc_drdyn spi_miso cpld_clk \
+#  cpld_sdi cpld_sdo adc_clk1 adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi freq_clka
+#$ NODES 26 spi_module__spi_cntr_vPcnt_i0 pps_counter__temp_pcnt_5__i23 \
+#  pps_counter__temp_pcnt_5__i0 pps_counter__temp_pcnt_5__i1 \
+#  pps_counter__temp_pcnt_5__i2 pps_counter__temp_pcnt_5__i3 \
+#  pps_counter__temp_pcnt_5__i4 pps_counter__temp_pcnt_5__i5 \
+#  pps_counter__temp_pcnt_5__i6 pps_counter__temp_pcnt_5__i7 \
+#  pps_counter__temp_pcnt_5__i8 pps_counter__temp_pcnt_5__i9 \
+#  pps_counter__temp_pcnt_5__i10 pps_counter__temp_pcnt_5__i11 \
+#  pps_counter__temp_pcnt_5__i12 pps_counter__temp_pcnt_5__i13 \
+#  pps_counter__temp_pcnt_5__i14 pps_counter__temp_pcnt_5__i15 \
+#  pps_counter__temp_pcnt_5__i16 pps_counter__temp_pcnt_5__i17 \
+#  pps_counter__temp_pcnt_5__i18 pps_counter__temp_pcnt_5__i19 \
+#  pps_counter__temp_pcnt_5__i20 pps_counter__temp_pcnt_5__i21 \
+#  pps_counter__temp_pcnt_5__i22 n151
+.model kepler_tl
+.inputs mcu_clko.BLIF rxd_1v8.BLIF adc_dclk.BLIF cpld_seln.BLIF pps_rstn.BLIF \
+adc_drdyn.BLIF spi_miso.BLIF cpld_clk.BLIF cpld_sdi.BLIF \
+spi_module__spi_cntr_vPcnt_i0.BLIF pps_counter__temp_pcnt_5__i23.BLIF \
+pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i17.BLIF \
+pps_counter__temp_pcnt_5__i18.BLIF pps_counter__temp_pcnt_5__i19.BLIF \
+pps_counter__temp_pcnt_5__i20.BLIF pps_counter__temp_pcnt_5__i21.BLIF \
+pps_counter__temp_pcnt_5__i22.BLIF n151.BLIF
+.outputs cpld_sdo adc_clk1 adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi \
+freq_clka spi_module__spi_cntr_vPcnt_i0.D spi_module__spi_cntr_vPcnt_i0.C \
+pps_counter__temp_pcnt_5__i23.D pps_counter__temp_pcnt_5__i23.C \
+pps_counter__temp_pcnt_5__i23.AR pps_counter__temp_pcnt_5__i0.D \
+pps_counter__temp_pcnt_5__i0.C pps_counter__temp_pcnt_5__i0.AR \
+pps_counter__temp_pcnt_5__i22.C pps_counter__temp_pcnt_5__i22.AR \
+pps_counter__temp_pcnt_5__i21.C pps_counter__temp_pcnt_5__i21.AR \
+pps_counter__temp_pcnt_5__i20.C pps_counter__temp_pcnt_5__i20.AR \
+pps_counter__temp_pcnt_5__i19.C pps_counter__temp_pcnt_5__i19.AR \
+pps_counter__temp_pcnt_5__i18.C pps_counter__temp_pcnt_5__i18.AR \
+pps_counter__temp_pcnt_5__i17.C pps_counter__temp_pcnt_5__i17.AR \
+pps_counter__temp_pcnt_5__i16.C pps_counter__temp_pcnt_5__i16.AR \
+pps_counter__temp_pcnt_5__i15.C pps_counter__temp_pcnt_5__i15.AR \
+pps_counter__temp_pcnt_5__i14.C pps_counter__temp_pcnt_5__i14.AR \
+pps_counter__temp_pcnt_5__i13.C pps_counter__temp_pcnt_5__i13.AR \
+pps_counter__temp_pcnt_5__i12.C pps_counter__temp_pcnt_5__i12.AR \
+pps_counter__temp_pcnt_5__i11.D pps_counter__temp_pcnt_5__i11.C \
+pps_counter__temp_pcnt_5__i11.AR pps_counter__temp_pcnt_5__i10.D \
+pps_counter__temp_pcnt_5__i10.C pps_counter__temp_pcnt_5__i10.AR \
+pps_counter__temp_pcnt_5__i9.C pps_counter__temp_pcnt_5__i9.AR \
+pps_counter__temp_pcnt_5__i8.C pps_counter__temp_pcnt_5__i8.AR \
+pps_counter__temp_pcnt_5__i7.C pps_counter__temp_pcnt_5__i7.AR \
+pps_counter__temp_pcnt_5__i6.C pps_counter__temp_pcnt_5__i6.AR \
+pps_counter__temp_pcnt_5__i5.C pps_counter__temp_pcnt_5__i5.AR \
+pps_counter__temp_pcnt_5__i4.C pps_counter__temp_pcnt_5__i4.AR \
+pps_counter__temp_pcnt_5__i3.D pps_counter__temp_pcnt_5__i3.C \
+pps_counter__temp_pcnt_5__i3.AR pps_counter__temp_pcnt_5__i2.D \
+pps_counter__temp_pcnt_5__i2.C pps_counter__temp_pcnt_5__i2.AR \
+pps_counter__temp_pcnt_5__i1.D pps_counter__temp_pcnt_5__i1.C \
+pps_counter__temp_pcnt_5__i1.AR n151 pps_counter__temp_pcnt_5__i4.D.X1 \
+pps_counter__temp_pcnt_5__i4.D.X2 pps_counter__temp_pcnt_5__i5.D.X1 \
+pps_counter__temp_pcnt_5__i5.D.X2 pps_counter__temp_pcnt_5__i6.D.X1 \
+pps_counter__temp_pcnt_5__i6.D.X2 pps_counter__temp_pcnt_5__i7.D.X1 \
+pps_counter__temp_pcnt_5__i7.D.X2 pps_counter__temp_pcnt_5__i8.D.X1 \
+pps_counter__temp_pcnt_5__i8.D.X2 pps_counter__temp_pcnt_5__i9.D.X1 \
+pps_counter__temp_pcnt_5__i9.D.X2 pps_counter__temp_pcnt_5__i12.D.X1 \
+pps_counter__temp_pcnt_5__i12.D.X2 pps_counter__temp_pcnt_5__i13.D.X1 \
+pps_counter__temp_pcnt_5__i13.D.X2 pps_counter__temp_pcnt_5__i14.D.X1 \
+pps_counter__temp_pcnt_5__i14.D.X2 pps_counter__temp_pcnt_5__i15.D.X1 \
+pps_counter__temp_pcnt_5__i15.D.X2 pps_counter__temp_pcnt_5__i16.D.X1 \
+pps_counter__temp_pcnt_5__i16.D.X2 pps_counter__temp_pcnt_5__i17.D.X1 \
+pps_counter__temp_pcnt_5__i17.D.X2 pps_counter__temp_pcnt_5__i18.D.X1 \
+pps_counter__temp_pcnt_5__i18.D.X2 pps_counter__temp_pcnt_5__i19.D.X1 \
+pps_counter__temp_pcnt_5__i19.D.X2 pps_counter__temp_pcnt_5__i20.D.X1 \
+pps_counter__temp_pcnt_5__i20.D.X2 pps_counter__temp_pcnt_5__i21.D.X1 \
+pps_counter__temp_pcnt_5__i21.D.X2 pps_counter__temp_pcnt_5__i22.D.X1 \
+pps_counter__temp_pcnt_5__i22.D.X2
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i23.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i23reg.AR
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i0.D
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i22reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i0.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i21reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i22.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i20reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i21.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i19reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i20.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i18reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i19.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i17reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i18.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i16reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i17.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i15reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i16.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i14reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i15.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i13reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i14.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i12reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i13.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i11reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i12.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i10reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i11.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i9reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i10.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i8reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i9.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i7reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i8.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i6reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i7.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i5reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i6.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i4reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i5.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i3reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i4.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i2reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i3.AR
 0 1
 1 0
-.names temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i1reg.D
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i2.AR
 0 1
 1 0
-.names nclr.BLIF temp_pcnt_12__i1reg.AR
+.names pps_rstn.BLIF pps_counter__temp_pcnt_5__i1.AR
 0 1
 1 0
-.names temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i11reg.BLIF \
-temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF \
-temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF \
-temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF n166
-111111111111 1
-----------0- 0
----------0-- 0
---------0--- 0
--------0---- 0
-------0----- 0
------0------ 0
-----0------- 0
----0-------- 0
---0--------- 0
--0---------- 0
-0----------- 0
------------0 0
-.names temp_pcnt_12__i15reg.BLIF temp_pcnt_12__i14reg.BLIF \
-temp_pcnt_12__i13reg.BLIF temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i11reg.BLIF \
-temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF \
-temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF \
-temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF n187
-111111111111111 1
--------------0- 0
-------------0-- 0
------------0--- 0
-----------0---- 0
----------0----- 0
---------0------ 0
--------0------- 0
-------0-------- 0
------0--------- 0
-----0---------- 0
----0----------- 0
---0------------ 0
--0------------- 0
-0-------------- 0
---------------0 0
-.names temp_pcnt_12__i19reg.BLIF temp_pcnt_12__i18reg.BLIF \
-temp_pcnt_12__i17reg.BLIF temp_pcnt_12__i16reg.BLIF temp_pcnt_12__i15reg.BLIF \
-temp_pcnt_12__i14reg.BLIF temp_pcnt_12__i13reg.BLIF temp_pcnt_12__i12reg.BLIF \
-temp_pcnt_12__i11reg.BLIF temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i9reg.BLIF \
-temp_pcnt_12__i8reg.BLIF temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF \
-temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF \
-temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF n215
-1111111111111111111 1
------------------0- 0
-----------------0-- 0
----------------0--- 0
---------------0---- 0
--------------0----- 0
-------------0------ 0
------------0------- 0
-----------0-------- 0
----------0--------- 0
---------0---------- 0
--------0----------- 0
-------0------------ 0
------0------------- 0
-----0-------------- 0
----0--------------- 0
---0---------------- 0
--0----------------- 0
-0------------------ 0
-------------------0 0
-.names temp_pcnt_12__i24reg.BLIF pcnt_23_
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF n151
+111111111 1
+-------0- 0
+------0-- 0
+-----0--- 0
+----0---- 0
+---0----- 0
+--0------ 0
+-0------- 0
+0-------- 0
+--------0 0
+.names cpld_seln.BLIF spi_miso.BLIF spi_module__spi_cntr_vPcnt_i0.BLIF \
+cpld_sdo
+11- 1
+0-1 1
+10- 0
+0-0 0
+.names adc_dclk.BLIF adc_clk1
 1 1
 0 0
-.names temp_pcnt_12__i23reg.BLIF pcnt_22_
+.names adc_drdyn.BLIF adc_sel1
 1 1
 0 0
-.names temp_pcnt_12__i22reg.BLIF pcnt_21_
+.names adc_drdyn.BLIF adc_sel0
 1 1
 0 0
-.names temp_pcnt_12__i21reg.BLIF pcnt_20_
+.names adc_dclk.BLIF adc_clk0
 1 1
 0 0
-.names temp_pcnt_12__i20reg.BLIF pcnt_19_
+.names cpld_clk.BLIF spi_clk
 1 1
 0 0
-.names temp_pcnt_12__i19reg.BLIF pcnt_18_
+.names cpld_sdi.BLIF spi_mosi
 1 1
 0 0
-.names temp_pcnt_12__i18reg.BLIF pcnt_17_
+.names mcu_clko.BLIF freq_clka
 1 1
 0 0
-.names temp_pcnt_12__i17reg.BLIF pcnt_16_
+.names pps_counter__temp_pcnt_5__i23.BLIF spi_module__spi_cntr_vPcnt_i0.D
 1 1
 0 0
-.names temp_pcnt_12__i16reg.BLIF pcnt_15_
-1 1
-0 0
-.names temp_pcnt_12__i15reg.BLIF pcnt_14_
-1 1
-0 0
-.names temp_pcnt_12__i14reg.BLIF pcnt_13_
-1 1
-0 0
-.names temp_pcnt_12__i13reg.BLIF pcnt_12_
-1 1
-0 0
-.names temp_pcnt_12__i12reg.BLIF pcnt_11_
-1 1
-0 0
-.names temp_pcnt_12__i11reg.BLIF pcnt_10_
-1 1
-0 0
-.names temp_pcnt_12__i10reg.BLIF pcnt_9_
-1 1
-0 0
-.names temp_pcnt_12__i9reg.BLIF pcnt_8_
-1 1
-0 0
-.names temp_pcnt_12__i8reg.BLIF pcnt_7_
-1 1
-0 0
-.names temp_pcnt_12__i7reg.BLIF pcnt_6_
-1 1
-0 0
-.names temp_pcnt_12__i6reg.BLIF pcnt_5_
-1 1
-0 0
-.names temp_pcnt_12__i5reg.BLIF pcnt_4_
-1 1
-0 0
-.names temp_pcnt_12__i4reg.BLIF pcnt_3_
-1 1
-0 0
-.names temp_pcnt_12__i3reg.BLIF pcnt_2_
-1 1
-0 0
-.names temp_pcnt_12__i2reg.BLIF pcnt_1_
-1 1
-0 0
-.names temp_pcnt_12__i1reg.BLIF pcnt_0_
-1 1
-0 0
-.names temp_pcnt_12__i24reg.BLIF temp_pcnt_12__i23reg.BLIF \
-temp_pcnt_12__i22reg.BLIF temp_pcnt_12__i21reg.BLIF temp_pcnt_12__i20reg.BLIF \
-temp_pcnt_12__i19reg.BLIF temp_pcnt_12__i18reg.BLIF temp_pcnt_12__i17reg.BLIF \
-temp_pcnt_12__i16reg.BLIF temp_pcnt_12__i15reg.BLIF temp_pcnt_12__i14reg.BLIF \
-temp_pcnt_12__i13reg.BLIF temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i11reg.BLIF \
-temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF \
-temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF \
-temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i24reg.D
+.names cpld_seln.BLIF spi_module__spi_cntr_vPcnt_i0.C
+0 1
+1 0
+.names pps_counter__temp_pcnt_5__i23.BLIF pps_counter__temp_pcnt_5__i0.BLIF \
+pps_counter__temp_pcnt_5__i1.BLIF pps_counter__temp_pcnt_5__i2.BLIF \
+pps_counter__temp_pcnt_5__i3.BLIF pps_counter__temp_pcnt_5__i4.BLIF \
+pps_counter__temp_pcnt_5__i5.BLIF pps_counter__temp_pcnt_5__i6.BLIF \
+pps_counter__temp_pcnt_5__i7.BLIF pps_counter__temp_pcnt_5__i8.BLIF \
+pps_counter__temp_pcnt_5__i9.BLIF pps_counter__temp_pcnt_5__i10.BLIF \
+pps_counter__temp_pcnt_5__i11.BLIF pps_counter__temp_pcnt_5__i12.BLIF \
+pps_counter__temp_pcnt_5__i13.BLIF pps_counter__temp_pcnt_5__i14.BLIF \
+pps_counter__temp_pcnt_5__i15.BLIF pps_counter__temp_pcnt_5__i16.BLIF \
+pps_counter__temp_pcnt_5__i17.BLIF pps_counter__temp_pcnt_5__i18.BLIF \
+pps_counter__temp_pcnt_5__i19.BLIF pps_counter__temp_pcnt_5__i20.BLIF \
+pps_counter__temp_pcnt_5__i21.BLIF pps_counter__temp_pcnt_5__i22.BLIF \
+pps_counter__temp_pcnt_5__i23.D
 011111111111111111111111 1
 1---------------------0- 1
 1--------------------0-- 1
@@ -325,165 +263,516 @@ temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i24reg.D
 0-0--------------------- 0
 00---------------------- 0
 0----------------------0 0
-.names pps.BLIF temp_pcnt_12__i24reg.C
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i23.C
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i23reg.C
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i0.C
 1 1
 0 0
-.names temp_pcnt_12__i22reg.BLIF temp_pcnt_12__i21reg.BLIF \
-temp_pcnt_12__i20reg.BLIF n215.BLIF temp_pcnt_12__i22reg.D
-0111 1
-1-0- 1
-10-- 1
-1--0 1
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i22.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i21.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i20.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i19.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i18.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i17.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i16.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i15.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i14.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i13.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i12.C
+1 1
+0 0
+.names pps_counter__temp_pcnt_5__i9.BLIF pps_counter__temp_pcnt_5__i10.BLIF \
+pps_counter__temp_pcnt_5__i11.BLIF n151.BLIF pps_counter__temp_pcnt_5__i11.D
+1101 1
+-01- 1
+0-1- 1
+--10 1
 1111 0
+-00- 0
 0-0- 0
-00-- 0
-0--0 0
-.names pps.BLIF temp_pcnt_12__i22reg.C
+--00 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i11.C
 1 1
 0 0
-.names temp_pcnt_12__i21reg.BLIF temp_pcnt_12__i20reg.BLIF n215.BLIF \
-temp_pcnt_12__i21reg.D
-011 1
-10- 1
-1-0 1
+.names pps_counter__temp_pcnt_5__i9.BLIF pps_counter__temp_pcnt_5__i10.BLIF \
+n151.BLIF pps_counter__temp_pcnt_5__i10.D
+101 1
+01- 1
+-10 1
 111 0
 00- 0
-0-0 0
-.names pps.BLIF temp_pcnt_12__i21reg.C
+-00 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i10.C
 1 1
 0 0
-.names temp_pcnt_12__i20reg.BLIF n215.BLIF temp_pcnt_12__i20reg.D
-10 1
-01 1
-00 0
-11 0
-.names pps.BLIF temp_pcnt_12__i20reg.C
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i9.C
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i19reg.C
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i8.C
 1 1
 0 0
-.names temp_pcnt_12__i18reg.BLIF temp_pcnt_12__i17reg.BLIF \
-temp_pcnt_12__i16reg.BLIF n187.BLIF temp_pcnt_12__i18reg.D
-0111 1
-1-0- 1
-10-- 1
-1--0 1
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i7.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i6.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i5.C
+1 1
+0 0
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i4.C
+1 1
+0 0
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i3.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
 1111 0
-0-0- 0
-00-- 0
+--00 0
+-0-0 0
 0--0 0
-.names pps.BLIF temp_pcnt_12__i18reg.C
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i3.C
 1 1
 0 0
-.names temp_pcnt_12__i17reg.BLIF temp_pcnt_12__i16reg.BLIF n187.BLIF \
-temp_pcnt_12__i17reg.D
-011 1
-10- 1
-1-0 1
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i2.D
+110 1
+-01 1
+0-1 1
 111 0
-00- 0
+-00 0
 0-0 0
-.names pps.BLIF temp_pcnt_12__i17reg.C
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i2.C
 1 1
 0 0
-.names temp_pcnt_12__i16reg.BLIF n187.BLIF temp_pcnt_12__i16reg.D
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i1.D
 10 1
 01 1
 00 0
 11 0
-.names pps.BLIF temp_pcnt_12__i16reg.C
+.names rxd_1v8.BLIF pps_counter__temp_pcnt_5__i1.C
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i15reg.C
+.names pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i4.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i14reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i4.D.X2
+1111- 1
+0---- 0
+-0--- 0
+--0-- 0
+---0- 0
+.names pps_counter__temp_pcnt_5__i5.BLIF pps_counter__temp_pcnt_5__i5.D.X1
 1 1
 0 0
-.names temp_pcnt_12__i13reg.BLIF n166.BLIF temp_pcnt_12__i13reg.D
-10 1
-01 1
-00 0
-11 0
-.names pps.BLIF temp_pcnt_12__i13reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i5.D.X2
+11111- 1
+0----- 0
+-0---- 0
+--0--- 0
+---0-- 0
+----0- 0
+.names pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i6.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i12reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i6.D.X2
+111111- 1
+0------ 0
+-0----- 0
+--0---- 0
+---0--- 0
+----0-- 0
+-----0- 0
+.names pps_counter__temp_pcnt_5__i7.BLIF pps_counter__temp_pcnt_5__i7.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i11reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i7.D.X2
+1111111- 1
+0------- 0
+-0------ 0
+--0----- 0
+---0---- 0
+----0--- 0
+-----0-- 0
+------0- 0
+.names pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i8.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i10reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i8.D.X2
+11111111- 1
+0-------- 0
+-0------- 0
+--0------ 0
+---0----- 0
+----0---- 0
+-----0--- 0
+------0-- 0
+-------0- 0
+.names pps_counter__temp_pcnt_5__i9.BLIF pps_counter__temp_pcnt_5__i9.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i9reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i9.D.X2
+111111111- 1
+0--------- 0
+-0-------- 0
+--0------- 0
+---0------ 0
+----0----- 0
+-----0---- 0
+------0--- 0
+-------0-- 0
+--------0- 0
+.names pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i12.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i8reg.C
+.names pps_counter__temp_pcnt_5__i9.BLIF pps_counter__temp_pcnt_5__i10.BLIF \
+pps_counter__temp_pcnt_5__i11.BLIF pps_counter__temp_pcnt_5__i12.BLIF \
+n151.BLIF pps_counter__temp_pcnt_5__i12.D.X2
+111-1 1
+0---- 0
+-0--- 0
+--0-- 0
+----0 0
+.names pps_counter__temp_pcnt_5__i13.BLIF pps_counter__temp_pcnt_5__i13.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i7reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i13.D.X2
+1111111111111- 1
+0------------- 0
+-0------------ 0
+--0----------- 0
+---0---------- 0
+----0--------- 0
+-----0-------- 0
+------0------- 0
+-------0------ 0
+--------0----- 0
+---------0---- 0
+----------0--- 0
+-----------0-- 0
+------------0- 0
+.names pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i14.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i6reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i14.D.X2
+11111111111111- 1
+0-------------- 0
+-0------------- 0
+--0------------ 0
+---0----------- 0
+----0---------- 0
+-----0--------- 0
+------0-------- 0
+-------0------- 0
+--------0------ 0
+---------0----- 0
+----------0---- 0
+-----------0--- 0
+------------0-- 0
+-------------0- 0
+.names pps_counter__temp_pcnt_5__i15.BLIF pps_counter__temp_pcnt_5__i15.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i5reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i15.D.X2
+111111111111111- 1
+0--------------- 0
+-0-------------- 0
+--0------------- 0
+---0------------ 0
+----0----------- 0
+-----0---------- 0
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+----------0----- 0
+-----------0---- 0
+------------0--- 0
+-------------0-- 0
+--------------0- 0
+.names pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i16.D.X1
 1 1
 0 0
-.names temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF \
-temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i4reg.D
-0111 1
-1-0- 1
-10-- 1
-1--0 1
-1111 0
-0-0- 0
-00-- 0
-0--0 0
-.names pps.BLIF temp_pcnt_12__i4reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i16.D.X2
+1111111111111111- 1
+0---------------- 0
+-0--------------- 0
+--0-------------- 0
+---0------------- 0
+----0------------ 0
+-----0----------- 0
+------0---------- 0
+-------0--------- 0
+--------0-------- 0
+---------0------- 0
+----------0------ 0
+-----------0----- 0
+------------0---- 0
+-------------0--- 0
+--------------0-- 0
+---------------0- 0
+.names pps_counter__temp_pcnt_5__i17.BLIF pps_counter__temp_pcnt_5__i17.D.X1
 1 1
 0 0
-.names temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i3reg.D
-011 1
-10- 1
-1-0 1
-111 0
-00- 0
-0-0 0
-.names pps.BLIF temp_pcnt_12__i3reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i17.BLIF \
+pps_counter__temp_pcnt_5__i17.D.X2
+11111111111111111- 1
+0----------------- 0
+-0---------------- 0
+--0--------------- 0
+---0-------------- 0
+----0------------- 0
+-----0------------ 0
+------0----------- 0
+-------0---------- 0
+--------0--------- 0
+---------0-------- 0
+----------0------- 0
+-----------0------ 0
+------------0----- 0
+-------------0---- 0
+--------------0--- 0
+---------------0-- 0
+----------------0- 0
+.names pps_counter__temp_pcnt_5__i18.BLIF pps_counter__temp_pcnt_5__i18.D.X1
 1 1
 0 0
-.names temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i2reg.D
-10 1
-01 1
-00 0
-11 0
-.names pps.BLIF temp_pcnt_12__i2reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i17.BLIF \
+pps_counter__temp_pcnt_5__i18.BLIF pps_counter__temp_pcnt_5__i18.D.X2
+111111111111111111- 1
+0------------------ 0
+-0----------------- 0
+--0---------------- 0
+---0--------------- 0
+----0-------------- 0
+-----0------------- 0
+------0------------ 0
+-------0----------- 0
+--------0---------- 0
+---------0--------- 0
+----------0-------- 0
+-----------0------- 0
+------------0------ 0
+-------------0----- 0
+--------------0---- 0
+---------------0--- 0
+----------------0-- 0
+-----------------0- 0
+.names pps_counter__temp_pcnt_5__i19.BLIF pps_counter__temp_pcnt_5__i19.D.X1
 1 1
 0 0
-.names pps.BLIF temp_pcnt_12__i1reg.C
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i17.BLIF \
+pps_counter__temp_pcnt_5__i18.BLIF pps_counter__temp_pcnt_5__i19.BLIF \
+pps_counter__temp_pcnt_5__i19.D.X2
+1111111111111111111- 1
+0------------------- 0
+-0------------------ 0
+--0----------------- 0
+---0---------------- 0
+----0--------------- 0
+-----0-------------- 0
+------0------------- 0
+-------0------------ 0
+--------0----------- 0
+---------0---------- 0
+----------0--------- 0
+-----------0-------- 0
+------------0------- 0
+-------------0------ 0
+--------------0----- 0
+---------------0---- 0
+----------------0--- 0
+-----------------0-- 0
+------------------0- 0
+.names pps_counter__temp_pcnt_5__i20.BLIF pps_counter__temp_pcnt_5__i20.D.X1
 1 1
 0 0
-.names temp_pcnt_12__i23reg.BLIF temp_pcnt_12__i23reg.D.X1
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i17.BLIF \
+pps_counter__temp_pcnt_5__i18.BLIF pps_counter__temp_pcnt_5__i19.BLIF \
+pps_counter__temp_pcnt_5__i20.BLIF pps_counter__temp_pcnt_5__i20.D.X2
+11111111111111111111- 1
+0-------------------- 0
+-0------------------- 0
+--0------------------ 0
+---0----------------- 0
+----0---------------- 0
+-----0--------------- 0
+------0-------------- 0
+-------0------------- 0
+--------0------------ 0
+---------0----------- 0
+----------0---------- 0
+-----------0--------- 0
+------------0-------- 0
+-------------0------- 0
+--------------0------ 0
+---------------0----- 0
+----------------0---- 0
+-----------------0--- 0
+------------------0-- 0
+-------------------0- 0
+.names pps_counter__temp_pcnt_5__i21.BLIF pps_counter__temp_pcnt_5__i21.D.X1
 1 1
 0 0
-.names temp_pcnt_12__i23reg.BLIF temp_pcnt_12__i22reg.BLIF \
-temp_pcnt_12__i21reg.BLIF temp_pcnt_12__i20reg.BLIF temp_pcnt_12__i19reg.BLIF \
-temp_pcnt_12__i18reg.BLIF temp_pcnt_12__i17reg.BLIF temp_pcnt_12__i16reg.BLIF \
-temp_pcnt_12__i15reg.BLIF temp_pcnt_12__i14reg.BLIF temp_pcnt_12__i13reg.BLIF \
-temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i11reg.BLIF temp_pcnt_12__i10reg.BLIF \
-temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF temp_pcnt_12__i7reg.BLIF \
-temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i4reg.BLIF \
-temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF \
-temp_pcnt_12__i23reg.D.X2
--1111111111111111111111 1
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i17.BLIF \
+pps_counter__temp_pcnt_5__i18.BLIF pps_counter__temp_pcnt_5__i19.BLIF \
+pps_counter__temp_pcnt_5__i20.BLIF pps_counter__temp_pcnt_5__i21.BLIF \
+pps_counter__temp_pcnt_5__i21.D.X2
+111111111111111111111- 1
+0--------------------- 0
+-0-------------------- 0
+--0------------------- 0
+---0------------------ 0
+----0----------------- 0
+-----0---------------- 0
+------0--------------- 0
+-------0-------------- 0
+--------0------------- 0
+---------0------------ 0
+----------0----------- 0
+-----------0---------- 0
+------------0--------- 0
+-------------0-------- 0
+--------------0------- 0
+---------------0------ 0
+----------------0----- 0
+-----------------0---- 0
+------------------0--- 0
+-------------------0-- 0
+--------------------0- 0
+.names pps_counter__temp_pcnt_5__i22.BLIF pps_counter__temp_pcnt_5__i22.D.X1
+1 1
+0 0
+.names pps_counter__temp_pcnt_5__i0.BLIF pps_counter__temp_pcnt_5__i1.BLIF \
+pps_counter__temp_pcnt_5__i2.BLIF pps_counter__temp_pcnt_5__i3.BLIF \
+pps_counter__temp_pcnt_5__i4.BLIF pps_counter__temp_pcnt_5__i5.BLIF \
+pps_counter__temp_pcnt_5__i6.BLIF pps_counter__temp_pcnt_5__i7.BLIF \
+pps_counter__temp_pcnt_5__i8.BLIF pps_counter__temp_pcnt_5__i9.BLIF \
+pps_counter__temp_pcnt_5__i10.BLIF pps_counter__temp_pcnt_5__i11.BLIF \
+pps_counter__temp_pcnt_5__i12.BLIF pps_counter__temp_pcnt_5__i13.BLIF \
+pps_counter__temp_pcnt_5__i14.BLIF pps_counter__temp_pcnt_5__i15.BLIF \
+pps_counter__temp_pcnt_5__i16.BLIF pps_counter__temp_pcnt_5__i17.BLIF \
+pps_counter__temp_pcnt_5__i18.BLIF pps_counter__temp_pcnt_5__i19.BLIF \
+pps_counter__temp_pcnt_5__i20.BLIF pps_counter__temp_pcnt_5__i21.BLIF \
+pps_counter__temp_pcnt_5__i22.BLIF pps_counter__temp_pcnt_5__i22.D.X2
+1111111111111111111111- 1
+0---------------------- 0
 -0--------------------- 0
 --0-------------------- 0
 ---0------------------- 0
@@ -505,186 +794,4 @@ temp_pcnt_12__i23reg.D.X2
 -------------------0--- 0
 --------------------0-- 0
 ---------------------0- 0
-----------------------0 0
-.names temp_pcnt_12__i19reg.BLIF temp_pcnt_12__i19reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i19reg.BLIF temp_pcnt_12__i18reg.BLIF \
-temp_pcnt_12__i17reg.BLIF temp_pcnt_12__i16reg.BLIF n187.BLIF \
-temp_pcnt_12__i19reg.D.X2
--1111 1
--0--- 0
---0-- 0
----0- 0
-----0 0
-.names temp_pcnt_12__i15reg.BLIF temp_pcnt_12__i15reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i15reg.BLIF temp_pcnt_12__i14reg.BLIF \
-temp_pcnt_12__i13reg.BLIF temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i11reg.BLIF \
-temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF \
-temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF \
-temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i15reg.D.X2
--11111111111111 1
--0------------- 0
---0------------ 0
----0----------- 0
-----0---------- 0
------0--------- 0
-------0-------- 0
--------0------- 0
---------0------ 0
----------0----- 0
-----------0---- 0
------------0--- 0
-------------0-- 0
--------------0- 0
---------------0 0
-.names temp_pcnt_12__i14reg.BLIF temp_pcnt_12__i14reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i14reg.BLIF temp_pcnt_12__i13reg.BLIF \
-temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i11reg.BLIF temp_pcnt_12__i10reg.BLIF \
-temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF temp_pcnt_12__i7reg.BLIF \
-temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i4reg.BLIF \
-temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF \
-temp_pcnt_12__i14reg.D.X2
--1111111111111 1
--0------------ 0
---0----------- 0
----0---------- 0
-----0--------- 0
------0-------- 0
-------0------- 0
--------0------ 0
---------0----- 0
----------0---- 0
-----------0--- 0
------------0-- 0
-------------0- 0
--------------0 0
-.names temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i12reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i12reg.BLIF temp_pcnt_12__i11reg.BLIF \
-temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF \
-temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF \
-temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i12reg.D.X2
--11111111111 1
--0---------- 0
---0--------- 0
----0-------- 0
-----0------- 0
------0------ 0
-------0----- 0
--------0---- 0
---------0--- 0
----------0-- 0
-----------0- 0
------------0 0
-.names temp_pcnt_12__i11reg.BLIF temp_pcnt_12__i11reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i11reg.BLIF temp_pcnt_12__i10reg.BLIF \
-temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF temp_pcnt_12__i7reg.BLIF \
-temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i4reg.BLIF \
-temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF \
-temp_pcnt_12__i11reg.D.X2
--1111111111 1
--0--------- 0
---0-------- 0
----0------- 0
-----0------ 0
------0----- 0
-------0---- 0
--------0--- 0
---------0-- 0
----------0- 0
-----------0 0
-.names temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i10reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i10reg.BLIF temp_pcnt_12__i9reg.BLIF \
-temp_pcnt_12__i8reg.BLIF temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF \
-temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF \
-temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i10reg.D.X2
--111111111 1
--0-------- 0
---0------- 0
----0------ 0
-----0----- 0
------0---- 0
-------0--- 0
--------0-- 0
---------0- 0
----------0 0
-.names temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i9reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i9reg.BLIF temp_pcnt_12__i8reg.BLIF \
-temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF \
-temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i9reg.D.X2
--11111111 1
--0------- 0
---0------ 0
----0----- 0
-----0---- 0
------0--- 0
-------0-- 0
--------0- 0
---------0 0
-.names temp_pcnt_12__i8reg.BLIF temp_pcnt_12__i8reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i8reg.BLIF temp_pcnt_12__i7reg.BLIF \
-temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i4reg.BLIF \
-temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF \
-temp_pcnt_12__i8reg.D.X2
--1111111 1
--0------ 0
---0----- 0
----0---- 0
-----0--- 0
------0-- 0
-------0- 0
--------0 0
-.names temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i7reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i7reg.BLIF temp_pcnt_12__i6reg.BLIF \
-temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF \
-temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i7reg.D.X2
--111111 1
--0----- 0
---0---- 0
----0--- 0
-----0-- 0
------0- 0
-------0 0
-.names temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i6reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i6reg.BLIF temp_pcnt_12__i5reg.BLIF \
-temp_pcnt_12__i4reg.BLIF temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF \
-temp_pcnt_12__i1reg.BLIF temp_pcnt_12__i6reg.D.X2
--11111 1
--0---- 0
---0--- 0
----0-- 0
-----0- 0
------0 0
-.names temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i5reg.D.X1
-1 1
-0 0
-.names temp_pcnt_12__i5reg.BLIF temp_pcnt_12__i4reg.BLIF \
-temp_pcnt_12__i3reg.BLIF temp_pcnt_12__i2reg.BLIF temp_pcnt_12__i1reg.BLIF \
-temp_pcnt_12__i5reg.D.X2
--1111 1
--0--- 0
---0-- 0
----0- 0
-----0 0
 .end

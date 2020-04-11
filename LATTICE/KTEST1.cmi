@@ -1,6 +1,6 @@
 [WINDOWS]
 MAIN_WINDOW_POSITION=0,0,1920,1080
-LEFT_PANE_WIDTH=634
+LEFT_PANE_WIDTH=211
 CHILD_FRAME_STATE=Normal
 CHILD_WINDOW_SIZE=1170,780
 CHILD_WINDOW_POS=730,0
@@ -21,8 +21,8 @@ Sort_Type=0
 Sort_Direction=0
 Skip_Next_Pin=0
 [Pin Attributes]
-Type=41,no
-Signal/Group Name=134,no
+Type=103,no
+Signal/Group Name=167,no
 Group Members=111,no
 GLB=36,no
 Macrocell=73,no
@@ -48,3 +48,12 @@ Source=54,no
 Destination=83,no
 Delay(ns)=70,no
 Frequency(MHz)=114,no
+[Nodal Constraints]
+Type=41,no
+Signal/Group Name=134,no
+Max_pterm_collapse=138,no
+Max_pterm_split=114,no
+Max_fanin=76,no
+Xor_synthesis=96,no
+Fmax_logic_level=117,no
+Clock_enable_optimization=179,no

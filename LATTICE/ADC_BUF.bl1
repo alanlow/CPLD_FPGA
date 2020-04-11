@@ -1,0 +1,27 @@
+#$ TOOL ispLEVER Classic 2.0.00.17.20.15
+#$ DATE Fri Apr 10 18:34:36 2020
+#$ MODULE adc_buf
+#$ PINS 6 drdyn dclk sel0 sel1 clk0 clk1
+#$ NODES 2 sel1_c_c clk1_c_c
+.model adc_buf
+.inputs drdyn.BLIF dclk.BLIF sel1_c_c.BLIF clk1_c_c.BLIF
+.outputs sel0 sel1 clk0 clk1 sel1_c_c clk1_c_c
+.names sel1_c_c.BLIF sel0
+1 1
+0 0
+.names sel1_c_c.BLIF sel1
+1 1
+0 0
+.names clk1_c_c.BLIF clk0
+1 1
+0 0
+.names clk1_c_c.BLIF clk1
+1 1
+0 0
+.names drdyn.BLIF sel1_c_c
+1 1
+0 0
+.names dclk.BLIF clk1_c_c
+1 1
+0 0
+.end

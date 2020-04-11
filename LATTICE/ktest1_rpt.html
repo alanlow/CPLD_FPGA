@@ -21,7 +21,7 @@ Tools->Fitter Report File Format...
 <BR>
 Project Name         :  ktest1
 Project Path         :  C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE
-Project Fitted on    :  Fri Apr 10 15:54:49 2020
+Project Fitted on    :  Sat Apr 11 22:00:53 2020
 
 Device               :  M4064_32
 Package              :  48
@@ -39,31 +39,31 @@ Source Format        :  Pure_VHDL
 <BR>
 Prefit Time                     0 secs
 Load Design Time                0.06 secs
-Partition Time                  0.03 secs
-Place Time                      0.00 secs
+Partition Time                  0.05 secs
+Place Time                      0.01 secs
 Route Time                      0.00 secs
 Total Fit Time                  00:00:01
 
 
 <A name="Design_Summary"></A><FONT COLOR=maroon><U><B><big>Design_Summary</big></B></U></FONT>
 <BR>
-Total Input Pins                2
-Total Logic Functions           27
-  Total Output Pins             24
+Total Input Pins                9
+Total Logic Functions           34
+  Total Output Pins             8
   Total Bidir I/O Pins          0
-  Total Buried Nodes            3
-Total Flip-Flops                24
-  Total D Flip-Flops            13
-  Total T Flip-Flops            11
+  Total Buried Nodes            26
+Total Flip-Flops                25
+  Total D Flip-Flops            9
+  Total T Flip-Flops            16
   Total Latches                 0
-Total Product Terms             96
+Total Product Terms             97
 
 Total Reserved Pins             0
-Total Locked Pins               1
+Total Locked Pins               17
 Total Locked Nodes              0
 
 Total Unique Output Enables     0
-Total Unique Clocks             1
+Total Unique Clocks             2
 Total Unique Clock Enables      0
 Total Unique Resets             1
 Total Unique Presets            0
@@ -77,19 +77,19 @@ Fmax Logic Levels               2
                                  Total    Used   Not Used   Utilization
 -----------------------------------------------------------------------
 </B>Dedicated Pins
-  Clock/Input Pins                  4        2      2    -->    50
-  I/O / Enable Pins                 2        2      0    -->   100
-I/O Pins                           30       22      8    -->    73
-Logic Functions                    64       27     37    -->    42
+  Clock/Input Pins                  4        3      1    -->    75
+  I/O / Enable Pins                 2        1      1    -->    50
+I/O Pins                           30       13     17    -->    43
+Logic Functions                    64       34     30    -->    53
   Input Registers                  32        0     32    -->     0
 
-GLB Inputs                        144       59     85    -->    40
+GLB Inputs                        144       55     89    -->    38
 Logical Product Terms             320       48    272    -->    15
 Occupied GLBs                       4        4      0    -->   100
-Macrocells                         64       27     37    -->    42
+Macrocells                         64       34     30    -->    53
 
 Control Product Terms:
-  GLB Clock/Clock Enables           4        0      4    -->     0
+  GLB Clock/Clock Enables           4        4      0    -->   100
   GLB Reset/Presets                 4        0      4    -->     0
   Macrocell Clocks                 64        0     64    -->     0
   Macrocell Clock Enables          64        0     64    -->     0
@@ -97,9 +97,9 @@ Control Product Terms:
   Macrocell Resets                 64        0     64    -->     0
   Macrocell Presets                64        0     64    -->     0
 
-Global Routing Pool               100       27     73    -->    27
-  GRP from IFB                     ..        1     ..    -->    ..
-    (from input signals)           ..        1     ..    -->    ..
+Global Routing Pool               100       35     65    -->    35
+  GRP from IFB                     ..        9     ..    -->    ..
+    (from input signals)           ..        9     ..    -->    ..
     (from output signals)          ..        0     ..    -->    ..
     (from bidir signals)           ..        0     ..    -->    ..
   GRP from MFB                     ..       26     ..    -->    ..
@@ -119,12 +119,12 @@ Global Routing Pool               100       27     73    -->    27
 Maximum
   GLB                      36      *(1)     8   --     --             16       80       16
 </B>-------------------------------------------------------------------------------------------
-  GLB    A      2    23    25      6/8      0   10      0              6       15       10
-  GLB    B      3     3     6      3/8      0    3      0             13        7        3
-  GLB    C      3    13    16      7/8      0    7      0              9       13        7
-  GLB    D      6     6    12      6/8      0    7      0              9       13        7
+  GLB    A      4     5     9      2/8      0    4      0             12        7        4
+  GLB    B      5     1     6      6/8      0    4      0             12        5        4
+  GLB    C      2    11    13      4/8      0   12      0              4       16       12
+  GLB    D      3    24    27      1/8      0   14      0              2       20       14
 -------------------------------------------------------------------------------------------
-TOTALS:        14    45    59     22/32     0   27      0             37       48       27
+TOTALS:        14    41    55     13/32     0   34      0             30       48       34
 
 &lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
 &lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
@@ -138,10 +138,10 @@ TOTALS:        14    45    59     22/32     0   27      0             37       4
 Maximum
   GLB        1      1        16     16     16     16     16  
 ==============================================================================
-</B>  GLB    A   0      0         0      0      0      0      0
-  GLB    B   0      0         0      0      0      0      0
-  GLB    C   0      0         0      0      0      0      0
-  GLB    D   0      0         0      0      0      0      0
+</B>  GLB    A   1      0         0      0      0      0      0
+  GLB    B   1      0         0      0      0      0      0
+  GLB    C   1      0         0      0      0      0      0
+  GLB    D   1      0         0      0      0      0      0
 ------------------------------------------------------------------------------
 
 &lt;Note&gt; 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
@@ -149,7 +149,7 @@ Maximum
 
 <A name="Optimizer_and_Fitter_Options"></A><FONT COLOR=maroon><U><B><big>Optimizer_and_Fitter_Options</big></B></U></FONT>
 <BR>
-Pin Assignment :                       No
+Pin Assignment :                       Yes
 Group Assignment :                     No
 Pin Reservation :                      No
 
@@ -213,56 +213,56 @@ Device Options:
 <BR>
 <B>      | Pin   | Bank |GLB |Assigned|                 | Signal|            | PG
 Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enable
-</B>----------------------------------------------------------------------------------
+</B>----------------------------------------------------------------------------------------------------
 1     | TDI   |   -  |    |        |                 |       |            |
-2     |  I_O  |   0  | A8 |        |LVCMOS18         | Output|<A href=#18>pcnt_13_</A>|
-3     |  I_O  |   0  | A10|        |LVCMOS18         | Output|<A href=#20>pcnt_11_</A>|
+2     |  I_O  |   0  | A8 |        |                 |       |            |
+3     |  I_O  |   0  | A10|        |                 |       |            |
 4     |  I_O  |   0  | A11|        |                 |       |            |
 5     |GNDIO0 |   -  |    |        |                 |       |            |
 6     |VCCIO0 |   -  |    |        |                 |       |            |
-7     |  I_O  |   0  | B15|        |                 |       |            |
+7     |  I_O  |   0  | B15|    *   |LVCMOS18         | Output|<A href=#17>adc_sel1</A>|
 8     |  I_O  |   0  | B12|        |                 |       |            |
-9     |  I_O  |   0  | B10|        |                 |       |            |
-10    |  I_O  |   0  | B8 |        |                 |       |            |
+9     |  I_O  |   0  | B10|    *   |LVCMOS18         | Input |<A href=#10>pps_rstn</A>|
+10    |  I_O  |   0  | B8 |    *   |LVCMOS18         | Output|<A href=#16>adc_clk1</A>|
 11    | TCK   |   -  |    |        |                 |       |            |
 12    | VCC   |   -  |    |        |                 |       |            |
 13    | GND   |   -  |    |        |                 |       |            |
-14    |  I_O  |   0  | B6 |        |                 |       |            |
-15    |  I_O  |   0  | B4 |        |LVCMOS18         | Output|<A href=#19>pcnt_12_</A>|
-16    |  I_O  |   0  | B2 |        |LVCMOS18         | Output|<A href=#12>pcnt_19_</A>|
-17    |  I_O  |   0  | B0 |        |LVCMOS18         | Output|<A href=#11>pcnt_20_</A>|
-18    |INCLK1 |   0  |    |    *   |LVCMOS18         | Input |<A href=#7>nclr</A>|
-19    |INCLK2 |   1  |    |        |                 |       |            |
-20    |  I_O  |   1  | C0 |        |LVCMOS18         | Output|<A href=#14>pcnt_17_</A>|
-21    |  I_O  |   1  | C1 |        |LVCMOS18         | Output|<A href=#15>pcnt_16_</A>|
-22    |  I_O  |   1  | C2 |        |LVCMOS18         | Output|<A href=#13>pcnt_18_</A>|
-23    |  I_O  |   1  | C4 |        |LVCMOS18         | Output|<A href=#21>pcnt_10_</A>|
-24    |  I_O  |   1  | C6 |        |LVCMOS18         | Output|<A href=#23>pcnt_8_</A>|
+14    |  I_O  |   0  | B6 |    *   |LVCMOS18         | Input |<A href=#9>cpld_seln</A>|
+15    |  I_O  |   0  | B4 |    *   |LVCMOS18         | Input |<A href=#14>cpld_sdi</A>|
+16    |  I_O  |   0  | B2 |        |                 |       |            |
+17    |  I_O  |   0  | B0 |    *   |LVCMOS18         | Output|<A href=#15>cpld_sdo</A>|
+18    |INCLK1 |   0  |    |    *   |LVCMOS18         | Input |<A href=#8>adc_dclk</A>|
+19    |INCLK2 |   1  |    |    *   |LVCMOS18         | Input |<A href=#11>adc_drdyn</A>|
+20    |  I_O  |   1  | C0 |        |                 |       |            |
+21    |  I_O  |   1  | C1 |    *   |LVCMOS18         | Output|<A href=#20>spi_clk</A>|
+22    |  I_O  |   1  | C2 |    *   |LVCMOS18         | Output|<A href=#21>spi_mosi</A>|
+23    |  I_O  |   1  | C4 |    *   |LVCMOS18         | Input |<A href=#12>spi_miso</A>|
+24    |  I_O  |   1  | C6 |    *   |LVCMOS18         | Input |<A href=#13>cpld_clk</A>|
 25    | TMS   |   -  |    |        |                 |       |            |
-26    |  I_O  |   1  | C8 |        |LVCMOS18         | Output|<A href=#24>pcnt_7_</A>|
-27    |  I_O  |   1  | C10|        |LVCMOS18         | Output|<A href=#25>pcnt_6_</A>|
+26    |  I_O  |   1  | C8 |        |                 |       |            |
+27    |  I_O  |   1  | C10|        |                 |       |            |
 28    |  I_O  |   1  | C11|        |                 |       |            |
 29    |GNDIO1 |   -  |    |        |                 |       |            |
 30    |VCCIO1 |   -  |    |        |                 |       |            |
 31    |  I_O  |   1  | D15|        |                 |       |            |
-32    |  I_O  |   1  | D12|        |LVCMOS18         | Output|<A href=#31>pcnt_0_</A>|
-33    |  I_O  |   1  | D10|        |LVCMOS18         | Output|<A href=#27>pcnt_4_</A>|
-34    |  I_O  |   1  | D8 |        |LVCMOS18         | Output|<A href=#26>pcnt_5_</A>|
+32    |  I_O  |   1  | D12|        |                 |       |            |
+33    |  I_O  |   1  | D10|        |                 |       |            |
+34    |  I_O  |   1  | D8 |        |                 |       |            |
 35    | TDO   |   -  |    |        |                 |       |            |
 36    | VCC   |   -  |    |        |                 |       |            |
 37    | GND   |   -  |    |        |                 |       |            |
-38    |  I_O  |   1  | D6 |        |LVCMOS18         | Output|<A href=#22>pcnt_9_</A>|
-39    |  I_O  |   1  | D4 |        |LVCMOS18         | Output|<A href=#30>pcnt_1_</A>|
-40    |  I_O  |   1  | D2 |        |LVCMOS18         | Output|<A href=#16>pcnt_15_</A>|
-41    | I_O/OE|   1  | D0 |        |LVCMOS18         | Output|<A href=#28>pcnt_3_</A>|
+38    |  I_O  |   1  | D6 |        |                 |       |            |
+39    |  I_O  |   1  | D4 |    *   |LVCMOS18         | Output|<A href=#22>freq_clka</A>|
+40    |  I_O  |   1  | D2 |        |                 |       |            |
+41    | I_O/OE|   1  | D0 |        |                 |       |            |
 42    |INCLK3 |   1  |    |        |                 |       |            |
-43    |INCLK0 |   0  |    |        |LVCMOS18         | Input |<A href=#6>pps</A>|
-44    | I_O/OE|   0  | A0 |        |LVCMOS18         | Output|<A href=#10>pcnt_21_</A>|
-45    |  I_O  |   0  | A1 |        |LVCMOS18         | Output|<A href=#29>pcnt_2_</A>|
-46    |  I_O  |   0  | A2 |        |LVCMOS18         | Output|<A href=#8>pcnt_23_</A>|
-47    |  I_O  |   0  | A4 |        |LVCMOS18         | Output|<A href=#9>pcnt_22_</A>|
-48    |  I_O  |   0  | A6 |        |LVCMOS18         | Output|<A href=#17>pcnt_14_</A>|
-----------------------------------------------------------------------------------
+43    |INCLK0 |   0  |    |    *   |LVCMOS18         | Input |<A href=#6>mcu_clko</A>|
+44    | I_O/OE|   0  | A0 |    *   |LVCMOS18         | Output|<A href=#18>adc_sel0</A>|
+45    |  I_O  |   0  | A1 |    *   |LVCMOS18         | Output|<A href=#19>adc_clk0</A>|
+46    |  I_O  |   0  | A2 |        |                 |       |            |
+47    |  I_O  |   0  | A4 |        |                 |       |            |
+48    |  I_O  |   0  | A6 |    *   |LVCMOS18         | Input |<A href=#7>rxd_1v8</A>|
+----------------------------------------------------------------------------------------------------
 
 &lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
 &lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
@@ -280,10 +280,17 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 <B>                Input
          Pin    Fanout
  Pin GLB Type           Pullup Signal
-</B>-------------------------------------
-  18  -- INCLK  4 ABCD    Down <A name=7>nclr</A>
-  43  -- INCLK    ----    Down <A name=6>pps</A>
--------------------------------------
+</B>----------------------------------------
+  18  -- INCLK  2 AB--      Up <A name=8>adc_dclk</A>
+  19  -- INCLK  2 AB--      Up <A name=11>adc_drdyn</A>
+  24   C  I/O   1 --C-      Up <A name=13>cpld_clk</A>
+  15   B  I/O   1 --C-      Up <A name=14>cpld_sdi</A>
+  14   B  I/O   1 -B--      Up <A name=9>cpld_seln</A>
+  43  -- INCLK  1 ---D      Up <A name=6>mcu_clko</A>
+   9   B  I/O   3 A-CD      Up <A name=10>pps_rstn</A>
+  48   A  I/O   3 A-CD      Up <A name=7>rxd_1v8</A>
+  23   C  I/O   1 -B--      Up <A name=12>spi_miso</A>
+----------------------------------------
 
 
 <A name="Output_Signal_List"></A><FONT COLOR=maroon><U><B><big>Output_Signal_List</big></B></U></FONT>
@@ -291,32 +298,16 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 <B>          I         C      P R P       O Output
           N         L Mc   R E U C O F B Fanout
  Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
-</B>---------------------------------------------------------------------
-  32   D  2  1   1  1 DFF    * R         3 A-CD  Fast   Down <A href=#31>pcnt_0_</A>
-  23   C 11  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#21>pcnt_10_</A>
-   3   A 12  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#20>pcnt_11_</A>
-  15   B  3  2   2  1 DFF    * R         2 AB--  Fast   Down <A href=#19>pcnt_12_</A>
-   2   A 14  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#18>pcnt_13_</A>
-  48   A 15  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#17>pcnt_14_</A>
-  40   D  3  2   2  1 DFF    * R         3 A-CD  Fast   Down <A href=#16>pcnt_15_</A>
-  21   C  4  2   3  1 DFF    * R         2 A-C-  Fast   Down <A href=#15>pcnt_16_</A>
-  20   C  5  2   4  1 DFF    * R         2 A-C-  Fast   Down <A href=#14>pcnt_17_</A>
-  22   C  6  2   2  1 DFF    * R         2 A-C-  Fast   Down <A href=#13>pcnt_18_</A>
-  16   B  3  2   2  1 DFF    * R         2 AB--  Fast   Down <A href=#12>pcnt_19_</A>
-  39   D  3  1   2  1 DFF    * R         3 A-CD  Fast   Down <A href=#30>pcnt_1_</A>
-  17   B  4  2   3  1 DFF    * R         2 AB--  Fast   Down <A href=#11>pcnt_20_</A>
-  44   A  5  2   4  1 DFF    * R         1 A---  Fast   Down <A href=#10>pcnt_21_</A>
-  47   A 23  1   1  1 TFF    * R         1 A---  Fast   Down <A href=#9>pcnt_22_</A>
-  46   A 24  1   1  1 TFF    * R           ----  Fast   Down <A href=#8>pcnt_23_</A>
-  45   A  4  1   3  1 DFF    * R         3 A-CD  Fast   Down <A href=#29>pcnt_2_</A>
-  41   D  5  1   4  1 DFF    * R         3 A-CD  Fast   Down <A href=#28>pcnt_3_</A>
-  33   D  6  1   2  1 DFF    * R         3 A-CD  Fast   Down <A href=#27>pcnt_4_</A>
-  34   D  6  1   1  1 TFF    * R         3 A-CD  Fast   Down <A href=#26>pcnt_5_</A>
-  27   C  7  1   1  1 TFF    * R         3 A-CD  Fast   Down <A href=#25>pcnt_6_</A>
-  26   C  8  1   1  1 TFF    * R         3 A-CD  Fast   Down <A href=#24>pcnt_7_</A>
-  24   C  9  1   1  1 TFF    * R         3 A-CD  Fast   Down <A href=#23>pcnt_8_</A>
-  38   D 10  1   1  1 TFF    * R         2 A-C-  Fast   Down <A href=#22>pcnt_9_</A>
----------------------------------------------------------------------
+</B>----------------------------------------------------------------------
+  45   A  1  1   1  1 COM                  ----  Fast     Up <A href=#19>adc_clk0</A>
+  10   B  1  1   1  1 COM                  ----  Fast     Up <A href=#16>adc_clk1</A>
+  44   A  1  1   1  1 COM                  ----  Fast     Up <A href=#18>adc_sel0</A>
+   7   B  1  1   1  1 COM                  ----  Fast     Up <A href=#17>adc_sel1</A>
+  17   B  3  1   2  1 COM                  ----  Fast     Up <A href=#15>cpld_sdo</A>
+  39   D  1  1   1  1 COM                  ----  Fast     Up <A href=#22>freq_clka</A>
+  21   C  1  1   1  1 COM                  ----  Fast     Up <A href=#20>spi_clk</A>
+  22   C  1  1   1  1 COM                  ----  Fast     Up <A href=#21>spi_mosi</A>
+----------------------------------------------------------------------
 
 &lt;Note&gt; CLS = Number of clusters used
        INP = Number of input signals
@@ -357,11 +348,34 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 <B>        I         C      P R P       Node
         N         L Mc   R E U C I F Fanout
 Mc GLB  P LL PTs  S Type E S P E R P         Signal
-</B>---------------------------------------------------
- 3   A 12  -   1  1 COM              1 -B--  <A href=#32>n166</A>
- 5   A 15  -   1  1 COM              2 --CD  <A href=#33>n187</A>
- 7   A 19  -   1  1 COM              2 AB--  <A href=#34>n215</A>
----------------------------------------------------
+</B>--------------------------------------------------------------------------
+12   C  9  -   1  1 COM              2 A--D  <A href=#48>n151</A>
+ 5   C  3  1   1  1 DFF    * R       2 --CD  <A href=#25>pps_counter__temp_pcnt_5__i0</A>
+ 4   C  4  1   2  1 DFF    * R       2 --CD  <A href=#26>pps_counter__temp_pcnt_5__i1</A>
+ 6   A  5  2   3  1 DFF    * R       2 A--D  <A href=#35>pps_counter__temp_pcnt_5__i10</A>
+ 1   D  6  2   4  1 DFF    * R       2 A--D  <A href=#36>pps_counter__temp_pcnt_5__i11</A>
+10   A  7  2   2  1 DFF    * R       2 A--D  <A href=#37>pps_counter__temp_pcnt_5__i12</A>
+ 3   D 15  1   1  1 TFF    * R       1 ---D  <A href=#38>pps_counter__temp_pcnt_5__i13</A>
+ 5   D 16  1   1  1 TFF    * R       1 ---D  <A href=#39>pps_counter__temp_pcnt_5__i14</A>
+ 6   D 17  1   1  1 TFF    * R       1 ---D  <A href=#40>pps_counter__temp_pcnt_5__i15</A>
+ 7   D 18  1   1  1 TFF    * R       1 ---D  <A href=#41>pps_counter__temp_pcnt_5__i16</A>
+ 8   D 19  1   1  1 TFF    * R       1 ---D  <A href=#42>pps_counter__temp_pcnt_5__i17</A>
+ 9   D 20  1   1  1 TFF    * R       1 ---D  <A href=#43>pps_counter__temp_pcnt_5__i18</A>
+10   D 21  1   1  1 TFF    * R       1 ---D  <A href=#44>pps_counter__temp_pcnt_5__i19</A>
+ 0   C  5  1   3  1 DFF    * R       2 --CD  <A href=#27>pps_counter__temp_pcnt_5__i2</A>
+11   D 22  1   1  1 TFF    * R       1 ---D  <A href=#45>pps_counter__temp_pcnt_5__i20</A>
+12   D 23  1   1  1 TFF    * R       1 ---D  <A href=#46>pps_counter__temp_pcnt_5__i21</A>
+13   D 24  1   1  1 TFF    * R       1 ---D  <A href=#47>pps_counter__temp_pcnt_5__i22</A>
+ 2   D 25  1   1  1 TFF    * R       1 -B--  <A href=#24>pps_counter__temp_pcnt_5__i23</A>
+ 0   D  6  1   4  1 DFF    * R       2 --CD  <A href=#28>pps_counter__temp_pcnt_5__i3</A>
+ 3   C  7  1   2  1 DFF    * R       2 --CD  <A href=#29>pps_counter__temp_pcnt_5__i4</A>
+ 6   C  7  1   1  1 TFF    * R       2 --CD  <A href=#30>pps_counter__temp_pcnt_5__i5</A>
+ 7   C  8  1   1  1 TFF    * R       2 --CD  <A href=#31>pps_counter__temp_pcnt_5__i6</A>
+ 8   C  9  1   1  1 TFF    * R       2 --CD  <A href=#32>pps_counter__temp_pcnt_5__i7</A>
+ 9   C 10  1   1  1 TFF    * R       2 --CD  <A href=#33>pps_counter__temp_pcnt_5__i8</A>
+10   C 11  1   1  1 TFF    * R       2 A--D  <A href=#34>pps_counter__temp_pcnt_5__i9</A>
+ 6   B  2  1   1  1 DFF      R       1 -B--  <A href=#23>spi_module__spi_cntr_vPcnt_i0</A>
+--------------------------------------------------------------------------
 
 &lt;Note&gt; CLS = Number of clusters used
        INP = Number of input signals
@@ -379,152 +393,263 @@ Mc GLB  P LL PTs  S Type E S P E R P         Signal
 
 <A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
 <BR>
-<A name=32>n166</A> = <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A>
-       & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 12 signals)
+<A name=19>adc_clk0</A> = <A href=#8>adc_dclk</A> ; (1 pterm, 1 signal)
 
-<A name=33>n187</A> = <A href=#17>pcnt_14_.Q</A> & <A href=#18>pcnt_13_.Q</A> & <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A>
-       & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A>
-       & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 15 signals)
+<A name=16>adc_clk1</A> = <A href=#8>adc_dclk</A> ; (1 pterm, 1 signal)
 
-<A name=34>n215</A> = <A href=#13>pcnt_18_.Q</A> & <A href=#14>pcnt_17_.Q</A> & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#17>pcnt_14_.Q</A>
-       & <A href=#18>pcnt_13_.Q</A> & <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A>
-       & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A>
-       & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 19 signals)
+<A name=18>adc_sel0</A> = <A href=#11>adc_drdyn</A> ; (1 pterm, 1 signal)
 
-<A name=31>pcnt_0_.D</A> = !<A href=#31>pcnt_0_.Q</A> ; (1 pterm, 1 signal)
-pcnt_0_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_0_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=17>adc_sel1</A> = <A href=#11>adc_drdyn</A> ; (1 pterm, 1 signal)
 
-<A name=21>pcnt_10_.T</A> = <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A>
-       & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 10 signals)
-pcnt_10_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_10_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=15>cpld_sdo</A> = <A href=#9>cpld_seln</A> & <A href=#12>spi_miso</A>
+    # !cpld_seln & <A href=#23>spi_module__spi_cntr_vPcnt_i0.Q</A> ; (2 pterms, 3 signals)
 
-<A name=20>pcnt_11_.T</A> = <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A>
-       & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 11 signals)
-pcnt_11_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_11_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=22>freq_clka</A> = <A href=#6>mcu_clko</A> ; (1 pterm, 1 signal)
 
-<A name=19>pcnt_12_.D</A> = <A href=#19>pcnt_12_.Q</A> & !<A href=#32>n166</A>
-    # !pcnt_12_.Q & n166 ; (2 pterms, 2 signals)
-pcnt_12_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_12_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=48>n151</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A> & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A>
+       & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A> & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A>
+       & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A> & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A>
+       & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A> & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A>
+       & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A> ; (1 pterm, 9 signals)
 
-<A name=18>pcnt_13_.T</A> = <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A>
-       & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A>
-       & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 13 signals)
-pcnt_13_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_13_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=25>pps_counter__temp_pcnt_5__i0.D</A> = !<A href=#25>pps_counter__temp_pcnt_5__i0.Q</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i0.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i0.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=17>pcnt_14_.T</A> = <A href=#18>pcnt_13_.Q</A> & <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A>
-       & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A>
-       & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 14 signals)
-pcnt_14_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_14_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=26>pps_counter__temp_pcnt_5__i1.D</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & !<A href=#26>pps_counter__temp_pcnt_5__i1.Q</A>
+    # !pps_counter__temp_pcnt_5__i0.Q & pps_counter__temp_pcnt_5__i1.Q ; (2 pterms, 2 signals)
+pps_counter__temp_pcnt_5__i1.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i1.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=16>pcnt_15_.D</A> = <A href=#16>pcnt_15_.Q</A> & !<A href=#33>n187</A>
-    # !pcnt_15_.Q & n187 ; (2 pterms, 2 signals)
-pcnt_15_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_15_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=35>pps_counter__temp_pcnt_5__i10.D</A> = <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A>
+       & !<A href=#35>pps_counter__temp_pcnt_5__i10.Q</A> & <A href=#48>n151</A>
+    # !pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+    # pps_counter__temp_pcnt_5__i10.Q & !n151 ; (3 pterms, 3 signals)
+pps_counter__temp_pcnt_5__i10.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i10.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=15>pcnt_16_.D</A> = !<A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#33>n187</A>
-    # pcnt_16_.Q & !pcnt_15_.Q
-    # pcnt_16_.Q & !n187 ; (3 pterms, 3 signals)
-pcnt_16_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_16_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=36>pps_counter__temp_pcnt_5__i11.D</A> = <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A>
+       & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A> & !<A href=#36>pps_counter__temp_pcnt_5__i11.Q</A>
+       & <A href=#48>n151</A>
+    # !pps_counter__temp_pcnt_5__i10.Q & pps_counter__temp_pcnt_5__i11.Q
+    # !pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i11.Q
+    # pps_counter__temp_pcnt_5__i11.Q & !n151 ; (4 pterms, 4 signals)
+pps_counter__temp_pcnt_5__i11.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i11.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=14>pcnt_17_.D</A> = !<A href=#14>pcnt_17_.Q</A> & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#33>n187</A>
-    # pcnt_17_.Q & !pcnt_15_.Q
-    # pcnt_17_.Q & !pcnt_16_.Q
-    # pcnt_17_.Q & !n187 ; (4 pterms, 4 signals)
-pcnt_17_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_17_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=37>pps_counter__temp_pcnt_5__i12.D.X1</A> = <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A>
+       & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A> & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A>
+       & <A href=#48>n151</A> ; (1 pterm, 4 signals)
+pps_counter__temp_pcnt_5__i12.D.X2 = <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i12.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i12.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=13>pcnt_18_.D.X1</A> = <A href=#13>pcnt_18_.Q</A> ; (1 pterm, 1 signal)
-pcnt_18_.D.X2 = <A href=#14>pcnt_17_.Q</A> & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#33>n187</A> ; (1 pterm, 4 signals)
-pcnt_18_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_18_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=38>pps_counter__temp_pcnt_5__i13.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A> ; (1 pterm, 13 signals)
+pps_counter__temp_pcnt_5__i13.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i13.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=12>pcnt_19_.D</A> = <A href=#12>pcnt_19_.Q</A> & !<A href=#34>n215</A>
-    # !pcnt_19_.Q & n215 ; (2 pterms, 2 signals)
-pcnt_19_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_19_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=39>pps_counter__temp_pcnt_5__i14.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> ; (1 pterm, 14 signals)
+pps_counter__temp_pcnt_5__i14.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i14.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=30>pcnt_1_.D</A> = <A href=#30>pcnt_1_.Q</A> & !<A href=#31>pcnt_0_.Q</A>
-    # !pcnt_1_.Q & pcnt_0_.Q ; (2 pterms, 2 signals)
-pcnt_1_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_1_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=40>pps_counter__temp_pcnt_5__i15.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A> ; (1 pterm, 15 signals)
+pps_counter__temp_pcnt_5__i15.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i15.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=11>pcnt_20_.D</A> = !<A href=#11>pcnt_20_.Q</A> & <A href=#12>pcnt_19_.Q</A> & <A href=#34>n215</A>
-    # pcnt_20_.Q & !pcnt_19_.Q
-    # pcnt_20_.Q & !n215 ; (3 pterms, 3 signals)
-pcnt_20_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_20_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=41>pps_counter__temp_pcnt_5__i16.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A>
+       & <A href=#40>pps_counter__temp_pcnt_5__i15.Q</A> ; (1 pterm, 16 signals)
+pps_counter__temp_pcnt_5__i16.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i16.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=10>pcnt_21_.D</A> = !<A href=#10>pcnt_21_.Q</A> & <A href=#11>pcnt_20_.Q</A> & <A href=#12>pcnt_19_.Q</A> & <A href=#34>n215</A>
-    # pcnt_21_.Q & !pcnt_19_.Q
-    # pcnt_21_.Q & !pcnt_20_.Q
-    # pcnt_21_.Q & !n215 ; (4 pterms, 4 signals)
-pcnt_21_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_21_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=42>pps_counter__temp_pcnt_5__i17.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A>
+       & <A href=#40>pps_counter__temp_pcnt_5__i15.Q</A> & <A href=#41>pps_counter__temp_pcnt_5__i16.Q</A> ; (1 pterm, 17 signals)
+pps_counter__temp_pcnt_5__i17.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i17.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=9>pcnt_22_.T</A> = <A href=#10>pcnt_21_.Q</A> & <A href=#11>pcnt_20_.Q</A> & <A href=#12>pcnt_19_.Q</A> & <A href=#13>pcnt_18_.Q</A> & <A href=#14>pcnt_17_.Q</A>
-       & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#17>pcnt_14_.Q</A> & <A href=#18>pcnt_13_.Q</A> & <A href=#19>pcnt_12_.Q</A>
-       & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A>
-       & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A>
-       & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 22 signals)
-pcnt_22_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_22_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=43>pps_counter__temp_pcnt_5__i18.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A>
+       & <A href=#40>pps_counter__temp_pcnt_5__i15.Q</A> & <A href=#41>pps_counter__temp_pcnt_5__i16.Q</A>
+       & <A href=#42>pps_counter__temp_pcnt_5__i17.Q</A> ; (1 pterm, 18 signals)
+pps_counter__temp_pcnt_5__i18.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i18.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=8>pcnt_23_.T</A> = <A href=#9>pcnt_22_.Q</A> & <A href=#10>pcnt_21_.Q</A> & <A href=#11>pcnt_20_.Q</A> & <A href=#12>pcnt_19_.Q</A> & <A href=#13>pcnt_18_.Q</A>
-       & <A href=#14>pcnt_17_.Q</A> & <A href=#15>pcnt_16_.Q</A> & <A href=#16>pcnt_15_.Q</A> & <A href=#17>pcnt_14_.Q</A> & <A href=#18>pcnt_13_.Q</A>
-       & <A href=#19>pcnt_12_.Q</A> & <A href=#20>pcnt_11_.Q</A> & <A href=#21>pcnt_10_.Q</A> & <A href=#22>pcnt_9_.Q</A> & <A href=#23>pcnt_8_.Q</A>
-       & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A>
-       & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 23 signals)
-pcnt_23_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_23_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=44>pps_counter__temp_pcnt_5__i19.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A>
+       & <A href=#40>pps_counter__temp_pcnt_5__i15.Q</A> & <A href=#41>pps_counter__temp_pcnt_5__i16.Q</A>
+       & <A href=#42>pps_counter__temp_pcnt_5__i17.Q</A> & <A href=#43>pps_counter__temp_pcnt_5__i18.Q</A> ; (1 pterm, 19 signals)
+pps_counter__temp_pcnt_5__i19.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i19.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=29>pcnt_2_.D</A> = !<A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A>
-    # pcnt_2_.Q & !pcnt_1_.Q
-    # pcnt_2_.Q & !pcnt_0_.Q ; (3 pterms, 3 signals)
-pcnt_2_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_2_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=27>pps_counter__temp_pcnt_5__i2.D</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & !<A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+    # !pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+    # !pps_counter__temp_pcnt_5__i0.Q & pps_counter__temp_pcnt_5__i2.Q ; (3 pterms, 3 signals)
+pps_counter__temp_pcnt_5__i2.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i2.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=28>pcnt_3_.D</A> = !<A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A>
-    # pcnt_3_.Q & !pcnt_1_.Q
-    # pcnt_3_.Q & !pcnt_2_.Q
-    # pcnt_3_.Q & !pcnt_0_.Q ; (4 pterms, 4 signals)
-pcnt_3_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_3_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=45>pps_counter__temp_pcnt_5__i20.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A>
+       & <A href=#40>pps_counter__temp_pcnt_5__i15.Q</A> & <A href=#41>pps_counter__temp_pcnt_5__i16.Q</A>
+       & <A href=#42>pps_counter__temp_pcnt_5__i17.Q</A> & <A href=#43>pps_counter__temp_pcnt_5__i18.Q</A>
+       & <A href=#44>pps_counter__temp_pcnt_5__i19.Q</A> ; (1 pterm, 20 signals)
+pps_counter__temp_pcnt_5__i20.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i20.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=27>pcnt_4_.D.X1</A> = <A href=#27>pcnt_4_.Q</A> ; (1 pterm, 1 signal)
-pcnt_4_.D.X2 = <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 4 signals)
-pcnt_4_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_4_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=46>pps_counter__temp_pcnt_5__i21.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A>
+       & <A href=#40>pps_counter__temp_pcnt_5__i15.Q</A> & <A href=#41>pps_counter__temp_pcnt_5__i16.Q</A>
+       & <A href=#42>pps_counter__temp_pcnt_5__i17.Q</A> & <A href=#43>pps_counter__temp_pcnt_5__i18.Q</A>
+       & <A href=#44>pps_counter__temp_pcnt_5__i19.Q</A> & <A href=#45>pps_counter__temp_pcnt_5__i20.Q</A> ; (1 pterm, 21 signals)
+pps_counter__temp_pcnt_5__i21.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i21.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=26>pcnt_5_.T</A> = <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 5 signals)
-pcnt_5_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_5_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=47>pps_counter__temp_pcnt_5__i22.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A>
+       & <A href=#40>pps_counter__temp_pcnt_5__i15.Q</A> & <A href=#41>pps_counter__temp_pcnt_5__i16.Q</A>
+       & <A href=#42>pps_counter__temp_pcnt_5__i17.Q</A> & <A href=#43>pps_counter__temp_pcnt_5__i18.Q</A>
+       & <A href=#44>pps_counter__temp_pcnt_5__i19.Q</A> & <A href=#45>pps_counter__temp_pcnt_5__i20.Q</A>
+       & <A href=#46>pps_counter__temp_pcnt_5__i21.Q</A> ; (1 pterm, 22 signals)
+pps_counter__temp_pcnt_5__i22.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i22.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=25>pcnt_6_.T</A> = <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A>
-       & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 6 signals)
-pcnt_6_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_6_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=24>pps_counter__temp_pcnt_5__i23.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A>
+       & <A href=#34>pps_counter__temp_pcnt_5__i9.Q</A> & <A href=#35>pps_counter__temp_pcnt_5__i10.Q</A>
+       & <A href=#36>pps_counter__temp_pcnt_5__i11.Q</A> & <A href=#37>pps_counter__temp_pcnt_5__i12.Q</A>
+       & <A href=#38>pps_counter__temp_pcnt_5__i13.Q</A> & <A href=#39>pps_counter__temp_pcnt_5__i14.Q</A>
+       & <A href=#40>pps_counter__temp_pcnt_5__i15.Q</A> & <A href=#41>pps_counter__temp_pcnt_5__i16.Q</A>
+       & <A href=#42>pps_counter__temp_pcnt_5__i17.Q</A> & <A href=#43>pps_counter__temp_pcnt_5__i18.Q</A>
+       & <A href=#44>pps_counter__temp_pcnt_5__i19.Q</A> & <A href=#45>pps_counter__temp_pcnt_5__i20.Q</A>
+       & <A href=#46>pps_counter__temp_pcnt_5__i21.Q</A> & <A href=#47>pps_counter__temp_pcnt_5__i22.Q</A> ; (1 pterm, 23 signals)
+pps_counter__temp_pcnt_5__i23.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i23.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=24>pcnt_7_.T</A> = <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A>
-       & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 7 signals)
-pcnt_7_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_7_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=28>pps_counter__temp_pcnt_5__i3.D</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & !<A href=#28>pps_counter__temp_pcnt_5__i3.Q</A>
+    # !pps_counter__temp_pcnt_5__i2.Q & pps_counter__temp_pcnt_5__i3.Q
+    # !pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i3.Q
+    # !pps_counter__temp_pcnt_5__i0.Q & pps_counter__temp_pcnt_5__i3.Q ; (4 pterms, 4 signals)
+pps_counter__temp_pcnt_5__i3.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i3.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=23>pcnt_8_.T</A> = <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A> & <A href=#28>pcnt_3_.Q</A>
-       & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 8 signals)
-pcnt_8_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_8_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=29>pps_counter__temp_pcnt_5__i4.D.X1</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> ; (1 pterm, 4 signals)
+pps_counter__temp_pcnt_5__i4.D.X2 = <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i4.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i4.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
 
-<A name=22>pcnt_9_.T</A> = <A href=#23>pcnt_8_.Q</A> & <A href=#24>pcnt_7_.Q</A> & <A href=#25>pcnt_6_.Q</A> & <A href=#26>pcnt_5_.Q</A> & <A href=#27>pcnt_4_.Q</A>
-       & <A href=#28>pcnt_3_.Q</A> & <A href=#29>pcnt_2_.Q</A> & <A href=#30>pcnt_1_.Q</A> & <A href=#31>pcnt_0_.Q</A> ; (1 pterm, 9 signals)
-pcnt_9_.C = <A href=#6>pps</A> ; (1 pterm, 1 signal)
-pcnt_9_.AR = !<A href=#7>nclr</A> ; (1 pterm, 1 signal)
+<A name=30>pps_counter__temp_pcnt_5__i5.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A> ; (1 pterm, 5 signals)
+pps_counter__temp_pcnt_5__i5.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i5.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
+
+<A name=31>pps_counter__temp_pcnt_5__i6.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> ; (1 pterm, 6 signals)
+pps_counter__temp_pcnt_5__i6.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i6.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
+
+<A name=32>pps_counter__temp_pcnt_5__i7.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A> ; (1 pterm, 7 signals)
+pps_counter__temp_pcnt_5__i7.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i7.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
+
+<A name=33>pps_counter__temp_pcnt_5__i8.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> ; (1 pterm, 8 signals)
+pps_counter__temp_pcnt_5__i8.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i8.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
+
+<A name=34>pps_counter__temp_pcnt_5__i9.T</A> = <A href=#25>pps_counter__temp_pcnt_5__i0.Q</A>
+       & <A href=#26>pps_counter__temp_pcnt_5__i1.Q</A> & <A href=#27>pps_counter__temp_pcnt_5__i2.Q</A>
+       & <A href=#28>pps_counter__temp_pcnt_5__i3.Q</A> & <A href=#29>pps_counter__temp_pcnt_5__i4.Q</A>
+       & <A href=#30>pps_counter__temp_pcnt_5__i5.Q</A> & <A href=#31>pps_counter__temp_pcnt_5__i6.Q</A>
+       & <A href=#32>pps_counter__temp_pcnt_5__i7.Q</A> & <A href=#33>pps_counter__temp_pcnt_5__i8.Q</A> ; (1 pterm, 9 signals)
+pps_counter__temp_pcnt_5__i9.C = <A href=#7>rxd_1v8</A> ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i9.AR = !<A href=#10>pps_rstn</A> ; (1 pterm, 1 signal)
+
+<A name=20>spi_clk</A> = <A href=#13>cpld_clk</A> ; (1 pterm, 1 signal)
+
+<A name=23>spi_module__spi_cntr_vPcnt_i0.D</A> = <A href=#24>pps_counter__temp_pcnt_5__i23.Q</A> ; (1 pterm, 1 signal)
+spi_module__spi_cntr_vPcnt_i0.C = !<A href=#9>cpld_seln</A> ; (1 pterm, 1 signal)
+
+<A name=21>spi_mosi</A> = <A href=#14>cpld_sdi</A> ; (1 pterm, 1 signal)
 
 <BR>
 <BR>

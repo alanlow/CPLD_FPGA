@@ -1,0 +1,81 @@
+// SDF delay-file
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "ktest1")
+  (DATE "4/10/2020 18:30:8")
+  (VENDOR "Lattice Semiconductor")
+  (PROGRAM "SDF Generator")
+  (VERSION "2.0.00.17.20.15 Data sheet version: 0.9")
+  (DIVIDER /)
+  (VOLTAGE :1.8:)
+  (PROCESS "worst")
+  (TEMPERATURE :90:)
+  (TIMESCALE 10ps)
+  (CELL
+    (CELLTYPE "OBUF")
+    (INSTANCE OUT_sel0_I_1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH I0 O (140:140:140) (140:140:140) )
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "OBUF")
+    (INSTANCE OUT_sel1_I_1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH I0 O (140:140:140) (140:140:140) )
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "OBUF")
+    (INSTANCE OUT_clk0_I_1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH I0 O (140:140:140) (140:140:140) )
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "BUFTH")
+    (INSTANCE OUT_clk1_I_1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH I0 O (140:140:140) (140:140:140) )
+        (IOPATH OE O () () (140:140:140) (140:140:140) (140:140:140) (140:140:140) )
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "BUFF")
+    (INSTANCE GATE_sel0_I_1)
+    (DELAY
+      (ABSOLUTE
+        (PORT I0 (395:395:395) (395:395:395) )
+        (IOPATH I0 O (45:45:45) (45:45:45) )
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "BUFF")
+    (INSTANCE GATE_sel1_I_1)
+    (DELAY
+      (ABSOLUTE
+        (PORT I0 (395:395:395) (395:395:395) )
+        (IOPATH I0 O (45:45:45) (45:45:45) )
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "BUFF")
+    (INSTANCE GATE_clk0_I_1)
+    (DELAY
+      (ABSOLUTE
+        (PORT I0 (395:395:395) (395:395:395) )
+        (IOPATH I0 O (45:45:45) (45:45:45) )
+      )
+    )
+  )
+)

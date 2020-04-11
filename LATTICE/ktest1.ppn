@@ -2,39 +2,30 @@
 // Software Version :  ispLEVER Classic 2.0.00.17.20.15  
 // Project Name	    :  ktest1
 // Targeted Device  :  LC4064ZE-5TN48I
-// Date             :  Fri Apr 10 15:54:49 2020
+// Date             :  Sat Apr 11 22:00:53 2020
 //
-                 pcnt_13_          OUT           2
-                 pcnt_11_          OUT           3
                    GNDIO0          SYS           5
                    VCCIO0          SYS           6
+                 adc_sel1          OUT           7
+                 pps_rstn          IN            9
+                 adc_clk1          OUT           10
                       VCC          SYS           12
                       GND          SYS           13
-                 pcnt_12_          OUT           15
-                 pcnt_19_          OUT           16
-                 pcnt_20_          OUT           17
-                     nclr          IN            18
-                 pcnt_17_          OUT           20
-                 pcnt_16_          OUT           21
-                 pcnt_18_          OUT           22
-                 pcnt_10_          OUT           23
-                  pcnt_8_          OUT           24
-                  pcnt_7_          OUT           26
-                  pcnt_6_          OUT           27
+                cpld_seln          IN            14
+                 cpld_sdi          IN            15
+                 cpld_sdo          OUT           17
+                 adc_dclk          IN            18
+                adc_drdyn          IN            19
+                  spi_clk          OUT           21
+                 spi_mosi          OUT           22
+                 spi_miso          IN            23
+                 cpld_clk          IN            24
                    GNDIO1          SYS           29
                    VCCIO1          SYS           30
-                  pcnt_0_          OUT           32
-                  pcnt_4_          OUT           33
-                  pcnt_5_          OUT           34
                       VCC          SYS           36
                       GND          SYS           37
-                  pcnt_9_          OUT           38
-                  pcnt_1_          OUT           39
-                 pcnt_15_          OUT           40
-                  pcnt_3_          OUT           41
-                      pps          IN            43
-                 pcnt_21_          OUT           44
-                  pcnt_2_          OUT           45
-                 pcnt_23_          OUT           46
-                 pcnt_22_          OUT           47
-                 pcnt_14_          OUT           48
+                freq_clka          OUT           39
+                 mcu_clko          IN            43
+                 adc_sel0          OUT           44
+                 adc_clk0          OUT           45
+                  rxd_1v8          IN            48

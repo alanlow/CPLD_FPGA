@@ -1,0 +1,11 @@
+----------------------------------------------------------------------
+Report for cell SPI_MOD.TECH
+Register bits:  24 of 880 (2.727%)
+I/O cells:      32
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            DFFCRSH        23          100.0
+                               DLAT         1          100.0
+                               IBUF        29          100.0
+                               OBUF         3          100.0
+                              TOTAL        56

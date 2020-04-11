@@ -1,0 +1,513 @@
+<top name = "KEPLER_TL"  library = "work"  arch = "RTL"  entry = "VHDL">
+
+<clocks>
+    <clockitem name = "cpld_seln"  type = "port" />
+    <clockitem name = "rxd_1v8"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 2
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "KEPLER_TL">
+
+    <!--
+        Top Level Pins: 18
+    -->
+
+    <pins>
+        <pitem  name = "mcu_clko"  direction = "in"  />
+        <pitem  name = "rxd_1v8"  direction = "in"  />
+        <pitem  name = "adc_dclk"  direction = "in"  />
+        <pitem  name = "cpld_seln"  direction = "in"  />
+        <pitem  name = "pps_rstn"  direction = "in"  />
+        <pitem  name = "cpld_rstn"  direction = "in"  />
+        <pitem  name = "adc_drdyn"  direction = "in"  />
+        <pitem  name = "spi_miso"  direction = "in"  />
+        <pitem  name = "cpld_clk"  direction = "in"  />
+        <pitem  name = "cpld_sdi"  direction = "in"  />
+        <pitem  name = "cpld_sdo"  direction = "out"  />
+        <pitem  name = "adc_clk1"  direction = "out"  />
+        <pitem  name = "adc_sel1"  direction = "out"  />
+        <pitem  name = "adc_sel0"  direction = "out"  />
+        <pitem  name = "adc_clk0"  direction = "out"  />
+        <pitem  name = "spi_clk"  direction = "out"  />
+        <pitem  name = "spi_mosi"  direction = "out"  />
+        <pitem  name = "freq_clka"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 9
+    -->
+
+    <instance  name = "pps_counter/pcnt_23__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pps_counter/gnd"  />
+        <nitem  name = "pps_counter/pwr"  />
+        <nitem  name = "pps_reg[23]"  />
+        <nitem  name = "pps_reg[22]"  />
+        <nitem  name = "pps_reg[21]"  />
+        <nitem  name = "pps_reg[20]"  />
+        <nitem  name = "pps_reg[19]"  />
+        <nitem  name = "pps_reg[18]"  />
+        <nitem  name = "pps_reg[17]"  />
+        <nitem  name = "pps_reg[16]"  />
+        <nitem  name = "pps_reg[15]"  />
+        <nitem  name = "pps_reg[14]"  />
+        <nitem  name = "pps_reg[13]"  />
+        <nitem  name = "pps_reg[12]"  />
+        <nitem  name = "pps_reg[11]"  />
+        <nitem  name = "pps_reg[10]"  />
+        <nitem  name = "pps_reg[9]"  />
+        <nitem  name = "pps_reg[8]"  />
+        <nitem  name = "pps_reg[7]"  />
+        <nitem  name = "pps_reg[6]"  />
+        <nitem  name = "pps_reg[5]"  />
+        <nitem  name = "pps_reg[4]"  />
+        <nitem  name = "pps_reg[3]"  />
+        <nitem  name = "pps_reg[2]"  />
+        <nitem  name = "pps_reg[1]"  />
+        <nitem  name = "pps_reg[0]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[23]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[22]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[21]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[20]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[19]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[18]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[17]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[16]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[15]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[14]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[13]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[12]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[11]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[10]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[9]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[8]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[7]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[6]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[5]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[4]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[3]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[2]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[1]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pps_counter/nclr_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pps_rstn"  />
+        <nitem  name = "pps_counter/nclr_N_26"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pps_counter/temp_pcnt"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "set[23]"  direction = "in"  />
+        <pitem  name = "set[22]"  direction = "in"  />
+        <pitem  name = "set[21]"  direction = "in"  />
+        <pitem  name = "set[20]"  direction = "in"  />
+        <pitem  name = "set[19]"  direction = "in"  />
+        <pitem  name = "set[18]"  direction = "in"  />
+        <pitem  name = "set[17]"  direction = "in"  />
+        <pitem  name = "set[16]"  direction = "in"  />
+        <pitem  name = "set[15]"  direction = "in"  />
+        <pitem  name = "set[14]"  direction = "in"  />
+        <pitem  name = "set[13]"  direction = "in"  />
+        <pitem  name = "set[12]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[23]"  direction = "out"  />
+        <pitem  name = "q[22]"  direction = "out"  />
+        <pitem  name = "q[21]"  direction = "out"  />
+        <pitem  name = "q[20]"  direction = "out"  />
+        <pitem  name = "q[19]"  direction = "out"  />
+        <pitem  name = "q[18]"  direction = "out"  />
+        <pitem  name = "q[17]"  direction = "out"  />
+        <pitem  name = "q[16]"  direction = "out"  />
+        <pitem  name = "q[15]"  direction = "out"  />
+        <pitem  name = "q[14]"  direction = "out"  />
+        <pitem  name = "q[13]"  direction = "out"  />
+        <pitem  name = "q[12]"  direction = "out"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[23]"  direction = "in"  />
+        <pitem  name = "reset[22]"  direction = "in"  />
+        <pitem  name = "reset[21]"  direction = "in"  />
+        <pitem  name = "reset[20]"  direction = "in"  />
+        <pitem  name = "reset[19]"  direction = "in"  />
+        <pitem  name = "reset[18]"  direction = "in"  />
+        <pitem  name = "reset[17]"  direction = "in"  />
+        <pitem  name = "reset[16]"  direction = "in"  />
+        <pitem  name = "reset[15]"  direction = "in"  />
+        <pitem  name = "reset[14]"  direction = "in"  />
+        <pitem  name = "reset[13]"  direction = "in"  />
+        <pitem  name = "reset[12]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[23]"  direction = "in"  />
+        <pitem  name = "d[22]"  direction = "in"  />
+        <pitem  name = "d[21]"  direction = "in"  />
+        <pitem  name = "d[20]"  direction = "in"  />
+        <pitem  name = "d[19]"  direction = "in"  />
+        <pitem  name = "d[18]"  direction = "in"  />
+        <pitem  name = "d[17]"  direction = "in"  />
+        <pitem  name = "d[16]"  direction = "in"  />
+        <pitem  name = "d[15]"  direction = "in"  />
+        <pitem  name = "d[14]"  direction = "in"  />
+        <pitem  name = "d[13]"  direction = "in"  />
+        <pitem  name = "d[12]"  direction = "in"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pps_counter/gnd"  />
+        <nitem  name = "rxd_1v8"  />
+        <nitem  name = "pps_reg[23]"  />
+        <nitem  name = "pps_reg[22]"  />
+        <nitem  name = "pps_reg[21]"  />
+        <nitem  name = "pps_reg[20]"  />
+        <nitem  name = "pps_reg[19]"  />
+        <nitem  name = "pps_reg[18]"  />
+        <nitem  name = "pps_reg[17]"  />
+        <nitem  name = "pps_reg[16]"  />
+        <nitem  name = "pps_reg[15]"  />
+        <nitem  name = "pps_reg[14]"  />
+        <nitem  name = "pps_reg[13]"  />
+        <nitem  name = "pps_reg[12]"  />
+        <nitem  name = "pps_reg[11]"  />
+        <nitem  name = "pps_reg[10]"  />
+        <nitem  name = "pps_reg[9]"  />
+        <nitem  name = "pps_reg[8]"  />
+        <nitem  name = "pps_reg[7]"  />
+        <nitem  name = "pps_reg[6]"  />
+        <nitem  name = "pps_reg[5]"  />
+        <nitem  name = "pps_reg[4]"  />
+        <nitem  name = "pps_reg[3]"  />
+        <nitem  name = "pps_reg[2]"  />
+        <nitem  name = "pps_reg[1]"  />
+        <nitem  name = "pps_reg[0]"  />
+        <nitem  name = "pps_counter/nclr_N_26"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[23]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[22]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[21]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[20]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[19]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[18]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[17]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[16]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[15]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[14]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[13]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[12]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[11]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[10]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[9]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[8]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[7]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[6]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[5]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[4]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[3]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[2]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[1]"  />
+        <nitem  name = "pps_counter/pcnt_23__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_module/miso_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "cpld_seln"  />
+        <nitem  name = "spi_miso"  />
+        <nitem  name = "cpld_sdo"  />
+        <nitem  name = "spi_module/sOut"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_module/nsel_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "cpld_seln"  />
+        <nitem  name = "spi_module/nsel_N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_module/spi_cntr.vPcnt"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[12]"  direction = "in"  />
+        <pitem  name = "set[13]"  direction = "in"  />
+        <pitem  name = "set[14]"  direction = "in"  />
+        <pitem  name = "set[15]"  direction = "in"  />
+        <pitem  name = "set[16]"  direction = "in"  />
+        <pitem  name = "set[17]"  direction = "in"  />
+        <pitem  name = "set[18]"  direction = "in"  />
+        <pitem  name = "set[19]"  direction = "in"  />
+        <pitem  name = "set[20]"  direction = "in"  />
+        <pitem  name = "set[21]"  direction = "in"  />
+        <pitem  name = "set[22]"  direction = "in"  />
+        <pitem  name = "set[23]"  direction = "in"  />
+        <pitem  name = "reset[23]"  direction = "in"  />
+        <pitem  name = "reset[22]"  direction = "in"  />
+        <pitem  name = "reset[21]"  direction = "in"  />
+        <pitem  name = "reset[20]"  direction = "in"  />
+        <pitem  name = "reset[19]"  direction = "in"  />
+        <pitem  name = "reset[18]"  direction = "in"  />
+        <pitem  name = "reset[17]"  direction = "in"  />
+        <pitem  name = "reset[16]"  direction = "in"  />
+        <pitem  name = "reset[15]"  direction = "in"  />
+        <pitem  name = "reset[14]"  direction = "in"  />
+        <pitem  name = "reset[13]"  direction = "in"  />
+        <pitem  name = "reset[12]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[23]"  direction = "in"  />
+        <pitem  name = "d[22]"  direction = "in"  />
+        <pitem  name = "d[21]"  direction = "in"  />
+        <pitem  name = "d[20]"  direction = "in"  />
+        <pitem  name = "d[19]"  direction = "in"  />
+        <pitem  name = "d[18]"  direction = "in"  />
+        <pitem  name = "d[17]"  direction = "in"  />
+        <pitem  name = "d[16]"  direction = "in"  />
+        <pitem  name = "d[15]"  direction = "in"  />
+        <pitem  name = "d[14]"  direction = "in"  />
+        <pitem  name = "d[13]"  direction = "in"  />
+        <pitem  name = "d[12]"  direction = "in"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "q[23]"  direction = "out"  />
+        <pitem  name = "clock"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "spi_module/gnd"  />
+        <nitem  name = "pps_reg[23]"  />
+        <nitem  name = "pps_reg[22]"  />
+        <nitem  name = "pps_reg[21]"  />
+        <nitem  name = "pps_reg[20]"  />
+        <nitem  name = "pps_reg[19]"  />
+        <nitem  name = "pps_reg[18]"  />
+        <nitem  name = "pps_reg[17]"  />
+        <nitem  name = "pps_reg[16]"  />
+        <nitem  name = "pps_reg[15]"  />
+        <nitem  name = "pps_reg[14]"  />
+        <nitem  name = "pps_reg[13]"  />
+        <nitem  name = "pps_reg[12]"  />
+        <nitem  name = "pps_reg[11]"  />
+        <nitem  name = "pps_reg[10]"  />
+        <nitem  name = "pps_reg[9]"  />
+        <nitem  name = "pps_reg[8]"  />
+        <nitem  name = "pps_reg[7]"  />
+        <nitem  name = "pps_reg[6]"  />
+        <nitem  name = "pps_reg[5]"  />
+        <nitem  name = "pps_reg[4]"  />
+        <nitem  name = "pps_reg[3]"  />
+        <nitem  name = "pps_reg[2]"  />
+        <nitem  name = "pps_reg[1]"  />
+        <nitem  name = "pps_reg[0]"  />
+        <nitem  name = "spi_module/sOut"  />
+        <nitem  name = "spi_module/nsel_N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "adc_sig"  />
+    <instance  name = "pps_counter"  />
+    <instance  name = "spi_module"  />
+    <!--
+        REG instances in netlist: 2
+    -->
+
+    <regs>
+        <reg  name = "pps_counter/temp_pcnt"  />
+        <reg  name = "spi_module/spi_cntr.vPcnt"  />
+    </regs>
+
+    <!--
+        Views in design "KEPLER_TL": 3
+    -->
+
+    <views>
+        <view  name = "ADC_BUF"  />
+        <view  name = "PPS_COUNT"  />
+        <view  name = "SPI_MOD"  />
+    </views>
+
+</unit>
+
+</library>
+
+</top>

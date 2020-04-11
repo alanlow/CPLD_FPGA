@@ -1,0 +1,2450 @@
+// Node Statistic Information File
+// Tool:  ispLEVER Classic 2.0.00.17.20.15
+// Design 'kepler_tl' created   Sat Apr 11 15:37:57 2020
+
+// Fmax Logic Level: 2.
+
+// Path: pps_counter__temp_pcnt_5__i18.Q
+//    -> n312
+//    -> pps_counter__temp_pcnt_5__i23.T
+
+// Signal Name: cpld_sdo
+// Type: Output
+BEGIN cpld_sdo
+Fanin Number		3
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+Fanin Input     	spi_miso.BLIF       	0
+Fanin Node      	spi_module__spi_cntr_vPcnt_23__61.Q	1
+END
+
+// Signal Name: adc_clk1
+// Type: Output
+BEGIN adc_clk1
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	adc_dclk.BLIF       	0
+END
+
+// Signal Name: adc_sel1
+// Type: Output
+BEGIN adc_sel1
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	adc_drdyn.BLIF      	0
+END
+
+// Signal Name: adc_sel0
+// Type: Output
+BEGIN adc_sel0
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	adc_drdyn.BLIF      	0
+END
+
+// Signal Name: adc_clk0
+// Type: Output
+BEGIN adc_clk0
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	adc_dclk.BLIF       	0
+END
+
+// Signal Name: spi_clk
+// Type: Output
+BEGIN spi_clk
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_mosi
+// Type: Output
+BEGIN spi_mosi
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_sdi.BLIF       	0
+END
+
+// Signal Name: freq_clka
+// Type: Output
+BEGIN freq_clka
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	mcu_clko.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_8__121.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_8__121.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_7__125.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_8__121.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_8__121.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_8__121.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_8__121.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_8__121.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_8__121.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_8__121.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_8__121.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_9__117.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_9__117.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_8__121.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_9__117.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_9__117.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_9__117.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_9__117.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_9__117.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_9__117.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i9.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_9__117.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_9__117.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i9.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_10__113.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_10__113.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_9__117.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_10__113.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_10__113.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_10__113.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_10__113.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_10__113.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_10__113.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i10.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_10__113.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_10__113.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i10.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_11__109.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_11__109.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_10__113.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_11__109.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_11__109.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_11__109.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_11__109.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_11__109.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_11__109.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i11.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_11__109.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_11__109.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i11.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_12__105.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_12__105.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_11__109.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_12__105.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_12__105.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_12__105.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_12__105.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_12__105.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_12__105.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_12__105.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_12__105.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_13__101.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_13__101.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_12__105.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_13__101.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_13__101.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_13__101.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_13__101.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_13__101.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_13__101.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i13.Q	3
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_13__101.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_13__101.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i13.Q	3
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_14__97.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_14__97.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_13__101.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_14__97.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_14__97.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_14__97.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_14__97.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_14__97.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_14__97.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i14.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_14__97.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_14__97.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i14.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_15__93.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_15__93.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_14__97.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_15__93.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_15__93.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_15__93.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_15__93.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_15__93.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_15__93.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i15.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_15__93.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_15__93.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i15.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_18__81.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_18__81.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_17__85.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_18__81.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_18__81.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_18__81.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_18__81.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_18__81.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_18__81.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i18.Q	4
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_18__81.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_18__81.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i18.Q	4
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_19__77.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_19__77.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_18__81.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_19__77.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_19__77.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_19__77.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_19__77.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_19__77.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_19__77.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i19.Q	2
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_19__77.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_19__77.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i19.Q	2
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_17__85.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_17__85.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_16__89.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_17__85.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_17__85.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_17__85.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_17__85.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_17__85.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_17__85.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i17.Q	3
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_17__85.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_17__85.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i17.Q	3
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_21__69.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_21__69.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_20__73.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_21__69.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_21__69.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_21__69.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_21__69.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_21__69.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_21__69.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i21.Q	4
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_21__69.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_21__69.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i21.Q	4
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_22__65.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_22__65.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_21__69.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_22__65.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_22__65.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_22__65.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_22__65.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_22__65.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_22__65.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i22.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_22__65.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_22__65.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i22.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_20__73.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_20__73.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_19__77.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_20__73.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_20__73.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_20__73.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_20__73.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_20__73.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_20__73.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i20.Q	3
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_20__73.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_20__73.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i20.Q	3
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_16__89.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_16__89.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_15__93.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_16__89.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_16__89.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_16__89.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_16__89.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_16__89.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_16__89.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i16.Q	2
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_16__89.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_16__89.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i16.Q	2
+END
+
+// Signal Name: spi_module__i195.D
+// Type: Node_reg
+BEGIN spi_module__i195.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: spi_module__i195.LH
+// Type: Node_reg
+BEGIN spi_module__i195.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_1__149.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_1__149.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__i195.Q  	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_1__149.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_1__149.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_1__149.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_1__149.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_1__149.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_1__149.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_1__149.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_1__149.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i23.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i23.T
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i22.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i21.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i20.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i19.Q	2
+Fanin Node      	n312.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i23.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i23.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i23.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i23.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i22.D.X1
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i22.D.X1
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i22.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i21.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i20.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i19.Q	2
+Fanin Node      	n312.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i22.D.X2
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i22.D.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i22.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i21.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i20.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i19.Q	2
+Fanin Node      	n312.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i22.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i22.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i22.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i22.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i21.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i21.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i21.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i20.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i19.Q	2
+Fanin Node      	n312.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i21.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i21.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i21.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i21.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i20.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i20.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i20.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i19.Q	2
+Fanin Node      	n312.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i20.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i20.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i20.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i20.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i19.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i19.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i19.Q	2
+Fanin Node      	n312.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i19.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i19.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i19.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i19.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i18.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i18.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i18.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i17.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i16.Q	2
+Fanin Node      	n291.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i18.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i18.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i18.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i18.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i17.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i17.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i17.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i16.Q	2
+Fanin Node      	n291.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i17.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i17.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i17.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i17.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i16.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i16.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i16.Q	2
+Fanin Node      	n291.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i16.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i16.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i16.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i16.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i15.D.X1
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i15.D.X1
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i15.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i14.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i13.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+Fanin Node      	n263.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i15.D.X2
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i15.D.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i15.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i14.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i13.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+Fanin Node      	n263.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i15.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i15.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i15.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i15.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i14.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i14.T
+Fanin Number		14
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i13.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i11.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i10.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i9.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i14.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i14.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i14.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i14.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i13.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i13.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i13.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+Fanin Node      	n263.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i13.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i13.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i13.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i13.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i12.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i12.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+Fanin Node      	n263.BLIF           	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i12.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i12.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i12.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i12.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i11.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i11.T
+Fanin Number		11
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i10.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i9.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i11.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i11.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i11.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i11.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i10.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i10.T
+Fanin Number		10
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i9.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i10.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i10.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i10.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i10.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i9.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i9.T
+Fanin Number		9
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i9.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i9.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i9.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i9.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i8.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i8.T
+Fanin Number		8
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i8.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i8.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i8.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i8.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i7.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i7.T
+Fanin Number		7
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i7.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i7.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i7.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i7.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i6.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i6.T
+Fanin Number		6
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i6.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i6.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i6.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i6.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i5.T
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i5.T
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i5.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i5.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i5.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i5.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i4.D.X1
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i4.D.X1
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i4.D.X2
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i4.D.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i4.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i4.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i4.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i4.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i3.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i3.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i3.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i3.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i3.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i3.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i2.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i2.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i2.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i2.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i2.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i2.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i1.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i1.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i1.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i1.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i1.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i1.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i0.D
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i0.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i0.C
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i0.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	rxd_1v8.BLIF        	0
+END
+
+// Signal Name: pps_counter__temp_pcnt_5__i0.AR
+// Type: Node_reg
+BEGIN pps_counter__temp_pcnt_5__i0.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_rstn.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_23__61.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_23__61.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_22__65.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_23__61.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_23__61.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_23__61.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_23__61.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_23__61.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_23__61.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i23.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_23__61.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_23__61.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i23.Q	1
+END
+
+// Signal Name: n312
+// Type: Node
+BEGIN n312
+Fanin Number		19
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	pps_counter__temp_pcnt_5__i18.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i17.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i16.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i15.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i14.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i13.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i11.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i10.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i9.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: n291
+// Type: Node
+BEGIN n291
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	pps_counter__temp_pcnt_5__i15.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i14.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i13.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i12.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i11.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i10.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i9.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: n263
+// Type: Node
+BEGIN n263
+Fanin Number		12
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	pps_counter__temp_pcnt_5__i11.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i10.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i9.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i8.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+Fanin Node      	pps_counter__temp_pcnt_5__i1.Q	2
+Fanin Node      	pps_counter__temp_pcnt_5__i0.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_2__145.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_2__145.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_1__149.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_2__145.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_2__145.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_2__145.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_2__145.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_2__145.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_2__145.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_2__145.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_2__145.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i2.Q	3
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_3__141.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_3__141.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_2__145.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_3__141.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_3__141.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_3__141.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_3__141.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_3__141.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_3__141.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_3__141.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_3__141.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i3.Q	4
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_4__137.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_4__137.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_3__141.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_4__137.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_4__137.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_4__137.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_4__137.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_4__137.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_4__137.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_4__137.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_4__137.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i4.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_5__133.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_5__133.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_4__137.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_5__133.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_5__133.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_5__133.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_5__133.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_5__133.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_5__133.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_5__133.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_5__133.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i5.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_6__129.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_6__129.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_5__133.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_6__129.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_6__129.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_6__129.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_6__129.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_6__129.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_6__129.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_6__129.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_6__129.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i6.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_7__125.D
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_7__125.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	spi_module__spi_cntr_vPcnt_6__129.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_7__125.C
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_7__125.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_7__125.CE
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_7__125.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_seln.BLIF      	0
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_7__125.AR
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_7__125.AR
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+END
+
+// Signal Name: spi_module__spi_cntr_vPcnt_7__125.AP
+// Type: Node_reg
+BEGIN spi_module__spi_cntr_vPcnt_7__125.AP
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	pps_rstn.BLIF       	0
+Fanin Node      	pps_counter__temp_pcnt_5__i7.Q	1
+END
+
+// Design 'kepler_tl' used clock signal list:
+CLOCK	cpld_clk
+CLOCK	rxd_1v8
+

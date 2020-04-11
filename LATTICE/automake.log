@@ -5,5 +5,10 @@ Updating: Aldec VHDL Functional Simulation
 Start to record tcl script...
 Finished recording TCL script.
 
-Launching: 'C:\ispLEVER_Classic2_0\active-hdl\BIN\avhdl.exe -do "pps_counter_tb_activehdl.do"'
+Starting: 'C:\ispLEVER_Classic2_0\ispcpld\bin\chipsim.exe kepler_tl_tb.rsp kepler_tl_tb.fado udo.rsp'
+
+
+Done: completed successfully.
+
+Launching: 'C:\ispLEVER_Classic2_0\active-hdl\BIN\avhdl.exe -do "kepler_tl_tb_activehdl.do"'
 

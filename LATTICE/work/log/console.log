@@ -1,5 +1,12 @@
 adel -all
 # Library contents cleared.
+vcom spi_mod.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: spi_mod.vhd
+# Compile Entity "SPI_MOD"
+# Compile Architecture "SPI_CPLD" of Entity "SPI_MOD"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
 vcom pps_count.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
@@ -7,13 +14,27 @@ vcom pps_count.vhd
 # Compile Entity "PPS_COUNT"
 # Compile Architecture "UP_COUNT" of Entity "PPS_COUNT"
 # Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-vcom pps_counter_tb.vhd
+vcom adc_buf.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: pps_counter_tb.vhd
+# File: adc_buf.vhd
+# Compile Entity "ADC_BUF"
+# Compile Architecture "BUFF" of Entity "ADC_BUF"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+vcom kepler_tl.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: kepler_tl.vhd
+# Compile Entity "KEPLER_TL"
+# Compile Architecture "TOP_LEVEL" of Entity "KEPLER_TL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+vcom kepler_tl_tb.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: kepler_tl_tb.vhd
 # Compile Entity "testbench"
 # Compile Architecture "behavior" of Entity "testbench"
-# Compile success 0 Errors 0 Warnings  Analysis time :  93.0 [ms]
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
 vsim +access +r testbench
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
@@ -34,17 +55,51 @@ vsim +access +r testbench
 # KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5948 kB (elbread=1023 elab2=4775 kernel=149 sdf=0)
+# Allocation: Simulator allocated 6978 kB (elbread=1023 elab2=5805 kernel=149 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\src\wave.asdb
-#  16:22, 10 April 2020
+#  22:10, 11 April 2020
 #  Simulation has been initialized
 #  Selected Top-Level: testbench (behavior)
-do -tcl pps_counter_tb_vhdaf.udo
+do -tcl kepler_tl_tb_vhdaf.udo
 add wave *
-# 3 signal(s) traced.
+# 18 signal(s) traced.
 run 1000 ns
 # Waveform file 'untitled.awc' connected to 'C:/Users/alanlow/Documents/GitHub/CPLD_FPGA/LATTICE/work/src/wave.asdb'.
 # KERNEL: stopped at time: 1 us
-run @10us
-# KERNEL: stopped at time: 10 us
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+run 100ns
+# KERNEL: stopped at time: 1100 ns
+run 500ms
+# KERNEL: stopped at time: 500001100 ns
+run 500ms
+# KERNEL: stopped at time: 1000001100 ns
+run 500ms
+# KERNEL: stopped at time: 1500001100 ns
+run 500ms
+# KERNEL: stopped at time: 2000001100 ns
+run 500ms
+# KERNEL: stopped at time: 2500001100 ns
+run 500ms
+# KERNEL: stopped at time: 3000001100 ns
+run 500ms
+# KERNEL: stopped at time: 3500001100 ns
+run 500ms
+# KERNEL: stopped at time: 4000001100 ns
+run 500ms
+# KERNEL: stopped at time: 4500001100 ns
+run 500ms
+# KERNEL: stopped at time: 5000001100 ns
+run 500ms
+# KERNEL: stopped at time: 5500001100 ns
+run 500ms
+# KERNEL: stopped at time: 6000001100 ns
+run 500ms
+# KERNEL: stopped at time: 6500001100 ns
+run 500ms
+# KERNEL: stopped at time: 7000001100 ns
+run 500ms
+# KERNEL: stopped at time: 7500001100 ns
 #  Simulation has been stopped
+# Adding file C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\src\CPLD-TopLevel.asdb ... Done
+# Adding file C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\src\CPLD-TopLevel.awc ... Done

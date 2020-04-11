@@ -1,0 +1,1874 @@
+<top name = "SPI_MOD"  library = "work"  arch = "RTL"  entry = "VHDL">
+
+<clocks>
+    <clockitem name = "dclk"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 1
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "SPI_MOD">
+
+    <!--
+        Top Level Pins: 32
+    -->
+
+    <pins>
+        <pitem  name = "pcnt[23]"  direction = "in"  />
+        <pitem  name = "pcnt[22]"  direction = "in"  />
+        <pitem  name = "pcnt[21]"  direction = "in"  />
+        <pitem  name = "pcnt[20]"  direction = "in"  />
+        <pitem  name = "pcnt[19]"  direction = "in"  />
+        <pitem  name = "pcnt[18]"  direction = "in"  />
+        <pitem  name = "pcnt[17]"  direction = "in"  />
+        <pitem  name = "pcnt[16]"  direction = "in"  />
+        <pitem  name = "pcnt[15]"  direction = "in"  />
+        <pitem  name = "pcnt[14]"  direction = "in"  />
+        <pitem  name = "pcnt[13]"  direction = "in"  />
+        <pitem  name = "pcnt[12]"  direction = "in"  />
+        <pitem  name = "pcnt[11]"  direction = "in"  />
+        <pitem  name = "pcnt[10]"  direction = "in"  />
+        <pitem  name = "pcnt[9]"  direction = "in"  />
+        <pitem  name = "pcnt[8]"  direction = "in"  />
+        <pitem  name = "pcnt[7]"  direction = "in"  />
+        <pitem  name = "pcnt[6]"  direction = "in"  />
+        <pitem  name = "pcnt[5]"  direction = "in"  />
+        <pitem  name = "pcnt[4]"  direction = "in"  />
+        <pitem  name = "pcnt[3]"  direction = "in"  />
+        <pitem  name = "pcnt[2]"  direction = "in"  />
+        <pitem  name = "pcnt[1]"  direction = "in"  />
+        <pitem  name = "pcnt[0]"  direction = "in"  />
+        <pitem  name = "nclr"  direction = "in"  />
+        <pitem  name = "sdi"  direction = "in"  />
+        <pitem  name = "dclk"  direction = "in"  />
+        <pitem  name = "nsel"  direction = "in"  />
+        <pitem  name = "miso"  direction = "in"  />
+        <pitem  name = "sdo"  direction = "out"  />
+        <pitem  name = "sclk"  direction = "out"  />
+        <pitem  name = "mosi"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 120
+    -->
+
+    <instance  name = "miso_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "miso"  />
+        <nitem  name = "sPcnt[23]"  />
+        <nitem  name = "nsel"  />
+        <nitem  name = "sdo"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr"  />
+        <nitem  name = "nclr_N_8"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dclk_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dclk"  />
+        <nitem  name = "dclk_N_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nsel_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nsel"  />
+        <nitem  name = "nsel_N_3"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_23__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[23]"  />
+        <nitem  name = "sPcnt[22]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_23__N_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_151"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[22]"  />
+        <nitem  name = "sPcnt_22__N_13"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_22__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[22]"  />
+        <nitem  name = "sPcnt[21]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_22__N_12"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_153"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[21]"  />
+        <nitem  name = "sPcnt_21__N_18"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_21__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[21]"  />
+        <nitem  name = "sPcnt[20]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_21__N_17"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_155"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[20]"  />
+        <nitem  name = "sPcnt_20__N_23"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_20__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[20]"  />
+        <nitem  name = "sPcnt[19]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_20__N_22"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_157"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[19]"  />
+        <nitem  name = "sPcnt_19__N_28"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_19__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[19]"  />
+        <nitem  name = "sPcnt[18]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_19__N_27"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_159"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[18]"  />
+        <nitem  name = "sPcnt_18__N_33"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_18__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[18]"  />
+        <nitem  name = "sPcnt[17]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_18__N_32"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_161"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[17]"  />
+        <nitem  name = "sPcnt_17__N_38"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_17__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[17]"  />
+        <nitem  name = "sPcnt[16]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_17__N_37"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_163"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[16]"  />
+        <nitem  name = "sPcnt_16__N_43"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_16__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[16]"  />
+        <nitem  name = "sPcnt[15]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_16__N_42"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_165"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[15]"  />
+        <nitem  name = "sPcnt_15__N_48"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_15__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[15]"  />
+        <nitem  name = "sPcnt[14]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_15__N_47"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_167"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[14]"  />
+        <nitem  name = "sPcnt_14__N_53"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_14__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[14]"  />
+        <nitem  name = "sPcnt[13]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_14__N_52"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_169"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[13]"  />
+        <nitem  name = "sPcnt_13__N_58"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_13__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[13]"  />
+        <nitem  name = "sPcnt[12]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_13__N_57"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_171"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[12]"  />
+        <nitem  name = "sPcnt_12__N_63"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_12__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[12]"  />
+        <nitem  name = "sPcnt[11]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_12__N_62"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_173"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[11]"  />
+        <nitem  name = "sPcnt_11__N_68"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_11__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[11]"  />
+        <nitem  name = "sPcnt[10]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_11__N_67"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_175"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[10]"  />
+        <nitem  name = "sPcnt_10__N_73"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_10__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[10]"  />
+        <nitem  name = "sPcnt[9]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_10__N_72"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_177"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[9]"  />
+        <nitem  name = "sPcnt_9__N_78"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[9]"  />
+        <nitem  name = "sPcnt[8]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_9__N_77"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_179"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[8]"  />
+        <nitem  name = "sPcnt_8__N_83"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_8__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[8]"  />
+        <nitem  name = "sPcnt[7]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_8__N_82"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_181"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[7]"  />
+        <nitem  name = "sPcnt_7__N_88"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_7__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[7]"  />
+        <nitem  name = "sPcnt[6]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_7__N_87"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_183"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[6]"  />
+        <nitem  name = "sPcnt_6__N_93"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_6__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[6]"  />
+        <nitem  name = "sPcnt[5]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_6__N_92"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_185"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[5]"  />
+        <nitem  name = "sPcnt_5__N_98"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_5__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[5]"  />
+        <nitem  name = "sPcnt[4]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_5__N_97"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_187"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[4]"  />
+        <nitem  name = "sPcnt_4__N_103"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_4__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[4]"  />
+        <nitem  name = "sPcnt[3]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_4__N_102"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_189"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[3]"  />
+        <nitem  name = "sPcnt_3__N_108"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_3__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[3]"  />
+        <nitem  name = "sPcnt[2]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_3__N_107"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_191"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[2]"  />
+        <nitem  name = "sPcnt_2__N_113"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_2__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[2]"  />
+        <nitem  name = "sPcnt[1]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_2__N_112"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_193"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[1]"  />
+        <nitem  name = "sPcnt_1__N_118"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_1__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[1]"  />
+        <nitem  name = "sPcnt[0]"  />
+        <nitem  name = "nsel_N_3"  />
+        <nitem  name = "sPcnt_1__N_117"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_0__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt[0]"  />
+        <nitem  name = "pcnt[0]"  />
+        <nitem  name = "nclr_N_8"  />
+        </nets>
+    </instance>
+
+    <instance  name = "sPcnt_23__I_1"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt[23]"  />
+        <nitem  name = "sPcnt_23__N_6"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_23__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[23]"  />
+        <nitem  name = "pcnt_23__N_11"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_150"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_23__N_11"  />
+        <nitem  name = "sPcnt_23__N_9"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[23]_61"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_23__N_1"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_23__N_6"  />
+        <nitem  name = "sPcnt_23__N_9"  />
+        <nitem  name = "sPcnt[23]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_22__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[22]"  />
+        <nitem  name = "pcnt_22__N_16"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_152"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_22__N_16"  />
+        <nitem  name = "sPcnt_22__N_14"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[22]_65"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_22__N_12"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_22__N_13"  />
+        <nitem  name = "sPcnt_22__N_14"  />
+        <nitem  name = "sPcnt[22]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_21__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[21]"  />
+        <nitem  name = "pcnt_21__N_21"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_154"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_21__N_21"  />
+        <nitem  name = "sPcnt_21__N_19"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[21]_69"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_21__N_17"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_21__N_18"  />
+        <nitem  name = "sPcnt_21__N_19"  />
+        <nitem  name = "sPcnt[21]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_20__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[20]"  />
+        <nitem  name = "pcnt_20__N_26"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_156"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_20__N_26"  />
+        <nitem  name = "sPcnt_20__N_24"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[20]_73"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_20__N_22"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_20__N_23"  />
+        <nitem  name = "sPcnt_20__N_24"  />
+        <nitem  name = "sPcnt[20]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_19__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[19]"  />
+        <nitem  name = "pcnt_19__N_31"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_158"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_19__N_31"  />
+        <nitem  name = "sPcnt_19__N_29"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[19]_77"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_19__N_27"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_19__N_28"  />
+        <nitem  name = "sPcnt_19__N_29"  />
+        <nitem  name = "sPcnt[19]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_18__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[18]"  />
+        <nitem  name = "pcnt_18__N_36"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_160"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_18__N_36"  />
+        <nitem  name = "sPcnt_18__N_34"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[18]_81"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_18__N_32"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_18__N_33"  />
+        <nitem  name = "sPcnt_18__N_34"  />
+        <nitem  name = "sPcnt[18]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_17__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[17]"  />
+        <nitem  name = "pcnt_17__N_41"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_162"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_17__N_41"  />
+        <nitem  name = "sPcnt_17__N_39"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[17]_85"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_17__N_37"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_17__N_38"  />
+        <nitem  name = "sPcnt_17__N_39"  />
+        <nitem  name = "sPcnt[17]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_16__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[16]"  />
+        <nitem  name = "pcnt_16__N_46"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_164"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_16__N_46"  />
+        <nitem  name = "sPcnt_16__N_44"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[16]_89"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_16__N_42"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_16__N_43"  />
+        <nitem  name = "sPcnt_16__N_44"  />
+        <nitem  name = "sPcnt[16]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_15__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[15]"  />
+        <nitem  name = "pcnt_15__N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_166"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_15__N_51"  />
+        <nitem  name = "sPcnt_15__N_49"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[15]_93"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_15__N_47"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_15__N_48"  />
+        <nitem  name = "sPcnt_15__N_49"  />
+        <nitem  name = "sPcnt[15]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_14__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[14]"  />
+        <nitem  name = "pcnt_14__N_56"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_168"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_14__N_56"  />
+        <nitem  name = "sPcnt_14__N_54"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[14]_97"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_14__N_52"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_14__N_53"  />
+        <nitem  name = "sPcnt_14__N_54"  />
+        <nitem  name = "sPcnt[14]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_13__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[13]"  />
+        <nitem  name = "pcnt_13__N_61"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_170"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_13__N_61"  />
+        <nitem  name = "sPcnt_13__N_59"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[13]_101"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_13__N_57"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_13__N_58"  />
+        <nitem  name = "sPcnt_13__N_59"  />
+        <nitem  name = "sPcnt[13]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_12__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[12]"  />
+        <nitem  name = "pcnt_12__N_66"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_172"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_12__N_66"  />
+        <nitem  name = "sPcnt_12__N_64"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[12]_105"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_12__N_62"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_12__N_63"  />
+        <nitem  name = "sPcnt_12__N_64"  />
+        <nitem  name = "sPcnt[12]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_11__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[11]"  />
+        <nitem  name = "pcnt_11__N_71"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_174"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_11__N_71"  />
+        <nitem  name = "sPcnt_11__N_69"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[11]_109"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_11__N_67"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_11__N_68"  />
+        <nitem  name = "sPcnt_11__N_69"  />
+        <nitem  name = "sPcnt[11]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_10__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[10]"  />
+        <nitem  name = "pcnt_10__N_76"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_176"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_10__N_76"  />
+        <nitem  name = "sPcnt_10__N_74"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[10]_113"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_10__N_72"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_10__N_73"  />
+        <nitem  name = "sPcnt_10__N_74"  />
+        <nitem  name = "sPcnt[10]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[9]"  />
+        <nitem  name = "pcnt_9__N_81"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_178"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_9__N_81"  />
+        <nitem  name = "sPcnt_9__N_79"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[9]_117"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_9__N_77"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_9__N_78"  />
+        <nitem  name = "sPcnt_9__N_79"  />
+        <nitem  name = "sPcnt[9]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_8__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[8]"  />
+        <nitem  name = "pcnt_8__N_86"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_180"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_8__N_86"  />
+        <nitem  name = "sPcnt_8__N_84"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[8]_121"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_8__N_82"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_8__N_83"  />
+        <nitem  name = "sPcnt_8__N_84"  />
+        <nitem  name = "sPcnt[8]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_7__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[7]"  />
+        <nitem  name = "pcnt_7__N_91"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_182"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_7__N_91"  />
+        <nitem  name = "sPcnt_7__N_89"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[7]_125"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_7__N_87"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_7__N_88"  />
+        <nitem  name = "sPcnt_7__N_89"  />
+        <nitem  name = "sPcnt[7]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_6__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[6]"  />
+        <nitem  name = "pcnt_6__N_96"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_184"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_6__N_96"  />
+        <nitem  name = "sPcnt_6__N_94"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[6]_129"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_6__N_92"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_6__N_93"  />
+        <nitem  name = "sPcnt_6__N_94"  />
+        <nitem  name = "sPcnt[6]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_5__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[5]"  />
+        <nitem  name = "pcnt_5__N_101"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_186"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_5__N_101"  />
+        <nitem  name = "sPcnt_5__N_99"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[5]_133"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_5__N_97"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_5__N_98"  />
+        <nitem  name = "sPcnt_5__N_99"  />
+        <nitem  name = "sPcnt[5]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_4__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[4]"  />
+        <nitem  name = "pcnt_4__N_106"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_188"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_4__N_106"  />
+        <nitem  name = "sPcnt_4__N_104"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[4]_137"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_4__N_102"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_4__N_103"  />
+        <nitem  name = "sPcnt_4__N_104"  />
+        <nitem  name = "sPcnt[4]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_3__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[3]"  />
+        <nitem  name = "pcnt_3__N_111"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_190"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_3__N_111"  />
+        <nitem  name = "sPcnt_3__N_109"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[3]_141"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_3__N_107"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_3__N_108"  />
+        <nitem  name = "sPcnt_3__N_109"  />
+        <nitem  name = "sPcnt[3]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_2__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[2]"  />
+        <nitem  name = "pcnt_2__N_116"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0_192"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_2__N_116"  />
+        <nitem  name = "sPcnt_2__N_114"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[2]_145"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_2__N_112"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_2__N_113"  />
+        <nitem  name = "sPcnt_2__N_114"  />
+        <nitem  name = "sPcnt[2]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pcnt_1__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pcnt[1]"  />
+        <nitem  name = "pcnt_1__N_121"  />
+        </nets>
+    </instance>
+
+    <instance  name = "nclr_N_8_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nclr_N_8"  />
+        <nitem  name = "pcnt_1__N_121"  />
+        <nitem  name = "sPcnt_1__N_119"  />
+        </nets>
+    </instance>
+
+    <instance  name = "spi_cntr.vPcnt[1]_149"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "sPcnt_1__N_117"  />
+        <nitem  name = "dclk_N_5"  />
+        <nitem  name = "sPcnt_1__N_118"  />
+        <nitem  name = "sPcnt_1__N_119"  />
+        <nitem  name = "sPcnt[1]"  />
+        </nets>
+    </instance>
+
+    <!--
+        REG instances in netlist: 23
+    -->
+
+    <regs>
+        <reg  name = "spi_cntr.vPcnt[23]_61"  />
+        <reg  name = "spi_cntr.vPcnt[22]_65"  />
+        <reg  name = "spi_cntr.vPcnt[21]_69"  />
+        <reg  name = "spi_cntr.vPcnt[20]_73"  />
+        <reg  name = "spi_cntr.vPcnt[19]_77"  />
+        <reg  name = "spi_cntr.vPcnt[18]_81"  />
+        <reg  name = "spi_cntr.vPcnt[17]_85"  />
+        <reg  name = "spi_cntr.vPcnt[16]_89"  />
+        <reg  name = "spi_cntr.vPcnt[15]_93"  />
+        <reg  name = "spi_cntr.vPcnt[14]_97"  />
+        <reg  name = "spi_cntr.vPcnt[13]_101"  />
+        <reg  name = "spi_cntr.vPcnt[12]_105"  />
+        <reg  name = "spi_cntr.vPcnt[11]_109"  />
+        <reg  name = "spi_cntr.vPcnt[10]_113"  />
+        <reg  name = "spi_cntr.vPcnt[9]_117"  />
+        <reg  name = "spi_cntr.vPcnt[8]_121"  />
+        <reg  name = "spi_cntr.vPcnt[7]_125"  />
+        <reg  name = "spi_cntr.vPcnt[6]_129"  />
+        <reg  name = "spi_cntr.vPcnt[5]_133"  />
+        <reg  name = "spi_cntr.vPcnt[4]_137"  />
+        <reg  name = "spi_cntr.vPcnt[3]_141"  />
+        <reg  name = "spi_cntr.vPcnt[2]_145"  />
+        <reg  name = "spi_cntr.vPcnt[1]_149"  />
+    </regs>
+
+    <!--
+        Views in design "SPI_MOD": 0
+    -->
+
+    <views>
+    </views>
+
+</unit>
+
+</library>
+
+</top>

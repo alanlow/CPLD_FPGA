@@ -1,5 +1,11 @@
-10
+25
+~E 1 "./../../adc_buf.vhd" 6 ADC_BUF
+~A 1 "./../../adc_buf.vhd" 16 BUFF
+~E 1 "./../../kepler_tl.vhd" 6 KEPLER_TL
+~A 1 "./../../kepler_tl.vhd" 30 TOP_LEVEL
 ~E 1 "./../../pps_count.vhd" 6 PPS_COUNT
 ~A 1 "./../../pps_count.vhd" 14 UP_COUNT
-~E 1 "./../../pps_counter_tb.vhd" 22 testbench
-~A 1 "./../../pps_counter_tb.vhd" 25 behavior
+~E 1 "./../../spi_mod.vhd" 7 SPI_MOD
+~A 1 "./../../spi_mod.vhd" 15 SPI_CPLD
+~E 1 "./../../kepler_tl_tb.vhd" 22 testbench
+~A 1 "./../../kepler_tl_tb.vhd" 25 behavior

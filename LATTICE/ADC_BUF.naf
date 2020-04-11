@@ -1,0 +1,6 @@
+drdyn  i
+dclk  i
+sel0  o
+sel1  o
+clk0  o
+clk1  o

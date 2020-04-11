@@ -7,150 +7,261 @@
 
 Equations:
 
-n166 = pcnt_11_.Q & pcnt_10_.Q & pcnt_9_.Q & pcnt_8_.Q & pcnt_7_.Q & pcnt_6_.Q
-       & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 12 signals)
+adc_clk0 = adc_dclk ; (1 pterm, 1 signal)
 
-n187 = pcnt_14_.Q & pcnt_13_.Q & pcnt_12_.Q & pcnt_11_.Q & pcnt_10_.Q
-       & pcnt_9_.Q & pcnt_8_.Q & pcnt_7_.Q & pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q
-       & pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 15 signals)
+adc_clk1 = adc_dclk ; (1 pterm, 1 signal)
 
-n215 = pcnt_18_.Q & pcnt_17_.Q & pcnt_16_.Q & pcnt_15_.Q & pcnt_14_.Q
-       & pcnt_13_.Q & pcnt_12_.Q & pcnt_11_.Q & pcnt_10_.Q & pcnt_9_.Q
-       & pcnt_8_.Q & pcnt_7_.Q & pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q
-       & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 19 signals)
+adc_sel0 = adc_drdyn ; (1 pterm, 1 signal)
 
-pcnt_0_.D = !pcnt_0_.Q ; (1 pterm, 1 signal)
-pcnt_0_.C = pps ; (1 pterm, 1 signal)
-pcnt_0_.AR = !nclr ; (1 pterm, 1 signal)
+adc_sel1 = adc_drdyn ; (1 pterm, 1 signal)
 
-pcnt_10_.T = pcnt_9_.Q & pcnt_8_.Q & pcnt_7_.Q & pcnt_6_.Q & pcnt_5_.Q
-       & pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 10 signals)
-pcnt_10_.C = pps ; (1 pterm, 1 signal)
-pcnt_10_.AR = !nclr ; (1 pterm, 1 signal)
+cpld_sdo = cpld_seln & spi_miso
+    # !cpld_seln & spi_module__spi_cntr_vPcnt_i0.Q ; (2 pterms, 3 signals)
 
-pcnt_11_.T = pcnt_10_.Q & pcnt_9_.Q & pcnt_8_.Q & pcnt_7_.Q & pcnt_6_.Q
-       & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 11 signals)
-pcnt_11_.C = pps ; (1 pterm, 1 signal)
-pcnt_11_.AR = !nclr ; (1 pterm, 1 signal)
+freq_clka = mcu_clko ; (1 pterm, 1 signal)
 
-pcnt_12_.D = pcnt_12_.Q & !n166
-    # !pcnt_12_.Q & n166 ; (2 pterms, 2 signals)
-pcnt_12_.C = pps ; (1 pterm, 1 signal)
-pcnt_12_.AR = !nclr ; (1 pterm, 1 signal)
+n151 = pps_counter__temp_pcnt_5__i0.Q & pps_counter__temp_pcnt_5__i1.Q
+       & pps_counter__temp_pcnt_5__i2.Q & pps_counter__temp_pcnt_5__i3.Q
+       & pps_counter__temp_pcnt_5__i4.Q & pps_counter__temp_pcnt_5__i5.Q
+       & pps_counter__temp_pcnt_5__i6.Q & pps_counter__temp_pcnt_5__i7.Q
+       & pps_counter__temp_pcnt_5__i8.Q ; (1 pterm, 9 signals)
 
-pcnt_13_.T = pcnt_12_.Q & pcnt_11_.Q & pcnt_10_.Q & pcnt_9_.Q & pcnt_8_.Q
-       & pcnt_7_.Q & pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q
-       & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 13 signals)
-pcnt_13_.C = pps ; (1 pterm, 1 signal)
-pcnt_13_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i0.D = !pps_counter__temp_pcnt_5__i0.Q ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i0.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i0.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_14_.T = pcnt_13_.Q & pcnt_12_.Q & pcnt_11_.Q & pcnt_10_.Q & pcnt_9_.Q
-       & pcnt_8_.Q & pcnt_7_.Q & pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q
-       & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 14 signals)
-pcnt_14_.C = pps ; (1 pterm, 1 signal)
-pcnt_14_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i1.D = pps_counter__temp_pcnt_5__i0.Q
+       & !pps_counter__temp_pcnt_5__i1.Q
+    # !pps_counter__temp_pcnt_5__i0.Q & pps_counter__temp_pcnt_5__i1.Q ; (2 pterms, 2 signals)
+pps_counter__temp_pcnt_5__i1.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i1.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_15_.D = pcnt_15_.Q & !n187
-    # !pcnt_15_.Q & n187 ; (2 pterms, 2 signals)
-pcnt_15_.C = pps ; (1 pterm, 1 signal)
-pcnt_15_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i10.D = pps_counter__temp_pcnt_5__i9.Q
+       & !pps_counter__temp_pcnt_5__i10.Q & n151
+    # !pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+    # pps_counter__temp_pcnt_5__i10.Q & !n151 ; (3 pterms, 3 signals)
+pps_counter__temp_pcnt_5__i10.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i10.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_16_.D = !pcnt_16_.Q & pcnt_15_.Q & n187
-    # pcnt_16_.Q & !pcnt_15_.Q
-    # pcnt_16_.Q & !n187 ; (3 pterms, 3 signals)
-pcnt_16_.C = pps ; (1 pterm, 1 signal)
-pcnt_16_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i11.D = pps_counter__temp_pcnt_5__i9.Q
+       & pps_counter__temp_pcnt_5__i10.Q & !pps_counter__temp_pcnt_5__i11.Q
+       & n151
+    # !pps_counter__temp_pcnt_5__i10.Q & pps_counter__temp_pcnt_5__i11.Q
+    # !pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i11.Q
+    # pps_counter__temp_pcnt_5__i11.Q & !n151 ; (4 pterms, 4 signals)
+pps_counter__temp_pcnt_5__i11.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i11.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_17_.D = !pcnt_17_.Q & pcnt_16_.Q & pcnt_15_.Q & n187
-    # pcnt_17_.Q & !pcnt_15_.Q
-    # pcnt_17_.Q & !pcnt_16_.Q
-    # pcnt_17_.Q & !n187 ; (4 pterms, 4 signals)
-pcnt_17_.C = pps ; (1 pterm, 1 signal)
-pcnt_17_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i12.D.X1 = pps_counter__temp_pcnt_5__i9.Q
+       & pps_counter__temp_pcnt_5__i10.Q & pps_counter__temp_pcnt_5__i11.Q
+       & n151 ; (1 pterm, 4 signals)
+pps_counter__temp_pcnt_5__i12.D.X2 = pps_counter__temp_pcnt_5__i12.Q ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i12.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i12.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_18_.D.X1 = pcnt_18_.Q ; (1 pterm, 1 signal)
-pcnt_18_.D.X2 = pcnt_17_.Q & pcnt_16_.Q & pcnt_15_.Q & n187 ; (1 pterm, 4 signals)
-pcnt_18_.C = pps ; (1 pterm, 1 signal)
-pcnt_18_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i13.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q ; (1 pterm, 13 signals)
+pps_counter__temp_pcnt_5__i13.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i13.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_19_.D = pcnt_19_.Q & !n215
-    # !pcnt_19_.Q & n215 ; (2 pterms, 2 signals)
-pcnt_19_.C = pps ; (1 pterm, 1 signal)
-pcnt_19_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i14.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q ; (1 pterm, 14 signals)
+pps_counter__temp_pcnt_5__i14.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i14.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_1_.D = pcnt_1_.Q & !pcnt_0_.Q
-    # !pcnt_1_.Q & pcnt_0_.Q ; (2 pterms, 2 signals)
-pcnt_1_.C = pps ; (1 pterm, 1 signal)
-pcnt_1_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i15.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q ; (1 pterm, 15 signals)
+pps_counter__temp_pcnt_5__i15.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i15.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_20_.D = !pcnt_20_.Q & pcnt_19_.Q & n215
-    # pcnt_20_.Q & !pcnt_19_.Q
-    # pcnt_20_.Q & !n215 ; (3 pterms, 3 signals)
-pcnt_20_.C = pps ; (1 pterm, 1 signal)
-pcnt_20_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i16.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q
+       & pps_counter__temp_pcnt_5__i15.Q ; (1 pterm, 16 signals)
+pps_counter__temp_pcnt_5__i16.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i16.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_21_.D = !pcnt_21_.Q & pcnt_20_.Q & pcnt_19_.Q & n215
-    # pcnt_21_.Q & !pcnt_19_.Q
-    # pcnt_21_.Q & !pcnt_20_.Q
-    # pcnt_21_.Q & !n215 ; (4 pterms, 4 signals)
-pcnt_21_.C = pps ; (1 pterm, 1 signal)
-pcnt_21_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i17.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q
+       & pps_counter__temp_pcnt_5__i15.Q & pps_counter__temp_pcnt_5__i16.Q ; (1 pterm, 17 signals)
+pps_counter__temp_pcnt_5__i17.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i17.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_22_.T = pcnt_21_.Q & pcnt_20_.Q & pcnt_19_.Q & pcnt_18_.Q & pcnt_17_.Q
-       & pcnt_16_.Q & pcnt_15_.Q & pcnt_14_.Q & pcnt_13_.Q & pcnt_12_.Q
-       & pcnt_11_.Q & pcnt_10_.Q & pcnt_9_.Q & pcnt_8_.Q & pcnt_7_.Q
-       & pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q
-       & pcnt_0_.Q ; (1 pterm, 22 signals)
-pcnt_22_.C = pps ; (1 pterm, 1 signal)
-pcnt_22_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i18.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q
+       & pps_counter__temp_pcnt_5__i15.Q & pps_counter__temp_pcnt_5__i16.Q
+       & pps_counter__temp_pcnt_5__i17.Q ; (1 pterm, 18 signals)
+pps_counter__temp_pcnt_5__i18.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i18.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_23_.T = pcnt_22_.Q & pcnt_21_.Q & pcnt_20_.Q & pcnt_19_.Q & pcnt_18_.Q
-       & pcnt_17_.Q & pcnt_16_.Q & pcnt_15_.Q & pcnt_14_.Q & pcnt_13_.Q
-       & pcnt_12_.Q & pcnt_11_.Q & pcnt_10_.Q & pcnt_9_.Q & pcnt_8_.Q
-       & pcnt_7_.Q & pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q
-       & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 23 signals)
-pcnt_23_.C = pps ; (1 pterm, 1 signal)
-pcnt_23_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i19.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q
+       & pps_counter__temp_pcnt_5__i15.Q & pps_counter__temp_pcnt_5__i16.Q
+       & pps_counter__temp_pcnt_5__i17.Q & pps_counter__temp_pcnt_5__i18.Q ; (1 pterm, 19 signals)
+pps_counter__temp_pcnt_5__i19.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i19.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_2_.D = !pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q
-    # pcnt_2_.Q & !pcnt_1_.Q
-    # pcnt_2_.Q & !pcnt_0_.Q ; (3 pterms, 3 signals)
-pcnt_2_.C = pps ; (1 pterm, 1 signal)
-pcnt_2_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i2.D = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & !pps_counter__temp_pcnt_5__i2.Q
+    # !pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+    # !pps_counter__temp_pcnt_5__i0.Q & pps_counter__temp_pcnt_5__i2.Q ; (3 pterms, 3 signals)
+pps_counter__temp_pcnt_5__i2.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i2.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_3_.D = !pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q
-    # pcnt_3_.Q & !pcnt_1_.Q
-    # pcnt_3_.Q & !pcnt_2_.Q
-    # pcnt_3_.Q & !pcnt_0_.Q ; (4 pterms, 4 signals)
-pcnt_3_.C = pps ; (1 pterm, 1 signal)
-pcnt_3_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i20.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q
+       & pps_counter__temp_pcnt_5__i15.Q & pps_counter__temp_pcnt_5__i16.Q
+       & pps_counter__temp_pcnt_5__i17.Q & pps_counter__temp_pcnt_5__i18.Q
+       & pps_counter__temp_pcnt_5__i19.Q ; (1 pterm, 20 signals)
+pps_counter__temp_pcnt_5__i20.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i20.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_4_.D.X1 = pcnt_4_.Q ; (1 pterm, 1 signal)
-pcnt_4_.D.X2 = pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 4 signals)
-pcnt_4_.C = pps ; (1 pterm, 1 signal)
-pcnt_4_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i21.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q
+       & pps_counter__temp_pcnt_5__i15.Q & pps_counter__temp_pcnt_5__i16.Q
+       & pps_counter__temp_pcnt_5__i17.Q & pps_counter__temp_pcnt_5__i18.Q
+       & pps_counter__temp_pcnt_5__i19.Q & pps_counter__temp_pcnt_5__i20.Q ; (1 pterm, 21 signals)
+pps_counter__temp_pcnt_5__i21.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i21.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_5_.T = pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 5 signals)
-pcnt_5_.C = pps ; (1 pterm, 1 signal)
-pcnt_5_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i22.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q
+       & pps_counter__temp_pcnt_5__i15.Q & pps_counter__temp_pcnt_5__i16.Q
+       & pps_counter__temp_pcnt_5__i17.Q & pps_counter__temp_pcnt_5__i18.Q
+       & pps_counter__temp_pcnt_5__i19.Q & pps_counter__temp_pcnt_5__i20.Q
+       & pps_counter__temp_pcnt_5__i21.Q ; (1 pterm, 22 signals)
+pps_counter__temp_pcnt_5__i22.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i22.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_6_.T = pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q
-       & pcnt_0_.Q ; (1 pterm, 6 signals)
-pcnt_6_.C = pps ; (1 pterm, 1 signal)
-pcnt_6_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i23.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q
+       & pps_counter__temp_pcnt_5__i9.Q & pps_counter__temp_pcnt_5__i10.Q
+       & pps_counter__temp_pcnt_5__i11.Q & pps_counter__temp_pcnt_5__i12.Q
+       & pps_counter__temp_pcnt_5__i13.Q & pps_counter__temp_pcnt_5__i14.Q
+       & pps_counter__temp_pcnt_5__i15.Q & pps_counter__temp_pcnt_5__i16.Q
+       & pps_counter__temp_pcnt_5__i17.Q & pps_counter__temp_pcnt_5__i18.Q
+       & pps_counter__temp_pcnt_5__i19.Q & pps_counter__temp_pcnt_5__i20.Q
+       & pps_counter__temp_pcnt_5__i21.Q & pps_counter__temp_pcnt_5__i22.Q ; (1 pterm, 23 signals)
+pps_counter__temp_pcnt_5__i23.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i23.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_7_.T = pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q & pcnt_2_.Q
-       & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 7 signals)
-pcnt_7_.C = pps ; (1 pterm, 1 signal)
-pcnt_7_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i3.D = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & !pps_counter__temp_pcnt_5__i3.Q
+    # !pps_counter__temp_pcnt_5__i2.Q & pps_counter__temp_pcnt_5__i3.Q
+    # !pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i3.Q
+    # !pps_counter__temp_pcnt_5__i0.Q & pps_counter__temp_pcnt_5__i3.Q ; (4 pterms, 4 signals)
+pps_counter__temp_pcnt_5__i3.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i3.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_8_.T = pcnt_7_.Q & pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q & pcnt_3_.Q
-       & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 8 signals)
-pcnt_8_.C = pps ; (1 pterm, 1 signal)
-pcnt_8_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i4.D.X1 = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q ; (1 pterm, 4 signals)
+pps_counter__temp_pcnt_5__i4.D.X2 = pps_counter__temp_pcnt_5__i4.Q ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i4.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i4.AR = !pps_rstn ; (1 pterm, 1 signal)
 
-pcnt_9_.T = pcnt_8_.Q & pcnt_7_.Q & pcnt_6_.Q & pcnt_5_.Q & pcnt_4_.Q
-       & pcnt_3_.Q & pcnt_2_.Q & pcnt_1_.Q & pcnt_0_.Q ; (1 pterm, 9 signals)
-pcnt_9_.C = pps ; (1 pterm, 1 signal)
-pcnt_9_.AR = !nclr ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i5.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q ; (1 pterm, 5 signals)
+pps_counter__temp_pcnt_5__i5.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i5.AR = !pps_rstn ; (1 pterm, 1 signal)
+
+pps_counter__temp_pcnt_5__i6.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q ; (1 pterm, 6 signals)
+pps_counter__temp_pcnt_5__i6.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i6.AR = !pps_rstn ; (1 pterm, 1 signal)
+
+pps_counter__temp_pcnt_5__i7.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q ; (1 pterm, 7 signals)
+pps_counter__temp_pcnt_5__i7.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i7.AR = !pps_rstn ; (1 pterm, 1 signal)
+
+pps_counter__temp_pcnt_5__i8.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q ; (1 pterm, 8 signals)
+pps_counter__temp_pcnt_5__i8.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i8.AR = !pps_rstn ; (1 pterm, 1 signal)
+
+pps_counter__temp_pcnt_5__i9.T = pps_counter__temp_pcnt_5__i0.Q
+       & pps_counter__temp_pcnt_5__i1.Q & pps_counter__temp_pcnt_5__i2.Q
+       & pps_counter__temp_pcnt_5__i3.Q & pps_counter__temp_pcnt_5__i4.Q
+       & pps_counter__temp_pcnt_5__i5.Q & pps_counter__temp_pcnt_5__i6.Q
+       & pps_counter__temp_pcnt_5__i7.Q & pps_counter__temp_pcnt_5__i8.Q ; (1 pterm, 9 signals)
+pps_counter__temp_pcnt_5__i9.C = rxd_1v8 ; (1 pterm, 1 signal)
+pps_counter__temp_pcnt_5__i9.AR = !pps_rstn ; (1 pterm, 1 signal)
+
+spi_clk = cpld_clk ; (1 pterm, 1 signal)
+
+spi_module__spi_cntr_vPcnt_i0.D = pps_counter__temp_pcnt_5__i23.Q ; (1 pterm, 1 signal)
+spi_module__spi_cntr_vPcnt_i0.C = !cpld_seln ; (1 pterm, 1 signal)
+
+spi_mosi = cpld_sdi ; (1 pterm, 1 signal)
 

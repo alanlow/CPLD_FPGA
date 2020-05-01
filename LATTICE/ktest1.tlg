@@ -1,0 +1,36 @@
+
+// Batch Timer Log File (Release Version: 2.0.00.17.20.15)
+
+//  Project = ktest1
+//  Family  = lc4k
+//  Device  = LC4064V
+//  Speed   = -5
+//  Voltage = 3.3
+//  Operating Condition = IND
+//  Data sheet version  = 3.2
+
+//  Pass Bidirection = OFF
+//  Pass S/R = OFF
+//  Pass Latch = OFF
+//  Pass Clock = OFF
+//  Maximum Paths = 20
+//  T_SU Endpoints D/T inputs = ON
+//  T_SU Endpoints CE inputs = OFF
+//  T_SU Endpoints S/R inputs = OFF
+//  T_SU Endpoints RAM gated = ON
+//  Fmax of CE = ON
+//  Fmax of RAM = ON
+
+//  Location(From => To)
+//    Pin number: numeric number preceded by "p", BGA number as is
+//    Macrocell number: Segment#,GLB#,Macrocell#
+//                      Segment#: starts from 0 (if applicable)
+//                      GLB#: starts from A..Z, AA..ZZ
+//                      Macrocell#: starts from 0 to 31
+
+//  Register-to-register critical path delay: 8.00 ns
+//    -    0.52  tCOi                              pps_counter__temp_pcnt_5__i0.C ==>  pps_counter__temp_pcnt_5__i0.Q
+//    -    2.61  tFBK+tROUTE+tBLA+tMCELL           pps_counter__temp_pcnt_5__i0.Q ==>  n151
+//    -    0.94  tPDi                              n151                     ==>  n151
+//    -    2.61  tFBK+tROUTE+tBLA+tMCELL           n151                     ==>  pps_counter__temp_pcnt_5__i10.D
+//    -    1.32  tS_PT                             pps_counter__temp_pcnt_5__i10.D ==>  pps_counter__temp_pcnt_5__i10.C

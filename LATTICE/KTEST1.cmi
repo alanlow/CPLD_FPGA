@@ -11,7 +11,7 @@ PV_WINDOW_POS=0,0
 Remember_Setting=1
 Open_PV_Opt=2
 Open_PV=1
-PV_IS_ACTIVE=0
+PV_IS_ACTIVE=1
 ACTIVE_SHEET=Pin Attributes
 Show_Def_Opt=2
 Show_Def_Val=1
@@ -29,8 +29,9 @@ Macrocell=73,no
 Pin=32,no
 Bank=42,no
 IO Types=65,no
-Pull=36,no
 Slewrate=64,no
+Fast bypass=83,no
+Orp bypass=81,no
 Input registers=102,no
 Register powerup=120,no
 [Global Constraints]
@@ -57,3 +58,14 @@ Max_fanin=76,no
 Xor_synthesis=96,no
 Fmax_logic_level=117,no
 Clock_enable_optimization=179,no
+[OPT WINDOWS]
+MAIN_WINDOW_POSITION=0,0,2048,1280
+CHILD_FRAME_STATE=Maximal
+CHILD_WINDOW_SIZE=2048,1054
+CHILD_WINDOW_POS=-8,-31
+[OPT GUI SETTING]
+Remember_Setting=1
+ACTIVE_SHEET=Opt Global Constraints
+[Opt Global Constraints]
+Constraint Name=179,no
+Constraint Value=115,no

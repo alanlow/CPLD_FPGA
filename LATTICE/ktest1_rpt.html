@@ -21,14 +21,14 @@ Tools->Fitter Report File Format...
 <BR>
 Project Name         :  ktest1
 Project Path         :  C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE
-Project Fitted on    :  Sat Apr 11 22:00:53 2020
+Project Fitted on    :  Fri May 01 16:36:36 2020
 
 Device               :  M4064_32
 Package              :  48
-GLB Input Mux Size   :  12
+GLB Input Mux Size   :  10
 Available Blocks     :  4
-Speed                :  -5.8
-Part Number          :  LC4064ZE-5TN48I
+Speed                :  -5
+Part Number          :  LC4064V-5T48I
 Source Format        :  Pure_VHDL
 
 
@@ -38,9 +38,9 @@ Source Format        :  Pure_VHDL
 <A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
 <BR>
 Prefit Time                     0 secs
-Load Design Time                0.06 secs
-Partition Time                  0.05 secs
-Place Time                      0.01 secs
+Load Design Time                0.05 secs
+Partition Time                  0.03 secs
+Place Time                      0.00 secs
 Route Time                      0.00 secs
 Total Fit Time                  00:00:01
 
@@ -198,7 +198,9 @@ Pin Reservation :                      No
 @IO_Types                              Default = LVCMOS18 (2)
 @Output_Slew_Rate                      Default = FAST (2)
 @Power                                 Default = HIGH (2)
-@Pull                                  Default = PULLUP_DOWN (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
 @Input_Registers                       Default = None (2)
 @Register_Powerup                      Default = None
 
@@ -211,58 +213,58 @@ Device Options:
 
 <A name="Pinout_Listing"></A><FONT COLOR=maroon><U><B><big>Pinout_Listing</big></B></U></FONT>
 <BR>
-<B>      | Pin   | Bank |GLB |Assigned|                 | Signal|            | PG
-Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enable
-</B>----------------------------------------------------------------------------------------------------
-1     | TDI   |   -  |    |        |                 |       |            |
-2     |  I_O  |   0  | A8 |        |                 |       |            |
-3     |  I_O  |   0  | A10|        |                 |       |            |
-4     |  I_O  |   0  | A11|        |                 |       |            |
-5     |GNDIO0 |   -  |    |        |                 |       |            |
-6     |VCCIO0 |   -  |    |        |                 |       |            |
-7     |  I_O  |   0  | B15|    *   |LVCMOS18         | Output|<A href=#17>adc_sel1</A>|
-8     |  I_O  |   0  | B12|        |                 |       |            |
-9     |  I_O  |   0  | B10|    *   |LVCMOS18         | Input |<A href=#10>pps_rstn</A>|
-10    |  I_O  |   0  | B8 |    *   |LVCMOS18         | Output|<A href=#16>adc_clk1</A>|
-11    | TCK   |   -  |    |        |                 |       |            |
-12    | VCC   |   -  |    |        |                 |       |            |
-13    | GND   |   -  |    |        |                 |       |            |
-14    |  I_O  |   0  | B6 |    *   |LVCMOS18         | Input |<A href=#9>cpld_seln</A>|
-15    |  I_O  |   0  | B4 |    *   |LVCMOS18         | Input |<A href=#14>cpld_sdi</A>|
-16    |  I_O  |   0  | B2 |        |                 |       |            |
-17    |  I_O  |   0  | B0 |    *   |LVCMOS18         | Output|<A href=#15>cpld_sdo</A>|
-18    |INCLK1 |   0  |    |    *   |LVCMOS18         | Input |<A href=#8>adc_dclk</A>|
-19    |INCLK2 |   1  |    |    *   |LVCMOS18         | Input |<A href=#11>adc_drdyn</A>|
-20    |  I_O  |   1  | C0 |        |                 |       |            |
-21    |  I_O  |   1  | C1 |    *   |LVCMOS18         | Output|<A href=#20>spi_clk</A>|
-22    |  I_O  |   1  | C2 |    *   |LVCMOS18         | Output|<A href=#21>spi_mosi</A>|
-23    |  I_O  |   1  | C4 |    *   |LVCMOS18         | Input |<A href=#12>spi_miso</A>|
-24    |  I_O  |   1  | C6 |    *   |LVCMOS18         | Input |<A href=#13>cpld_clk</A>|
-25    | TMS   |   -  |    |        |                 |       |            |
-26    |  I_O  |   1  | C8 |        |                 |       |            |
-27    |  I_O  |   1  | C10|        |                 |       |            |
-28    |  I_O  |   1  | C11|        |                 |       |            |
-29    |GNDIO1 |   -  |    |        |                 |       |            |
-30    |VCCIO1 |   -  |    |        |                 |       |            |
-31    |  I_O  |   1  | D15|        |                 |       |            |
-32    |  I_O  |   1  | D12|        |                 |       |            |
-33    |  I_O  |   1  | D10|        |                 |       |            |
-34    |  I_O  |   1  | D8 |        |                 |       |            |
-35    | TDO   |   -  |    |        |                 |       |            |
-36    | VCC   |   -  |    |        |                 |       |            |
-37    | GND   |   -  |    |        |                 |       |            |
-38    |  I_O  |   1  | D6 |        |                 |       |            |
-39    |  I_O  |   1  | D4 |    *   |LVCMOS18         | Output|<A href=#22>freq_clka</A>|
-40    |  I_O  |   1  | D2 |        |                 |       |            |
-41    | I_O/OE|   1  | D0 |        |                 |       |            |
-42    |INCLK3 |   1  |    |        |                 |       |            |
-43    |INCLK0 |   0  |    |    *   |LVCMOS18         | Input |<A href=#6>mcu_clko</A>|
-44    | I_O/OE|   0  | A0 |    *   |LVCMOS18         | Output|<A href=#18>adc_sel0</A>|
-45    |  I_O  |   0  | A1 |    *   |LVCMOS18         | Output|<A href=#19>adc_clk0</A>|
-46    |  I_O  |   0  | A2 |        |                 |       |            |
-47    |  I_O  |   0  | A4 |        |                 |       |            |
-48    |  I_O  |   0  | A6 |    *   |LVCMOS18         | Input |<A href=#7>rxd_1v8</A>|
-----------------------------------------------------------------------------------------------------
+<B>      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+</B>--------------------------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |
+2     |  I_O  |   0  |A10 |        |                 |       |
+3     |  I_O  |   0  |A12 |        |                 |       |
+4     |  I_O  |   0  |A14 |        |                 |       |
+5     |GNDIO0 |   -  |    |        |                 |       |
+6     |VCCIO0 |   -  |    |        |                 |       |
+7     |  I_O  |   0  |B0  |    *   |LVCMOS18         | Output|<A href=#17>adc_sel1</A>
+8     |  I_O  |   0  |B2  |        |                 |       |
+9     |  I_O  |   0  |B4  |    *   |LVCMOS18         | Input |<A href=#10>pps_rstn</A>
+10    |  I_O  |   0  |B6  |    *   |LVCMOS18         | Output|<A href=#16>adc_clk1</A>
+11    | TCK   |   -  |    |        |                 |       |
+12    | VCC   |   -  |    |        |                 |       |
+13    | GND   |   -  |    |        |                 |       |
+14    |  I_O  |   0  |B8  |    *   |LVCMOS18         | Input |<A href=#9>cpld_seln</A>
+15    |  I_O  |   0  |B10 |    *   |LVCMOS18         | Input |<A href=#14>cpld_sdi</A>
+16    |  I_O  |   0  |B12 |        |                 |       |
+17    |  I_O  |   0  |B14 |    *   |LVCMOS18         | Output|<A href=#15>cpld_sdo</A>
+18    |INCLK1 |   0  |    |    *   |LVCMOS18         | Input |<A href=#8>adc_dclk</A>
+19    |INCLK2 |   1  |    |    *   |LVCMOS18         | Input |<A href=#11>adc_drdyn</A>
+20    |  I_O  |   1  |C0  |        |                 |       |
+21    |  I_O  |   1  |C2  |    *   |LVCMOS18         | Output|<A href=#20>spi_clk</A>
+22    |  I_O  |   1  |C4  |    *   |LVCMOS18         | Output|<A href=#21>spi_mosi</A>
+23    |  I_O  |   1  |C6  |    *   |LVCMOS18         | Input |<A href=#12>spi_miso</A>
+24    |  I_O  |   1  |C8  |    *   |LVCMOS18         | Input |<A href=#13>cpld_clk</A>
+25    | TMS   |   -  |    |        |                 |       |
+26    |  I_O  |   1  |C10 |        |                 |       |
+27    |  I_O  |   1  |C12 |        |                 |       |
+28    |  I_O  |   1  |C14 |        |                 |       |
+29    |GNDIO1 |   -  |    |        |                 |       |
+30    |VCCIO1 |   -  |    |        |                 |       |
+31    |  I_O  |   1  |D0  |        |                 |       |
+32    |  I_O  |   1  |D2  |        |                 |       |
+33    |  I_O  |   1  |D4  |        |                 |       |
+34    |  I_O  |   1  |D6  |        |                 |       |
+35    | TDO   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    |  I_O  |   1  |D8  |        |                 |       |
+39    |  I_O  |   1  |D10 |    *   |LVCMOS18         | Output|<A href=#22>freq_clka</A>
+40    |  I_O  |   1  |D12 |        |                 |       |
+41    | I_O/OE|   1  |D14 |        |                 |       |
+42    |INCLK3 |   1  |    |        |                 |       |
+43    |INCLK0 |   0  |    |    *   |LVCMOS18         | Input |<A href=#6>mcu_clko</A>
+44    | I_O/OE|   0  |A0  |    *   |LVCMOS18         | Output|<A href=#18>adc_sel0</A>
+45    |  I_O  |   0  |A2  |    *   |LVCMOS18         | Output|<A href=#19>adc_clk0</A>
+46    |  I_O  |   0  |A4  |        |                 |       |
+47    |  I_O  |   0  |A6  |        |                 |       |
+48    |  I_O  |   0  |A8  |    *   |LVCMOS18         | Input |<A href=#7>rxd_1v8</A>
+--------------------------------------------------------------------------------------------
 
 &lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
 &lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
@@ -351,11 +353,11 @@ Mc GLB  P LL PTs  S Type E S P E R P         Signal
 </B>--------------------------------------------------------------------------
 12   C  9  -   1  1 COM              2 A--D  <A href=#48>n151</A>
  5   C  3  1   1  1 DFF    * R       2 --CD  <A href=#25>pps_counter__temp_pcnt_5__i0</A>
- 4   C  4  1   2  1 DFF    * R       2 --CD  <A href=#26>pps_counter__temp_pcnt_5__i1</A>
+ 3   C  4  1   2  1 DFF    * R       2 --CD  <A href=#26>pps_counter__temp_pcnt_5__i1</A>
  6   A  5  2   3  1 DFF    * R       2 A--D  <A href=#35>pps_counter__temp_pcnt_5__i10</A>
- 1   D  6  2   4  1 DFF    * R       2 A--D  <A href=#36>pps_counter__temp_pcnt_5__i11</A>
+ 2   D  6  2   4  1 DFF    * R       2 A--D  <A href=#36>pps_counter__temp_pcnt_5__i11</A>
 10   A  7  2   2  1 DFF    * R       2 A--D  <A href=#37>pps_counter__temp_pcnt_5__i12</A>
- 3   D 15  1   1  1 TFF    * R       1 ---D  <A href=#38>pps_counter__temp_pcnt_5__i13</A>
+ 4   D 15  1   1  1 TFF    * R       1 ---D  <A href=#38>pps_counter__temp_pcnt_5__i13</A>
  5   D 16  1   1  1 TFF    * R       1 ---D  <A href=#39>pps_counter__temp_pcnt_5__i14</A>
  6   D 17  1   1  1 TFF    * R       1 ---D  <A href=#40>pps_counter__temp_pcnt_5__i15</A>
  7   D 18  1   1  1 TFF    * R       1 ---D  <A href=#41>pps_counter__temp_pcnt_5__i16</A>
@@ -366,15 +368,15 @@ Mc GLB  P LL PTs  S Type E S P E R P         Signal
 11   D 22  1   1  1 TFF    * R       1 ---D  <A href=#45>pps_counter__temp_pcnt_5__i20</A>
 12   D 23  1   1  1 TFF    * R       1 ---D  <A href=#46>pps_counter__temp_pcnt_5__i21</A>
 13   D 24  1   1  1 TFF    * R       1 ---D  <A href=#47>pps_counter__temp_pcnt_5__i22</A>
- 2   D 25  1   1  1 TFF    * R       1 -B--  <A href=#24>pps_counter__temp_pcnt_5__i23</A>
- 0   D  6  1   4  1 DFF    * R       2 --CD  <A href=#28>pps_counter__temp_pcnt_5__i3</A>
- 3   C  7  1   2  1 DFF    * R       2 --CD  <A href=#29>pps_counter__temp_pcnt_5__i4</A>
+ 3   D 25  1   1  1 TFF    * R       1 -B--  <A href=#24>pps_counter__temp_pcnt_5__i23</A>
+ 1   D  6  1   4  1 DFF    * R       2 --CD  <A href=#28>pps_counter__temp_pcnt_5__i3</A>
+ 1   C  7  1   2  1 DFF    * R       2 --CD  <A href=#29>pps_counter__temp_pcnt_5__i4</A>
  6   C  7  1   1  1 TFF    * R       2 --CD  <A href=#30>pps_counter__temp_pcnt_5__i5</A>
  7   C  8  1   1  1 TFF    * R       2 --CD  <A href=#31>pps_counter__temp_pcnt_5__i6</A>
  8   C  9  1   1  1 TFF    * R       2 --CD  <A href=#32>pps_counter__temp_pcnt_5__i7</A>
  9   C 10  1   1  1 TFF    * R       2 --CD  <A href=#33>pps_counter__temp_pcnt_5__i8</A>
 10   C 11  1   1  1 TFF    * R       2 A--D  <A href=#34>pps_counter__temp_pcnt_5__i9</A>
- 6   B  2  1   1  1 DFF      R       1 -B--  <A href=#23>spi_module__spi_cntr_vPcnt_i0</A>
+10   B  2  1   1  1 DFF      R       1 -B--  <A href=#23>spi_module__spi_cntr_vPcnt_i0</A>
 --------------------------------------------------------------------------
 
 &lt;Note&gt; CLS = Number of clusters used

@@ -1,19 +1,19 @@
 
 [Device]
 Family = lc4k;
-PartNumber = LC4064ZE-5TN48I;
+PartNumber = LC4064V-5T48I;
 Package = 48TQFP;
-PartType = LC4064ZE;
-Speed = -5.8;
+PartType = LC4064V;
+Speed = -5;
 Operating_condition = IND;
 Status = Production;
 EN_PinGLB = yes;
 EN_PinMacrocell = yes;
 
 [Revision]
-Parent = lc4k64e.lci;
-DATE = 04/11/2020;
-TIME = 15:48:49;
+Parent = lc4k64v.lci;
+DATE = 05/01/2020;
+TIME = 16:36:29;
 Source_Format = Pure_VHDL;
 Synthesis = LSE;
 

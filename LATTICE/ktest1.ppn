@@ -1,8 +1,8 @@
 //
 // Software Version :  ispLEVER Classic 2.0.00.17.20.15  
 // Project Name	    :  ktest1
-// Targeted Device  :  LC4064ZE-5TN48I
-// Date             :  Sat Apr 11 22:00:53 2020
+// Targeted Device  :  LC4064V-5T48I
+// Date             :  Fri May 01 16:36:36 2020
 //
                    GNDIO0          SYS           5
                    VCCIO0          SYS           6

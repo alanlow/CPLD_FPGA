@@ -1,0 +1,1 @@
+-global -lci ktest1.lct -touch ktest1.imp

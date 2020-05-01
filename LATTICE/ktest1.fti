@@ -1,5 +1,5 @@
 #PLAFILE     ktest1.bl5
-#DATE        Sat Apr 11 22:00:53 2020
+#DATE        Fri May 01 16:36:36 2020
 
 #DESIGN      ktest1
 #DEVICE      MACH4S-64
@@ -20,29 +20,29 @@ DATA LOCATION spi_miso:C_*_23
 DATA LOCATION cpld_clk:C_*_24
 DATA LOCATION cpld_sdi:B_*_15
 DATA LOCATION cpld_sdo:B_1_17
-DATA LOCATION adc_clk1:B_10_10
+DATA LOCATION adc_clk1:B_6_10
 DATA LOCATION adc_sel1:B_3_7
 DATA LOCATION adc_sel0:A_1_44
 DATA LOCATION adc_clk0:A_3_45
-DATA LOCATION spi_clk:C_1_21
-DATA LOCATION spi_mosi:C_2_22
-DATA LOCATION freq_clka:D_4_39
-DATA LOCATION spi_module__spi_cntr_vPcnt_i0:B_6
-DATA LOCATION pps_counter__temp_pcnt_5__i23:D_2
+DATA LOCATION spi_clk:C_2_21
+DATA LOCATION spi_mosi:C_4_22
+DATA LOCATION freq_clka:D_0_39
+DATA LOCATION spi_module__spi_cntr_vPcnt_i0:B_10
+DATA LOCATION pps_counter__temp_pcnt_5__i23:D_3
 DATA LOCATION pps_counter__temp_pcnt_5__i0:C_5
-DATA LOCATION pps_counter__temp_pcnt_5__i1:C_4
+DATA LOCATION pps_counter__temp_pcnt_5__i1:C_3
 DATA LOCATION pps_counter__temp_pcnt_5__i2:C_0
-DATA LOCATION pps_counter__temp_pcnt_5__i3:D_0
-DATA LOCATION pps_counter__temp_pcnt_5__i4:C_3
+DATA LOCATION pps_counter__temp_pcnt_5__i3:D_1
+DATA LOCATION pps_counter__temp_pcnt_5__i4:C_1
 DATA LOCATION pps_counter__temp_pcnt_5__i5:C_6
 DATA LOCATION pps_counter__temp_pcnt_5__i6:C_7
 DATA LOCATION pps_counter__temp_pcnt_5__i7:C_8
 DATA LOCATION pps_counter__temp_pcnt_5__i8:C_9
 DATA LOCATION pps_counter__temp_pcnt_5__i9:C_10
 DATA LOCATION pps_counter__temp_pcnt_5__i10:A_6
-DATA LOCATION pps_counter__temp_pcnt_5__i11:D_1
+DATA LOCATION pps_counter__temp_pcnt_5__i11:D_2
 DATA LOCATION pps_counter__temp_pcnt_5__i12:A_10
-DATA LOCATION pps_counter__temp_pcnt_5__i13:D_3
+DATA LOCATION pps_counter__temp_pcnt_5__i13:D_4
 DATA LOCATION pps_counter__temp_pcnt_5__i14:D_5
 DATA LOCATION pps_counter__temp_pcnt_5__i15:D_6
 DATA LOCATION pps_counter__temp_pcnt_5__i16:D_7

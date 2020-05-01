@@ -1,0 +1,133 @@
+MODELDATA
+MODELDATA_VERSION "1.0";
+DESIGN "ktest1";
+DATE "Fri May 01 16:57:46 2020";
+VENDOR "Lattice Semiconductor Corporation";
+PROGRAM "STAMP Model Generator";
+
+/* port drive, max transition and max capacitance */
+PORTDATA
+adc_dclk: MAXTRANS(0.0);
+adc_drdyn: MAXTRANS(0.0);
+cpld_clk: MAXTRANS(0.0);
+cpld_sdi: MAXTRANS(0.0);
+cpld_seln: MAXTRANS(0.0);
+mcu_clko: MAXTRANS(0.0);
+pps_rstn: MAXTRANS(0.0);
+rxd_1v8: MAXTRANS(0.0);
+spi_miso: MAXTRANS(0.0);
+adc_clk0: MAXTRANS(0.0);
+adc_clk1: MAXTRANS(0.0);
+adc_sel0: MAXTRANS(0.0);
+adc_sel1: MAXTRANS(0.0);
+cpld_sdo: MAXTRANS(0.0);
+freq_clka: MAXTRANS(0.0);
+spi_clk: MAXTRANS(0.0);
+spi_mosi: MAXTRANS(0.0);
+ENDPORTDATA
+
+/* timing arc data */
+TIMINGDATA
+
+ARCDATA
+adc_dclk_adc_clk0_delay:
+CELL_RISE(scalar) {
+VALUES(5.6);
+}
+CELL_FALL(scalar) {
+VALUES(5.6);
+}
+ENDARCDATA
+
+ARCDATA
+adc_dclk_adc_clk1_delay:
+CELL_RISE(scalar) {
+VALUES(5.6);
+}
+CELL_FALL(scalar) {
+VALUES(5.6);
+}
+ENDARCDATA
+
+ARCDATA
+adc_drdyn_adc_sel0_delay:
+CELL_RISE(scalar) {
+VALUES(5.6);
+}
+CELL_FALL(scalar) {
+VALUES(5.6);
+}
+ENDARCDATA
+
+ARCDATA
+adc_drdyn_adc_sel1_delay:
+CELL_RISE(scalar) {
+VALUES(5.6);
+}
+CELL_FALL(scalar) {
+VALUES(5.6);
+}
+ENDARCDATA
+
+ARCDATA
+cpld_clk_spi_clk_delay:
+CELL_RISE(scalar) {
+VALUES(5.5);
+}
+CELL_FALL(scalar) {
+VALUES(5.5);
+}
+ENDARCDATA
+
+ARCDATA
+cpld_sdi_spi_mosi_delay:
+CELL_RISE(scalar) {
+VALUES(5.5);
+}
+CELL_FALL(scalar) {
+VALUES(5.5);
+}
+ENDARCDATA
+
+ARCDATA
+cpld_seln_cpld_sdo_delay:
+CELL_RISE(scalar) {
+VALUES(5.5);
+}
+CELL_FALL(scalar) {
+VALUES(5.5);
+}
+ENDARCDATA
+
+ARCDATA
+mcu_clko_freq_clka_delay:
+CELL_RISE(scalar) {
+VALUES(5.5);
+}
+CELL_FALL(scalar) {
+VALUES(5.5);
+}
+ENDARCDATA
+
+ARCDATA
+spi_miso_cpld_sdo_delay:
+CELL_RISE(scalar) {
+VALUES(5.5);
+}
+CELL_FALL(scalar) {
+VALUES(5.5);
+}
+ENDARCDATA
+
+ARCDATA
+cpld_seln_cpld_sdo_delay:
+CELL_RISE(scalar) {
+VALUES(8.6);
+}
+CELL_FALL(scalar) {
+VALUES(8.6);
+}
+ENDARCDATA
+
+ENDTIMINGDATA
+ENDMODELDATA

@@ -6,11 +6,23 @@ Output Files:
 
 Parsing C:/ispLEVER_Classic2_0/ispcpld/dat/sdf.mdl
 Input file: c:/users/alanlow/documents/github/cpld_fpga/lattice\ktest1.tt4
+Note 18862: NODE name spi_module__spi_cntr_vPcnt_i0 being renamed to spi_module_Xspi_cntr_vPcnt_i0.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i23 being renamed to pps_counter_Xtemp_pcnt_5_Xi23.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i0 being renamed to pps_counter_Xtemp_pcnt_5_Xi0.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i1 being renamed to pps_counter_Xtemp_pcnt_5_Xi1.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i2 being renamed to pps_counter_Xtemp_pcnt_5_Xi2.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i3 being renamed to pps_counter_Xtemp_pcnt_5_Xi3.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i4 being renamed to pps_counter_Xtemp_pcnt_5_Xi4.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i5 being renamed to pps_counter_Xtemp_pcnt_5_Xi5.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i6 being renamed to pps_counter_Xtemp_pcnt_5_Xi6.
+Note 18862: NODE name pps_counter__temp_pcnt_5__i7 being renamed to pps_counter_Xtemp_pcnt_5_Xi7.
 Reading library information ...
 Mapping to combinational gates 
 Mapping to netlist view.
+Note 18862: NODE name pps_counter_Xtemp_pcnt_5_Xi4.D.X1 being renamed to GATE_pps_counter_Xtemp_pcnt_5_Xi4_D_X1.
+Note 18862: NODE name pps_counter_Xtemp_pcnt_5_Xi12.D.X1 being renamed to GATE_pps_counter_Xtemp_pcnt_5_Xi12_D_X1.
 Utilization Estimate
-    Combinational Macros:          3
-    Flip-Flop and Latch Macros:    0
-    I/O Pads:                      6
+    Combinational Macros:        192
+    Flip-Flop and Latch Macros:   25
+    I/O Pads:                     17
 Elapsed time: 1 seconds

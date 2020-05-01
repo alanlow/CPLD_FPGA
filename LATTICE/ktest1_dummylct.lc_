@@ -1,3 +1,4 @@
+
 [DEVICE]
 Family = lc4k;
 PartType = LC4064ZE;
@@ -7,7 +8,7 @@ Speed = -5.8;
 Operating_condition = IND;
 EN_Segment = Yes;
 Pin_MC_1to1 = No;
-Default_Device_Io_Types=LVCMOS18,-;
+Default_Device_Io_Types = LVCMOS18, -;
 Voltage = 1.8;
 
 [REVISION]
@@ -95,91 +96,88 @@ User_max_glb_fanin = 36;
 Adjust_input_assignments = Off;
 
 [LOCATION ASSIGNMENTS]
-// Block A
-rxd_1v8=pin,48,-,A,6;
-adc_sel0=pin,44,-,A,1;
-adc_clk0=pin,45,-,A,3;
-pps_counter__temp_pcnt_5__i10=node,-,-,A,6;
-pps_counter__temp_pcnt_5__i12=node,-,-,A,10;
-// Block B
-cpld_seln=pin,14,-,B,6;
-pps_rstn=pin,9,-,B,10;
-cpld_sdi=pin,15,-,B,4;
-cpld_sdo=pin,17,-,B,1;
-adc_clk1=pin,10,-,B,10;
-adc_sel1=pin,7,-,B,3;
-spi_module__spi_cntr_vPcnt_i0=node,-,-,B,6;
-// Block C
-spi_miso=pin,23,-,C,4;
-cpld_clk=pin,24,-,C,6;
-spi_clk=pin,21,-,C,1;
-spi_mosi=pin,22,-,C,2;
-pps_counter__temp_pcnt_5__i0=node,-,-,C,5;
-pps_counter__temp_pcnt_5__i1=node,-,-,C,4;
-pps_counter__temp_pcnt_5__i2=node,-,-,C,0;
-pps_counter__temp_pcnt_5__i4=node,-,-,C,3;
-pps_counter__temp_pcnt_5__i5=node,-,-,C,6;
-pps_counter__temp_pcnt_5__i6=node,-,-,C,7;
-pps_counter__temp_pcnt_5__i7=node,-,-,C,8;
-pps_counter__temp_pcnt_5__i8=node,-,-,C,9;
-pps_counter__temp_pcnt_5__i9=node,-,-,C,10;
-n151=node,-,-,C,12;
-// Block D
-freq_clka=pin,39,-,D,4;
-pps_counter__temp_pcnt_5__i23=node,-,-,D,2;
-pps_counter__temp_pcnt_5__i3=node,-,-,D,0;
-pps_counter__temp_pcnt_5__i11=node,-,-,D,1;
-pps_counter__temp_pcnt_5__i13=node,-,-,D,3;
-pps_counter__temp_pcnt_5__i14=node,-,-,D,5;
-pps_counter__temp_pcnt_5__i15=node,-,-,D,6;
-pps_counter__temp_pcnt_5__i16=node,-,-,D,7;
-pps_counter__temp_pcnt_5__i17=node,-,-,D,8;
-pps_counter__temp_pcnt_5__i18=node,-,-,D,9;
-pps_counter__temp_pcnt_5__i19=node,-,-,D,10;
-pps_counter__temp_pcnt_5__i20=node,-,-,D,11;
-pps_counter__temp_pcnt_5__i21=node,-,-,D,12;
-pps_counter__temp_pcnt_5__i22=node,-,-,D,13;
-// Input/Clock Pins
-mcu_clko=pin,43,-,-,-;
-adc_dclk=pin,18,-,-,-;
-adc_drdyn=pin,19,-,-,-;
+layer = OFF;
+rxd_1v8 = pin, 48, -, A, 6;
+adc_sel0 = pin, 44, -, A, 1;
+adc_clk0 = pin, 45, -, A, 3;
+pps_counter__temp_pcnt_5__i10 = node, -, -, A, 6;
+pps_counter__temp_pcnt_5__i12 = node, -, -, A, 10;
+cpld_seln = pin, 14, -, B, 6;
+pps_rstn = pin, 9, -, B, 10;
+cpld_sdi = pin, 15, -, B, 4;
+cpld_sdo = pin, 17, -, B, 1;
+adc_clk1 = pin, 10, -, B, 10;
+adc_sel1 = pin, 7, -, B, 3;
+spi_module__spi_cntr_vPcnt_i0 = node, -, -, B, 6;
+spi_miso = pin, 23, -, C, 4;
+cpld_clk = pin, 24, -, C, 6;
+spi_clk = pin, 21, -, C, 1;
+spi_mosi = pin, 22, -, C, 2;
+pps_counter__temp_pcnt_5__i0 = node, -, -, C, 5;
+pps_counter__temp_pcnt_5__i1 = node, -, -, C, 4;
+pps_counter__temp_pcnt_5__i2 = node, -, -, C, 0;
+pps_counter__temp_pcnt_5__i4 = node, -, -, C, 3;
+pps_counter__temp_pcnt_5__i5 = node, -, -, C, 6;
+pps_counter__temp_pcnt_5__i6 = node, -, -, C, 7;
+pps_counter__temp_pcnt_5__i7 = node, -, -, C, 8;
+pps_counter__temp_pcnt_5__i8 = node, -, -, C, 9;
+pps_counter__temp_pcnt_5__i9 = node, -, -, C, 10;
+n151 = node, -, -, C, 12;
+freq_clka = pin, 39, -, D, 4;
+pps_counter__temp_pcnt_5__i23 = node, -, -, D, 2;
+pps_counter__temp_pcnt_5__i3 = node, -, -, D, 0;
+pps_counter__temp_pcnt_5__i11 = node, -, -, D, 1;
+pps_counter__temp_pcnt_5__i13 = node, -, -, D, 3;
+pps_counter__temp_pcnt_5__i14 = node, -, -, D, 5;
+pps_counter__temp_pcnt_5__i15 = node, -, -, D, 6;
+pps_counter__temp_pcnt_5__i16 = node, -, -, D, 7;
+pps_counter__temp_pcnt_5__i17 = node, -, -, D, 8;
+pps_counter__temp_pcnt_5__i18 = node, -, -, D, 9;
+pps_counter__temp_pcnt_5__i19 = node, -, -, D, 10;
+pps_counter__temp_pcnt_5__i20 = node, -, -, D, 11;
+pps_counter__temp_pcnt_5__i21 = node, -, -, D, 12;
+pps_counter__temp_pcnt_5__i22 = node, -, -, D, 13;
+mcu_clko = pin, 43, -, -, -;
+adc_dclk = pin, 18, -, -, -;
+adc_drdyn = pin, 19, -, -, -;
 
 [PTOE ASSIGNMENTS]
 
 [INPUT REGISTERS]
-Default=NONE;
-;
+Default = NONE;
 
 [IO TYPES]
-mcu_clko=LVCMOS18,pin,-,-;
-rxd_1v8=LVCMOS18,pin,-,-;
-adc_dclk=LVCMOS18,pin,-,-;
-cpld_seln=LVCMOS18,pin,-,-;
-pps_rstn=LVCMOS18,pin,-,-;
-adc_drdyn=LVCMOS18,pin,-,-;
-spi_miso=LVCMOS18,pin,-,-;
-cpld_clk=LVCMOS18,pin,-,-;
-cpld_sdi=LVCMOS18,pin,-,-;
-cpld_sdo=LVCMOS18,pin,0,-;
-adc_clk1=LVCMOS18,pin,0,-;
-adc_sel1=LVCMOS18,pin,0,-;
-adc_sel0=LVCMOS18,pin,0,-;
-adc_clk0=LVCMOS18,pin,0,-;
-spi_clk=LVCMOS18,pin,1,-;
-spi_mosi=LVCMOS18,pin,1,-;
-freq_clka=LVCMOS18,pin,1,-;
+mcu_clko = LVCMOS18, pin, -, -;
+rxd_1v8 = LVCMOS18, pin, -, -;
+adc_dclk = LVCMOS18, pin, -, -;
+cpld_seln = LVCMOS18, pin, -, -;
+pps_rstn = LVCMOS18, pin, -, -;
+adc_drdyn = LVCMOS18, pin, -, -;
+spi_miso = LVCMOS18, pin, -, -;
+cpld_clk = LVCMOS18, pin, -, -;
+cpld_sdi = LVCMOS18, pin, -, -;
+cpld_sdo = LVCMOS18, pin, 0, -;
+adc_clk1 = LVCMOS18, pin, 0, -;
+adc_sel1 = LVCMOS18, pin, 0, -;
+adc_sel0 = LVCMOS18, pin, 0, -;
+adc_clk0 = LVCMOS18, pin, 0, -;
+spi_clk = LVCMOS18, pin, 1, -;
+spi_mosi = LVCMOS18, pin, 1, -;
+freq_clka = LVCMOS18, pin, 1, -;
 
 [PLL ASSIGNMENTS]
 
 [RESOURCE RESERVATIONS]
-layer=OFF;
+layer = OFF;
 
 [SLEWRATE]
-Default=FAST;
+Default = FAST;
 
 [PULLUP]
-UP=mcu_clko,adc_sel0,adc_clk0,rxd_1v8,adc_dclk,cpld_sdo,cpld_sdi,cpld_seln,adc_clk1,pps_rstn,cpld_rstn,adc_sel1,adc_drdyn,spi_clk,spi_mosi,spi_miso,cpld_clk,freq_clka;
-Default=DOWN;
+UP = mcu_clko, adc_sel0, adc_clk0, rxd_1v8, adc_dclk, cpld_sdo, cpld_sdi, cpld_seln, 
+	adc_clk1, pps_rstn, cpld_rstn, adc_sel1, adc_drdyn, spi_clk, spi_mosi, 
+	spi_miso, cpld_clk, freq_clka;
+Default = DOWN;
 
 [FITTER RESULTS]
 I/O_pin_util = 40;
@@ -194,7 +192,7 @@ GLB_input_util = 38;
 GLB_input = 55;
 
 [TIMING CONSTRAINTS]
-layer=OFF;
+layer = OFF;
 
 [FITTER REPORT FORMAT]
 Fitter_Options = Yes;
@@ -212,7 +210,7 @@ Page_Break = Yes;
 Detailed = No;
 
 [POWER]
-Default=HIGH;
+Default = HIGH;
 
 [SOURCE_CONSTRAINT_OPTION]
 
@@ -223,6 +221,61 @@ Pullup = No;
 Slew_Rate = FAST;
 
 [TIMING ANALYZER]
-Last_source=;
-Last_source_type=Fmax;
+Last_source = ;
+Last_source_type = Fmax;
 
+[Pin attributes list]
+
+[Attributes list setting]
+
+[Power Guard]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[GROUP ASSIGNMENTS]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Source Constraint Option]
+
+[NETLIST/DELAY FORMAT]
+
+[Fast Bypass]
+
+[ORP Bypass]
+
+[OSM Bypass]
+
+[Register Powerup]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[Timing Results]
+Fmax = 97.09;
+Logic_level = 2;

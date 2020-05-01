@@ -1,5 +1,5 @@
 #$ TOOL   ispLEVER Classic 2.0.00.17.20.15
-#$ DATE   Sat Apr 11 22:00:53 2020
+#$ DATE   Fri May 01 16:36:36 2020
 #$ MODULE   KEPLER_TL
 #$ PINS 17 mcu_clko rxd_1v8 adc_dclk cpld_seln pps_rstn adc_drdyn spi_miso
  cpld_clk cpld_sdi cpld_sdo adc_clk1 adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi

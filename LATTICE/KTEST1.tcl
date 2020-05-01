@@ -37221,3 +37221,470 @@ if [runCmd "\"$install_dir/active-hdl/BIN/avhdl\" -do \"kepler_tl_tb_activehdl.d
 
 ########## Tcl recorder end at 04/11/20 22:10:12 ###########
 
+
+########## Tcl recorder starts at 05/01/20 16:21:45 ##########
+
+# Commands to make the Process: 
+# Generate Board-level Stamp Model
+if [runCmd "\"$cpld_bin/timer\" -inp \"ktest1.tt4\" -lci \"ktest1.lct\" -stamp \"ktest1.stamp\" -exf \"KEPLER_TL.exf\" -lco \"ktest1.lco\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/stamppar\" -i ktest1.stamp "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:21:45 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:22:01 ##########
+
+# Commands to make the Process: 
+# Generate Schematic Symbol
+if [runCmd "\"$cpld_bin/naf2sym\" KEPLER_TL"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:22:01 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:22:06 ##########
+
+# Commands to make the Process: 
+# ABEL Test Vector Template
+if [runCmd "\"$cpld_bin/vhd2naf\" -tfi -proj ktest1 -mod KEPLER_TL -out KEPLER_TL -tpl \"$install_dir/ispcpld/plsi/abel/plsiabt.tft\" -ext abt -p \"$install_dir/ispcpld/generic\" kepler_tl.vhd"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:22:06 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:22:10 ##########
+
+# Commands to make the Process: 
+# Generate Synthesize Tool Tcl Script
+# - none -
+# Application to view the Process: 
+# Generate Synthesize Tool Tcl Script
+if [catch {open KEPLER_TL.synproj w} rspFile] {
+	puts stderr "Cannot create response file KEPLER_TL.synproj: $rspFile"
+} else {
+	puts $rspFile "-a ispMACH400ZE
+-d LC4064ZE
+-top KEPLER_TL
+-vhd spi_mod.vhd pps_count.vhd adc_buf.vhd kepler_tl.vhd
+-output_edif KEPLER_TL.edi
+-optimization_goal Area
+-frequency  200
+-fsm_encoding_style Auto
+-use_io_insertion 1
+-resource_sharing 1
+-propagate_constants 1
+-remove_duplicate_regs 1
+-twr_paths  3
+-resolve_mixed_drivers 0
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/synedit\" -i \"KEPLER_TL.synproj\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:22:10 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:22:56 ##########
+
+# Commands to make the Process: 
+# Post-Fit Pinouts
+# - none -
+# Application to view the Process: 
+# Post-Fit Pinouts
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src ktest1.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/lc4k/m4e_64_32.dev\" -postfit -lci ktest1.lco
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:22:56 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:23:15 ##########
+
+# Commands to make the Process: 
+# ISC-1532 File
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj ktest1 -if ktest1.jed -j2i "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:23:15 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:23:51 ##########
+
+# Commands to make the Process: 
+# Optimization Constraint
+# - none -
+# Application to view the Process: 
+# Optimization Constraint
+if [catch {open opt_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file opt_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-global -lci ktest1.lct -touch ktest1.imp
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/optedit\" @opt_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:23:51 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:36:33 ##########
+
+# Commands to make the Process: 
+# Fit Design
+if [runCmd "\"$cpld_bin/impsrc\"  -prj ktest1 -lci ktest1.lct -log ktest1.imp -err automake.err -tti ktest1.bl2 -dir $proj_dir"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci ktest1.lct -blifopt ktest1.b2_"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mblifopt\" ktest1.bl2 -sweep -mergefb -err automake.err -o ktest1.bl3 @ktest1.b2_ "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci ktest1.lct -dev lc4k -diofft ktest1.d0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/mdiofft\" ktest1.bl3 -family AMDMACH -idev van -o ktest1.bl4 -oxrf ktest1.xrf -err automake.err @ktest1.d0 "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/abelvci\" -vci ktest1.lct -dev lc4k -prefit ktest1.l0"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/prefit\" -blif -inp ktest1.bl4 -out ktest1.bl5 -err automake.err -log ktest1.log -mod KEPLER_TL @ktest1.l0  -sc"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [catch {open ktest1.rs1 w} rspFile] {
+	puts stderr "Cannot create response file ktest1.rs1: $rspFile"
+} else {
+	puts $rspFile "-i ktest1.bl5 -lci ktest1.lct -d m4s_64_32 -lco ktest1.lco -html_rpt -fti ktest1.fti -fmt PLA -tto ktest1.tt4 -nojed -eqn ktest1.eq3 -tmv NoInput.tmv
+-rpt_num 1
+"
+	close $rspFile
+}
+if [catch {open ktest1.rs2 w} rspFile] {
+	puts stderr "Cannot create response file ktest1.rs2: $rspFile"
+} else {
+	puts $rspFile "-i ktest1.bl5 -lci ktest1.lct -d m4s_64_32 -lco ktest1.lco -html_rpt -fti ktest1.fti -fmt PLA -tto ktest1.tt4 -eqn ktest1.eq3 -tmv NoInput.tmv
+-rpt_num 1
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lpf4k\" \"@ktest1.rs2\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete ktest1.rs1
+file delete ktest1.rs2
+if [runCmd "\"$cpld_bin/tda\" -i ktest1.bl5 -o ktest1.tda -lci ktest1.lct -dev m4s_64_32 -family lc4k -mod KEPLER_TL -ovec NoInput.tmv -err tda.err "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj ktest1 -if ktest1.jed -j2s -log ktest1.svl "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:36:34 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:36:48 ##########
+
+# Commands to make the Process: 
+# Post-Fit Pinouts
+# - none -
+# Application to view the Process: 
+# Post-Fit Pinouts
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src ktest1.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/lc4k/m4s_64_32.dev\" -postfit -lci ktest1.lco
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:36:48 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:47:43 ##########
+
+# Commands to make the Process: 
+# ISC-1532 File
+if [runCmd "\"$cpld_bin/synsvf\" -exe \"$install_dir/ispvmsystem/ispufw\" -prj ktest1 -if ktest1.jed -j2i "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:47:43 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:55:47 ##########
+
+# Commands to make the Process: 
+# Optimization Constraint
+# - none -
+# Application to view the Process: 
+# Optimization Constraint
+if [catch {open opt_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file opt_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-global -lci ktest1.lct -touch ktest1.imp
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/optedit\" @opt_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:55:47 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:57:01 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vhd2jhd\" kepler_tl.vhd -o kepler_tl.jhd -m \"$install_dir/ispcpld/generic/lib/vhd/location.map\" -p \"$install_dir/ispcpld/generic/lib\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/vhd2jhd\" adc_buf.vhd -o adc_buf.jhd -m \"$install_dir/ispcpld/generic/lib/vhd/location.map\" -p \"$install_dir/ispcpld/generic/lib\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/vhd2jhd\" spi_mod.vhd -o spi_mod.jhd -m \"$install_dir/ispcpld/generic/lib/vhd/location.map\" -p \"$install_dir/ispcpld/generic/lib\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/vhd2jhd\" pps_count.vhd -o pps_count.jhd -m \"$install_dir/ispcpld/generic/lib/vhd/location.map\" -p \"$install_dir/ispcpld/generic/lib\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:57:01 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:57:35 ##########
+
+# Commands to make the Process: 
+# Post-Fit Pinouts
+# - none -
+# Application to view the Process: 
+# Post-Fit Pinouts
+if [catch {open lattice_cmd.rs2 w} rspFile] {
+	puts stderr "Cannot create response file lattice_cmd.rs2: $rspFile"
+} else {
+	puts $rspFile "-src ktest1.tt4 -type PLA -devfile \"$install_dir/ispcpld/dat/lc4k/m4s_64_32.dev\" -postfit -lci ktest1.lco
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/lciedit\" @lattice_cmd.rs2"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:57:35 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:57:46 ##########
+
+# Commands to make the Process: 
+# Generate Board-level Stamp Model
+if [runCmd "\"$cpld_bin/timer\" -inp \"ktest1.tt4\" -lci \"ktest1.lct\" -stamp \"ktest1.stamp\" -exf \"KEPLER_TL.exf\" -lco \"ktest1.lco\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+if [runCmd "\"$cpld_bin/stamppar\" -i ktest1.stamp "] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:57:46 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:57:51 ##########
+
+# Commands to make the Process: 
+# Generate Timing Simulation Files
+if [catch {open ktest1.rsp w} rspFile] {
+	puts stderr "Cannot create response file ktest1.rsp: $rspFile"
+} else {
+	puts $rspFile "-i ktest1.tt4 -lib \"$install_dir/ispcpld/dat/lc4k\" -strategy top -sdfmdl \"$install_dir/ispcpld/dat/sdf.mdl\" -pla ktest1.tt4 -lci ktest1.lct -prj ktest1 -dir \"$proj_dir\" -err automake.err -log ktest1.nrp -exf KEPLER_TL.exf 
+"
+	close $rspFile
+}
+if [runCmd "\"$cpld_bin/sdf\" @ktest1.rsp"] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+file delete ktest1.rsp
+
+########## Tcl recorder end at 05/01/20 16:57:51 ###########
+
+
+########## Tcl recorder starts at 05/01/20 16:58:40 ##########
+
+# Commands to make the Process: 
+# Hierarchy
+if [runCmd "\"$cpld_bin/vhd2jhd\" adc_buf.vhd -o adc_buf.jhd -m \"$install_dir/ispcpld/generic/lib/vhd/location.map\" -p \"$install_dir/ispcpld/generic/lib\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/01/20 16:58:40 ###########
+

@@ -1,0 +1,33 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 2.0.00.17.20.15 Equations File            -|
+|- Copyright(C), 1992-2012, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+adc_clk0 = adc_dclk ; (1 pterm, 1 signal)
+
+adc_clk1 = adc_dclk ; (1 pterm, 1 signal)
+
+adc_sel0.D = !inst_Q2.Q & inst_Q1.Q ; (1 pterm, 2 signals)
+adc_sel0.C = mcu_clko ; (1 pterm, 1 signal)
+
+adc_sel1.D = !inst_Q2.Q & inst_Q1.Q ; (1 pterm, 2 signals)
+adc_sel1.C = mcu_clko ; (1 pterm, 1 signal)
+
+cpld_sdo = spi_miso ; (1 pterm, 1 signal)
+
+freq_clka = mcu_clko ; (1 pterm, 1 signal)
+
+inst_Q1.D = !adc_dclk & adc_drdyn ; (1 pterm, 2 signals)
+inst_Q1.C = mcu_clko ; (1 pterm, 1 signal)
+
+inst_Q2.D = inst_Q1.Q ; (1 pterm, 1 signal)
+inst_Q2.C = mcu_clko ; (1 pterm, 1 signal)
+
+spi_clk = cpld_clk ; (1 pterm, 1 signal)
+
+spi_mosi = cpld_sdi ; (1 pterm, 1 signal)
+

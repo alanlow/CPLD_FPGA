@@ -1,0 +1,4 @@
+@E: CD255 :"C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\kepler_tl.vhd":50:21:50:21|No identifier "spulse" in scope
+@E: CD415 :"C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\kepler_tl.vhd":52:26:52:26|Expecting keyword of
+@E|Parse errors encountered - exiting
+

@@ -37688,3 +37688,57 @@ if [runCmd "\"$cpld_bin/vhd2jhd\" adc_buf.vhd -o adc_buf.jhd -m \"$install_dir/i
 
 ########## Tcl recorder end at 05/01/20 16:58:40 ###########
 
+
+########## Tcl recorder starts at 05/05/20 15:55:51 ##########
+
+# Commands to make the Process: 
+# Aldec VHDL Functional Simulation
+# - none -
+# Application to view the Process: 
+# Aldec VHDL Functional Simulation
+if [catch {open kepler_tl_tb_activehdl.do w} rspFile] {
+	puts stderr "Cannot create response file kepler_tl_tb_activehdl.do: $rspFile"
+} else {
+	puts $rspFile "set SIM_WORKING_FOLDER .
+do -tcl kepler_tl_tb.fado
+"
+	close $rspFile
+}
+if [runCmd "\"$install_dir/active-hdl/BIN/avhdl\" -do \"kepler_tl_tb_activehdl.do\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/05/20 15:55:51 ###########
+
+
+########## Tcl recorder starts at 05/05/20 16:00:45 ##########
+
+# Commands to make the Process: 
+# Aldec VHDL Functional Simulation
+# - none -
+# Application to view the Process: 
+# Aldec VHDL Functional Simulation
+if [catch {open kepler_tl_tb_activehdl.do w} rspFile] {
+	puts stderr "Cannot create response file kepler_tl_tb_activehdl.do: $rspFile"
+} else {
+	puts $rspFile "set SIM_WORKING_FOLDER .
+do -tcl kepler_tl_tb.fado
+"
+	close $rspFile
+}
+if [runCmd "\"$install_dir/active-hdl/BIN/avhdl\" -do \"kepler_tl_tb_activehdl.do\""] {
+	return
+} else {
+	vwait done
+	if [checkResult $done] {
+		return
+	}
+}
+
+########## Tcl recorder end at 05/05/20 16:00:45 ###########
+

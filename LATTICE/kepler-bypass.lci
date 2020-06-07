@@ -1,0 +1,147 @@
+
+[Device]
+Family = lc4k;
+PartNumber = LC4064V-5T48I;
+Package = 48TQFP;
+PartType = LC4064V;
+Speed = -5;
+Operating_condition = IND;
+Status = Production;
+EN_PinGLB = yes;
+EN_PinMacrocell = yes;
+
+[Revision]
+Parent = lc4k64v.lci;
+DATE = 05/05/2020;
+TIME = 17:02:01;
+Source_Format = Schematic_VHDL;
+Synthesis = Synplify;
+
+[Ignore Assignments]
+
+[Clear Assignments]
+
+[Backannotate Assignments]
+
+[Global Constraints]
+
+[Location Assignments]
+layer = OFF;
+mcu_clko = Pin, 43, -, -, -;
+adc_drdyn = Pin, 19, -, -, -;
+cpld_clk = Pin, 24, -, C, 8;
+cpld_sdi = Pin, 15, -, B, 10;
+spi_miso = Pin, 23, -, C, 6;
+adc_clk0 = Pin, 45, -, A, 2;
+adc_clk1 = Pin, 10, -, B, 6;
+adc_sel0 = Pin, 44, -, A, 0;
+adc_sel1 = Pin, 7, -, B, 0;
+cpld_sdo = Pin, 17, -, B, 14;
+freq_clka = Pin, 39, -, D, 10;
+spi_clk = Pin, 21, -, C, 2;
+spi_mosi = Pin, 22, -, C, 4;
+
+[Group Assignments]
+layer = OFF;
+
+[Resource Reservations]
+layer = OFF;
+
+[Fitter Report Format]
+
+[Power]
+
+[Source Constraint Option]
+
+[Fast Bypass]
+FORCED = adc_clk0, adc_clk1, adc_sel0, adc_sel1, cpld_sdo, freq_clka, spi_clk, spi_mosi;
+
+[OSM Bypass]
+
+[Input Registers]
+NONE = mcu_clko;
+
+[Netlist/Delay Format]
+NetList = VHDL;
+
+[IO Types]
+layer = OFF;
+mcu_clko = LVCMOS18, PIN, 0, -;
+cpld_clk = LVCMOS18, PIN, 1, -;
+
+[Pullup]
+
+[Slewrate]
+
+[Region]
+
+[Timing Constraints]
+layer = OFF;
+
+[HSI Attributes]
+
+[Input Delay]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[Pin attributes list]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[pin lock limitation]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Attributes list setting]
+
+[Timing Analyzer]
+
+[PLL Assignments]
+
+[Dual Function Macrocell]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[ORP Bypass]
+BYPASS = adc_clk0, adc_clk1, adc_sel0, adc_sel1, cpld_sdo, freq_clka, spi_clk, spi_mosi;
+
+[Register Powerup]
+
+[Constraint Version]
+version = 1.0;
+
+[ORP ASSIGNMENTS]
+layer = OFF;
+
+[Node attribute]
+layer = OFF;
+
+[SYMBOL/MODULE attribute]
+layer = OFF;
+
+[Nodal Constraints]
+layer = OFF;

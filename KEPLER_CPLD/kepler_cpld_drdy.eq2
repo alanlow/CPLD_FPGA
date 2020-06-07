@@ -1,0 +1,85 @@
+ ispLEVER Classic 2.0.00.17.20.15 Linked Equations File
+Copyright(C), 1992-2015, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design kepler_tl created  Thu May 14 10:24:51 2020
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   1/1        1        1    Pin   cpld_sdo 
+   1/1        1        1    Pin   adc_clk1 
+   1          2        1    Pin   adc_sel1.D 
+   1/1        1        1    Pin   adc_sel1.C 
+   1/1        1        1    Pin   adc_clk0 
+   1/1        1        1    Pin   spi_clk 
+   1/1        1        1    Pin   spi_mosi 
+   1/1        1        1    Pin   freq_clka 
+   1          2        1    Pin   adc_sel0.D 
+   1/1        1        1    Pin   adc_sel0.C 
+   1/1        1        1    Node  inst_Q2.D 
+   1/1        1        1    Node  inst_Q2.C 
+   1          2        1    Node  inst_Q1.D 
+   1/1        1        1    Node  inst_Q1.C 
+=========
+  14/11         Best P-Term Total: 14
+                       Total Pins: 14
+                      Total Nodes: 2
+            Average P-Term/Output: 1
+
+
+Equations:
+
+cpld_sdo = (spi_miso);
+
+adc_clk1 = (adc_dclk);
+
+adc_sel1.D = (!inst_Q2.Q & inst_Q1.Q);
+
+adc_sel1.C = (mcu_clko);
+
+adc_clk0 = (adc_dclk);
+
+spi_clk = (cpld_clk);
+
+spi_mosi = (cpld_sdi);
+
+freq_clka = (mcu_clko);
+
+adc_sel0.D = (!inst_Q2.Q & inst_Q1.Q);
+
+adc_sel0.C = (mcu_clko);
+
+inst_Q2.D = (inst_Q1.Q);
+
+inst_Q2.C = (mcu_clko);
+
+inst_Q1.D = (!adc_dclk & adc_drdyn);
+
+inst_Q1.C = (mcu_clko);
+
+
+Reverse-Polarity Equations:
+
+!cpld_sdo = (!spi_miso);
+
+!adc_clk1 = (!adc_dclk);
+
+!adc_sel1.C = (!mcu_clko);
+
+!adc_clk0 = (!adc_dclk);
+
+!spi_clk = (!cpld_clk);
+
+!spi_mosi = (!cpld_sdi);
+
+!freq_clka = (!mcu_clko);
+
+!adc_sel0.C = (!mcu_clko);
+
+!inst_Q2.D = (!inst_Q1.Q);
+
+!inst_Q2.C = (!mcu_clko);
+
+!inst_Q1.C = (!mcu_clko);
+

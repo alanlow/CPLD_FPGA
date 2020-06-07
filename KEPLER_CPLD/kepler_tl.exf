@@ -1,0 +1,22 @@
+Section Cross Reference File
+Design 'KEPLER_TL' created Thu May 14 10:25:12 2020
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     mcu_clko
+        Input     adc_dclk
+        Input     adc_drdyn
+        Input     spi_miso
+        Input     cpld_clk
+        Input     cpld_sdi
+        Output     cpld_sdo
+        Output     adc_clk1
+        Output     adc_sel1
+        Output     adc_sel0
+        Output     adc_clk0
+        Output     spi_clk
+        Output     spi_mosi
+        Output     freq_clka
+End

@@ -1,0 +1,28 @@
+//
+// Software Version :  ispLEVER Classic 2.0.00.17.20.15  
+// Project Name	    :  kepler_cpld_drdy
+// Targeted Device  :  LC4064V-5T48I
+// Date             :  Thu May 14 10:25:14 2020
+//
+                   GNDIO0          SYS           5
+                   VCCIO0          SYS           6
+                 adc_sel1          OUT           7
+                 adc_clk1          OUT           10
+                      VCC          SYS           12
+                      GND          SYS           13
+                 cpld_sdi          IN            15
+                 cpld_sdo          OUT           17
+                 adc_dclk          IN            18
+                adc_drdyn          IN            19
+                  spi_clk          OUT           21
+                 spi_mosi          OUT           22
+                 spi_miso          IN            23
+                 cpld_clk          IN            24
+                   GNDIO1          SYS           29
+                   VCCIO1          SYS           30
+                      VCC          SYS           36
+                      GND          SYS           37
+                freq_clka          OUT           39
+                 mcu_clko          IN            43
+                 adc_sel0          OUT           44
+                 adc_clk0          OUT           45

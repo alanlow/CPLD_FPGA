@@ -1,0 +1,98 @@
+// Node Statistic Information File
+// Tool:  ispLEVER Classic 2.0.00.17.20.15
+// Design 'kepler_tl' created   Tue May 12 13:08:41 2020
+
+// Fmax Logic Level: 0.
+
+// Path: 
+
+// Signal Name: cpld_sdo
+// Type: Output
+BEGIN cpld_sdo
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	spi_miso.BLIF       	0
+END
+
+// Signal Name: adc_clk1
+// Type: Output
+BEGIN adc_clk1
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	adc_dclk.BLIF       	0
+END
+
+// Signal Name: adc_sel1
+// Type: Output
+BEGIN adc_sel1
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	adc_drdyn.BLIF      	0
+END
+
+// Signal Name: adc_sel0
+// Type: Output
+BEGIN adc_sel0
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	adc_drdyn.BLIF      	0
+END
+
+// Signal Name: adc_clk0
+// Type: Output
+BEGIN adc_clk0
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	adc_dclk.BLIF       	0
+END
+
+// Signal Name: spi_clk
+// Type: Output
+BEGIN spi_clk
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_clk.BLIF       	0
+END
+
+// Signal Name: spi_mosi
+// Type: Output
+BEGIN spi_mosi
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	cpld_sdi.BLIF       	0
+END
+
+// Signal Name: freq_clka
+// Type: Output
+BEGIN freq_clka
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	mcu_clko.BLIF       	0
+END
+
+// Design 'kepler_tl' used clock signal list:
+

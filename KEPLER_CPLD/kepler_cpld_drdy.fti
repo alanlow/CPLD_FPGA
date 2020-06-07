@@ -1,0 +1,62 @@
+#PLAFILE     kepler_cpld_drdy.bl5
+#DATE        Thu May 14 10:25:14 2020
+
+#DESIGN      kepler_cpld_drdy
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION mcu_clko:*_*_43
+DATA LOCATION adc_dclk:*_*_18
+DATA LOCATION adc_drdyn:*_*_19
+DATA LOCATION spi_miso:C_*_23
+DATA LOCATION cpld_clk:C_*_24
+DATA LOCATION cpld_sdi:B_*_15
+DATA LOCATION cpld_sdo:B_2_17
+DATA LOCATION adc_clk1:B_10_10
+DATA LOCATION adc_sel1:B_5_7
+DATA LOCATION adc_clk0:A_3_45
+DATA LOCATION spi_clk:C_3_21
+DATA LOCATION spi_mosi:C_9_22
+DATA LOCATION freq_clka:D_11_39
+DATA LOCATION adc_sel0:A_1_44
+DATA LOCATION inst_Q2:A_6
+DATA LOCATION inst_Q1:A_10
+
+// Signals direction
+DATA IO_DIR mcu_clko:IN
+DATA IO_DIR adc_dclk:IN
+DATA IO_DIR adc_drdyn:IN
+DATA IO_DIR spi_miso:IN
+DATA IO_DIR cpld_clk:IN
+DATA IO_DIR cpld_sdi:IN
+DATA IO_DIR cpld_sdo:OUT
+DATA IO_DIR adc_clk1:OUT
+DATA IO_DIR adc_sel1:OUT
+DATA IO_DIR adc_clk0:OUT
+DATA IO_DIR spi_clk:OUT
+DATA IO_DIR spi_mosi:OUT
+DATA IO_DIR freq_clka:OUT
+DATA IO_DIR adc_sel0:OUT
+
+// Global Clocks
+DATA GLB_CLOCK mcu_clko:0
+
+// Block Load Adders
+DATA tBLA inst_Q1:1
+DATA tBLA inst_Q2:1
+DATA tBLA adc_dclk:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM cpld_sdo
+DATA tOSM adc_clk1
+DATA tOSM adc_sel1
+DATA tOSM adc_clk0
+DATA tOSM spi_clk
+DATA tOSM spi_mosi
+DATA tOSM freq_clka
+DATA tOSM adc_sel0

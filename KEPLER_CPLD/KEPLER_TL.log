@@ -1,0 +1,13 @@
+Starting EDIF2BLIF....
+readEDIF ended normally.
+
+Inspect circuit KEPLER_TL
+    Number of input ports   : 6
+    Number of output ports  : 8
+    Number of bidir ports   : 0
+    Number of instances     : 21
+    Number of nets          : 27
+
+No design errors found in circuit KEPLER_TL
+
+WriteBLIF ended normally.

@@ -1,0 +1,418 @@
+<HTML>
+<HEAD><TITLE>HTML_REPORT_FILE</TITLE>
+<STYLE TYPE="text/css">
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 10pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 10pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+</HEAD>
+<PRE>
+<A name="Top"></A><H2 align=center> ispLEVER Classic 2.0.00.17.20.15 Fitter Report File </H2>
+<H2 align=center>Copyright(C), 1992-2012, Lattice Semiconductor Corporation</H2>
+<H2 align=center>All Rights Reserved</H2>
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+<A name="Project_Summary"></A><FONT COLOR=maroon><U><B><big>Project_Summary</big></B></U></FONT>
+<BR>
+Project Name         :  kepler-bypass
+Project Path         :  C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE
+Project Fitted on    :  Tue May 05 17:02:07 2020
+
+Device               :  M4064_32
+Package              :  48
+GLB Input Mux Size   :  10
+Available Blocks     :  4
+Speed                :  -5
+Part Number          :  LC4064V-5T48I
+Source Format        :  Schematic_VHDL
+
+
+<font color=green size=4><span class=blink><strong><B>Project 'kepler-bypass' Fit Successfully!</B></strong></span></font>
+
+
+<A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
+<BR>
+Prefit Time                     0 secs
+Load Design Time                0.01 secs
+Partition Time                  0.00 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+<A name="Design_Summary"></A><FONT COLOR=maroon><U><B><big>Design_Summary</big></B></U></FONT>
+<BR>
+Total Input Pins                6
+Total Logic Functions           8
+  Total Output Pins             8
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            0
+Total Flip-Flops                0
+  Total D Flip-Flops            0
+  Total T Flip-Flops            0
+  Total Latches                 0
+Total Product Terms             8
+
+Total Reserved Pins             0
+Total Locked Pins               14
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             0
+Total Unique Clock Enables      0
+Total Unique Resets             0
+Total Unique Presets            0
+
+Fmax Logic Levels               -
+
+
+<A name="Device_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>Device_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+</B>Dedicated Pins
+  Clock/Input Pins                  4        3      1    -->    75
+  I/O / Enable Pins                 2        1      1    -->    50
+I/O Pins                           30       10     20    -->    33
+Logic Functions                    64        8     56    -->    12
+  Input Registers                  32        0     32    -->     0
+
+GLB Inputs                        144        8    136    -->     5
+Logical Product Terms             320        8    312    -->     2
+Occupied GLBs                       4        4      0    -->   100
+Macrocells                         64        8     56    -->    12
+
+Control Product Terms:
+  GLB Clock/Clock Enables           4        0      4    -->     0
+  GLB Reset/Presets                 4        0      4    -->     0
+  Macrocell Clocks                 64        0     64    -->     0
+  Macrocell Clock Enables          64        0     64    -->     0
+  Macrocell Enables                64        0     64    -->     0
+  Macrocell Resets                 64        0     64    -->     0
+  Macrocell Presets                64        0     64    -->     0
+
+Global Routing Pool               100        6     94    -->     6
+  GRP from IFB                     ..        6     ..    -->    ..
+    (from input signals)           ..        6     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..        0     ..    -->    ..
+----------------------------------------------------------------------
+
+&lt;Note&gt; 1 : The available PT is the product term that has not been used.
+&lt;Note&gt; 2 : IFB is I/O feedback.
+&lt;Note&gt; 3 : MFB is macrocell feedback.
+
+
+<A name="GLB_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+</B>-------------------------------------------------------------------------------------------
+  GLB    A      2     0     2      1/8      0    2      0             14        2        2
+  GLB    B      3     0     3      4/8      0    3      0             13        3        3
+  GLB    C      2     0     2      4/8      0    2      0             14        2        2
+  GLB    D      1     0     1      1/8      0    1      0             15        1        1
+-------------------------------------------------------------------------------------------
+TOTALS:         8     0     8     10/32     0    8      0             56        8        8
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+&lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+<A name="GLB_Control_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Control_Summary</big></B></U></FONT>
+<BR>
+<B>           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+</B>  GLB    A   0      0         0      0      0      0      0
+  GLB    B   0      0         0      0      0      0      0
+  GLB    C   0      0         0      0      0      0      0
+  GLB    D   0      0         0      0      0      0      0
+------------------------------------------------------------------------------
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+<A name="Optimizer_and_Fitter_Options"></A><FONT COLOR=maroon><U><B><big>Optimizer_and_Fitter_Options</big></B></U></FONT>
+<BR>
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              Yes
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = Bypass (2)
+@ORP_Bypass                            Default = Bypass
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+&lt;Note&gt; 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+&lt;Note&gt; 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+<A name="Pinout_Listing"></A><FONT COLOR=maroon><U><B><big>Pinout_Listing</big></B></U></FONT>
+<BR>
+<B>      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+</B>--------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |
+2     |  I_O  |   0  |A10 |        |                 |       |
+3     |  I_O  |   0  |A12 |        |                 |       |
+4     |  I_O  |   0  |A14 |        |                 |       |
+5     |GNDIO0 |   -  |    |        |                 |       |
+6     |VCCIO0 |   -  |    |        |                 |       |
+7     |  I_O  |   0  |B0  |    *   |LVCMOS18         | Output|<A href=#14>adc_sel1</A>
+8     |  I_O  |   0  |B2  |        |                 |       |
+9     |  I_O  |   0  |B4  |        |                 |       |
+10    |  I_O  |   0  |B6  |    *   |LVCMOS18         | Output|<A href=#13>adc_clk1</A>
+11    | TCK   |   -  |    |        |                 |       |
+12    | VCC   |   -  |    |        |                 |       |
+13    | GND   |   -  |    |        |                 |       |
+14    |  I_O  |   0  |B8  |        |                 |       |
+15    |  I_O  |   0  |B10 |    *   |LVCMOS18         | Input |<A href=#11>cpld_sdi</A>
+16    |  I_O  |   0  |B12 |        |                 |       |
+17    |  I_O  |   0  |B14 |    *   |LVCMOS18         | Output|<A href=#12>cpld_sdo</A>
+18    |INCLK1 |   0  |    |    *   |LVCMOS18         | Input |<A href=#7>adc_dclk</A>
+19    |INCLK2 |   1  |    |    *   |LVCMOS18         | Input |<A href=#8>adc_drdyn</A>
+20    |  I_O  |   1  |C0  |        |                 |       |
+21    |  I_O  |   1  |C2  |    *   |LVCMOS18         | Output|<A href=#17>spi_clk</A>
+22    |  I_O  |   1  |C4  |    *   |LVCMOS18         | Output|<A href=#18>spi_mosi</A>
+23    |  I_O  |   1  |C6  |    *   |LVCMOS18         | Input |<A href=#9>spi_miso</A>
+24    |  I_O  |   1  |C8  |    *   |LVCMOS18         | Input |<A href=#10>cpld_clk</A>
+25    | TMS   |   -  |    |        |                 |       |
+26    |  I_O  |   1  |C10 |        |                 |       |
+27    |  I_O  |   1  |C12 |        |                 |       |
+28    |  I_O  |   1  |C14 |        |                 |       |
+29    |GNDIO1 |   -  |    |        |                 |       |
+30    |VCCIO1 |   -  |    |        |                 |       |
+31    |  I_O  |   1  |D0  |        |                 |       |
+32    |  I_O  |   1  |D2  |        |                 |       |
+33    |  I_O  |   1  |D4  |        |                 |       |
+34    |  I_O  |   1  |D6  |        |                 |       |
+35    | TDO   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    |  I_O  |   1  |D8  |        |                 |       |
+39    |  I_O  |   1  |D10 |    *   |LVCMOS18         | Output|<A href=#19>freq_clka</A>
+40    |  I_O  |   1  |D12 |        |                 |       |
+41    | I_O/OE|   1  |D14 |        |                 |       |
+42    |INCLK3 |   1  |    |        |                 |       |
+43    |INCLK0 |   0  |    |    *   |LVCMOS18         | Input |<A href=#6>mcu_clko</A>
+44    | I_O/OE|   0  |A0  |    *   |LVCMOS18         | Output|<A href=#15>adc_sel0</A>
+45    |  I_O  |   0  |A2  |    *   |LVCMOS18         | Output|<A href=#16>adc_clk0</A>
+46    |  I_O  |   0  |A4  |        |                 |       |
+47    |  I_O  |   0  |A6  |        |                 |       |
+48    |  I_O  |   0  |A8  |        |                 |       |
+--------------------------------------------------------------------------
+
+&lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
+&lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+&lt;Note&gt; Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+<A name="Input_Signal_List"></A><FONT COLOR=maroon><U><B><big>Input_Signal_List</big></B></U></FONT>
+<BR>
+<B>                Input
+         Pin    Fanout
+ Pin GLB Type           Pullup Signal
+</B>----------------------------------------
+  18  -- INCLK  2 AB--      Up <A name=7>adc_dclk</A>
+  19  -- INCLK  2 AB--      Up <A name=8>adc_drdyn</A>
+  24   C  I/O   1 --C-      Up <A name=10>cpld_clk</A>
+  15   B  I/O   1 --C-      Up <A name=11>cpld_sdi</A>
+  43  -- INCLK  1 ---D      Up <A name=6>mcu_clko</A>
+  23   C  I/O   1 -B--      Up <A name=9>spi_miso</A>
+----------------------------------------
+
+
+<A name="Output_Signal_List"></A><FONT COLOR=maroon><U><B><big>Output_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+</B>----------------------------------------------------------------------
+  45   A  1  1   1  1 COM            * *   ----  Fast     Up <A href=#16>adc_clk0</A>
+  10   B  1  1   1  1 COM            * *   ----  Fast     Up <A href=#13>adc_clk1</A>
+  44   A  1  1   1  1 COM            * *   ----  Fast     Up <A href=#15>adc_sel0</A>
+   7   B  1  1   1  1 COM            * *   ----  Fast     Up <A href=#14>adc_sel1</A>
+  17   B  1  1   1  1 COM            * *   ----  Fast     Up <A href=#12>cpld_sdo</A>
+  39   D  1  1   1  1 COM            * *   ----  Fast     Up <A href=#19>freq_clka</A>
+  21   C  1  1   1  1 COM            * *   ----  Fast     Up <A href=#17>spi_clk</A>
+  22   C  1  1   1  1 COM            * *   ----  Fast     Up <A href=#18>spi_mosi</A>
+----------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Bidir_Signal_List"></A><FONT COLOR=maroon><U><B><big>Bidir_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+</B>-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Buried_Signal_List"></A><FONT COLOR=maroon><U><B><big>Buried_Signal_List</big></B></U></FONT>
+<BR>
+
+
+<A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
+<BR>
+<A name=16>adc_clk0</A> = <A href=#7>adc_dclk</A> ; (1 pterm, 1 signal)
+
+<A name=13>adc_clk1</A> = <A href=#7>adc_dclk</A> ; (1 pterm, 1 signal)
+
+<A name=15>adc_sel0</A> = <A href=#8>adc_drdyn</A> ; (1 pterm, 1 signal)
+
+<A name=14>adc_sel1</A> = <A href=#8>adc_drdyn</A> ; (1 pterm, 1 signal)
+
+<A name=12>cpld_sdo</A> = <A href=#9>spi_miso</A> ; (1 pterm, 1 signal)
+
+<A name=19>freq_clka</A> = <A href=#6>mcu_clko</A> ; (1 pterm, 1 signal)
+
+<A name=17>spi_clk</A> = <A href=#10>cpld_clk</A> ; (1 pterm, 1 signal)
+
+<A name=18>spi_mosi</A> = <A href=#11>cpld_sdi</A> ; (1 pterm, 1 signal)
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+

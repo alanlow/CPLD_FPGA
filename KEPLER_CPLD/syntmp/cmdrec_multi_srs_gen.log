@@ -1,0 +1,7 @@
+C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe  -link  -top  KEPLER_TL  -multisrs  C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\synwork\KEPLER_TL_comp.srs  -osyn  C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\synwork\KEPLER_TL_mult.srs  -log  C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\synlog\KEPLER_TL_multi_srs_gen.srr 
+rc:0 success:1
+C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\synwork\KEPLER_TL_comp.srs|i|1589422903|2619
+C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\synwork\KEPLER_TL_mult.srs|o|1589422904|2360
+C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\synlog\KEPLER_TL_multi_srs_gen.srr|o|1589423107|434
+C:\ispLEVER_Classic2_0\synpbase\bin\syn_nfilter.exe|i|1401202336|2741760
+C:\ispLEVER_Classic2_0\synpbase\bin64\syn_nfilter.exe|i|1401202532|6337536

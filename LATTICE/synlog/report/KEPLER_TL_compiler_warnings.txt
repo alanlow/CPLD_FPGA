@@ -1,0 +1,5 @@
+@W: CL159 :"C:\users\alanlow\documents\github\cpld_fpga\lattice\kepler_tl.vhd":9:3:9:9|Input rxd_1v8 is unused
+@W: CL159 :"C:\users\alanlow\documents\github\cpld_fpga\lattice\kepler_tl.vhd":11:3:11:11|Input cpld_seln is unused
+@W: CL159 :"C:\users\alanlow\documents\github\cpld_fpga\lattice\kepler_tl.vhd":12:3:12:10|Input pps_rstn is unused
+@W: CL159 :"C:\users\alanlow\documents\github\cpld_fpga\lattice\kepler_tl.vhd":13:3:13:11|Input cpld_rstn is unused
+

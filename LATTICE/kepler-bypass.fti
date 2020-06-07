@@ -1,0 +1,56 @@
+#PLAFILE     kepler-bypass.bl5
+#DATE        Tue May 05 17:02:07 2020
+
+#DESIGN      kepler-bypass
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION mcu_clko:*_*_43
+DATA LOCATION adc_dclk:*_*_18
+DATA LOCATION adc_drdyn:*_*_19
+DATA LOCATION spi_miso:C_*_23
+DATA LOCATION cpld_clk:C_*_24
+DATA LOCATION cpld_sdi:B_*_15
+DATA LOCATION cpld_sdo:B_14_17
+DATA LOCATION adc_clk1:B_6_10
+DATA LOCATION adc_sel1:B_0_7
+DATA LOCATION adc_sel0:A_0_44
+DATA LOCATION adc_clk0:A_2_45
+DATA LOCATION spi_clk:C_2_21
+DATA LOCATION spi_mosi:C_4_22
+DATA LOCATION freq_clka:D_10_39
+
+// Signals direction
+DATA IO_DIR mcu_clko:IN
+DATA IO_DIR adc_dclk:IN
+DATA IO_DIR adc_drdyn:IN
+DATA IO_DIR spi_miso:IN
+DATA IO_DIR cpld_clk:IN
+DATA IO_DIR cpld_sdi:IN
+DATA IO_DIR cpld_sdo:OUT
+DATA IO_DIR adc_clk1:OUT
+DATA IO_DIR adc_sel1:OUT
+DATA IO_DIR adc_sel0:OUT
+DATA IO_DIR adc_clk0:OUT
+DATA IO_DIR spi_clk:OUT
+DATA IO_DIR spi_mosi:OUT
+DATA IO_DIR freq_clka:OUT
+
+// Block Load Adders
+DATA tBLA adc_dclk:1
+DATA tBLA adc_drdyn:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tPDB cpld_sdo
+DATA tPDB adc_clk1
+DATA tPDB adc_sel1
+DATA tPDB adc_sel0
+DATA tPDB adc_clk0
+DATA tPDB spi_clk
+DATA tPDB spi_mosi
+DATA tPDB freq_clka

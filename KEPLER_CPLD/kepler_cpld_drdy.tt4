@@ -1,0 +1,23 @@
+#$ TOOL   ispLEVER Classic 2.0.00.17.20.15
+#$ DATE   Thu May 14 10:25:14 2020
+#$ MODULE   KEPLER_TL
+#$ PINS 14 mcu_clko adc_dclk adc_drdyn spi_miso cpld_clk cpld_sdi cpld_sdo
+ adc_clk1 adc_sel1 adc_clk0 spi_clk spi_mosi freq_clka adc_sel0
+#$ NODES 2 inst_Q2 inst_Q1
+.type f
+.i 8
+.o 14
+.ilb mcu_clko adc_dclk adc_drdyn spi_miso cpld_clk cpld_sdi inst_Q2.Q inst_Q1.Q
+.ob cpld_sdo adc_clk1 adc_sel1.D adc_sel1.C adc_clk0 spi_clk spi_mosi freq_clka
+ adc_sel0.D adc_sel0.C inst_Q2.D inst_Q2.C inst_Q1.D inst_Q1.C
+.phase 11111111111111
+.p 8
+---1---- 10000000000000
+-1------ 01001000000000
+------01 00100000100000
+1------- 00010001010101
+----1--- 00000100000000
+-----1-- 00000010000000
+-------1 00000000001000
+-01----- 00000000000010
+.end

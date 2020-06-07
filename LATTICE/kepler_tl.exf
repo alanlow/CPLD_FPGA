@@ -1,8 +1,7 @@
 Section Cross Reference File
-Design 'KEPLER_TL' created Sat Apr 11 22:00:50 2020
+Design 'KEPLER_TL' created Tue May 05 16:50:19 2020
    Type              New Name                               Original Name
 // ----------------------------------------------------------------------
-   Inst   spi_module__spi_cntr_vPcnt_i0             spi_module__spi_cntr.vPcnt_i0
 End
 Section Type      Name
 // ----------------------------------------------------------------------

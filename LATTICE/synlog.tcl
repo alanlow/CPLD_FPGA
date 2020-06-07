@@ -1,2 +1,1 @@
-source "C:/Users/alanlow/AppData/Local/Synplicity/scm_perforce.tcl"
-history clear
+project -load c:/users/alanlow/documents/github/cpld_fpga/lattice/KEPLER_TL.prj

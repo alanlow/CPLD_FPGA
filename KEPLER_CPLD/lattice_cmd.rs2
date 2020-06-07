@@ -1,0 +1,1 @@
+-src kepler_cpld_drdy.tt4 -type PLA -devfile "C:/ispLEVER_Classic2_0/ispcpld/dat/lc4k/m4s_64_32.dev" -postfit -lci kepler_cpld_drdy.lco

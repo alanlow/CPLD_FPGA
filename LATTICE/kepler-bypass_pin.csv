@@ -1,0 +1,54 @@
+ ispLEVER Classic 2.0.00.17.20.15 Fitter Report File 
+Project Name,kepler-bypass
+Project Path,C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE
+Project Fitted on,Tue May 05 17:02:07 2020
+
+Pin,Pin_Type,Bank,GLB_Pad,Assigned,I/O_Type,Signal_Type,Signal_Name
+1,TDI,-,,,,,
+2,I_O,0,A10,,,,
+3,I_O,0,A12,,,,
+4,I_O,0,A14,,,,
+5,GNDIO0,-,,,,,
+6,VCCIO0,-,,,,,
+7,I_O,0,B0,*,LVCMOS18,Output,adc_sel1
+8,I_O,0,B2,,,,
+9,I_O,0,B4,,,,
+10,I_O,0,B6,*,LVCMOS18,Output,adc_clk1
+11,TCK,-,,,,,
+12,VCC,-,,,,,
+13,GND,-,,,,,
+14,I_O,0,B8,,,,
+15,I_O,0,B10,*,LVCMOS18,Input,cpld_sdi
+16,I_O,0,B12,,,,
+17,I_O,0,B14,*,LVCMOS18,Output,cpld_sdo
+18,INCLK1,0,,*,LVCMOS18,Input,adc_dclk
+19,INCLK2,1,,*,LVCMOS18,Input,adc_drdyn
+20,I_O,1,C0,,,,
+21,I_O,1,C2,*,LVCMOS18,Output,spi_clk
+22,I_O,1,C4,*,LVCMOS18,Output,spi_mosi
+23,I_O,1,C6,*,LVCMOS18,Input,spi_miso
+24,I_O,1,C8,*,LVCMOS18,Input,cpld_clk
+25,TMS,-,,,,,
+26,I_O,1,C10,,,,
+27,I_O,1,C12,,,,
+28,I_O,1,C14,,,,
+29,GNDIO1,-,,,,,
+30,VCCIO1,-,,,,,
+31,I_O,1,D0,,,,
+32,I_O,1,D2,,,,
+33,I_O,1,D4,,,,
+34,I_O,1,D6,,,,
+35,TDO,-,,,,,
+36,VCC,-,,,,,
+37,GND,-,,,,,
+38,I_O,1,D8,,,,
+39,I_O,1,D10,*,LVCMOS18,Output,freq_clka
+40,I_O,1,D12,,,,
+41,I_O/OE,1,D14,,,,
+42,INCLK3,1,,,,,
+43,INCLK0,0,,*,LVCMOS18,Input,mcu_clko
+44,I_O/OE,0,A0,*,LVCMOS18,Output,adc_sel0
+45,I_O,0,A2,*,LVCMOS18,Output,adc_clk0
+46,I_O,0,A4,,,,
+47,I_O,0,A6,,,,
+48,I_O,0,A8,,,,

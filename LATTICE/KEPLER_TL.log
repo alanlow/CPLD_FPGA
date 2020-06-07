@@ -1,35 +1,15 @@
 Starting EDIF2BLIF....
 readEDIF ended normally.
 
-Inspect circuit SPI_MOD
-    Number of input ports   : 2
-    Number of output ports  : 1
-    Number of bidir ports   : 0
-    Number of instances     : 2
-    Number of nets          : 4
-
-No design errors found in circuit SPI_MOD
-
-
-Inspect circuit PPS_COUNT
-    Number of input ports   : 3
-    Number of output ports  : 24
-    Number of bidir ports   : 0
-    Number of instances     : 25
-    Number of nets          : 51
-
-No design errors found in circuit PPS_COUNT
-
-
 EDIF2BLIF: Warning: Remove floating instance: :
-	i196
+	rxd_1v8
 
 Inspect circuit KEPLER_TL
     Number of input ports   : 10
     Number of output ports  : 8
     Number of bidir ports   : 0
-    Number of instances     : 92
-    Number of nets          : 101
+    Number of instances     : 14
+    Number of nets          : 20
 
 No design errors found in circuit KEPLER_TL
 

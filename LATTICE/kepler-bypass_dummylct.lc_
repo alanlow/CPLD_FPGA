@@ -1,0 +1,203 @@
+[DEVICE]
+Family = lc4k;
+PartType = LC4064V;
+Package = 48TQFP;
+PartNumber = LC4064V-5T48I;
+Speed = -5;
+Operating_condition = IND;
+EN_Segment = Yes;
+Pin_MC_1to1 = No;
+Default_Device_Io_Types=LVCMOS18,-;
+Voltage = 3.3;
+
+[REVISION]
+RCS = "$Header $";
+Parent = lc4k64v.lci;
+Design = ;
+DATE = 05/05/2020;
+TIME = 17:02:01;
+Source_Format = Schematic_VHDL;
+Type = ;
+Pre_Fit_Time = ;
+
+[IGNORE ASSIGNMENTS]
+Pin_Assignments = No;
+Pin_Keep_Block = No;
+Pin_Keep_Segment = No;
+Group_Assignments = No;
+Macrocell_Assignments = No;
+Macrocell_Keep_Block = No;
+Macrocell_Keep_Segment = No;
+Pin_Reservation = No;
+Block_Reservation = No;
+Segment_Reservation = No;
+Timing_Constraints = No;
+IO_Types = No;
+
+[CLEAR ASSIGNMENTS]
+Pin_Assignments = No;
+Pin_Keep_Block = No;
+Pin_Keep_Segment = No;
+Group_Assignments = No;
+Macrocell_Assignments = No;
+Macrocell_Keep_Block = No;
+Macrocell_Keep_Segment = No;
+Pin_Reservation = No;
+Block_Reservation = No;
+Segment_Reservation = No;
+Timing_Constraints = No;
+IO_Types = No;
+
+[BACKANNOTATE ASSIGNMENTS]
+Pin_Assignment = No;
+Pin_Block = No;
+Pin_Macrocell_Block = No;
+Routing = No;
+Io_Types = No;
+
+[GLOBAL CONSTRAINTS]
+Max_Fanin = 24;
+Max_PTerm_Split = 80;
+Max_PTerm_Collapse = 16;
+Max_Pin_Percent = 100;
+Max_Macrocell_Percent = 100;
+Max_GLB_Input_Percent = 100;
+Logic_Reduction = Yes;
+XOR_Synthesis = Yes;
+Keep_XOR = No;
+DT_Synthesis = Yes;
+Node_Collapse = Yes;
+Nodes_collapsing_mode = FMAX;
+Fmax_Logic_Level = 1;
+Use_CE = Yes;
+Use_Internal_COM_FB = Yes;
+Set_Reset_Swap = No;
+Clock_Optimize = No;
+EN_Set_Reset_Dont_Care = No;
+TOE_AS_IO = No;
+Set_Reset_Dont_Care = No;
+EN_In_Reg_Optimize = No;
+In_Reg_Optimize = Yes;
+Run_Time = 0;
+Routing_Attempts = 2;
+Balanced_Partitioning = Yes;
+Spread_Placement = Yes;
+Usercode = ;
+Usercode_Format = HEX;
+Vcc = ;
+Dual_Function_Macrocell = 1;
+Global_PTOE = Yes;
+Hard_Fast_Bypass = No;
+Fitter_Effort_Level = LOW;
+Auto_buffering_for_high_glb_fanin = Off;
+Auto_buffering_for_low_bonded_io = Off;
+User_max_glb_fanin = 36;
+Adjust_input_assignments = Off;
+
+[LOCATION ASSIGNMENTS]
+// Block A
+adc_sel0=pin,44,-,A,0;
+adc_clk0=pin,45,-,A,2;
+// Block B
+cpld_sdi=pin,15,-,B,10;
+cpld_sdo=pin,17,-,B,14;
+adc_clk1=pin,10,-,B,6;
+adc_sel1=pin,7,-,B,0;
+// Block C
+spi_miso=pin,23,-,C,6;
+cpld_clk=pin,24,-,C,8;
+spi_clk=pin,21,-,C,2;
+spi_mosi=pin,22,-,C,4;
+// Block D
+freq_clka=pin,39,-,D,10;
+// Input/Clock Pins
+mcu_clko=pin,43,-,-,-;
+adc_dclk=pin,18,-,-,-;
+adc_drdyn=pin,19,-,-,-;
+
+[PTOE ASSIGNMENTS]
+
+[FAST BYPASS]
+Default=NONE;
+BYPASS=cpld_sdo,adc_clk1,adc_sel1,adc_sel0,adc_clk0,spi_clk,spi_mosi,freq_clka;
+
+[ORP BYPASS]
+BYPASS=adc_clk0,adc_clk1,adc_sel0,adc_sel1,cpld_sdo,freq_clka,spi_clk,spi_mosi;
+default=NONE;
+
+[INPUT REGISTERS]
+Default=NONE;
+;
+
+[IO TYPES]
+mcu_clko=LVCMOS18,pin,-,-;
+adc_dclk=LVCMOS18,pin,-,-;
+adc_drdyn=LVCMOS18,pin,-,-;
+spi_miso=LVCMOS18,pin,-,-;
+cpld_clk=LVCMOS18,pin,-,-;
+cpld_sdi=LVCMOS18,pin,-,-;
+cpld_sdo=LVCMOS18,pin,0,-;
+adc_clk1=LVCMOS18,pin,0,-;
+adc_sel1=LVCMOS18,pin,0,-;
+adc_sel0=LVCMOS18,pin,0,-;
+adc_clk0=LVCMOS18,pin,0,-;
+spi_clk=LVCMOS18,pin,1,-;
+spi_mosi=LVCMOS18,pin,1,-;
+freq_clka=LVCMOS18,pin,1,-;
+
+[PLL ASSIGNMENTS]
+
+[RESOURCE RESERVATIONS]
+layer=OFF;
+
+[SLEWRATE]
+Default=FAST;
+
+[PULLUP]
+Default=UP;
+
+[FITTER RESULTS]
+I/O_pin_util = 31;
+I/O_pin = 10;
+Logic_PT_util = 2;
+Logic_PT = 8;
+Occupied_MC_util = 12;
+Occupied_MC = 8;
+Occupied_PT_util = 2;
+Occupied_PT = 8;
+GLB_input_util = 5;
+GLB_input = 8;
+
+[TIMING CONSTRAINTS]
+layer=OFF;
+
+[FITTER REPORT FORMAT]
+Fitter_Options = Yes;
+Pinout_Diagram = No;
+Pinout_Listing = Yes;
+Detailed_Block_Segment_Summary = Yes;
+Input_Signal_List = Yes;
+Output_Signal_List = Yes;
+Bidir_Signal_List = Yes;
+Node_Signal_List = Yes;
+Signal_Fanout_List = Yes;
+Block_Segment_Fanin_List = Yes;
+Postfit_Eqn = Yes;
+Page_Break = Yes;
+Detailed = No;
+
+[POWER]
+Default=HIGH;
+
+[SOURCE_CONSTRAINT_OPTION]
+
+[HARDWARE DEVICE OPTIONS]
+Zero_Hold_Time = No;
+Signature_Word = ;
+Pullup = No;
+Slew_Rate = FAST;
+
+[TIMING ANALYZER]
+Last_source=;
+Last_source_type=Fmax;
+

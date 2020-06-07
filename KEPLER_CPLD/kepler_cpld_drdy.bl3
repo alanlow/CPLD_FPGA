@@ -1,0 +1,57 @@
+#$ TOOL ispLEVER Classic 2.0.00.17.20.15
+#$ DATE Thu May 14 10:25:12 2020
+#$ MODULE kepler_cpld_drdy
+#$ PINS 14 mcu_clko adc_dclk adc_drdyn spi_miso cpld_clk cpld_sdi cpld_sdo adc_clk1 \
+#  adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi freq_clka
+#$ NODES 3 inst_spulsereg inst_Q2 inst_Q1
+.model kepler_tl
+.inputs mcu_clko.BLIF adc_dclk.BLIF adc_drdyn.BLIF spi_miso.BLIF cpld_clk.BLIF \
+cpld_sdi.BLIF inst_spulsereg.BLIF inst_Q2.BLIF inst_Q1.BLIF
+.outputs cpld_sdo adc_clk1 adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi \
+freq_clka inst_Q2.D inst_Q2.C inst_Q1.D inst_Q1.C inst_spulsereg.D \
+inst_spulsereg.C
+.names adc_dclk.BLIF adc_drdyn.BLIF inst_Q1.D
+01 1
+1- 0
+-0 0
+.names inst_Q2.BLIF inst_Q1.BLIF inst_spulsereg.D
+01 1
+1- 0
+-0 0
+.names spi_miso.BLIF cpld_sdo
+1 1
+0 0
+.names adc_dclk.BLIF adc_clk1
+1 1
+0 0
+.names inst_spulsereg.BLIF adc_sel1
+1 1
+0 0
+.names inst_spulsereg.BLIF adc_sel0
+1 1
+0 0
+.names adc_dclk.BLIF adc_clk0
+1 1
+0 0
+.names cpld_clk.BLIF spi_clk
+1 1
+0 0
+.names cpld_sdi.BLIF spi_mosi
+1 1
+0 0
+.names mcu_clko.BLIF freq_clka
+1 1
+0 0
+.names inst_Q1.BLIF inst_Q2.D
+1 1
+0 0
+.names mcu_clko.BLIF inst_Q2.C
+1 1
+0 0
+.names mcu_clko.BLIF inst_Q1.C
+1 1
+0 0
+.names mcu_clko.BLIF inst_spulsereg.C
+1 1
+0 0
+.end

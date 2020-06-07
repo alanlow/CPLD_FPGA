@@ -1,4 +1,4 @@
 Part Number: LC4064V-5T48I
-C:\ispLEVER_Classic2_0\ispvmsystem/ispufw -dev LC4064V-XXT48 -if ktest1.jed -oft -isc -lever
-Invoke process : C:\ispLEVER_Classic2_0\ispvmsystem/ispufw -dev LC4064V-XXT48 -if ktest1.jed -oft -isc -lever
+C:\ispLEVER_Classic2_0\ispvmsystem/ispufw -dev LC4064V-XXT48 -if kepler-bypass.jed -oft -isc -lever
+Invoke process : C:\ispLEVER_Classic2_0\ispvmsystem/ispufw -dev LC4064V-XXT48 -if kepler-bypass.jed -oft -isc -lever
 ISC file is generated successfully

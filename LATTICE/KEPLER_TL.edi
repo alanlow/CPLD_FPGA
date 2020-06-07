@@ -1,1550 +1,192 @@
-(edif root
+(edif KEPLER_TL
   (edifVersion 2 0 0)
   (edifLevel 0)
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2020 4 11 22 0 49)
-      (author "Lattice Semiconductor Corp.")
-      (program "EDIF Writer"(version "lse"))
-    )
-  )
-  (external mach
+      (timeStamp 2020 5 5 16 50 15)
+      (author "Synopsys, Inc.")
+      (program "Synplify Pro" (version "I-2014.03LC , mapper maplat, Build 923R"))
+     )
+   )
+  (external ispmach4s
     (edifLevel 0)
-    (technology (numberDefinition))
-    (cell AND2
-      (cellType generic)
-      (view (rename uNoName_ "<NoName>")
-        (viewType netlist)
-        (interface
-          (port O (direction OUTPUT))
-          (port I0 (direction INPUT))
-          (port I1 (direction INPUT))
-        )
-      )
+    (technology (numberDefinition ))
+    (cell IBUF (cellType GENERIC)
+       (view prim (viewType NETLIST)
+         (interface
+           (port O (direction OUTPUT))
+           (port I0 (direction INPUT))
+         )
+       )
     )
-    (cell XOR2
-      (cellType generic)
-      (view (rename uNoName_ "<NoName>")
-        (viewType netlist)
-        (interface
-          (port O (direction OUTPUT))
-          (port I0 (direction INPUT))
-          (port I1 (direction INPUT))
-        )
-      )
-    )
-    (cell OR2
-      (cellType generic)
-      (view (rename uNoName_ "<NoName>")
-        (viewType netlist)
-        (interface
-          (port O (direction OUTPUT))
-          (port I0 (direction INPUT))
-          (port I1 (direction INPUT))
-        )
-      )
-    )
-    (cell DFF
-      (cellType generic)
-      (view (rename INTERFACE_c "INTERFACE")
-        (viewType netlist)
-        (interface
-          (port Q (direction OUTPUT))
-          (port D (direction INPUT))
-          (port CLK (direction INPUT))
-        )
-      )
-    )
-    (cell GND
-      (cellType generic)
-      (view (rename uNoName_ "<NoName>")
-        (viewType netlist)
-        (interface
-          (port X (direction OUTPUT))
-        )
-      )
-    )
-    (cell INV
-      (cellType generic)
-      (view (rename uNoName_ "<NoName>")
-        (viewType netlist)
-        (interface
-          (port O (direction OUTPUT))
-          (port I0 (direction INPUT))
-        )
-      )
-    )
-    (cell DFFR
-      (cellType generic)
-      (view (rename INTERFACE_c "INTERFACE")
-        (viewType netlist)
-        (interface
-          (port Q (direction OUTPUT))
-          (port D (direction INPUT))
-          (port CLK (direction INPUT))
-          (port R (direction INPUT))
-        )
-      )
-    )
-    (cell IBUF
-      (cellType generic)
-      (view (rename INTERFACE_c "INTERFACE")
-        (viewType netlist)
-        (interface
-          (port O (direction OUTPUT))
-          (port I0 (direction INPUT))
-        )
-        (property black_box_pad_pin (string "I0"))
-      )
-    )
-    (cell OBUF
-      (cellType generic)
-      (view (rename INTERFACE_c "INTERFACE")
-        (viewType netlist)
-        (interface
-          (port O (direction OUTPUT))
-          (port I0 (direction INPUT))
-        )
-        (property black_box_pad_pin (string "O"))
-      )
-    )
-    (cell VCC
-      (cellType generic)
-      (view (rename uNoName_ "<NoName>")
-        (viewType netlist)
-        (interface
-          (port X (direction OUTPUT))
-        )
-      )
+    (cell OBUF (cellType GENERIC)
+       (view prim (viewType NETLIST)
+         (interface
+           (port O (direction OUTPUT))
+           (port I0 (direction INPUT))
+         )
+       )
     )
   )
   (library work
     (edifLevel 0)
-    (technology (numberDefinition))
-    (cell SPI_MOD
-      (cellType generic)
-      (view v1
-        (viewType netlist)
-        (interface
-          (port (array (rename n66 "n66[0:0]") 1) (direction OUTPUT))
-          (port nsel_N_28 (direction INPUT))
-          (port (rename pps_reg_23_ "pps_reg[23]") (direction INPUT))
-        )
-        (contents
-          (instance (rename spi_cntr_vPcnt_i0 "spi_cntr.vPcnt_i0")
-            (viewRef INTERFACE_c (cellRef DFF (libraryref mach)))
-          )
-          (net sOut
-            (joined
-              (portRef (member n66 0))
-              (portRef Q (instanceRef spi_cntr_vPcnt_i0))
-            )
-          )
-          (net nsel_N_28
-            (joined
-              (portRef nsel_N_28)
-              (portRef CLK (instanceRef spi_cntr_vPcnt_i0))
-            )
-            (property is_inv_clock (string "1"))
-            (property SET_AS_NETWORK (string "\spi_module/nsel_N_28"))
-            (property is_clock (string "1"))
-          )
-          (net pps_reg_23
-            (joined
-              (portRef pps_reg_23_)
-              (portRef D (instanceRef spi_cntr_vPcnt_i0))
-            )
-          )
-        )
-      )
-    )
-    (cell PPS_COUNT
-      (cellType generic)
-      (view v1
-        (viewType netlist)
-        (interface
-          (port (rename pps_reg_23_ "pps_reg[23]") (direction OUTPUT))
-          (port rxd_1v8_c (direction INPUT))
-          (port pps_rstn_c (direction INPUT))
-          (port (array (rename n101 "n101[23:0]") 24) (direction INPUT))
-          (port n24 (direction OUTPUT))
-          (port n2 (direction OUTPUT))
-          (port n3 (direction OUTPUT))
-          (port n4 (direction OUTPUT))
-          (port n5 (direction OUTPUT))
-          (port n6 (direction OUTPUT))
-          (port n7 (direction OUTPUT))
-          (port n8 (direction OUTPUT))
-          (port n9 (direction OUTPUT))
-          (port n10 (direction OUTPUT))
-          (port n11 (direction OUTPUT))
-          (port n12 (direction OUTPUT))
-          (port n13 (direction OUTPUT))
-          (port n14 (direction OUTPUT))
-          (port n15 (direction OUTPUT))
-          (port n16 (direction OUTPUT))
-          (port n17 (direction OUTPUT))
-          (port n18 (direction OUTPUT))
-          (port n19 (direction OUTPUT))
-          (port n20 (direction OUTPUT))
-          (port n21 (direction OUTPUT))
-          (port n22 (direction OUTPUT))
-          (port n23 (direction OUTPUT))
-        )
-        (contents
-          (instance temp_pcnt_5__i23
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i0
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i22
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i21
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i20
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i19
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i18
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i17
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i16
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i15
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i14
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i13
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i12
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i11
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i10
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i9
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i8
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i7
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i6
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i5
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i4
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i3
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i2
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (instance temp_pcnt_5__i1
-            (viewRef INTERFACE_c (cellRef DFFR (libraryref mach)))
-          )
-          (net pps_reg_23
-            (joined
-              (portRef pps_reg_23_)
-              (portRef Q (instanceRef temp_pcnt_5__i23))
-            )
-          )
-          (net rxd_1v8_c
-            (joined
-              (portRef rxd_1v8_c)
-              (portRef CLK (instanceRef temp_pcnt_5__i23))
-              (portRef CLK (instanceRef temp_pcnt_5__i1))
-              (portRef CLK (instanceRef temp_pcnt_5__i2))
-              (portRef CLK (instanceRef temp_pcnt_5__i3))
-              (portRef CLK (instanceRef temp_pcnt_5__i4))
-              (portRef CLK (instanceRef temp_pcnt_5__i5))
-              (portRef CLK (instanceRef temp_pcnt_5__i6))
-              (portRef CLK (instanceRef temp_pcnt_5__i7))
-              (portRef CLK (instanceRef temp_pcnt_5__i8))
-              (portRef CLK (instanceRef temp_pcnt_5__i9))
-              (portRef CLK (instanceRef temp_pcnt_5__i10))
-              (portRef CLK (instanceRef temp_pcnt_5__i11))
-              (portRef CLK (instanceRef temp_pcnt_5__i12))
-              (portRef CLK (instanceRef temp_pcnt_5__i13))
-              (portRef CLK (instanceRef temp_pcnt_5__i14))
-              (portRef CLK (instanceRef temp_pcnt_5__i15))
-              (portRef CLK (instanceRef temp_pcnt_5__i16))
-              (portRef CLK (instanceRef temp_pcnt_5__i17))
-              (portRef CLK (instanceRef temp_pcnt_5__i18))
-              (portRef CLK (instanceRef temp_pcnt_5__i19))
-              (portRef CLK (instanceRef temp_pcnt_5__i20))
-              (portRef CLK (instanceRef temp_pcnt_5__i21))
-              (portRef CLK (instanceRef temp_pcnt_5__i22))
-              (portRef CLK (instanceRef temp_pcnt_5__i0))
-            )
-            (property SET_AS_NETWORK (string "rxd_1v8_c"))
-            (property is_clock (string "1"))
-          )
-          (net pps_rstn_c
-            (joined
-              (portRef pps_rstn_c)
-              (portRef R (instanceRef temp_pcnt_5__i0))
-              (portRef R (instanceRef temp_pcnt_5__i23))
-              (portRef R (instanceRef temp_pcnt_5__i22))
-              (portRef R (instanceRef temp_pcnt_5__i21))
-              (portRef R (instanceRef temp_pcnt_5__i20))
-              (portRef R (instanceRef temp_pcnt_5__i19))
-              (portRef R (instanceRef temp_pcnt_5__i18))
-              (portRef R (instanceRef temp_pcnt_5__i17))
-              (portRef R (instanceRef temp_pcnt_5__i16))
-              (portRef R (instanceRef temp_pcnt_5__i15))
-              (portRef R (instanceRef temp_pcnt_5__i14))
-              (portRef R (instanceRef temp_pcnt_5__i13))
-              (portRef R (instanceRef temp_pcnt_5__i12))
-              (portRef R (instanceRef temp_pcnt_5__i11))
-              (portRef R (instanceRef temp_pcnt_5__i10))
-              (portRef R (instanceRef temp_pcnt_5__i9))
-              (portRef R (instanceRef temp_pcnt_5__i8))
-              (portRef R (instanceRef temp_pcnt_5__i7))
-              (portRef R (instanceRef temp_pcnt_5__i6))
-              (portRef R (instanceRef temp_pcnt_5__i5))
-              (portRef R (instanceRef temp_pcnt_5__i4))
-              (portRef R (instanceRef temp_pcnt_5__i3))
-              (portRef R (instanceRef temp_pcnt_5__i2))
-              (portRef R (instanceRef temp_pcnt_5__i1))
-            )
-          )
-          (net n102
-            (joined
-              (portRef (member n101 0))
-              (portRef D (instanceRef temp_pcnt_5__i23))
-            )
-          )
-          (net n24
-            (joined
-              (portRef n24)
-              (portRef Q (instanceRef temp_pcnt_5__i0))
-            )
-          )
-          (net n125
-            (joined
-              (portRef (member n101 23))
-              (portRef D (instanceRef temp_pcnt_5__i0))
-            )
-          )
-          (net n2
-            (joined
-              (portRef n2)
-              (portRef Q (instanceRef temp_pcnt_5__i22))
-            )
-          )
-          (net n103
-            (joined
-              (portRef (member n101 1))
-              (portRef D (instanceRef temp_pcnt_5__i22))
-            )
-          )
-          (net n3
-            (joined
-              (portRef n3)
-              (portRef Q (instanceRef temp_pcnt_5__i21))
-            )
-          )
-          (net n104
-            (joined
-              (portRef (member n101 2))
-              (portRef D (instanceRef temp_pcnt_5__i21))
-            )
-          )
-          (net n4
-            (joined
-              (portRef n4)
-              (portRef Q (instanceRef temp_pcnt_5__i20))
-            )
-          )
-          (net n105
-            (joined
-              (portRef (member n101 3))
-              (portRef D (instanceRef temp_pcnt_5__i20))
-            )
-          )
-          (net n5
-            (joined
-              (portRef n5)
-              (portRef Q (instanceRef temp_pcnt_5__i19))
-            )
-          )
-          (net n106
-            (joined
-              (portRef (member n101 4))
-              (portRef D (instanceRef temp_pcnt_5__i19))
-            )
-          )
-          (net n6
-            (joined
-              (portRef n6)
-              (portRef Q (instanceRef temp_pcnt_5__i18))
-            )
-          )
-          (net n107
-            (joined
-              (portRef (member n101 5))
-              (portRef D (instanceRef temp_pcnt_5__i18))
-            )
-          )
-          (net n7
-            (joined
-              (portRef n7)
-              (portRef Q (instanceRef temp_pcnt_5__i17))
-            )
-          )
-          (net n108
-            (joined
-              (portRef (member n101 6))
-              (portRef D (instanceRef temp_pcnt_5__i17))
-            )
-          )
-          (net n8
-            (joined
-              (portRef n8)
-              (portRef Q (instanceRef temp_pcnt_5__i16))
-            )
-          )
-          (net n109
-            (joined
-              (portRef (member n101 7))
-              (portRef D (instanceRef temp_pcnt_5__i16))
-            )
-          )
-          (net n9
-            (joined
-              (portRef n9)
-              (portRef Q (instanceRef temp_pcnt_5__i15))
-            )
-          )
-          (net n110
-            (joined
-              (portRef (member n101 8))
-              (portRef D (instanceRef temp_pcnt_5__i15))
-            )
-          )
-          (net n10
-            (joined
-              (portRef n10)
-              (portRef Q (instanceRef temp_pcnt_5__i14))
-            )
-          )
-          (net n111
-            (joined
-              (portRef (member n101 9))
-              (portRef D (instanceRef temp_pcnt_5__i14))
-            )
-          )
-          (net n11
-            (joined
-              (portRef n11)
-              (portRef Q (instanceRef temp_pcnt_5__i13))
-            )
-          )
-          (net n112
-            (joined
-              (portRef (member n101 10))
-              (portRef D (instanceRef temp_pcnt_5__i13))
-            )
-          )
-          (net n12
-            (joined
-              (portRef n12)
-              (portRef Q (instanceRef temp_pcnt_5__i12))
-            )
-          )
-          (net n113
-            (joined
-              (portRef (member n101 11))
-              (portRef D (instanceRef temp_pcnt_5__i12))
-            )
-          )
-          (net n13
-            (joined
-              (portRef n13)
-              (portRef Q (instanceRef temp_pcnt_5__i11))
-            )
-          )
-          (net n114
-            (joined
-              (portRef (member n101 12))
-              (portRef D (instanceRef temp_pcnt_5__i11))
-            )
-          )
-          (net n14
-            (joined
-              (portRef n14)
-              (portRef Q (instanceRef temp_pcnt_5__i10))
-            )
-          )
-          (net n115
-            (joined
-              (portRef (member n101 13))
-              (portRef D (instanceRef temp_pcnt_5__i10))
-            )
-          )
-          (net n15
-            (joined
-              (portRef n15)
-              (portRef Q (instanceRef temp_pcnt_5__i9))
-            )
-          )
-          (net n116
-            (joined
-              (portRef (member n101 14))
-              (portRef D (instanceRef temp_pcnt_5__i9))
-            )
-          )
-          (net n16
-            (joined
-              (portRef n16)
-              (portRef Q (instanceRef temp_pcnt_5__i8))
-            )
-          )
-          (net n117
-            (joined
-              (portRef (member n101 15))
-              (portRef D (instanceRef temp_pcnt_5__i8))
-            )
-          )
-          (net n17
-            (joined
-              (portRef n17)
-              (portRef Q (instanceRef temp_pcnt_5__i7))
-            )
-          )
-          (net n118
-            (joined
-              (portRef (member n101 16))
-              (portRef D (instanceRef temp_pcnt_5__i7))
-            )
-          )
-          (net n18
-            (joined
-              (portRef n18)
-              (portRef Q (instanceRef temp_pcnt_5__i6))
-            )
-          )
-          (net n119
-            (joined
-              (portRef (member n101 17))
-              (portRef D (instanceRef temp_pcnt_5__i6))
-            )
-          )
-          (net n19
-            (joined
-              (portRef n19)
-              (portRef Q (instanceRef temp_pcnt_5__i5))
-            )
-          )
-          (net n120
-            (joined
-              (portRef (member n101 18))
-              (portRef D (instanceRef temp_pcnt_5__i5))
-            )
-          )
-          (net n20
-            (joined
-              (portRef n20)
-              (portRef Q (instanceRef temp_pcnt_5__i4))
-            )
-          )
-          (net n121
-            (joined
-              (portRef (member n101 19))
-              (portRef D (instanceRef temp_pcnt_5__i4))
-            )
-          )
-          (net n21
-            (joined
-              (portRef n21)
-              (portRef Q (instanceRef temp_pcnt_5__i3))
-            )
-          )
-          (net n122
-            (joined
-              (portRef (member n101 20))
-              (portRef D (instanceRef temp_pcnt_5__i3))
-            )
-          )
-          (net n22
-            (joined
-              (portRef n22)
-              (portRef Q (instanceRef temp_pcnt_5__i2))
-            )
-          )
-          (net n123
-            (joined
-              (portRef (member n101 21))
-              (portRef D (instanceRef temp_pcnt_5__i2))
-            )
-          )
-          (net n23
-            (joined
-              (portRef n23)
-              (portRef Q (instanceRef temp_pcnt_5__i1))
-            )
-          )
-          (net n124
-            (joined
-              (portRef (member n101 22))
-              (portRef D (instanceRef temp_pcnt_5__i1))
-            )
-          )
-        )
-      )
-    )
-    (cell KEPLER_TL
-      (cellType generic)
-      (view TECH
-        (viewType netlist)
-        (interface
-          (port mcu_clko (direction INPUT))
-          (port rxd_1v8 (direction INPUT))
-          (port adc_dclk (direction INPUT))
-          (port cpld_seln (direction INPUT))
-          (port pps_rstn (direction INPUT))
-          (port cpld_rstn (direction INPUT))
-          (port adc_drdyn (direction INPUT))
-          (port spi_miso (direction INPUT))
-          (port cpld_clk (direction INPUT))
-          (port cpld_sdi (direction INPUT))
-          (port cpld_sdo (direction OUTPUT))
-          (port adc_clk1 (direction OUTPUT))
-          (port adc_sel1 (direction OUTPUT))
-          (port adc_sel0 (direction OUTPUT))
-          (port adc_clk0 (direction OUTPUT))
-          (port spi_clk (direction OUTPUT))
-          (port spi_mosi (direction OUTPUT))
-          (port freq_clka (direction OUTPUT))
-        )
-        (contents
-          (instance i163
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i170
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i177
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i149
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i184
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i156
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i199
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i198
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i41
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i51
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i37
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i44
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i34
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i55
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i62
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i69
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i76
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i83
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i90
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i97
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i104
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i111
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i118
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i125
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i132
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i139
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i146
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i153
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i160
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i167
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i174
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i181
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i48
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i188
-            (viewRef uNoName_ (cellRef XOR2 (libraryref mach)))
-          )
-          (instance i58
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i200
-            (viewRef uNoName_ (cellRef OR2 (libraryref mach)))
-          )
-          (instance spi_module
-            (viewRef v1 (cellRef SPI_MOD))
-          )
-          (instance i196
-            (viewRef uNoName_ (cellRef GND (libraryref mach)))
-          )
-          (instance i32
-            (viewRef uNoName_ (cellRef INV (libraryref mach)))
-          )
-          (instance nsel_I_0
-            (viewRef uNoName_ (cellRef INV (libraryref mach)))
-          )
-          (instance pps_counter
-            (viewRef v1 (cellRef PPS_COUNT))
-          )
-          (instance spi_mosi_c_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance spi_clk_c_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance spi_miso_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance adc_sel0_c_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance cpld_rstn_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance pps_rstn_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance cpld_seln_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance adc_clk0_c_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance rxd_1v8_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance freq_clka_c_pad
-            (viewRef INTERFACE_c (cellRef IBUF (libraryref mach)))
-          )
-          (instance freq_clka_pad
-            (viewRef INTERFACE_c (cellRef OBUF (libraryref mach)))
-          )
-          (instance spi_mosi_pad
-            (viewRef INTERFACE_c (cellRef OBUF (libraryref mach)))
-          )
-          (instance spi_clk_pad
-            (viewRef INTERFACE_c (cellRef OBUF (libraryref mach)))
-          )
-          (instance adc_clk0_pad
-            (viewRef INTERFACE_c (cellRef OBUF (libraryref mach)))
-          )
-          (instance adc_sel0_pad
-            (viewRef INTERFACE_c (cellRef OBUF (libraryref mach)))
-          )
-          (instance adc_sel1_pad
-            (viewRef INTERFACE_c (cellRef OBUF (libraryref mach)))
-          )
-          (instance adc_clk1_pad
-            (viewRef INTERFACE_c (cellRef OBUF (libraryref mach)))
-          )
-          (instance cpld_sdo_pad
-            (viewRef INTERFACE_c (cellRef OBUF (libraryref mach)))
-          )
-          (instance i197
-            (viewRef uNoName_ (cellRef VCC (libraryref mach)))
-          )
-          (instance i142
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i135
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i128
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i121
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i114
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i107
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i100
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i93
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i86
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i79
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i72
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (instance i65
-            (viewRef uNoName_ (cellRef AND2 (libraryref mach)))
-          )
-          (net freq_clka_c_c
-            (joined
-              (portRef I0 (instanceRef freq_clka_pad))
-              (portRef O (instanceRef freq_clka_c_pad))
-            )
-          )
-          (net rxd_1v8_c
-            (joined
-              (portRef O (instanceRef rxd_1v8_pad))
-              (portRef rxd_1v8_c (instanceRef pps_counter))
-            )
-            (property SET_AS_NETWORK (string "rxd_1v8_c"))
-            (property is_clock (string "1"))
-          )
-          (net adc_clk0_c_c
-            (joined
-              (portRef O (instanceRef adc_clk0_c_pad))
-              (portRef I0 (instanceRef adc_clk0_pad))
-              (portRef I0 (instanceRef adc_clk1_pad))
-            )
-          )
-          (net cpld_seln_c
-            (joined
-              (portRef I0 (instanceRef i199))
-              (portRef O (instanceRef cpld_seln_pad))
-              (portRef I0 (instanceRef nsel_I_0))
-            )
-            (property is_clock (string "1"))
-          )
-          (net pps_rstn_c
-            (joined
-              (portRef O (instanceRef pps_rstn_pad))
-              (portRef pps_rstn_c (instanceRef pps_counter))
-            )
-          )
-          (net cpld_rstn_c
-            (joined
-              (portRef O (instanceRef cpld_rstn_pad))
-            )
-          )
-          (net adc_sel0_c_c
-            (joined
-              (portRef O (instanceRef adc_sel0_c_pad))
-              (portRef I0 (instanceRef adc_sel0_pad))
-              (portRef I0 (instanceRef adc_sel1_pad))
-            )
-          )
-          (net spi_miso_c
-            (joined
-              (portRef I1 (instanceRef i199))
-              (portRef O (instanceRef spi_miso_pad))
-            )
-          )
-          (net spi_clk_c_c
-            (joined
-              (portRef O (instanceRef spi_clk_c_pad))
-              (portRef I0 (instanceRef spi_clk_pad))
-            )
-          )
-          (net spi_mosi_c_c
-            (joined
-              (portRef O (instanceRef spi_mosi_c_pad))
-              (portRef I0 (instanceRef spi_mosi_pad))
-            )
-          )
-          (net cpld_sdo_c
-            (joined
-              (portRef I0 (instanceRef cpld_sdo_pad))
-              (portRef O (instanceRef i200))
-            )
-          )
-          (net adc_sel0
-            (joined
-              (portRef adc_sel0)
-              (portRef O (instanceRef adc_sel0_pad))
-            )
-          )
-          (net n165
-            (joined
-              (portRef I0 (instanceRef i104))
-              (portRef I0 (instanceRef i107))
-              (portRef O (instanceRef i100))
-            )
-          )
-          (net adc_sel1
-            (joined
-              (portRef adc_sel1)
-              (portRef O (instanceRef adc_sel1_pad))
-            )
-          )
-          (net n172
-            (joined
-              (portRef I0 (instanceRef i111))
-              (portRef I0 (instanceRef i114))
-              (portRef O (instanceRef i107))
-            )
-          )
-          (net sOut
-            (joined
-              (portRef I1 (instanceRef i198))
-              (portRef (member n66 0) (instanceRef spi_module))
-            )
-          )
-          (net n259
-            (joined
-              (portRef I1 (instanceRef i200))
-              (portRef O (instanceRef i198))
-            )
-          )
-          (net pps_reg_23
-            (joined
-              (portRef pps_reg_23_ (instanceRef spi_module))
-              (portRef pps_reg_23_ (instanceRef pps_counter))
-              (portRef I1 (instanceRef i188))
-            )
-          )
-          (net n24
-            (joined
-              (portRef I0 (instanceRef i37))
-              (portRef I0 (instanceRef i32))
-              (portRef n24 (instanceRef pps_counter))
-              (portRef I0 (instanceRef i34))
-            )
-          )
-          (net n23
-            (joined
-              (portRef I1 (instanceRef i34))
-              (portRef I1 (instanceRef i37))
-              (portRef n23 (instanceRef pps_counter))
-            )
-          )
-          (net n22
-            (joined
-              (portRef I1 (instanceRef i44))
-              (portRef n22 (instanceRef pps_counter))
-              (portRef I1 (instanceRef i41))
-            )
-          )
-          (net n21
-            (joined
-              (portRef I1 (instanceRef i48))
-              (portRef I1 (instanceRef i51))
-              (portRef n21 (instanceRef pps_counter))
-            )
-          )
-          (net n20
-            (joined
-              (portRef I1 (instanceRef i58))
-              (portRef n20 (instanceRef pps_counter))
-              (portRef I1 (instanceRef i55))
-            )
-          )
-          (net n19
-            (joined
-              (portRef I1 (instanceRef i62))
-              (portRef I1 (instanceRef i65))
-              (portRef n19 (instanceRef pps_counter))
-            )
-          )
-          (net n18
-            (joined
-              (portRef I1 (instanceRef i69))
-              (portRef I1 (instanceRef i72))
-              (portRef n18 (instanceRef pps_counter))
-            )
-          )
-          (net n17
-            (joined
-              (portRef I1 (instanceRef i76))
-              (portRef I1 (instanceRef i79))
-              (portRef n17 (instanceRef pps_counter))
-            )
-          )
-          (net n16
-            (joined
-              (portRef I1 (instanceRef i83))
-              (portRef I1 (instanceRef i86))
-              (portRef n16 (instanceRef pps_counter))
-            )
-          )
-          (net n15
-            (joined
-              (portRef I1 (instanceRef i90))
-              (portRef I1 (instanceRef i93))
-              (portRef n15 (instanceRef pps_counter))
-            )
-          )
-          (net n14
-            (joined
-              (portRef I1 (instanceRef i97))
-              (portRef I1 (instanceRef i100))
-              (portRef n14 (instanceRef pps_counter))
-            )
-          )
-          (net n13
-            (joined
-              (portRef I1 (instanceRef i104))
-              (portRef I1 (instanceRef i107))
-              (portRef n13 (instanceRef pps_counter))
-            )
-          )
-          (net n12
-            (joined
-              (portRef I1 (instanceRef i111))
-              (portRef I1 (instanceRef i114))
-              (portRef n12 (instanceRef pps_counter))
-            )
-          )
-          (net n11
-            (joined
-              (portRef I1 (instanceRef i118))
-              (portRef I1 (instanceRef i121))
-              (portRef n11 (instanceRef pps_counter))
-            )
-          )
-          (net n10
-            (joined
-              (portRef I1 (instanceRef i125))
-              (portRef I1 (instanceRef i128))
-              (portRef n10 (instanceRef pps_counter))
-            )
-          )
-          (net n9
-            (joined
-              (portRef I1 (instanceRef i132))
-              (portRef I1 (instanceRef i135))
-              (portRef n9 (instanceRef pps_counter))
-            )
-          )
-          (net n8
-            (joined
-              (portRef I1 (instanceRef i139))
-              (portRef I1 (instanceRef i142))
-              (portRef n8 (instanceRef pps_counter))
-            )
-          )
-          (net n7
-            (joined
-              (portRef I1 (instanceRef i146))
-              (portRef I1 (instanceRef i149))
-              (portRef n7 (instanceRef pps_counter))
-            )
-          )
-          (net n6
-            (joined
-              (portRef I1 (instanceRef i153))
-              (portRef I1 (instanceRef i156))
-              (portRef n6 (instanceRef pps_counter))
-            )
-          )
-          (net n5
-            (joined
-              (portRef I1 (instanceRef i160))
-              (portRef I1 (instanceRef i163))
-              (portRef n5 (instanceRef pps_counter))
-            )
-          )
-          (net n4
-            (joined
-              (portRef I1 (instanceRef i167))
-              (portRef I1 (instanceRef i170))
-              (portRef n4 (instanceRef pps_counter))
-            )
-          )
-          (net n3
-            (joined
-              (portRef I1 (instanceRef i174))
-              (portRef I1 (instanceRef i177))
-              (portRef n3 (instanceRef pps_counter))
-            )
-          )
-          (net n2
-            (joined
-              (portRef I1 (instanceRef i181))
-              (portRef I1 (instanceRef i184))
-              (portRef n2 (instanceRef pps_counter))
-            )
-          )
-          (net adc_clk1
-            (joined
-              (portRef adc_clk1)
-              (portRef O (instanceRef adc_clk1_pad))
-            )
-          )
-          (net pwr
-            (joined
-              (portRef X (instanceRef i197))
-            )
-          )
-          (net n151
-            (joined
-              (portRef I0 (instanceRef i90))
-              (portRef I0 (instanceRef i93))
-              (portRef O (instanceRef i86))
-            )
-          )
-          (net cpld_sdo
-            (joined
-              (portRef cpld_sdo)
-              (portRef O (instanceRef cpld_sdo_pad))
-            )
-          )
-          (net n109
-            (joined
-              (portRef I0 (instanceRef i51))
-              (portRef I0 (instanceRef i48))
-              (portRef O (instanceRef i44))
-            )
-          )
-          (net nsel_N_28
-            (joined
-              (portRef O (instanceRef nsel_I_0))
-              (portRef nsel_N_28 (instanceRef spi_module))
-              (portRef I0 (instanceRef i198))
-            )
-            (property is_inv_clock (string "1"))
-            (property SET_AS_NETWORK (string "\spi_module/nsel_N_28"))
-            (property is_clock (string "1"))
-          )
-          (net n158
-            (joined
-              (portRef I0 (instanceRef i97))
-              (portRef I0 (instanceRef i100))
-              (portRef O (instanceRef i93))
-            )
-          )
-          (net adc_clk0
-            (joined
-              (portRef adc_clk0)
-              (portRef O (instanceRef adc_clk0_pad))
-            )
-          )
-          (net n179
-            (joined
-              (portRef I0 (instanceRef i118))
-              (portRef I0 (instanceRef i121))
-              (portRef O (instanceRef i114))
-            )
-          )
-          (net spi_clk
-            (joined
-              (portRef spi_clk)
-              (portRef O (instanceRef spi_clk_pad))
-            )
-          )
-          (net n186
-            (joined
-              (portRef I0 (instanceRef i125))
-              (portRef I0 (instanceRef i128))
-              (portRef O (instanceRef i121))
-            )
-          )
-          (net spi_mosi
-            (joined
-              (portRef spi_mosi)
-              (portRef O (instanceRef spi_mosi_pad))
-            )
-          )
-          (net n193
-            (joined
-              (portRef I0 (instanceRef i132))
-              (portRef I0 (instanceRef i135))
-              (portRef O (instanceRef i128))
-            )
-          )
-          (net freq_clka
-            (joined
-              (portRef freq_clka)
-              (portRef O (instanceRef freq_clka_pad))
-            )
-          )
-          (net n200
-            (joined
-              (portRef I0 (instanceRef i139))
-              (portRef I0 (instanceRef i142))
-              (portRef O (instanceRef i135))
-            )
-          )
-          (net mcu_clko
-            (joined
-              (portRef mcu_clko)
-              (portRef I0 (instanceRef freq_clka_c_pad))
-            )
-          )
-          (net n207
-            (joined
-              (portRef I0 (instanceRef i146))
-              (portRef I0 (instanceRef i149))
-              (portRef O (instanceRef i142))
-            )
-          )
-          (net rxd_1v8
-            (joined
-              (portRef rxd_1v8)
-              (portRef I0 (instanceRef rxd_1v8_pad))
-            )
-          )
-          (net n214
-            (joined
-              (portRef I0 (instanceRef i153))
-              (portRef I0 (instanceRef i156))
-              (portRef O (instanceRef i149))
-            )
-          )
-          (net adc_dclk
-            (joined
-              (portRef adc_dclk)
-              (portRef I0 (instanceRef adc_clk0_c_pad))
-            )
-          )
-          (net n221
-            (joined
-              (portRef I0 (instanceRef i160))
-              (portRef I0 (instanceRef i163))
-              (portRef O (instanceRef i156))
-            )
-          )
-          (net cpld_seln
-            (joined
-              (portRef cpld_seln)
-              (portRef I0 (instanceRef cpld_seln_pad))
-            )
-          )
-          (net n228
-            (joined
-              (portRef I0 (instanceRef i167))
-              (portRef I0 (instanceRef i170))
-              (portRef O (instanceRef i163))
-            )
-          )
-          (net pps_rstn
-            (joined
-              (portRef pps_rstn)
-              (portRef I0 (instanceRef pps_rstn_pad))
-            )
-          )
-          (net n235
-            (joined
-              (portRef I0 (instanceRef i174))
-              (portRef I0 (instanceRef i177))
-              (portRef O (instanceRef i170))
-            )
-          )
-          (net cpld_rstn
-            (joined
-              (portRef cpld_rstn)
-              (portRef I0 (instanceRef cpld_rstn_pad))
-            )
-          )
-          (net n242
-            (joined
-              (portRef I0 (instanceRef i181))
-              (portRef I0 (instanceRef i184))
-              (portRef O (instanceRef i177))
-            )
-          )
-          (net adc_drdyn
-            (joined
-              (portRef adc_drdyn)
-              (portRef I0 (instanceRef adc_sel0_c_pad))
-            )
-          )
-          (net n249
-            (joined
-              (portRef O (instanceRef i184))
-              (portRef I0 (instanceRef i188))
-            )
-          )
-          (net spi_miso
-            (joined
-              (portRef spi_miso)
-              (portRef I0 (instanceRef spi_miso_pad))
-            )
-          )
-          (net gnd
-            (joined
-              (portRef X (instanceRef i196))
-            )
-          )
-          (net cpld_clk
-            (joined
-              (portRef cpld_clk)
-              (portRef I0 (instanceRef spi_clk_c_pad))
-            )
-          )
-          (net cpld_sdi
-            (joined
-              (portRef cpld_sdi)
-              (portRef I0 (instanceRef spi_mosi_c_pad))
-            )
-          )
-          (net n116
-            (joined
-              (portRef I0 (instanceRef i58))
-              (portRef O (instanceRef i51))
-              (portRef I0 (instanceRef i55))
-            )
-          )
-          (net n123
-            (joined
-              (portRef I0 (instanceRef i62))
-              (portRef O (instanceRef i58))
-              (portRef I0 (instanceRef i65))
-            )
-          )
-          (net n260
-            (joined
-              (portRef O (instanceRef i199))
-              (portRef I0 (instanceRef i200))
-            )
-          )
-          (net n130
-            (joined
-              (portRef I0 (instanceRef i69))
-              (portRef I0 (instanceRef i72))
-              (portRef O (instanceRef i65))
-            )
-          )
-          (net n102
-            (joined
-              (portRef I0 (instanceRef i41))
-              (portRef I0 (instanceRef i44))
-              (portRef O (instanceRef i37))
-            )
-          )
-          (net n137
-            (joined
-              (portRef I0 (instanceRef i76))
-              (portRef I0 (instanceRef i79))
-              (portRef O (instanceRef i72))
-            )
-          )
-          (net n144
-            (joined
-              (portRef I0 (instanceRef i83))
-              (portRef I0 (instanceRef i86))
-              (portRef O (instanceRef i79))
-            )
-          )
-          (net n102_adj_29
-            (joined
-              (portRef O (instanceRef i188))
-              (portRef (member n101 0) (instanceRef pps_counter))
-            )
-          )
-          (net n103
-            (joined
-              (portRef O (instanceRef i181))
-              (portRef (member n101 1) (instanceRef pps_counter))
-            )
-          )
-          (net n104
-            (joined
-              (portRef O (instanceRef i174))
-              (portRef (member n101 2) (instanceRef pps_counter))
-            )
-          )
-          (net n105
-            (joined
-              (portRef O (instanceRef i167))
-              (portRef (member n101 3) (instanceRef pps_counter))
-            )
-          )
-          (net n106
-            (joined
-              (portRef O (instanceRef i160))
-              (portRef (member n101 4) (instanceRef pps_counter))
-            )
-          )
-          (net n107
-            (joined
-              (portRef O (instanceRef i153))
-              (portRef (member n101 5) (instanceRef pps_counter))
-            )
-          )
-          (net n108
-            (joined
-              (portRef O (instanceRef i146))
-              (portRef (member n101 6) (instanceRef pps_counter))
-            )
-          )
-          (net n109_adj_30
-            (joined
-              (portRef O (instanceRef i139))
-              (portRef (member n101 7) (instanceRef pps_counter))
-            )
-          )
-          (net n110
-            (joined
-              (portRef O (instanceRef i132))
-              (portRef (member n101 8) (instanceRef pps_counter))
-            )
-          )
-          (net n111
-            (joined
-              (portRef O (instanceRef i125))
-              (portRef (member n101 9) (instanceRef pps_counter))
-            )
-          )
-          (net n112
-            (joined
-              (portRef O (instanceRef i118))
-              (portRef (member n101 10) (instanceRef pps_counter))
-            )
-          )
-          (net n113
-            (joined
-              (portRef O (instanceRef i111))
-              (portRef (member n101 11) (instanceRef pps_counter))
-            )
-          )
-          (net n114
-            (joined
-              (portRef O (instanceRef i104))
-              (portRef (member n101 12) (instanceRef pps_counter))
-            )
-          )
-          (net n115
-            (joined
-              (portRef O (instanceRef i97))
-              (portRef (member n101 13) (instanceRef pps_counter))
-            )
-          )
-          (net n116_adj_31
-            (joined
-              (portRef O (instanceRef i90))
-              (portRef (member n101 14) (instanceRef pps_counter))
-            )
-          )
-          (net n117
-            (joined
-              (portRef O (instanceRef i83))
-              (portRef (member n101 15) (instanceRef pps_counter))
-            )
-          )
-          (net n118
-            (joined
-              (portRef O (instanceRef i76))
-              (portRef (member n101 16) (instanceRef pps_counter))
-            )
-          )
-          (net n119
-            (joined
-              (portRef O (instanceRef i69))
-              (portRef (member n101 17) (instanceRef pps_counter))
-            )
-          )
-          (net n120
-            (joined
-              (portRef O (instanceRef i62))
-              (portRef (member n101 18) (instanceRef pps_counter))
-            )
-          )
-          (net n121
-            (joined
-              (portRef O (instanceRef i55))
-              (portRef (member n101 19) (instanceRef pps_counter))
-            )
-          )
-          (net n122
-            (joined
-              (portRef O (instanceRef i48))
-              (portRef (member n101 20) (instanceRef pps_counter))
-            )
-          )
-          (net n123_adj_32
-            (joined
-              (portRef O (instanceRef i41))
-              (portRef (member n101 21) (instanceRef pps_counter))
-            )
-          )
-          (net n124
-            (joined
-              (portRef O (instanceRef i34))
-              (portRef (member n101 22) (instanceRef pps_counter))
-            )
-          )
-          (net n125
-            (joined
-              (portRef O (instanceRef i32))
-              (portRef (member n101 23) (instanceRef pps_counter))
-            )
-          )
-        )
-      )
+    (technology (numberDefinition ))
+    (cell KEPLER_TL (cellType GENERIC)
+       (view top_level (viewType NETLIST)
+         (interface
+           (port mcu_clko (direction INPUT))
+           (port rxd_1v8 (direction INPUT))
+           (port adc_dclk (direction INPUT))
+           (port cpld_seln (direction INPUT))
+           (port pps_rstn (direction INPUT))
+           (port cpld_rstn (direction INPUT))
+           (port adc_drdyn (direction INPUT))
+           (port spi_miso (direction INPUT))
+           (port cpld_clk (direction INPUT))
+           (port cpld_sdi (direction INPUT))
+           (port cpld_sdo (direction OUTPUT))
+           (port adc_clk1 (direction OUTPUT))
+           (port adc_sel1 (direction OUTPUT))
+           (port adc_sel0 (direction OUTPUT))
+           (port adc_clk0 (direction OUTPUT))
+           (port spi_clk (direction OUTPUT))
+           (port spi_mosi (direction OUTPUT))
+           (port freq_clka (direction OUTPUT))
+         )
+         (contents
+          (instance mcu_clko (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance rxd_1v8 (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance adc_dclk (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance cpld_seln (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance pps_rstn (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance cpld_rstn (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance adc_drdyn (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance spi_miso (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance cpld_clk (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance cpld_sdi (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance cpld_sdo (viewRef prim (cellRef OBUF (libraryRef ispmach4s)))          )
+          (instance adc_clk1 (viewRef prim (cellRef OBUF (libraryRef ispmach4s)))          )
+          (instance adc_sel1 (viewRef prim (cellRef OBUF (libraryRef ispmach4s)))          )
+          (instance adc_sel0 (viewRef prim (cellRef OBUF (libraryRef ispmach4s)))          )
+          (instance adc_clk0 (viewRef prim (cellRef OBUF (libraryRef ispmach4s)))          )
+          (instance spi_clk (viewRef prim (cellRef OBUF (libraryRef ispmach4s)))          )
+          (instance spi_mosi (viewRef prim (cellRef OBUF (libraryRef ispmach4s)))          )
+          (instance freq_clka (viewRef prim (cellRef OBUF (libraryRef ispmach4s)))          )
+          (net mcu_clko_c (joined
+           (portRef O (instanceRef mcu_clko))
+           (portRef I0 (instanceRef freq_clka))
+          ))
+          (net mcu_clko (joined
+           (portRef mcu_clko)
+           (portRef I0 (instanceRef mcu_clko))
+          ))
+          (net rxd_1v8_c (joined
+           (portRef O (instanceRef rxd_1v8))
+          ))
+          (net rxd_1v8 (joined
+           (portRef rxd_1v8)
+           (portRef I0 (instanceRef rxd_1v8))
+          ))
+          (net adc_dclk (joined
+           (portRef adc_dclk)
+           (portRef I0 (instanceRef adc_dclk))
+          ))
+          (net cpld_seln_c (joined
+           (portRef O (instanceRef cpld_seln))
+          ))
+          (net cpld_seln (joined
+           (portRef cpld_seln)
+           (portRef I0 (instanceRef cpld_seln))
+          ))
+          (net pps_rstn_c (joined
+           (portRef O (instanceRef pps_rstn))
+          ))
+          (net pps_rstn (joined
+           (portRef pps_rstn)
+           (portRef I0 (instanceRef pps_rstn))
+          ))
+          (net cpld_rstn_c (joined
+           (portRef O (instanceRef cpld_rstn))
+          ))
+          (net cpld_rstn (joined
+           (portRef cpld_rstn)
+           (portRef I0 (instanceRef cpld_rstn))
+          ))
+          (net adc_drdyn (joined
+           (portRef adc_drdyn)
+           (portRef I0 (instanceRef adc_drdyn))
+          ))
+          (net spi_miso (joined
+           (portRef spi_miso)
+           (portRef I0 (instanceRef spi_miso))
+          ))
+          (net cpld_clk (joined
+           (portRef cpld_clk)
+           (portRef I0 (instanceRef cpld_clk))
+          ))
+          (net cpld_sdi (joined
+           (portRef cpld_sdi)
+           (portRef I0 (instanceRef cpld_sdi))
+          ))
+          (net cpld_sdo_c (joined
+           (portRef O (instanceRef spi_miso))
+           (portRef I0 (instanceRef cpld_sdo))
+          ))
+          (net cpld_sdo (joined
+           (portRef O (instanceRef cpld_sdo))
+           (portRef cpld_sdo)
+          ))
+          (net adc_clk1 (joined
+           (portRef O (instanceRef adc_clk1))
+           (portRef adc_clk1)
+          ))
+          (net adc_sel1 (joined
+           (portRef O (instanceRef adc_sel1))
+           (portRef adc_sel1)
+          ))
+          (net adc_sel0_c (joined
+           (portRef O (instanceRef adc_drdyn))
+           (portRef I0 (instanceRef adc_sel0))
+           (portRef I0 (instanceRef adc_sel1))
+          ))
+          (net adc_sel0 (joined
+           (portRef O (instanceRef adc_sel0))
+           (portRef adc_sel0)
+          ))
+          (net adc_clk0_c (joined
+           (portRef O (instanceRef adc_dclk))
+           (portRef I0 (instanceRef adc_clk0))
+           (portRef I0 (instanceRef adc_clk1))
+          ))
+          (net adc_clk0 (joined
+           (portRef O (instanceRef adc_clk0))
+           (portRef adc_clk0)
+          ))
+          (net spi_clk_c (joined
+           (portRef O (instanceRef cpld_clk))
+           (portRef I0 (instanceRef spi_clk))
+          ))
+          (net spi_clk (joined
+           (portRef O (instanceRef spi_clk))
+           (portRef spi_clk)
+          ))
+          (net spi_mosi_c (joined
+           (portRef O (instanceRef cpld_sdi))
+           (portRef I0 (instanceRef spi_mosi))
+          ))
+          (net spi_mosi (joined
+           (portRef O (instanceRef spi_mosi))
+           (portRef spi_mosi)
+          ))
+          (net freq_clka (joined
+           (portRef O (instanceRef freq_clka))
+           (portRef freq_clka)
+          ))
+         )
+        (property orig_inst_of (string "KEPLER_TL"))
+       )
     )
   )
-  (design TECH
-    (cellRef KEPLER_TL (libraryref work))
-  )
+  (design KEPLER_TL (cellRef KEPLER_TL (libraryRef work)))
 )

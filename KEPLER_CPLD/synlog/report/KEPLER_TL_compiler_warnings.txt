@@ -1,0 +1,3 @@
+@W: CL169 :"C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\kepler_tl.vhd":45:6:45:7|Pruning register Q2_2  
+@W: CL169 :"C:\users\alanlow\documents\github\cpld_fpga\kepler_cpld\kepler_tl.vhd":45:6:45:7|Pruning register Q1_2  
+

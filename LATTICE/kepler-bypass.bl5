@@ -1,0 +1,26 @@
+#$ TOOL  ispLEVER Classic 2.0.00.17.20.15
+#$ DATE  Tue May 05 16:50:19 2020
+#$ MODULE  KEPLER_TL
+#$ PINS 14 mcu_clko adc_dclk adc_drdyn spi_miso cpld_clk cpld_sdi cpld_sdo
+ adc_clk1 adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi freq_clka
+.model kepler_tl 
+.inputs mcu_clko.BLIF adc_dclk.BLIF adc_drdyn.BLIF spi_miso.BLIF cpld_clk.BLIF \
+ cpld_sdi.BLIF
+.outputs cpld_sdo adc_clk1 adc_sel1 adc_sel0 adc_clk0 spi_clk spi_mosi freq_clka
+.names spi_miso.BLIF cpld_sdo
+1 1
+.names adc_dclk.BLIF adc_clk1
+1 1
+.names adc_drdyn.BLIF adc_sel1
+1 1
+.names adc_drdyn.BLIF adc_sel0
+1 1
+.names adc_dclk.BLIF adc_clk0
+1 1
+.names cpld_clk.BLIF spi_clk
+1 1
+.names cpld_sdi.BLIF spi_mosi
+1 1
+.names mcu_clko.BLIF freq_clka
+1 1
+.end

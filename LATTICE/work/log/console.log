@@ -6,35 +6,35 @@ vcom spi_mod.vhd
 # File: spi_mod.vhd
 # Compile Entity "SPI_MOD"
 # Compile Architecture "SPI_CPLD" of Entity "SPI_MOD"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
 vcom pps_count.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: pps_count.vhd
 # Compile Entity "PPS_COUNT"
 # Compile Architecture "UP_COUNT" of Entity "PPS_COUNT"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
 vcom adc_buf.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: adc_buf.vhd
 # Compile Entity "ADC_BUF"
 # Compile Architecture "BUFF" of Entity "ADC_BUF"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
 vcom kepler_tl.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: kepler_tl.vhd
 # Compile Entity "KEPLER_TL"
 # Compile Architecture "TOP_LEVEL" of Entity "KEPLER_TL"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
 vcom kepler_tl_tb.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: kepler_tl_tb.vhd
 # Compile Entity "testbench"
 # Compile Architecture "behavior" of Entity "testbench"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
 vsim +access +r testbench
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
@@ -51,13 +51,13 @@ vsim +access +r testbench
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
 # SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 6978 kB (elbread=1023 elab2=5805 kernel=149 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\src\wave.asdb
-#  22:10, 11 April 2020
+#  4:00 PM, Tuesday, 5 May 2020
 #  Simulation has been initialized
 #  Selected Top-Level: testbench (behavior)
 do -tcl kepler_tl_tb_vhdaf.udo
@@ -66,40 +66,132 @@ add wave *
 run 1000 ns
 # Waveform file 'untitled.awc' connected to 'C:/Users/alanlow/Documents/GitHub/CPLD_FPGA/LATTICE/work/src/wave.asdb'.
 # KERNEL: stopped at time: 1 us
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-run 100ns
-# KERNEL: stopped at time: 1100 ns
-run 500ms
-# KERNEL: stopped at time: 500001100 ns
-run 500ms
-# KERNEL: stopped at time: 1000001100 ns
-run 500ms
-# KERNEL: stopped at time: 1500001100 ns
-run 500ms
-# KERNEL: stopped at time: 2000001100 ns
-run 500ms
-# KERNEL: stopped at time: 2500001100 ns
-run 500ms
-# KERNEL: stopped at time: 3000001100 ns
-run 500ms
-# KERNEL: stopped at time: 3500001100 ns
-run 500ms
-# KERNEL: stopped at time: 4000001100 ns
-run 500ms
-# KERNEL: stopped at time: 4500001100 ns
-run 500ms
-# KERNEL: stopped at time: 5000001100 ns
-run 500ms
-# KERNEL: stopped at time: 5500001100 ns
-run 500ms
-# KERNEL: stopped at time: 6000001100 ns
-run 500ms
-# KERNEL: stopped at time: 6500001100 ns
-run 500ms
-# KERNEL: stopped at time: 7000001100 ns
-run 500ms
-# KERNEL: stopped at time: 7500001100 ns
+run 1s
+# KERNEL: stopped at time: 1000001 us
+run 1s
+# KERNEL: stopped at time: 2000001 us
+run 1s
+# KERNEL: stopped at time: 3000001 us
+run 1s
+# KERNEL: stopped at time: 4000001 us
+run 1s
+# KERNEL: stopped at time: 5000001 us
+run 1s
+# KERNEL: stopped at time: 6000001 us
+run 1s
+# KERNEL: stopped at time: 7000001 us
+run 1s
+# KERNEL: stopped at time: 8000001 us
+run 1s
+# KERNEL: stopped at time: 9000001 us
+run 1s
+# KERNEL: stopped at time: 10000001 us
+run 1s
+# KERNEL: stopped at time: 11000001 us
+run 1s
+# KERNEL: stopped at time: 12000001 us
+run 1s
+# KERNEL: stopped at time: 13000001 us
+run 1s
+# KERNEL: stopped at time: 14000001 us
+run 1s
+# KERNEL: stopped at time: 15000001 us
+run 1s
+# KERNEL: stopped at time: 16000001 us
+run 1s
+# KERNEL: stopped at time: 17000001 us
+run 1s
+# KERNEL: stopped at time: 18000001 us
+run 1s
+# KERNEL: stopped at time: 19000001 us
+run 1s
+# KERNEL: stopped at time: 20000001 us
+run 1s
+# KERNEL: stopped at time: 21000001 us
+run 1s
+# KERNEL: stopped at time: 22000001 us
+run 1s
+# KERNEL: stopped at time: 23000001 us
+run 1s
+# KERNEL: stopped at time: 24000001 us
+run 1s
+# KERNEL: stopped at time: 25000001 us
+run 1s
+# KERNEL: stopped at time: 26000001 us
+run 1s
+# KERNEL: stopped at time: 27000001 us
+run 1s
+# KERNEL: stopped at time: 28000001 us
+run 1s
+# KERNEL: stopped at time: 29000001 us
+run 1s
+# KERNEL: stopped at time: 30000001 us
+run 1s
+# KERNEL: stopped at time: 31000001 us
+run 1s
+# KERNEL: stopped at time: 32000001 us
+run 1s
+# KERNEL: stopped at time: 33000001 us
+run 1s
+# KERNEL: stopped at time: 34000001 us
+run 1s
+# KERNEL: stopped at time: 35000001 us
+run 1s
+# KERNEL: stopped at time: 36000001 us
+run 1s
+# KERNEL: stopped at time: 37000001 us
+run 1s
+# KERNEL: stopped at time: 38000001 us
+run 1s
+# KERNEL: stopped at time: 39000001 us
+run 1s
+# KERNEL: stopped at time: 40000001 us
+run 1s
+# KERNEL: stopped at time: 41000001 us
+run 1s
+# KERNEL: stopped at time: 42000001 us
+run 1s
+# KERNEL: stopped at time: 43000001 us
+run 1s
+# KERNEL: stopped at time: 44000001 us
+run 1s
+# KERNEL: stopped at time: 45000001 us
+run 1s
+# KERNEL: stopped at time: 46000001 us
+run 1s
+# KERNEL: stopped at time: 47000001 us
+run 1s
+# KERNEL: stopped at time: 48000001 us
+run 1s
+# KERNEL: stopped at time: 49000001 us
+run 1s
+# KERNEL: stopped at time: 50000001 us
+run 1s
+# KERNEL: stopped at time: 51000001 us
+run 1s
+# KERNEL: stopped at time: 52000001 us
+run 1s
+# KERNEL: stopped at time: 53000001 us
+run 1s
+# KERNEL: stopped at time: 54000001 us
+run 1s
+# KERNEL: stopped at time: 55000001 us
+run 1s
+# KERNEL: stopped at time: 56000001 us
+run 1s
+# KERNEL: stopped at time: 57000001 us
+run 1s
+# KERNEL: stopped at time: 58000001 us
+run 1s
+# KERNEL: stopped at time: 59000001 us
+run 1s
+# KERNEL: stopped at time: 60000001 us
+run 1s
+# KERNEL: stopped at time: 61000001 us
+run 1s
+# KERNEL: stopped at time: 62000001 us
+run 1s
+# KERNEL: stopped at time: 63000001 us
+run 1s
+# KERNEL: stopped at time: 64000001 us
 #  Simulation has been stopped
-# Adding file C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\src\CPLD-TopLevel.asdb ... Done
-# Adding file C:\Users\alanlow\Documents\GitHub\CPLD_FPGA\LATTICE\work\src\CPLD-TopLevel.awc ... Done

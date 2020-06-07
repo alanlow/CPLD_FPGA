@@ -1,0 +1,123 @@
+EDIF2BLIF version IspLever 1.0  Linked Equations File
+Copyright(C), 1992-2015, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design kepler_tl created Tue May 12 13:49:50 2020
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   1/1        1        1    Pin   cpld_sdo 
+   1/1        1        1    Pin   adc_clk1 
+   1/1        1        1    Pin   adc_sel1 
+   1/1        1        1    Pin   adc_sel0 
+   1/1        1        1    Pin   adc_clk0 
+   1/1        1        1    Pin   spi_clk 
+   1/1        1        1    Pin   spi_mosi 
+   1/1        1        1    Pin   freq_clka 
+   1          2        1    Node  inst_spulsereg.D 
+   1/1        1        1    Node  inst_spulsereg.C 
+   1/1        1        1    Node  inst_Q2.D 
+   1/1        1        1    Node  inst_Q2.C 
+   1          2        1    Node  inst_Q1.D 
+   1/1        1        1    Node  inst_Q1.C 
+   1          1        1    Node  Q2_i 
+   1          1        1    Node  adc_clk0_i 
+   1/1        1        1    Node  mcu_clko_c 
+   1/1        1        1    Node  cpld_sdo_c 
+   1/1        1        1    Node  adc_sel1_c 
+   1/1        1        1    Node  adc_clk0_c 
+   1/1        1        1    Node  spi_clk_c 
+   1/1        1        1    Node  spi_mosi_c 
+=========
+  22/18         Best P-Term Total: 22
+                       Total Pins: 14
+                      Total Nodes: 11
+            Average P-Term/Output: 1
+
+
+Equations:
+
+cpld_sdo = (cpld_sdo_c);
+
+adc_clk1 = (adc_clk0_c);
+
+adc_sel1 = (adc_sel1_c);
+
+adc_sel0 = (inst_spulsereg);
+
+adc_clk0 = (adc_clk0_c);
+
+spi_clk = (spi_clk_c);
+
+spi_mosi = (spi_mosi_c);
+
+freq_clka = (mcu_clko_c);
+
+inst_spulsereg.D = (inst_Q1 & Q2_i);
+
+inst_spulsereg.C = (mcu_clko_c);
+
+inst_Q2.D = (inst_Q1);
+
+inst_Q2.C = (mcu_clko_c);
+
+inst_Q1.D = (adc_clk0_i & adc_sel1_c);
+
+inst_Q1.C = (mcu_clko_c);
+
+Q2_i = (!inst_Q2);
+
+adc_clk0_i = (!adc_clk0_c);
+
+mcu_clko_c = (mcu_clko);
+
+cpld_sdo_c = (spi_miso);
+
+adc_sel1_c = (adc_drdyn);
+
+adc_clk0_c = (adc_dclk);
+
+spi_clk_c = (cpld_clk);
+
+spi_mosi_c = (cpld_sdi);
+
+
+Reverse-Polarity Equations:
+
+!cpld_sdo = (!cpld_sdo_c);
+
+!adc_clk1 = (!adc_clk0_c);
+
+!adc_sel1 = (!adc_sel1_c);
+
+!adc_sel0 = (!inst_spulsereg);
+
+!adc_clk0 = (!adc_clk0_c);
+
+!spi_clk = (!spi_clk_c);
+
+!spi_mosi = (!spi_mosi_c);
+
+!freq_clka = (!mcu_clko_c);
+
+!inst_spulsereg.C = (!mcu_clko_c);
+
+!inst_Q2.D = (!inst_Q1);
+
+!inst_Q2.C = (!mcu_clko_c);
+
+!inst_Q1.C = (!mcu_clko_c);
+
+!mcu_clko_c = (!mcu_clko);
+
+!cpld_sdo_c = (!spi_miso);
+
+!adc_sel1_c = (!adc_drdyn);
+
+!adc_clk0_c = (!adc_dclk);
+
+!spi_clk_c = (!cpld_clk);
+
+!spi_mosi_c = (!cpld_sdi);
+
